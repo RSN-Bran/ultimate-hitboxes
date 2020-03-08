@@ -33,7 +33,7 @@
     },
     devServer: {
       contentBase:  path.resolve(__dirname, 'dist'),
-      port: 80
+      port: 8080
     },
     plugins: [
       new HtmlWebpackPlugin({

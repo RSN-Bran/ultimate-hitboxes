@@ -1,0 +1,29 @@
+#dropDownContainer {
+  display: inline-flex;
+  height: 3em;
+}
+
+#characterDropDown {
+    margin-right: 3em;
+}
+
+@media screen and (max-width:450px) {
+    .dropDown {
+        height: 2em;
+        width: 11em;
+        
+    }
+}
+
+@media screen and (min-width:451px) {
+    .dropDown {
+        height: 2em;
+        width: 15em;
+    }
+}
+
+@media screen and (max-width:450px) {
+}
+
+@media screen and (min-width:451px) {
+}

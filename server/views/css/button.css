@@ -1,0 +1,40 @@
+button {
+  cursor: pointer;
+}
+.playMode {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
+.pauseMode {
+  background-color: green;
+  border-color: green;
+  color: white;
+}
+
+.video-buttons-disabled {
+    cursor: default;
+    border-color: black;
+    height: 40px;
+    opacity: .5;
+}
+
+.video-buttons-enabled {
+    cursor: pointer;
+    border-color: black;
+    height: 40px;
+    opacity: 1;
+}
+
+#buttonContainer {
+  display: inline-block
+}
+
+#decrement {
+    margin-right: 3em;
+}
+
+#play {
+    margin-right: 3em;
+}

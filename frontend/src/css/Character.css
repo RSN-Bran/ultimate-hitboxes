@@ -1,0 +1,22 @@
+.character {
+	border: solid black 2px;
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+	background-color: white;
+	color: black;
+	margin: 10px;
+	cursor: pointer;
+	position: relative
+}
+
+.character:hover {
+	border: solid gold 2px;
+}
+
+small {
+	left: 0%;
+	top: 0%;
+	text-align: right;
+	position: relative;
+}

@@ -1,0 +1,7 @@
+#optionsContainer {
+	display: inline-flex;
+}
+
+.option {
+	width: 100%
+}

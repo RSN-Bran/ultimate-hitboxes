@@ -1,0 +1,26 @@
+[
+  {
+    "name"  : "Mario",
+    "value" : "mario"
+  },
+  {
+    "name"  : "Donkey Kong",
+    "value" : "donkey-kong"
+  },
+  {
+    "name"  : "Zelda",
+    "value" : "zelda"
+  },
+  {
+    "name"  : "Roy",
+    "value" : "roy"
+  },
+  {
+    "name"  : "Palutena",
+    "value" : "palutena"
+  },
+  {
+    "name"  : "Banjo & Kazooie",
+    "value" : "banjo-kazooie"
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "name": "Snake",
+  "value": "snake",
+  "moves": [
+    {
+      "name": "Back Air",
+      "value": "back-air",
+      "frames": 46,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Dash Attack",
+      "value": "dash-attack",
+      "frames": 54,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Dash Grab",
+      "value": "dash-grab",
+      "frames": 41,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Down Air",
+      "value": "down-air",
+      "frames": 78,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Down Smash",
+      "value": "down-smash",
+      "frames": 49,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Down Tilt",
+      "value": "down-tilt",
+      "frames": 40,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Forward Air",
+      "value": "forward-air",
+      "frames": 72,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Forward Smash",
+      "value": "forward-smash",
+      "frames": 85,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Forward Tilt 1",
+      "value": "forward-tilt-1",
+      "frames": 38,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Forward Tilt 2",
+      "value": "forward-tilt-2",
+      "frames": 55,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Jab 1",
+      "value": "jab-1",
+      "frames": 30,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Jab 2",
+      "value": "jab-2",
+      "frames": 30,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Jab 3",
+      "value": "jab-3",
+      "frames": 58,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Neutral Air",
+      "value": "neutral-air",
+      "frames": 65,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Pivot Grab",
+      "value": "pivot-grab",
+      "frames": 36,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Pummel",
+      "value": "pummel",
+      "frames": 18,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Standing Grab",
+      "value": "standing-grab",
+      "frames": 36,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Up Air",
+      "value": "up-air",
+      "frames": 56,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Up Smash",
+      "value": "up-smash",
+      "frames": 68,
+      "faf": 0,
+      "hitboxes": []
+    },
+    {
+      "name": "Up Tilt",
+      "value": "up-tilt",
+      "frames": 46,
+      "faf": 0,
+      "hitboxes": []
+    }
+  ]
+}

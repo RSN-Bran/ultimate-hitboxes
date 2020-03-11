@@ -10,7 +10,11 @@ function CharacterOptions(props) {
 
 	if (props.pickingCharacter) {
 		return (
+
 			<div id="characterList">
+				<div id="exit" onClick={props.exit}>
+					X
+				</div>
 				{characterButtonArray}
 			</div>
 		)

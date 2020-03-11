@@ -79,7 +79,7 @@ class App extends React.Component {
     this.updateSlider = this.updateSlider.bind(this)
     this.changeSpeed = this.changeSpeed.bind(this)
     this.chooseCharacter = this.chooseCharacter.bind(this)
-    
+    this.exitCharacterPicker = this.exitCharacterPicker.bind(this)
   }
 
   //Increment the frame by 1
@@ -261,6 +261,12 @@ class App extends React.Component {
       pickingCharacter: true
     })
   }
+
+  exitCharacterPicker() {
+    this.setState({
+      pickingCharacter: false
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -278,6 +284,7 @@ class App extends React.Component {
           pickingCharacter={this.state.pickingCharacter}
           characterData={characterData}
           getCharacterData={this.getCharacterData}
+          exit={this.exitCharacterPicker}
         />
         <select
           name="Select Move"

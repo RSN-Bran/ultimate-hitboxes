@@ -1,4 +1,7 @@
 table, th, td {
 	border: 1px solid white;
 	border-collapse: collapse;
+	color: white;
+	text-align: center;
+	margin: 0 auto;
 }

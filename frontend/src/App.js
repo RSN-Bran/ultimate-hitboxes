@@ -8,11 +8,7 @@ import CharacterOptions from './components/CharacterOptions'
 import MoveChoice from './components/MoveChoice'
 import Portal from './components/Portal'
 import PlayOptions from './components/PlayOptions'
-
-
-
-
-
+import HitBoxDetail from './components/HitBoxDetail'
 
 //Get character data (will become an api call later)
 import characterData from './characterData.js'
@@ -65,6 +61,8 @@ class App extends React.Component {
       playSpeed: 2,
 
       pickingCharacter: false,
+
+      hitboxData: undefined
     }
 
     //Bind functions so they are usable within components
@@ -80,6 +78,7 @@ class App extends React.Component {
     this.changeSpeed = this.changeSpeed.bind(this)
     this.chooseCharacter = this.chooseCharacter.bind(this)
     this.exitCharacterPicker = this.exitCharacterPicker.bind(this)
+    this.updateHitboxData = this.updateHitboxData.bind(this)
   }
 
   //Increment the frame by 1
@@ -267,6 +266,13 @@ class App extends React.Component {
       pickingCharacter: false
     })
   }
+
+  updateHitboxData(hitbox) {
+    console.log(hitbox);
+    this.setState({
+      hitboxData: hitbox
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -286,6 +292,12 @@ class App extends React.Component {
           getCharacterData={this.getCharacterData}
           exit={this.exitCharacterPicker}
         />
+
+        <HitBoxDetail
+          hitboxData={this.state.hitboxData}
+          updateHitboxData={this.updateHitboxData}
+        />
+
         <select
           name="Select Move"
           onChange={this.setMove} >
@@ -320,6 +332,7 @@ class App extends React.Component {
 
           //Pass down move data for the Table
           move={this.state.currentMoveData}
+          updateHitboxData={this.updateHitboxData}
         />
       </div>
     );

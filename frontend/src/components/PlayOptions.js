@@ -34,6 +34,7 @@ function PlayOptions(props) {
 				<DataTable
 					move={props.move}
 					currentFrame={props.currentFrame}
+					updateHitboxData={props.updateHitboxData}
 				/>
 			</div>
 		)

@@ -4,7 +4,7 @@ import '../css/DataTable.css'
 function DataEntry(props) {
   
   return (
-    <tr>
+    <tr onClick={props.updateHitboxData.bind(this, props.hitbox)}>
       <td>{props.hitbox.frames[0]}</td>
       <td>{props.hitbox.damage}</td>
       <td>{props.hitbox.shielddamage}</td>
@@ -14,6 +14,8 @@ function DataEntry(props) {
       <td>{props.hitbox.fkb}</td>
       <td>{props.hitbox.trip}</td>
     </tr>
+
+    
   )
 }
 

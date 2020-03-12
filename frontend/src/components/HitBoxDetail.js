@@ -3,6 +3,7 @@ import React from "react"
 import '../css/HitBoxDetail.css';
 import '../css/CharacterList.css';
 
+import x from '../media/x.png'
 function HitBoxDetail(props) {
   
   if (props.hitboxData === undefined) { return null; }
@@ -10,9 +11,7 @@ function HitBoxDetail(props) {
     console.log("her")
     return (
       <div id="hitboxDetail">
-        <div id="exit" onClick={props.updateHitboxData.bind(this, undefined)}>
-          X
-				</div>
+        <img id="exit" onClick={props.updateHitboxData.bind(this, undefined)} src={x}/>
 
         <p>part: {props.hitboxData.part}                          </p>
         <p>bone: {props.hitboxData.bone}                          </p>

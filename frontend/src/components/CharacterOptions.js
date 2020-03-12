@@ -2,6 +2,12 @@ import React from "react"
 import Character from './Character'
 import '../css/CharacterList.css';
 
+
+import x from '../media/x.png'
+
+				
+
+
 function CharacterOptions(props) {
 
 	let characterButtonArray = []
@@ -12,9 +18,7 @@ function CharacterOptions(props) {
 		return (
 
 			<div id="characterList">
-				<div id="exit" onClick={props.exit}>
-					X
-				</div>
+				<img id="exit" onClick={props.exit} src={x} />
 				{characterButtonArray}
 			</div>
 		)

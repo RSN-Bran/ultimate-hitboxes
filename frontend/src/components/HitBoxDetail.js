@@ -8,11 +8,11 @@ function HitBoxDetail(props) {
   
   if (props.hitboxData === undefined) { return null; }
   else {
-    console.log("her")
     return (
       <div id="hitboxDetail">
         <img id="exit" onClick={props.updateHitboxData.bind(this, undefined)} src={x}/>
 
+        <p>id: {props.hitboxData.id}                              </p>
         <p>part: {props.hitboxData.part}                          </p>
         <p>bone: {props.hitboxData.bone}                          </p>
         <p>damage: {props.hitboxData.damage}                      </p>

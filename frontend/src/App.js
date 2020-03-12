@@ -79,6 +79,7 @@ class App extends React.Component {
     this.chooseCharacter = this.chooseCharacter.bind(this)
     this.exitCharacterPicker = this.exitCharacterPicker.bind(this)
     this.updateHitboxData = this.updateHitboxData.bind(this)
+    this.jumpToFrame = this.jumpToFrame.bind(this)
   }
 
   //Increment the frame by 1
@@ -268,9 +269,15 @@ class App extends React.Component {
   }
 
   updateHitboxData(hitbox) {
-    console.log(hitbox);
     this.setState({
       hitboxData: hitbox
+    })
+  }
+
+  jumpToFrame(frame) {
+
+    this.setState({
+      frame: frame
     })
   }
   render() {
@@ -333,6 +340,7 @@ class App extends React.Component {
           //Pass down move data for the Table
           move={this.state.currentMoveData}
           updateHitboxData={this.updateHitboxData}
+          jumpToFrame={this.jumpToFrame}
         />
       </div>
     );

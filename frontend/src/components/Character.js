@@ -15,7 +15,13 @@ function Character(props) {
 		)
 	}
 	else {
-		return null;
+		return (
+			<div className="character-incomplete" value={props.character.value}>
+				<small style={{ "position": "absolute" }}>#{props.character.number.replace('e', 'ε')}</small>
+				<h2 style={{ "position": "absolute" }}>{props.character.name}</h2>
+				<img src={renderURL} height="100" alt={props.character.name}></img>
+			</div>
+		)
 	}
 }
 

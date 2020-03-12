@@ -35,6 +35,7 @@ function PlayOptions(props) {
 					move={props.move}
 					currentFrame={props.currentFrame}
 					updateHitboxData={props.updateHitboxData}
+					jumpToFrame={props.jumpToFrame}
 				/>
 			</div>
 		)

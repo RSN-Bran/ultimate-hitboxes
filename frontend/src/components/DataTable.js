@@ -6,7 +6,7 @@ function DataTable(props) {
   console.log(props.move)
   let hitboxData = [];
   props.move.hitboxes.forEach(function (hitbox) {
-    hitboxData.push(<DataEntry hitbox={hitbox} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData}/>)
+    hitboxData.push(<DataEntry hitbox={hitbox} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame}/>)
   })
 	return (
     <table>
@@ -20,6 +20,7 @@ function DataTable(props) {
           <th>KBG</th>
           <th>FKB</th>
           <th>Trip</th>
+          <th>More Data</th>
         </tr>
       </thead>
       <tbody>

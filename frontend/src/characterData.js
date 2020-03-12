@@ -100,7 +100,7 @@
     name: "Peach",
     value: "peach",
     number: "13",
-    completed: false
+    completed: true
   },
   {
     id: 15,
@@ -114,6 +114,104 @@
     name: "Bowser",
     value: "bowser",
     number: "14",
+    completed: false
+  },
+  {
+    id: 17,
+    name: "Ice Climbers",
+    value: "ice-climbers",
+    number: "15",
+    completed: false
+  },
+  {
+    id: 18,
+    name: "Sheik",
+    value: "sheik",
+    number: "16",
+    completed: false
+  },
+  {
+    id: 19,
+    name: "Zelda",
+    value: "zelda",
+    number: "17",
+    completed: false
+  },
+  {
+    id: 20,
+    name: "Dr. Mario",
+    value: "dr-mario",
+    number: "18",
+    completed: false
+  },
+  {
+    id: 21,
+    name: "Pichu",
+    value: "pichu",
+    number: "19",
+    completed: false
+  },
+  {
+    id: 22,
+    name: "Falco",
+    value: "falco",
+    number: "20",
+    completed: false
+  },
+  {
+    id: 23,
+    name: "Marth",
+    value: "marth",
+    number: "21",
+    completed: false
+  },
+  {
+    id: 24,
+    name: "Lucina",
+    value: "lucina",
+    number: "21ε",
+    completed: false
+  },
+  {
+    id: 25,
+    name: "Young Link",
+    value: "young-link",
+    number: "22",
+    completed: false
+  },
+  {
+    id: 26,
+    name: "Ganondorf",
+    value: "ganondorf",
+    number: "23",
+    completed: false
+  },
+  {
+    id: 27,
+    name: "Mewtwo",
+    value: "mewtwo",
+    number: "24",
+    completed: false
+  },
+  {
+    id: 28,
+    name: "Roy",
+    value: "roy",
+    number: "25",
+    completed: false
+  },
+  {
+    id: 29,
+    name: "Chrom",
+    value: "chrom",
+    number: "25ε",
+    completed: false
+  },
+  {
+    id: 30,
+    name: "Mr. Game & Watch",
+    value: "mr-game-watch",
+    number: "26",
     completed: false
   },
 ]

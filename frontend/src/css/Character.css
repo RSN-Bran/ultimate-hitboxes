@@ -10,6 +10,18 @@
 	position: relative
 }
 
+.character-incomplete {
+	border: solid black 2px;
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+	background-color: white;
+	color: black;
+	margin: 10px;
+	position: relative;
+	opacity: 0.4;
+}
+
 .character:hover {
 	border: solid gold 2px;
 }

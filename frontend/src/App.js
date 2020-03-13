@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Import css
-import './App.css';
+import './css/App.css';
 
 //Import components
 import CharacterOptions from './components/CharacterOptions'

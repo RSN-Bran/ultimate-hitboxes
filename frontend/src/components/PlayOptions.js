@@ -8,6 +8,7 @@ function PlayOptions(props) {
 	if (props.portalState === "hasMove") {
 		return (
 			<div>
+
 				<Slider
 					totalFrames={props.totalFrames}
 					currentFrame={props.currentFrame}

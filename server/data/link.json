@@ -931,8 +931,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": ""
+          "frames": [ 20, 21, 22, 23 ],
+          "color": "IndianRed"
         }
       ]
     },

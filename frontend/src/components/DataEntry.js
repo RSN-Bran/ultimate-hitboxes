@@ -7,9 +7,18 @@ function DataEntry(props) {
   if (props.hitbox.frames.includes(props.currentFrame)) {
     color = props.hitbox.color
   }
+
+  let frametd;
+  if (props.hitbox.frames[0] !== undefined) {
+    frametd = <td style={{ "cursor": "pointer"}}onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}> {props.hitbox.frames[0]}</td>
+  }
+  else {
+    frametd = <td></td>
+  }
   return (
-    <tr style={{ backgroundColor: color}}>
-      <td onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}> {props.hitbox.frames[0]}</td>
+    <tr style={{ backgroundColor: color }}>
+
+      {frametd}
       <td>{props.hitbox.damage}</td>
       <td>{props.hitbox.shielddamage}</td>
       <td>{props.hitbox.angle}</td>

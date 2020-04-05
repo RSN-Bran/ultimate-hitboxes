@@ -7,7 +7,8 @@
 	color: black;
 	margin: 10px;
 	cursor: pointer;
-	position: relative
+	position: relative;
+	font-size: .7em;
 }
 
 .character-incomplete {
@@ -20,6 +21,7 @@
 	margin: 10px;
 	position: relative;
 	opacity: 0.4;
+	font-size: .7em;
 }
 
 .character:hover {
@@ -31,4 +33,10 @@ small {
 	top: 0%;
 	text-align: right;
 	position: relative;
+}
+
+.series-icon {
+	height: 60%;
+	right: 0%;
+	position: absolute;
 }

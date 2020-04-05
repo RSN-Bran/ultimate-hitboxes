@@ -14,3 +14,12 @@
 	cursor: pointer;
 	width: 3%
 }
+
+#searchbar {
+	display: block;
+	margin:0 auto;
+}
+
+label {
+	font-size: 15;
+}

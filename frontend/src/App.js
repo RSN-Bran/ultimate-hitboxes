@@ -15,14 +15,13 @@ import characterData from './characterData.js'
 
 
 let environment;
-if (process.env.NODE_ENV === "production") {
-  environment = "ultimate-hitboxes.com"
-}
-else {
+console.log(process.env.NODE_ENV)
+if (process.env.NODE_ENV === "development") {
   environment = "localhost"
 }
-
-environment = "ultimate-hitboxes.com"
+else {
+  environment = "ultimate-hitboxes.com"
+}
 
 class App extends React.Component {
   constructor() {

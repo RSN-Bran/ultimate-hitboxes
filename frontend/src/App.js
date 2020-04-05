@@ -61,7 +61,10 @@ class App extends React.Component {
 
       pickingCharacter: false,
 
-      hitboxData: undefined
+      hitboxData: undefined,
+
+      sortBy: "number",
+      search: ""
     }
 
     //Bind functions so they are usable within components
@@ -79,6 +82,8 @@ class App extends React.Component {
     this.exitCharacterPicker = this.exitCharacterPicker.bind(this)
     this.updateHitboxData = this.updateHitboxData.bind(this)
     this.jumpToFrame = this.jumpToFrame.bind(this)
+    this.changeSortBy = this.changeSortBy.bind(this)
+    this.changeSearchValue = this.changeSearchValue.bind(this)
   }
 
   //Increment the frame by 1
@@ -279,6 +284,18 @@ class App extends React.Component {
       frame: frame
     })
   }
+
+  changeSortBy(value) {
+    this.setState({
+      sortBy: value.target.id
+    })
+  }
+
+  changeSearchValue(value) {
+    this.setState({
+      search: value.target.value
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -296,6 +313,10 @@ class App extends React.Component {
           pickingCharacter={this.state.pickingCharacter}
           characterData={characterData}
           getCharacterData={this.getCharacterData}
+          sortBy={this.state.sortBy}
+          search={this.state.search}
+          changeSortBy={this.changeSortBy}
+          changeSearchValue={this.changeSearchValue}
           exit={this.exitCharacterPicker}
         />
 

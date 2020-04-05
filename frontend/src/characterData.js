@@ -1,10 +1,5 @@
 ﻿const characterData = [
   {
-    id: 0,
-    name: "Select Character",
-    completed: true
-  },
-  {
     id: 1,
     name: "Mario",
     value: "mario",
@@ -325,7 +320,7 @@
     series: "pokemon"
   },
   {
-    id: 40,
+    id: 41,
     name: "Diddy Kong",
     value: "diddy-kong",
     number: "36",
@@ -333,7 +328,7 @@
     series: "donkey-kong"
   },
   {
-    id: 41,
+    id: 42,
     name: "Lucas",
     value: "lucas",
     number: "37",
@@ -341,7 +336,7 @@
     series: "earthbound"
   },
   {
-    id: 42,
+    id: 43,
     name: "Sonic",
     value: "sonic",
     number: "38",
@@ -349,7 +344,7 @@
     series: "sonic"
   },
   {
-    id: 43,
+    id: 44,
     name: "King Dedede",
     value: "king-dedede",
     number: "39",
@@ -357,7 +352,7 @@
     series: "kirby"
   },
   {
-    id: 44,
+    id: 45,
     name: "Olimar",
     value: "olimar",
     number: "40",
@@ -365,7 +360,7 @@
     series: "pikmin"
   },
   {
-    id: 45,
+    id: 46,
     name: "Lucario",
     value: "lucario",
     number: "41",
@@ -373,7 +368,7 @@
     series: "pokemon"
   },
   {
-    id: 46,
+    id: 47,
     name: "R.O.B.",
     value: "rob",
     number: "42",
@@ -381,7 +376,7 @@
     series: "rob"
   },
   {
-    id: 47,
+    id: 48,
     name: "Toon Link",
     value: "toon-link",
     number: "43",
@@ -389,7 +384,7 @@
     series: "legend-of-zelda"
   },
   {
-    id: 48,
+    id: 49,
     name: "Wolf",
     value: "wolf",
     number: "44",
@@ -397,7 +392,7 @@
     series: "star-fox"
   },
   {
-    id: 49,
+    id: 50,
     name: "Villager",
     value: "villager",
     number: "45",
@@ -405,7 +400,7 @@
     series: "animal-crossing"
   },
   {
-    id: 50,
+    id: 51,
     name: "Mega Man",
     value: "mega-man",
     number: "46",
@@ -413,7 +408,7 @@
     series: "mega-man"
   },
   {
-    id: 51,
+    id: 52,
     name: "Wii Fit Trainer",
     value: "wii-fit-trainer",
     number: "47",
@@ -421,7 +416,7 @@
     series: "wii-fit"
   },
   {
-    id: 52,
+    id: 53,
     name: "Rosalina & Luma",
     value: "rosalina-luma",
     number: "48",
@@ -429,7 +424,7 @@
     series: "super-mario"
   },
   {
-    id: 53,
+    id: 54,
     name: "Little Mac",
     value: "little-mac",
     number: "49",
@@ -437,7 +432,7 @@
     series: "punch-out"
   },
   {
-    id: 54,
+    id: 55,
     name: "Greninja",
     value: "greninja",
     number: "50",
@@ -445,7 +440,7 @@
     series: "pokemon"
   },
   {
-    id: 55,
+    id: 56,
     name: "Mii Brawler",
     value: "mii-brawler",
     number: "51",
@@ -453,7 +448,7 @@
     series: "smash-bros"
   },
   {
-    id: 56,
+    id: 57,
     name: "Mii Swordfighter",
     value: "mii-swordfighter",
     number: "52",
@@ -461,7 +456,7 @@
     series: "smash-bros"
   },
   {
-    id: 57,
+    id: 58,
     name: "Mii Gunner",
     value: "mii-gunner",
     number: "53",
@@ -469,7 +464,7 @@
     series: "smash-bros"
   },
   {
-    id: 58,
+    id: 59,
     name: "Palutena",
     value: "palutena",
     number: "54",
@@ -477,7 +472,7 @@
     series: "kid-icarus"
   },
   {
-    id: 59,
+    id: 60,
     name: "Pac-Man",
     value: "pac-man",
     number: "55",
@@ -485,7 +480,7 @@
     series: "pac-man"
   },
   {
-    id: 60,
+    id: 61,
     name: "Robin",
     value: "robin",
     number: "56",
@@ -493,7 +488,7 @@
     series: "fire-emblem"
   },
   {
-    id: 61,
+    id: 62,
     name: "Shulk",
     value: "shulk",
     number: "57",
@@ -501,7 +496,7 @@
     series: "xenoblade"
   },
   {
-    id: 62,
+    id: 63,
     name: "Bowser Jr.",
     value: "bowser-jr",
     number: "58",
@@ -509,7 +504,7 @@
     series: "super-mario"
   },
   {
-    id: 63,
+    id: 64,
     name: "Duck Hunt",
     value: "duck-hunt",
     number: "59",
@@ -517,7 +512,7 @@
     series: "duck-hunt"
   },
   {
-    id: 64,
+    id: 65,
     name: "Ryu",
     value: "ryu",
     number: "60",
@@ -525,7 +520,7 @@
     series: "street-fighter"
   },
   {
-    id: 65,
+    id: 66,
     name: "Ken",
     value: "ken",
     number: "60ε",
@@ -533,7 +528,7 @@
     series: "street-fighter"
   },
   {
-    id: 66,
+    id: 67,
     name: "Cloud",
     value: "cloud",
     number: "61",
@@ -541,7 +536,7 @@
     series: "final-fantasy"
   },
   {
-    id: 67,
+    id: 68,
     name: "Corrin",
     value: "corrin",
     number: "62",
@@ -549,7 +544,7 @@
     series: "fire-emblem"
   },
   {
-    id: 68,
+    id: 69,
     name: "Bayonetta",
     value: "bayonetta",
     number: "63",
@@ -557,7 +552,7 @@
     series: "bayonetta"
   },
   {
-    id: 71,
+    id: 70,
     name: "Inkling",
     value: "inkling",
     number: "64",
@@ -565,7 +560,7 @@
     series: "splatoon"
   },
   {
-    id: 72,
+    id: 71,
     name: "Ridley",
     value: "ridley",
     number: "65",
@@ -573,7 +568,7 @@
     series: "metroid"
   },
   {
-    id: 73,
+    id: 72,
     name: "Simon",
     value: "simon",
     number: "66",
@@ -581,7 +576,7 @@
     series: "castlevania"
   },
   {
-    id: 74,
+    id: 73,
     name: "Richter",
     value: "richter",
     number: "66ε",
@@ -589,7 +584,7 @@
     series: "castlevania"
   },
   {
-    id: 75,
+    id: 74,
     name: "King K. Rool",
     value: "king-k-rool",
     number: "67",
@@ -597,7 +592,7 @@
     series: "donkey-kong"
   },
   {
-    id: 76,
+    id: 75,
     name: "Isabelle",
     value: "isabelle",
     number: "68",
@@ -605,7 +600,7 @@
     series: "animal-crossing"
   },
   {
-    id: 77,
+    id: 76,
     name: "Incineroar",
     value: "incineroar",
     number: "69",
@@ -613,7 +608,7 @@
     series: "pokemon"
   },
   {
-    id: 78,
+    id: 77,
     name: "Piranha Plant",
     value: "piranha-plant",
     number: "70",
@@ -621,7 +616,7 @@
     series: "super-mario"
   },
   {
-    id: 79,
+    id: 78,
     name: "Joker",
     value: "joker",
     number: "71",
@@ -629,7 +624,7 @@
     series: "persona"
   },
   {
-    id: 80,
+    id: 79,
     name: "Hero",
     value: "hero",
     number: "72",
@@ -637,7 +632,7 @@
     series: "dragon-quest"
   },
   {
-    id: 81,
+    id: 80,
     name: "Banjo & Kazooie",
     value: "banjo-kazooie",
     number: "73",
@@ -645,7 +640,7 @@
     series: "banjo-kazooie"
   },
   {
-    id: 82,
+    id: 81,
     name: "Terry",
     value: "terry",
     number: "74",

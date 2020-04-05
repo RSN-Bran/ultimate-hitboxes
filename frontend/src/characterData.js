@@ -23,84 +23,84 @@
     name: "Link",
     value: "link",
     number: "03",
-    completed: true
+    completed: false
   },
   {
     id: 4,
     name: "Samus",
     value: "samus",
     number: "04",
-    completed: true
+    completed: false
   },
   {
     id: 5,
     name: "Dark Samus",
     value: "dark-samus",
     number: "04e",
-    completed: true
+    completed: false
   },
   {
     id: 6,
     name: "Yoshi",
     value: "yoshi",
     number: "05",
-    completed: true
+    completed: false
   },
   {
     id: 7,
     name: "Kirby",
     value: "kirby",
     number: "06",
-    completed: true
+    completed: false
   },
   {
     id: 8,
     name: "Fox",
     value: "fox",
     number: "07",
-    completed: true
+    completed: false
   },
   {
     id: 9,
     name: "Pikachu",
     value: "pikachu",
     number: "08",
-    completed: true
+    completed: false
   },
   {
     id: 10,
     name: "Luigi",
     value: "luigi",
     number: "09",
-    completed: true
+    completed: false
   },
   {
     id: 11,
     name: "Ness",
     value: "ness",
     number: "10",
-    completed: true
+    completed: false
   },
   {
     id: 12,
     name: "Captain Falcon",
     value: "captain-falcon",
     number: "11",
-    completed: true
+    completed: false
   },
   {
     id: 13,
     name: "Jigglypuff",
     value: "jigglypuff",
     number: "12",
-    completed: true
+    completed: false
   },
   {
     id: 14,
     name: "Peach",
     value: "peach",
     number: "13",
-    completed: true
+    completed: false
   },
   {
     id: 15,

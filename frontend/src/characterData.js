@@ -20,7 +20,7 @@
     name: "Link",
     value: "link",
     number: "03",
-    completed: false,
+    completed: true,
     series: "legend-of-zelda"
   },
   {
@@ -100,7 +100,7 @@
     name: "Jigglypuff",
     value: "jigglypuff",
     number: "12",
-    completed: false,
+    completed: true,
     series: "pokemon"
   },
   {

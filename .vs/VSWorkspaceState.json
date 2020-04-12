@@ -4,8 +4,9 @@
     "\\frontend",
     "\\frontend\\src",
     "\\frontend\\src\\components",
-    "\\frontend\\src\\css"
+    "\\frontend\\src\\css",
+    "\\server"
   ],
-  "SelectedNode": "\\frontend\\src\\components\\HitBoxDetail.js",
+  "SelectedNode": "\\frontend\\src\\characterData.js",
   "PreviewInSolutionExplorer": false
 }

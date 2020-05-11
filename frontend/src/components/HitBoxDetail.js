@@ -12,7 +12,7 @@ function HitBoxDetail(props) {
     let displayData = [];
     console.log(dataArrays)
     dataArrays.forEach(pair => {
-      displayData.push(<p>{pair[0]}: {pair[1]}</p>)
+      displayData.push(<p><b>{pair[0]}</b>: {pair[1]}</p>)
     })
     return (
       <div id="hitboxDetail">

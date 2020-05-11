@@ -332,6 +332,7 @@ class App extends React.Component {
           frame={this.state.frame}
           portalState={this.state.portalState}
           width={this.state.loadingPercent}
+          pickingCharacter={this.state.pickingCharacter}
         />
 
         <PlayOptions

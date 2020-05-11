@@ -9,39 +9,54 @@ import LoadingBar from './LoadingBar'
 
 function Portal(props) {
 	var portalRender;
-	var loadingStyle = {};
-
-	if (props.portalState === "initial") {
+	if (props.pickingCharacter) {
+		return null;
+	}
+	else if (props.portalState === "initial") {
 		portalRender = placeholder;
-		loadingStyle.display = "none"
+		return (
+			<div id="portal">
+				<img
+					id="moveImg"
+					src={portalRender}
+					alt="Move Frames go here"
+				/>
+			</div>
+		)
 	}
 	else if (props.portalState === "loading") {
 		portalRender = placeholder;
-		
+		return (
+			<div id="portal">
+				<img
+					id="moveImg"
+					src={portalRender}
+					alt="Move Frames go here"
+				/>
+				<div id="loading">
+
+					<img
+						src={loading}
+						alt="Move loading"
+					/>
+					<LoadingBar width={props.width} />
+				</div>
+			</div>
+		)
 	}
 	else {
 		portalRender = props.url + props.frame + '.png'
-		loadingStyle.display = "none"
-	}
-
-
-	return (
-		<div id="portal">
-			<img
-				id="moveImg"
-				src={portalRender}
-				alt="Move Frames go here"
-			/>
-			<div id="loading" style={loadingStyle}>
-				
+		return (
+			<div id="portal">
 				<img
-					src={loading}
-					alt="Move loading"
+					id="moveImg"
+					src={portalRender}
+					alt="Move Frames go here"
 				/>
-				<LoadingBar width={props.width} />
 			</div>
-		</div>
-	)
+		)
+	}
+	
 }
 
 export default Portal

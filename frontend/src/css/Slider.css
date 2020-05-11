@@ -6,8 +6,10 @@
   }
 }
 
-#videoSlider {
-  width: 100%
+@media (min-width: 1200px) {
+  #videoSlider {
+    width: 100%
+  }
 }
 
 #sliderContainer {

@@ -1,5 +1,20 @@
 .button {
 	cursor: pointer;
 	width: 10%;
+	
 }
 
+#pause-play {
+	margin-right: 5%
+}
+
+#minus {
+	margin-right: 5%
+}
+
+@media (max-width: 800px) {
+	.button {
+		width: 15%;
+	}
+
+}

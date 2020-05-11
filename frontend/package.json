@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "and": "^0.0.3",
+    "bootstrap-slider": "^10.6.2",
     "file-loader": "^5.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"

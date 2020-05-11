@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useCallback  } from "react";
 
 //Import css
 import './css/App.css';
@@ -13,9 +14,7 @@ import HitBoxDetail from './components/HitBoxDetail'
 //Get character data (will become an api call later)
 import characterData from './characterData.js'
 
-
 let environment;
-console.log(process.env.NODE_ENV)
 if (process.env.NODE_ENV === "development") {
   environment = "localhost"
 }
@@ -27,10 +26,6 @@ class App extends React.Component {
   constructor() {
     
     super();
-
-    //Preload loading gif
-    var loadingImg = new Image()
-    loadingImg.src = `./media/loading.gif`
 
     let playInterval;
     //State
@@ -84,6 +79,8 @@ class App extends React.Component {
     this.jumpToFrame = this.jumpToFrame.bind(this)
     this.changeSortBy = this.changeSortBy.bind(this)
     this.changeSearchValue = this.changeSearchValue.bind(this)
+
+
   }
 
   //Increment the frame by 1
@@ -130,7 +127,6 @@ class App extends React.Component {
 
   //Get all data for a character
   getCharacterData(character) {
-
     //API call to server to get character data
     fetch(`http://${environment}:5000/${character}/data`)
       .then(response => response.json())
@@ -221,7 +217,6 @@ class App extends React.Component {
 
         //Call function to complete loading
         this.finishLoading()
-        
       }
 
       //Else, reset counter and try again
@@ -235,6 +230,7 @@ class App extends React.Component {
 
   //Move loading has been completed, display the first frame of the move
   finishLoading() {
+    
     let number = characterData.find(element => element.value === this.state.currentCharacterData.value).number
     this.setState({
       url: `https://ultimate-hitboxes.s3.amazonaws.com/frames/${number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/`,
@@ -301,14 +297,14 @@ class App extends React.Component {
       <div className="App">
         <h3>Smash Ultimate Hitbox Viewer</h3>
 
-        <button style={{ "cursor": "pointer"}}
+        <button id="chooseCharacter"
           onClick={this.chooseCharacter}
         >
         Choose a Character
-
-          
+  
+            
         </button>
-
+        
         <CharacterOptions
           pickingCharacter={this.state.pickingCharacter}
           characterData={characterData}

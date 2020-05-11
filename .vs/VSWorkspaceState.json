@@ -1,12 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\frontend",
     "\\frontend\\src",
     "\\frontend\\src\\components",
     "\\frontend\\src\\css",
     "\\server"
   ],
-  "SelectedNode": "\\frontend\\src\\characterData.js",
+  "SelectedNode": "\\server\\server.js",
   "PreviewInSolutionExplorer": false
 }

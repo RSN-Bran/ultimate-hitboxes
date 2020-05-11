@@ -1,7 +1,17 @@
 #videoSlider {
-	width: 100%
+  width: 100%
 }
 
-.slider-selection {
-	background: green;
+#sliderContainer {
+	background-color: #282c34;
 }
+
+/*
+    thumbHeight = 20px,
+    thumbBorderWidth = 4px,
+    trackColor = #ccc,
+    activeTrackColor = #777,
+    trackHeight = 4px,
+    thumbColor = red,
+    activeThumbColor = darkOrange
+  */

@@ -7,6 +7,11 @@
       path: path.resolve(__dirname, 'dist'),
       filename: 'bundle.js'
     },
+    resolve: {
+      alias: {
+        "jquery": path.join(__dirname, "./jquery-stub.js")
+      }
+    },
     module: {
       rules: 
         [{

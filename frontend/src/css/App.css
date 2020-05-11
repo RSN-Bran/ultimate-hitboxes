@@ -9,7 +9,7 @@
   color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   #chooseCharacter {
     cursor: pointer;
     width: 30%;

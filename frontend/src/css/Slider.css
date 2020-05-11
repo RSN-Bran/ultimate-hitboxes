@@ -1,3 +1,11 @@
+
+
+@media (max-width: 1200px) {
+  #videoSlider {
+    width: 80%
+  }
+}
+
 #videoSlider {
   width: 100%
 }

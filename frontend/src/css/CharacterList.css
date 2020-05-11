@@ -7,12 +7,23 @@
 	height: 100%
 }
 
+@media (max-width: 1200px) {
+	#exit {
+		width: 10%
+	}
+}
+
+@media (min-width: 1200px) {
+	#exit {
+		width: 3%
+	}
+}
+
 #exit {
 	position: absolute;
 	left: 0%;
 	top: 0%;
 	cursor: pointer;
-	width: 3%
 }
 
 #searchbar {
@@ -23,3 +34,5 @@
 label {
 	font-size: 15;
 }
+
+

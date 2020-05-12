@@ -353,6 +353,7 @@ class App extends React.Component {
 
           //Pass down values needed by the Speed Options
           changeSpeed={this.changeSpeed}
+          playSpeed={this.state.playSpeed}
 
           //Pass down move data for the Table
           move={this.state.currentMoveData}

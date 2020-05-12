@@ -9,6 +9,13 @@
   color: white;
 }
 
+#chooseCharacter {
+  cursor: pointer;
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
 @media (max-width: 1200px) {
   #chooseCharacter {
     cursor: pointer;

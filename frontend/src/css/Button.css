@@ -18,3 +18,12 @@
 	}
 
 }
+
+.speedButton {
+	display: inline;
+	
+}
+
+#quarterSpeed, #halfSpeed, #baseSpeed, #doubleSpeed {
+	margin-left: 5%;
+}

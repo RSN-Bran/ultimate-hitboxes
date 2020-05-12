@@ -5,7 +5,7 @@ import '../css/CharacterList.css';
 
 import x from '../media/x.png'
 
-function CharacterOptions(props) {
+function CharacterList(props) {
 	let characterButtonArray = []
 	let sortedCharacterData = []
 
@@ -49,4 +49,4 @@ function CharacterOptions(props) {
 }
 
 
-export default CharacterOptions
+export default CharacterList

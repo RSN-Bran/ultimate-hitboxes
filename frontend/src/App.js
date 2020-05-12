@@ -5,7 +5,7 @@ import { useState, useCallback  } from "react";
 import './css/App.css';
 
 //Import components
-import CharacterOptions from './components/CharacterOptions'
+import CharacterList from './components/CharacterList'
 import MoveChoice from './components/MoveChoice'
 import Portal from './components/Portal'
 import PlayOptions from './components/PlayOptions'
@@ -305,7 +305,7 @@ class App extends React.Component {
             
         </button>
         
-        <CharacterOptions
+        <CharacterList
           pickingCharacter={this.state.pickingCharacter}
           characterData={characterData}
           getCharacterData={this.getCharacterData}

@@ -13,7 +13,7 @@ function DataTable(props) {
       <table>
         <thead>
           <tr>
-            <th>Frame</th>
+            <th data-tip data-for="frameToolTip">Frame</th>
             <th data-tip data-for="dmgToolTip">Dmg</th>
             <th data-tip data-for="sdToolTip">SD</th>
             <th>Angle</th>
@@ -28,6 +28,10 @@ function DataTable(props) {
           {hitboxData}
         </tbody>
       </table>
+
+      <ReactTooltip id="frameToolTip" place="top" effect="solid">
+        First Active Frame of the hitbox. Click on the number to jump to that frame.
+      </ReactTooltip>
 
       <ReactTooltip id="dmgToolTip" place="top" effect="solid">
         Damage

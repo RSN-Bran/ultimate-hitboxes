@@ -61,7 +61,9 @@ class App extends React.Component {
       hitboxData: undefined,
 
       sortBy: "number",
-      search: ""
+      search: "",
+
+      damageMultiplier: false,
     }
 
     //Bind functions so they are usable within components
@@ -81,7 +83,7 @@ class App extends React.Component {
     this.jumpToFrame = this.jumpToFrame.bind(this)
     this.changeSortBy = this.changeSortBy.bind(this)
     this.changeSearchValue = this.changeSearchValue.bind(this)
-
+    this.changeDamageMultiplier = this.changeDamageMultiplier.bind(this)
 
   }
 
@@ -305,6 +307,21 @@ class App extends React.Component {
       search: value.target.value
     })
   }
+
+  changeDamageMultiplier() {
+    if (this.state.damageMultiplier) {
+      this.setState({
+        damageMultiplier: false
+      })
+    }
+    else {
+      this.setState({
+        damageMultiplier: true
+      })
+    }
+    
+  }
+
   render() {
     return (
       <div className="App">
@@ -373,6 +390,8 @@ class App extends React.Component {
           move={this.state.currentMoveData}
           updateHitboxData={this.updateHitboxData}
           jumpToFrame={this.jumpToFrame}
+          damageMultiplier={this.state.damageMultiplier}
+          changeDamageMultiplier={this.changeDamageMultiplier}
         />
       </div>
     );

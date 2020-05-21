@@ -54,6 +54,8 @@ function PlayOptions(props) {
 					currentFrame={props.currentFrame}
 					updateHitboxData={props.updateHitboxData}
 					jumpToFrame={props.jumpToFrame}
+					damageMultiplier={props.damageMultiplier}
+					changeDamageMultiplier={props.changeDamageMultiplier}
 				/>
 			</div>
 		)

@@ -19,7 +19,7 @@ function DataEntry(props) {
     <tr style={{ backgroundColor: color }}>
 
       {frametd}
-      <td>{props.hitbox.damage}</td>
+      <td>{props.damageMultiplier ? parseFloat(props.hitbox.damage * 1.2).toFixed(1) : parseFloat(props.hitbox.damage).toFixed(1)}</td>
       <td>{props.hitbox.shielddamage}</td>
       <td>{props.hitbox.angle}&#176;</td>
       <td>{props.hitbox.bkb}</td>

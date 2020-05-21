@@ -6,7 +6,7 @@ import DataEntry from './DataEntry'
 function DataTable(props) {
   let hitboxData = [];
   props.move.hitboxes.forEach(function (hitbox) {
-    hitboxData.push(<DataEntry hitbox={hitbox} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame}/>)
+    hitboxData.push(<DataEntry hitbox={hitbox} damageMultiplier={props.damageMultiplier} currentFrame = { props.currentFrame } key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)
   })
   return (
     <div>
@@ -14,9 +14,9 @@ function DataTable(props) {
         <thead>
           <tr>
             <th data-tip data-for="frameToolTip">Frame</th>
-            <th data-tip data-for="dmgToolTip">Dmg</th>
+            <th data-tip data-for="dmgToolTip" onClick={props.changeDamageMultiplier}>Dmg</th>
             <th data-tip data-for="sdToolTip">SD</th>
-            <th>Angle</th>
+            <th data-tip data-for="angleToolTip">Angle</th>
             <th data-tip data-for="bkbToolTip">BKB</th>
             <th data-tip data-for="kbgToolTip">KBG</th>
             <th data-tip data-for="fkbToolTip">FKB</th>
@@ -34,11 +34,15 @@ function DataTable(props) {
       </ReactTooltip>
 
       <ReactTooltip id="dmgToolTip" place="top" effect="solid">
-        Damage
+        {props.damageMultiplier ? "1v1 Damage, click to remove the 1v1 multiplier" : "Base Damage, click to apply the 1v1 multiplier"}
       </ReactTooltip>
 
       <ReactTooltip id="sdToolTip" place="top" effect="solid">
         Shield Damage
+      </ReactTooltip>
+
+      <ReactTooltip id="angleToolTip" place="top" effect="solid">
+        Launch Angle, 361 denotes the "Sakurai Angle"
       </ReactTooltip>
 
       <ReactTooltip id="bkbToolTip" place="top" effect="solid">

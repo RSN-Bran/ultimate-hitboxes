@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTooltip from "react-tooltip";
 import { useState, useCallback  } from "react";
 
 //Import css
@@ -106,7 +107,6 @@ class App extends React.Component {
 
   //Play the video if it is paused
   play() {
-    console.log("here")
     this.setState({
       playing: true
     })
@@ -307,6 +307,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        
         <h3>Smash Ultimate Hitbox Viewer</h3>
 
         <button id="chooseCharacter"

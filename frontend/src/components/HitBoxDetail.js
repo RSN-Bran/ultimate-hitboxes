@@ -10,7 +10,6 @@ function HitBoxDetail(props) {
   else {
     let dataArrays = Object.entries(props.hitboxData);
     let displayData = [];
-    console.log(dataArrays)
     dataArrays.forEach(pair => {
       displayData.push(<p><b>{pair[0]}</b>: {pair[1]}</p>)
     })

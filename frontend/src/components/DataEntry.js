@@ -21,7 +21,7 @@ function DataEntry(props) {
       {frametd}
       <td>{props.hitbox.damage}</td>
       <td>{props.hitbox.shielddamage}</td>
-      <td>{props.hitbox.angle}</td>
+      <td>{props.hitbox.angle}&#176;</td>
       <td>{props.hitbox.bkb}</td>
       <td>{props.hitbox.kbg}</td>
       <td>{props.hitbox.fkb}</td>

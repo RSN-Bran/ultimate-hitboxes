@@ -52,6 +52,7 @@ class App extends React.Component {
       //Current percent completion of the loading of a move
       loadingPercent: 0,
 
+      //Default play speed, plays at .5 speed
       playSpeed: 2,
 
       pickingCharacter: false,
@@ -105,6 +106,7 @@ class App extends React.Component {
 
   //Play the video if it is paused
   play() {
+    console.log("here")
     this.setState({
       playing: true
     })
@@ -248,12 +250,22 @@ class App extends React.Component {
     clearInterval(this.playInterval)
   }
 
+  //Function is called when one of the play speed radio buttons are pressed
   changeSpeed(event) {
+    //Update the play speed variable in the state
     this.setState({
-      playSpeed: event.target.value,
-      playing: false,
+      playSpeed: event.target.value
     })
-    clearInterval(this.playInterval)
+
+    //If the portal was already playing, clear the interval and restart it with the new speed
+    if (this.state.playing) {
+      clearInterval(this.playInterval)
+      this.playInterval = setInterval(() => {
+        this.setState({
+          frame: this.state.frame >= this.state.currentMoveData.frames ? 1 : this.state.frame + 1
+        })
+      }, ((1000 / 60) * event.target.value))
+    }
   }
 
   chooseCharacter() {

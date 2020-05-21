@@ -289,8 +289,9 @@ class App extends React.Component {
   jumpToFrame(frame) {
 
     this.setState({
-      frame: frame
+      frame: frame,
     })
+    this.pause();
   }
 
   changeSortBy(value) {

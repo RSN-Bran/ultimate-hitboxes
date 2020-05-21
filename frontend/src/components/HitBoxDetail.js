@@ -11,7 +11,9 @@ function HitBoxDetail(props) {
     let dataArrays = Object.entries(props.hitboxData);
     let displayData = [];
     dataArrays.forEach(pair => {
-      displayData.push(<p><b>{pair[0]}</b>: {pair[1]}</p>)
+      if (pair[0] !== "frames" && pair[0] !== "color" && pair[0] !== "notes") {
+        displayData.push(<p><b>{pair[0]}</b>: {pair[1]}</p>)
+      }
     })
     return (
       <div id="hitboxDetail">

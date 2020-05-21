@@ -21,7 +21,7 @@ function DataTable(props) {
             <th data-tip data-for="kbgToolTip">KBG</th>
             <th data-tip data-for="fkbToolTip">FKB</th>
             <th data-tip data-for="tripToolTip">Trip</th>
-            <th>More Data</th>
+            <th data-tip data-for="moreToolTip">More Data</th>
           </tr>
         </thead>
         <tbody>
@@ -59,6 +59,10 @@ function DataTable(props) {
 
       <ReactTooltip id="tripToolTip" place="top" effect="solid">
         Trip Chance
+      </ReactTooltip>
+
+      <ReactTooltip id="moreToolTip" place="top" effect="solid">
+        Shows all raw data for a hitbox
       </ReactTooltip>
 
     </div>

@@ -28,7 +28,7 @@
     name: "Samus",
     value: "samus",
     number: "04",
-    completed: false,
+    completed: true,
     series: "metroid"
   },
   {

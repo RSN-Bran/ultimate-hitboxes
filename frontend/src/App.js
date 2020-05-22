@@ -11,6 +11,7 @@ import MoveChoice from './components/MoveChoice'
 import Portal from './components/Portal'
 import PlayOptions from './components/PlayOptions'
 import HitBoxDetail from './components/HitBoxDetail'
+import MoveSelect from './components/MoveSelect'
 
 //Get character data (will become an api call later)
 import characterData from './characterData.js'
@@ -72,7 +73,6 @@ class App extends React.Component {
     this.play = this.play.bind(this)
     this.pause = this.pause.bind(this)
     this.getCharacterData = this.getCharacterData.bind(this)
-    this.loadMoveList = this.loadMoveList.bind(this)
     this.setMove = this.setMove.bind(this)
     this.finishLoading = this.finishLoading.bind(this)
     this.updateSlider = this.updateSlider.bind(this)
@@ -84,6 +84,8 @@ class App extends React.Component {
     this.changeSortBy = this.changeSortBy.bind(this)
     this.changeSearchValue = this.changeSearchValue.bind(this)
     this.changeDamageMultiplier = this.changeDamageMultiplier.bind(this)
+    this.nextMove = this.nextMove.bind(this)
+    this.previousMove = this.previousMove.bind(this)
 
   }
 
@@ -138,28 +140,22 @@ class App extends React.Component {
         //Save the character data
         this.setState({
           currentCharacterData: data,
+          moveList: data.moves,
+          //set the current move as the first one
+          currentMoveData: data.moves[0],
+          playing: false,
+          pickingCharacter: false,
         })
+        clearInterval(this.playInterval)
 
-        //Call function to load the list of moves for that character
-        this.loadMoveList()
+        //Call function to load the first move for the character
+        this.loadMove()
       })
 
       //TODO: MAKE ERROR HANDLING MORE ROBUST
       .catch(err => {
         console.log("fail")
       })
-  }
-
-  //Update the list of moves to contain all the moves fetched fro mthe previous api call. SEt the current move to be the first one in the list
-  loadMoveList() {
-    this.setState({
-      moveList: this.state.currentCharacterData.moves.map(move => <MoveChoice key={move.value} name={move.name} value={move.value} />),
-      currentMoveData: this.state.currentCharacterData.moves[0],
-      playing: false,
-      pickingCharacter: false,
-    })
-    clearInterval(this.playInterval)
-    this.loadMove()
   }
 
   setMove(event) {
@@ -242,6 +238,7 @@ class App extends React.Component {
       playing: false,
       portalState: "hasMove",
     })
+
   }
 
   updateSlider(event) {
@@ -319,7 +316,44 @@ class App extends React.Component {
         damageMultiplier: true
       })
     }
+  }
+
+  nextMove() {
+
+    console.log(this.state.moveList)
+    //Get index of the move in the array
+    let index = (element) => element.name === this.state.currentMoveData.name
+    index = this.state.moveList.findIndex(index)
     
+    //Create a dummy event object to pass to the setMove function
+    let event = {
+      target: { value: undefined }
+    };
+
+    //Set the move to be passed as the next move in the list
+    let nextMove = this.state.moveList[index + 1]
+    event.target.value = nextMove.value
+
+    //Call the setMove function
+    this.setMove(event);
+  }
+
+  previousMove() {
+    //Get index of the move in the array
+    let index = (element) => element.name === this.state.currentMoveData.name
+    index = this.state.moveList.findIndex(index)
+
+    //Create a dummy event object to pass to the setMove function
+    let event = {
+      target: { value: undefined }
+    };
+
+    //Set the move to be passed as the next move in the list
+    let nextMove = this.state.moveList[index - 1]
+    event.target.value = nextMove.value
+
+    //Call the setMove function
+    this.setMove(event);
   }
 
   render() {
@@ -352,11 +386,12 @@ class App extends React.Component {
           updateHitboxData={this.updateHitboxData}
         />
 
-        <select
-          name="Select Move"
-          onChange={this.setMove} >
-          {this.state.moveList}
-        </select>
+        <MoveSelect
+          setMove={this.setMove}
+          moveList={this.state.moveList}
+          currentMoveData={this.state.currentMoveData}
+          characterData={this.state.currentCharacterData}
+        />
 
         <Portal
           url={this.state.url}
@@ -381,6 +416,8 @@ class App extends React.Component {
           playing={this.state.playing}
           play={this.play}
           pause={this.pause}
+          nextMove={this.nextMove}
+          previousMove={this.previousMove}
 
           //Pass down values needed by the Speed Options
           changeSpeed={this.changeSpeed}

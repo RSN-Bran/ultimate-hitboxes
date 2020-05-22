@@ -6,6 +6,8 @@ import minus from '../media/minus.png'
 import plus from '../media/plus.png'
 import play from '../media/play.png'
 import pause from '../media/pause.png'
+import next from '../media/next.png'
+import previous from '../media/previous.png'
 
 import '../css/Button.css';
 
@@ -13,6 +15,20 @@ function Buttons(props) {
 
 	return (
 		<div>
+
+			<img
+				data-tip data-for="previousToolTip"
+				className="button"
+				id="previous"
+				src={previous}
+				onClick={props.previousMove}
+				alt="Previous Move"
+			/>
+
+			<ReactTooltip id="previousToolTip" place="top" effect="solid">
+				Show Previous Move
+      </ReactTooltip>
+
 			<img
 				data-tip data-for="minusToolTip"
 				className="button"
@@ -50,6 +66,19 @@ function Buttons(props) {
 
 			<ReactTooltip id="plusToolTip" place="top" effect="solid">
 				Go Forward 1 Frame
+      </ReactTooltip>
+
+			<img
+				data-tip data-for="nextToolTip"
+				className="button"
+				id="next"
+				src={next}
+				onClick={props.nextMove}
+				alt="NextMove"
+			/>
+
+			<ReactTooltip id="nextToolTip" place="top" effect="solid">
+				Show Next Move
       </ReactTooltip>
 
 		</div>

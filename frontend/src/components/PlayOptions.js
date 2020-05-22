@@ -5,7 +5,6 @@ import Buttons from './Buttons';
 import DataTable from './DataTable'
 
 function PlayOptions(props) {
-	console.log(props.playSpeed)
 	if (props.portalState === "hasMove") {
 		return (
 			<div>
@@ -22,6 +21,8 @@ function PlayOptions(props) {
 					playing={props.playing}
 					play={props.play}
 					pause={props.pause}
+					nextMove={props.nextMove}
+					previousMove={props.previousMove}
 				/>
 				<p>Play Speed: </p>
 				<div className="speedButton" id="tenthSpeed">

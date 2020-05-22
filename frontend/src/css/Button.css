@@ -4,11 +4,7 @@
 	
 }
 
-#pause-play {
-	margin-right: 5%
-}
-
-#minus {
+#previous, #pause-play, #minus, #plus {
 	margin-right: 5%
 }
 

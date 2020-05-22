@@ -23,6 +23,11 @@ function PlayOptions(props) {
 					pause={props.pause}
 					nextMove={props.nextMove}
 					previousMove={props.previousMove}
+					index={props.index}
+					totalMoves={props.totalMoves}
+					totalFrames={props.totalFrames}
+					currentFrame={props.currentFrame}
+
 				/>
 				<p>Play Speed: </p>
 				<div className="speedButton" id="tenthSpeed">

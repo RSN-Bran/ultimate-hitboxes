@@ -1,7 +1,12 @@
 .button {
 	cursor: pointer;
-	width: 10%;
+	width: 5%;
 	
+}
+
+.buttonNoClick {
+	width: 5%;
+	opacity: .2;
 }
 
 #previous, #pause-play, #minus, #plus {
@@ -9,7 +14,7 @@
 }
 
 @media (max-width: 1200px) {
-	.button {
+	.button, .buttonNoClick {
 		width: 15%;
 	}
 

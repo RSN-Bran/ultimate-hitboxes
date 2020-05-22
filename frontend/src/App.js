@@ -322,8 +322,7 @@ class App extends React.Component {
 
     console.log(this.state.moveList)
     //Get index of the move in the array
-    let index = (element) => element.name === this.state.currentMoveData.name
-    index = this.state.moveList.findIndex(index)
+    let index = this.state.moveList.findIndex((element) => element.name === this.state.currentMoveData.name)
     
     //Create a dummy event object to pass to the setMove function
     let event = {
@@ -339,9 +338,9 @@ class App extends React.Component {
   }
 
   previousMove() {
+    console.log("here")
     //Get index of the move in the array
-    let index = (element) => element.name === this.state.currentMoveData.name
-    index = this.state.moveList.findIndex(index)
+    let index = this.state.moveList.findIndex((element) => element.name === this.state.currentMoveData.name)
 
     //Create a dummy event object to pass to the setMove function
     let event = {
@@ -418,6 +417,8 @@ class App extends React.Component {
           pause={this.pause}
           nextMove={this.nextMove}
           previousMove={this.previousMove}
+          index={this.state.currentMoveData !== undefined ? this.state.moveList.findIndex((element) => element.name === this.state.currentMoveData.name) : undefined}
+          totalMoves={this.state.moveList.length}
 
           //Pass down values needed by the Speed Options
           changeSpeed={this.changeSpeed}

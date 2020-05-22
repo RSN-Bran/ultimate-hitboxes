@@ -12,16 +12,16 @@ import previous from '../media/previous.png'
 import '../css/Button.css';
 
 function Buttons(props) {
-
+	console.log(props.index)
 	return (
 		<div>
 
 			<img
 				data-tip data-for="previousToolTip"
-				className="button"
+				className={props.index === 0 ? "buttonNoClick" : "button" }
 				id="previous"
 				src={previous}
-				onClick={props.previousMove}
+				onClick={props.index === 0 ? null : props.previousMove}
 				alt="Previous Move"
 			/>
 
@@ -31,10 +31,10 @@ function Buttons(props) {
 
 			<img
 				data-tip data-for="minusToolTip"
-				className="button"
+				className={props.currentFrame === 1 ? "buttonNoClick" : "button"}
 				id="minus"
 				src={minus}
-				onClick={props.decrementFrame}
+				onClick={props.currentFrame === 1 ? null : props.decrementFrame}
 				alt="Decrement Frame"
 			/>
 
@@ -57,10 +57,10 @@ function Buttons(props) {
 
 			<img
 				data-tip data-for="plusToolTip"
-				className="button"
+				className={props.currentFrame === props.totalFrames ? "buttonNoClick" : "button"}
 				id="plus"
 				src={plus}
-				onClick={props.incrementFrame}
+				onClick={props.currentFrame === props.totalFrames ? null : props.incrementFrame}
 				alt="Increment Frame"
 			/>
 
@@ -70,10 +70,10 @@ function Buttons(props) {
 
 			<img
 				data-tip data-for="nextToolTip"
-				className="button"
+				className={props.index === props.totalMoves-1 ? "buttonNoClick" : "button"}
 				id="next"
 				src={next}
-				onClick={props.nextMove}
+				onClick={props.index === props.totalMoves - 1 ? null : props.nextMove}
 				alt="NextMove"
 			/>
 

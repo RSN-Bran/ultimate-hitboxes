@@ -31,10 +31,10 @@ function Buttons(props) {
 
 			<img
 				data-tip data-for="minusToolTip"
-				className={props.currentFrame === 1 ? "buttonNoClick" : "button"}
+				className={props.currentFrame === 1 || props.playing ? "buttonNoClick" : "button"}
 				id="minus"
 				src={minus}
-				onClick={props.currentFrame === 1 ? null : props.decrementFrame}
+				onClick={props.currentFrame === 1 || props.playing ? null : props.decrementFrame}
 				alt="Decrement Frame"
 			/>
 
@@ -57,10 +57,10 @@ function Buttons(props) {
 
 			<img
 				data-tip data-for="plusToolTip"
-				className={props.currentFrame === props.totalFrames ? "buttonNoClick" : "button"}
+				className={props.currentFrame === props.totalFrames || props.playing ? "buttonNoClick" : "button"}
 				id="plus"
 				src={plus}
-				onClick={props.currentFrame === props.totalFrames ? null : props.incrementFrame}
+				onClick={props.currentFrame === props.totalFrames || props.playing ? null : props.incrementFrame}
 				alt="Increment Frame"
 			/>
 

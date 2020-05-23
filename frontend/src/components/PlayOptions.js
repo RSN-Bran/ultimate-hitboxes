@@ -6,7 +6,7 @@ import SpeedOptions from './SpeedOptions';
 
 
 function PlayOptions(props) {
-	if (props.portalState === "hasMove") {
+	if (props.portalState === "hasMove" && !props.pickingCharacter) {
 		return (
 			<div id="playOptions">
 

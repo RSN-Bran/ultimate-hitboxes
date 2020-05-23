@@ -362,13 +362,10 @@ class App extends React.Component {
       <div className="App">
         
         <h3>Smash Ultimate Hitbox Viewer</h3>
-
         <button id="chooseCharacter"
           onClick={this.chooseCharacter}
         >
-        Choose a Character
-  
-            
+        Choose a Character  
         </button>
         
         <CharacterList
@@ -405,6 +402,7 @@ class App extends React.Component {
         <PlayOptions
           //Pass down boolean to show if video is playing or not
           portalState={this.state.portalState}
+          pickingCharacter={this.state.pickingCharacter}
 
           //Pass down values needed by the Slider
           totalFrames={this.state.currentMoveData === undefined ? 1 : this.state.currentMoveData.frames}
@@ -430,6 +428,8 @@ class App extends React.Component {
 
         <DataTable
           portalState={this.state.portalState}
+          pickingCharacter={this.state.pickingCharacter}
+          pickingCharacter={this.state.pickingCharacter}
           move={this.state.currentMoveData}
           currentFrame={this.state.frame}
           updateHitboxData={this.updateHitboxData}

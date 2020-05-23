@@ -5,7 +5,7 @@ import DataEntry from './DataEntry'
 
 function DataTable(props) {
 
-  if (props.portalState === "hasMove") {
+  if (props.portalState === "hasMove" && !props.pickingCharacter) {
     let hitboxData = [];
     props.move.hitboxes.forEach(function (hitbox) {
       hitboxData.push(<DataEntry hitbox={hitbox} damageMultiplier={props.damageMultiplier} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)

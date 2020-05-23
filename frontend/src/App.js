@@ -12,9 +12,11 @@ import Portal from './components/Portal'
 import PlayOptions from './components/PlayOptions'
 import HitBoxDetail from './components/HitBoxDetail'
 import MoveSelect from './components/MoveSelect'
+import DataTable from './components/DataTable';
 
 //Get character data (will become an api call later)
 import characterData from './characterData.js'
+
 
 let environment;
 if (process.env.NODE_ENV === "development") {
@@ -399,7 +401,7 @@ class App extends React.Component {
           width={this.state.loadingPercent}
           pickingCharacter={this.state.pickingCharacter}
         />
-
+        
         <PlayOptions
           //Pass down boolean to show if video is playing or not
           portalState={this.state.portalState}
@@ -424,8 +426,12 @@ class App extends React.Component {
           changeSpeed={this.changeSpeed}
           playSpeed={this.state.playSpeed}
 
-          //Pass down move data for the Table
+        />
+
+        <DataTable
+          portalState={this.state.portalState}
           move={this.state.currentMoveData}
+          currentFrame={this.state.frame}
           updateHitboxData={this.updateHitboxData}
           jumpToFrame={this.jumpToFrame}
           damageMultiplier={this.state.damageMultiplier}

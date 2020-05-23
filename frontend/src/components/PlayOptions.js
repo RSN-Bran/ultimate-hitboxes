@@ -3,12 +3,12 @@ import React from "react"
 import Slider from './Slider'
 import Buttons from './Buttons';
 import SpeedOptions from './SpeedOptions';
-import DataTable from './DataTable'
+
 
 function PlayOptions(props) {
 	if (props.portalState === "hasMove") {
 		return (
-			<div>
+			<div id="playOptions">
 
 				<Slider
 					totalFrames={props.totalFrames}
@@ -36,14 +36,6 @@ function PlayOptions(props) {
 					playSpeed={props.playSpeed}
 				/>
 
-				<DataTable
-					move={props.move}
-					currentFrame={props.currentFrame}
-					updateHitboxData={props.updateHitboxData}
-					jumpToFrame={props.jumpToFrame}
-					damageMultiplier={props.damageMultiplier}
-					changeDamageMultiplier={props.changeDamageMultiplier}
-				/>
 			</div>
 		)
 	}

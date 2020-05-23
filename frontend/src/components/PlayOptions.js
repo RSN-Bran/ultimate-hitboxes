@@ -2,6 +2,7 @@ import React from "react"
 
 import Slider from './Slider'
 import Buttons from './Buttons';
+import SpeedOptions from './SpeedOptions';
 import DataTable from './DataTable'
 
 function PlayOptions(props) {
@@ -29,31 +30,11 @@ function PlayOptions(props) {
 					currentFrame={props.currentFrame}
 
 				/>
-				<p>Play Speed: </p>
-				<div className="speedButton" id="tenthSpeed">
-					<input type="radio" name="playSpeed" value="10" onChange={props.changeSpeed} checked={props.playSpeed == 10} />
-					<label htmlFor=".1x">.1x</label>
-				</div>
 
-				<div className="speedButton" id="quarterSpeed">
-					<input type="radio" name="playSpeed" value="4" onChange={props.changeSpeed} checked={props.playSpeed == 4} />
-					<label htmlFor=".25x">.25x</label>
-				</div>
-
-				<div className="speedButton" id="halfSpeed">
-					<input type="radio" name="playSpeed" value="2" onChange={props.changeSpeed} checked={props.playSpeed == 2} />
-					<label htmlFor=".5x">.5x</label>
-				</div>
-
-				<div className="speedButton" id="baseSpeed">
-					<input type="radio" name="playSpeed" value="1" onChange={props.changeSpeed} checked={props.playSpeed == 1} />
-					<label htmlFor="1x">1x</label>
-				</div>
-
-				<div className="speedButton" id="doubleSpeed">
-					<input type="radio" name="playSpeed" value=".5" onChange={props.changeSpeed} checked={props.playSpeed == .5} />
-					<label htmlFor="2x">2x</label>
-				</div>
+				<SpeedOptions
+					changeSpeed={props.changeSpeed}
+					playSpeed={props.playSpeed}
+				/>
 
 				<DataTable
 					move={props.move}

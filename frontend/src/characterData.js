@@ -36,7 +36,7 @@
     name: "Dark Samus",
     value: "dark-samus",
     number: "04e",
-    completed: false,
+    completed: true,
     series: "metroid"
   },
   {

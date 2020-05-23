@@ -8,7 +8,7 @@ import './css/App.css';
 //Import components
 import CharacterList from './components/CharacterList'
 import MoveChoice from './components/MoveChoice'
-import Portal from './components/Portal'
+import Player from './components/Player'
 import PlayOptions from './components/PlayOptions'
 import HitBoxDetail from './components/HitBoxDetail'
 import MoveSelect from './components/MoveSelect'
@@ -394,7 +394,7 @@ class App extends React.Component {
           characterData={this.state.currentCharacterData}
         />
 
-        <Portal
+        <Player
           url={this.state.url}
           frame={this.state.frame}
           portalState={this.state.portalState}

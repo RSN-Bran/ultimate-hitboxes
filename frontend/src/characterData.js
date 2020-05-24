@@ -52,7 +52,7 @@
     name: "Kirby",
     value: "kirby",
     number: "06",
-    completed: false,
+    completed: true,
     series: "kirby"
   },
   {

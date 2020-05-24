@@ -44,7 +44,7 @@
     name: "Yoshi",
     value: "yoshi",
     number: "05",
-    completed: false,
+    completed: true,
     series: "yoshi"
   },
   {

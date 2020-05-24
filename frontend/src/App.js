@@ -360,7 +360,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        
+   
         <h3>Smash Ultimate Hitbox Viewer</h3>
         <button id="chooseCharacter"
           onClick={this.chooseCharacter}

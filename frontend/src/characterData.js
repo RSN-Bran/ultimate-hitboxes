@@ -60,7 +60,7 @@
     name: "Fox",
     value: "fox",
     number: "07",
-    completed: false,
+    completed: true,
     series: "star-fox"
   },
   {

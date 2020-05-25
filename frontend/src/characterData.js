@@ -68,7 +68,7 @@
     name: "Pikachu",
     value: "pikachu",
     number: "08",
-    completed: false,
+    completed: true,
     series: "pokemon"
   },
   {

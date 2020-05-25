@@ -1,6 +1,10 @@
 import React from "react"
 
 function SpeedOptions(props) {
+	if (props.totalFrames === 1) {
+		return null;
+	}
+	else {
 		return (
 			<div>
 				<p>Play Speed: </p>
@@ -30,6 +34,8 @@ function SpeedOptions(props) {
 				</div>
 			</div>
 		)
+	}
+		
 }
 
 export default SpeedOptions

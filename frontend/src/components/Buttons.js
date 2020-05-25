@@ -44,7 +44,7 @@ function Buttons(props) {
 
 			<img
 				data-tip data-for="playToolTip"
-				className="button"
+				className={props.totalFrames === 1 ? "buttonNoClick" : "button"}
 				id="pause-play"
 				src={props.playing ? pause : play}
 				onClick={props.playing ? props.pause : props.play}

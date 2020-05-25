@@ -34,6 +34,7 @@ function PlayOptions(props) {
 				<SpeedOptions
 					changeSpeed={props.changeSpeed}
 					playSpeed={props.playSpeed}
+					totalFrames={props.totalFrames}
 				/>
 
 			</div>

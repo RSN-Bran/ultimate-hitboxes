@@ -17,28 +17,34 @@ function Slider(props) {
 	}
 
 	var input = "value=" + props.currentFrame + ";"
-	return (
-		<div id="sliderContainer" style={sliderStyle}>
-			<p>Frame: {props.currentFrame}</p>
-			<div>
-				<input
-					id="videoSlider"
-					name="videoSlider"
-					type="range"
-					min="1"
-					max={props.totalFrames}
-					value={props.currentFrame}
-					onInput={props.change}
-					onChange={props.change}
-					list="ticks"
+	if (props.totalFrames == 1) {
+		return null;
+	}
+	else {
+		return (
+			<div id="sliderContainer" style={sliderStyle}>
+				<p>Frame: {props.currentFrame}</p>
+				<div>
+					<input
+						id="videoSlider"
+						name="videoSlider"
+						type="range"
+						min="1"
+						max={props.totalFrames}
+						value={props.currentFrame}
+						onInput={props.change}
+						onChange={props.change}
+						list="ticks"
 					//style={{ width: (1 / (props.totalFrames-1)) * 100 * (props.totalFrames-1) + "%"}}
-				/>
+					/>
+				</div>
+				<datalist id="ticks">
+					{options}
+				</datalist>
 			</div>
-			<datalist id="ticks">
-				{options}
-			</datalist>
-		</div>
-	)
+		)
+	}
+	
 }
 
 export default Slider

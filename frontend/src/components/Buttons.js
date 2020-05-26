@@ -1,6 +1,5 @@
 import React from "react"
-import ReactTooltip from "react-tooltip";
-
+import ToolTip from './ToolTip';
 
 import minus from '../media/minus.png'
 import plus from '../media/plus.png'
@@ -18,68 +17,75 @@ function Buttons(props) {
 
 			<img
 				data-tip data-for="previousToolTip"
-				className={props.index === 0 ? "buttonNoClick" : "button" }
+				className={props.index !== 0 ? "button" : "buttonNoClick"}
 				id="previous"
 				src={previous}
-				onClick={props.index === 0 ? null : props.previousMove}
+				onClick={props.index !== 0 ? props.previousMove : null}
 				alt="Previous Move"
 			/>
 
-			<ReactTooltip id="previousToolTip" place="top" effect="solid">
-				Show Previous Move
-      </ReactTooltip>
+			<ToolTip
+				id="previousToolTip"
+				text="Show Previous Move"
+				render={props.index !== 0}
+			/>
 
 			<img
 				data-tip data-for="minusToolTip"
-				className={props.currentFrame === 1 || props.playing ? "buttonNoClick" : "button"}
+				className={props.currentFrame !== 1 && !props.playing ? "button" : "buttonNoClick"}
 				id="minus"
 				src={minus}
-				onClick={props.currentFrame === 1 || props.playing ? null : props.decrementFrame}
+				onClick={props.currentFrame !== 1 && !props.playing ? props.decrementFrame : null}
 				alt="Decrement Frame"
 			/>
 
-			<ReactTooltip id="minusToolTip" place="top" effect="solid">
-				Go Back 1 Frame
-      </ReactTooltip>
+			<ToolTip
+				id="minusToolTip"
+				text="Go Back 1 Frame"
+				render={props.currentFrame !== 1 && !props.playing}
+			/>
 
 			<img
 				data-tip data-for="playToolTip"
-				className={props.totalFrames === 1 ? "buttonNoClick" : "button"}
+				className={props.totalFrames !== 1 ? "button" : "buttonNoClick"}
 				id="pause-play"
 				src={props.playing ? pause : play}
 				onClick={props.playing ? props.pause : props.play}
 				alt="Play Move"
 			/>
-
-			<ReactTooltip id="playToolTip" place="top" effect="solid">
-				Play the Move
-      </ReactTooltip>
+			<ToolTip
+				id="playToolTip"
+				text="Play the Move"
+				render={props.totalFrames !== 1}
+			/>
 
 			<img
 				data-tip data-for="plusToolTip"
-				className={props.currentFrame === props.totalFrames || props.playing ? "buttonNoClick" : "button"}
+				className={props.currentFrame !== props.totalFrames && !props.playing ? "button" : "buttonNoClick"}
 				id="plus"
 				src={plus}
-				onClick={props.currentFrame === props.totalFrames || props.playing ? null : props.incrementFrame}
+				onClick={props.currentFrame !== props.totalFrames && !props.playing ? props.incrementFrame : null}
 				alt="Increment Frame"
 			/>
-
-			<ReactTooltip id="plusToolTip" place="top" effect="solid">
-				Go Forward 1 Frame
-      </ReactTooltip>
+			<ToolTip
+				id="plusToolTip"
+				text="Go Forward 1 Frame"
+				render={props.currentFrame !== props.totalFrames && !props.playing}
+			/>
 
 			<img
 				data-tip data-for="nextToolTip"
-				className={props.index === props.totalMoves-1 ? "buttonNoClick" : "button"}
+				className={props.index !== props.totalMoves - 1 ? "button" : "buttonNoClick"}
 				id="next"
 				src={next}
-				onClick={props.index === props.totalMoves - 1 ? null : props.nextMove}
+				onClick={props.index !== props.totalMoves - 1 ? props.nextMove : null}
 				alt="NextMove"
 			/>
-
-			<ReactTooltip id="nextToolTip" place="top" effect="solid">
-				Show Next Move
-      </ReactTooltip>
+			<ToolTip
+				id="nextToolTip"
+				text="Show Next Movee"
+				render={props.index !== props.totalMoves - 1}
+			/>
 
 		</div>
 	)

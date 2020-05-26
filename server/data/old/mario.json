@@ -4574,8 +4574,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [24,25,26],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         }
       ]
@@ -4623,8 +4623,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [16,17],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -4664,8 +4664,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [21,22],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         }
       ]
@@ -4713,7 +4713,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [19,20],
+          "frames": [],
           "color": "",
           "notes": ""
         },
@@ -4754,8 +4754,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [24,25],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         }
       ]
@@ -4803,8 +4803,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [19,20],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -4844,8 +4844,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [31,32],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         }
       ]

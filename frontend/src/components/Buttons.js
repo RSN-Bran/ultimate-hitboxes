@@ -55,7 +55,7 @@ function Buttons(props) {
 			/>
 			<ToolTip
 				id="playToolTip"
-				text="Play the Move"
+				text={props.playing ? "Pause the Move" : "Play the Move"}
 				render={props.totalFrames !== 1}
 			/>
 

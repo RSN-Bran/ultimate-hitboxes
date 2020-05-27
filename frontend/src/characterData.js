@@ -76,7 +76,7 @@
     name: "Luigi",
     value: "luigi",
     number: "09",
-    completed: false,
+    completed: true,
     series: "super-mario"
   },
   {

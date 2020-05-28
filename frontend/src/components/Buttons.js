@@ -83,7 +83,7 @@ function Buttons(props) {
 			/>
 			<ToolTip
 				id="nextToolTip"
-				text="Show Next Movee"
+				text="Show Next Move"
 				render={props.index !== props.totalMoves - 1}
 			/>
 

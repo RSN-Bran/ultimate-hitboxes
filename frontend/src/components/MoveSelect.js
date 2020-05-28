@@ -9,7 +9,7 @@ function MoveSelect(props) {
 		return null
 	}
 	else {
-		let moveList = props.characterData.moves.map(move => <MoveChoice key={move.value} name={move.name} value={move.value} currentMove={props.currentMoveData} />)
+		let moveList = props.characterData.moves.map(move => <MoveChoice key={move.value} name={move.name} value={move.value} complete={move.complete} currentMove={props.currentMoveData} />)
 		return (
 			<select
 				name="Select Move"

@@ -332,7 +332,16 @@ class App extends React.Component {
     };
 
     //Set the move to be passed as the next move in the list
-    let nextMove = this.state.moveList[index + 1]
+    let nextMove = undefined;
+    let increment = 1;
+    while (nextMove === undefined) {
+      if (this.state.moveList[index + increment].complete !== false) {
+        nextMove = this.state.moveList[index + increment]
+      }
+      else {
+        increment = increment + 1
+      }
+    }
     event.target.value = nextMove.value
 
     //Call the setMove function
@@ -350,7 +359,16 @@ class App extends React.Component {
     };
 
     //Set the move to be passed as the next move in the list
-    let nextMove = this.state.moveList[index - 1]
+    let nextMove = undefined;
+    let increment = 1;
+    while (nextMove === undefined) {
+      if (this.state.moveList[index - increment].complete !== false) {
+        nextMove = this.state.moveList[index - increment]
+      }
+      else {
+        increment = increment + 1
+      }
+    }
     event.target.value = nextMove.value
 
     //Call the setMove function

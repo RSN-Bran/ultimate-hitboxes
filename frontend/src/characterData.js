@@ -84,7 +84,7 @@
     name: "Ness",
     value: "ness",
     number: "10",
-    completed: false,
+    completed: true,
     series: "earthbound"
   },
   {

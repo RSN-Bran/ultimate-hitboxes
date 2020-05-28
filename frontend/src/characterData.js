@@ -92,7 +92,7 @@
     name: "Captain Falcon",
     value: "captain-falcon",
     number: "11",
-    completed: false,
+    completed: true,
     series: "f-zero"
   },
   {

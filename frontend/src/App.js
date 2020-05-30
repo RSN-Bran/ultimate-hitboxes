@@ -166,8 +166,11 @@ class App extends React.Component {
 
   setMove(event) {
 
+    let characterFromCharacterData = characterData.filter(obj => {
+      return obj.value === this.state.currentCharacterData.value
+    })
     //GET data for the move to be loaded
-    fetch(`http://${environment}:5000/${this.state.currentCharacterData.value}/${event.target.value}/data`)
+    fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${this.state.currentCharacterData.value}/${event.target.value}/data`)
       .then(response => response.json())
       .then(data => {
 

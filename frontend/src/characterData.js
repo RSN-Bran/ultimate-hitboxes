@@ -108,7 +108,7 @@
     name: "Peach",
     value: "peach",
     number: "13",
-    completed: false,
+    completed: true,
     series: "super-mario"
   },
   {

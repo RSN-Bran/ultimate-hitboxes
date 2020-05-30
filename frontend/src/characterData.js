@@ -115,8 +115,8 @@
     id: 15,
     name: "Daisy",
     value: "daisy",
-    number: "13ε",
-    completed: false,
+    number: "13e",
+    completed: true,
     series: "super-mario"
   },
   {

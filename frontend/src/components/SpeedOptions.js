@@ -8,6 +8,11 @@ function SpeedOptions(props) {
 		return (
 			<div>
 				<p>Play Speed: </p>
+				<div className="speedButton" id="hundrethSpeed">
+					<input type="radio" name="playSpeed" value="60" onChange={props.changeSpeed} checked={props.playSpeed == 60} />
+					<label htmlFor=".06x">.06x</label>
+				</div>
+
 				<div className="speedButton" id="tenthSpeed">
 					<input type="radio" name="playSpeed" value="10" onChange={props.changeSpeed} checked={props.playSpeed == 10} />
 					<label htmlFor=".1x">.1x</label>

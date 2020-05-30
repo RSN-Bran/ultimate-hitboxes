@@ -135,8 +135,12 @@ class App extends React.Component {
 
   //Get all data for a character
   getCharacterData(character) {
+    let characterFromCharacterData = characterData.filter(obj => {
+      return obj.value === character
+    })
+    console.log(characterFromCharacterData)
     //API call to server to get character data
-    fetch(`http://${environment}:5000/${character}/data`)
+    fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${character}/data`)
       .then(response => response.json())
       .then(data => {
         //Save the character data

@@ -2,8 +2,6 @@ import React from "react"
 
 function MoveChoice(props) {
 	if (props.currentMove !== undefined) {
-		console.log(props.name)
-		console.log(props.complete)
 		return (
 			<option
 				value={props.value}

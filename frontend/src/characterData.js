@@ -124,7 +124,7 @@
     name: "Bowser",
     value: "bowser",
     number: "14",
-    completed: false,
+    completed: true,
     series: "super-mario"
   },
   {

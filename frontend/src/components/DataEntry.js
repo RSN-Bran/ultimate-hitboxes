@@ -3,9 +3,15 @@ import React from "react"
 import '../css/DataTable.css'
 function DataEntry(props) {
 
-  let color = "";
+  let style = {}
   if (props.hitbox.frames.includes(props.currentFrame)) {
-    color = props.hitbox.color
+    style.backgroundColor = props.hitbox.color
+    if (props.hitbox.color === "yellow" || props.hitbox.color === "white") {
+      style.color = "black"
+    }
+    else {
+      style.color = "white"
+    }
   }
 
   let frametd;
@@ -15,8 +21,9 @@ function DataEntry(props) {
   else {
     frametd = <td></td>
   }
+
   return (
-    <tr style={{ backgroundColor: color }}>
+    <tr style={style}>
 
       {frametd}
       <td>{props.damageMultiplier ? parseFloat(props.hitbox.damage * 1.2).toFixed(1) : parseFloat(props.hitbox.damage).toFixed(1)}</td>

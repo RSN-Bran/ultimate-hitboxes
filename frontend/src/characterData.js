@@ -132,7 +132,7 @@
     name: "Ice Climbers",
     value: "ice-climbers",
     number: "15",
-    completed: false,
+    completed: true,
     series: "ice-climber"
   },
   {

@@ -140,7 +140,7 @@
     name: "Sheik",
     value: "sheik",
     number: "16",
-    completed: false,
+    completed: true,
     series: "legend-of-zelda"
   },
   {

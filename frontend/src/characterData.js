@@ -148,7 +148,7 @@
     name: "Zelda",
     value: "zelda",
     number: "17",
-    completed: false,
+    completed: true,
     series: "legend-of-zelda"
   },
   {

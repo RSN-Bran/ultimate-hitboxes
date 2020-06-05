@@ -156,7 +156,7 @@
     name: "Dr. Mario",
     value: "dr-mario",
     number: "18",
-    completed: false,
+    completed: true,
     series: "super-mario"
   },
   {

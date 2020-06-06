@@ -164,7 +164,7 @@
     name: "Pichu",
     value: "pichu",
     number: "19",
-    completed: false,
+    completed: true,
     series: "pokemon"
   },
   {

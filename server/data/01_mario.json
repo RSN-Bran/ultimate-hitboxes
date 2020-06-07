@@ -2383,6 +2383,7 @@
       "value": "MarioGrab",
       "frames": 34,
       "faf": 34,
+      "type": "grab",
       "hitboxes": [
         {
           "id": "0",
@@ -2423,6 +2424,7 @@
       "value": "MarioDashGrab",
       "frames": 42,
       "faf": 42,
+      "type": "grab",
       "hitboxes": [
         {
           "id": "0",
@@ -2463,6 +2465,7 @@
       "value": "MarioPivotGrab",
       "frames": 36,
       "faf": 36,
+      "type": "grab",
       "hitboxes": [
         {
           "id": "0",

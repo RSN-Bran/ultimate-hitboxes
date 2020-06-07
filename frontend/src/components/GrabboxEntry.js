@@ -26,6 +26,7 @@ function GrabboxEntry(props) {
     <tr style={style}>
 
       {frametd}
+      <td>{props.hitbox.size}</td>
       <td>{props.hitbox.ground_air === "collision_situation_mask_g" ? "Ground" : "Air"}</td>
       <td><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td>
     </tr>

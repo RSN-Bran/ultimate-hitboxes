@@ -3328,21 +3328,123 @@
       "value": "LinkGrab",
       "frames": 34,
       "faf": 34,
-      "hitboxes": []
+      "type": "grab",
+      "hitboxes": [
+        {
+          "id": "0",
+          "bone": "top",
+          "size": "3.3",
+          "x": "0.0",
+          "y": "8.0",
+          "z": "4.0",
+          "x2": "0.0",
+          "y2": "8.0",
+          "z2": "7.7",
+          "status": "fighter_status_kind_capture_pulled",
+          "ground_air": "collision_situation_mask_g",
+          "frames": [6,7],
+          "color": "darkviolet",
+          "notes": ""
+        },
+        {
+          "id": "1",
+          "bone": "top",
+          "size": "1.65",
+          "x": "0.0",
+          "y": "8.0",
+          "z": "2.35",
+          "x2": "0.0",
+          "y2": "8.0",
+          "z2": "9.35",
+          "status": "fighter_status_kind_capture_pulled",
+          "ground_air": "collision_situation_mask_a",
+          "frames": [6,7],
+          "color": "purple",
+          "notes": ""
+        }
+      ]
     },
     {
       "name": "Dash Grab",
       "value": "LinkDashGrab",
       "frames": 42,
       "faf": 42,
-      "hitboxes": []
+      "type": "grab",
+      "hitboxes": [
+        {
+          "id": "0",
+          "bone": "top",
+          "size": "2.6",
+          "x": "0.0",
+          "y": "7.0",
+          "z": "4.0",
+          "x2": "0.0",
+          "y2": "7.0",
+          "z2": "9.4",
+          "status": "fighter_status_kind_capture_pulled",
+          "ground_air": "collision_situation_mask_g",
+          "frames": [9,10],
+          "color": "darkviolet",
+          "notes": ""
+        },
+        {
+          "id": "1",
+          "bone": "top",
+          "size": "1.3",
+          "x": "0.0",
+          "y": "7.0",
+          "z": "2.7",
+          "x2": "0.0",
+          "y2": "7.0",
+          "z2": "10.7",
+          "status": "fighter_status_kind_capture_pulled",
+          "ground_air": "collision_situation_mask_a",
+          "frames": [9,10],
+          "color": "purple",
+          "notes": ""
+        }
+      ]
     },
     {
       "name": "Pivot Grab",
       "value": "LinkPivotGrab",
       "frames": 37,
       "faf": 37,
-      "hitboxes": []
+      "type": "grab",
+      "hitboxes": [
+        {
+          "id": "0",
+          "bone": "top",
+          "size": "3.3",
+          "x": "0.0",
+          "y": "7.0",
+          "z": "-4.0",
+          "x2": "0.0",
+          "y2": "7.0",
+          "z2": "-13.2",
+          "status": "fighter_status_kind_capture_pulled",
+          "ground_air": "collision_situation_mask_g",
+          "frames": [10,11],
+          "color": "darkviolet",
+          "notes": ""
+        },
+        {
+          "id": "1",
+          "bone": "top",
+          "size": "1.65",
+          "x": "0.0",
+          "y": "7.0",
+          "z": "-2.35",
+          "x2": "0.0",
+          "y2": "7.0",
+          "z2": "-14.85",
+          "status": "fighter_status_kind_capture_pulled",
+          "ground_air": "collision_situation_mask_a",
+          "frames": [10,11],
+          "color": "purple",
+          "notes": ""
+        }
+      ]
     },
     {
       "name": "Forward Throw",

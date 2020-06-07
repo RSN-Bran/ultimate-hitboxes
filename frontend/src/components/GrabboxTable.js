@@ -15,7 +15,8 @@ function GrabboxTable(props) {
         <thead>
           <tr>
             <th data-tip data-for="frameToolTip">Frame</th>
-            <th data-tip data-for="ground-air">Ground/Air</th>
+            <th data-tip data-for="sizeToolTip">Size</th>
+            <th data-tip data-for="ground-airToolTip">Ground/Air</th>
             <th data-tip data-for="moreToolTip">More Data</th>
           </tr>
         </thead>
@@ -28,7 +29,11 @@ function GrabboxTable(props) {
         First Active Frame of the hitbox. Click on the number to jump to that frame.
       </ReactTooltip>
 
-      <ReactTooltip id="ground-air" place="top" effect="solid">
+      <ReactTooltip id="sizeToolTip" place="top" effect="solid">
+        Size of the hitbox.
+      </ReactTooltip>
+
+      <ReactTooltip id="ground-airToolTip" place="top" effect="solid">
         Determines if it affects grounded or aerial opponents
       </ReactTooltip>
 

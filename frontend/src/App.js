@@ -454,7 +454,6 @@ class App extends React.Component {
         <DataTable
           portalState={this.state.portalState}
           pickingCharacter={this.state.pickingCharacter}
-          pickingCharacter={this.state.pickingCharacter}
           move={this.state.currentMoveData}
           currentFrame={this.state.frame}
           updateHitboxData={this.updateHitboxData}

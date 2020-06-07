@@ -1,7 +1,7 @@
 import React from "react"
 
 import '../css/DataTable.css'
-function DataEntry(props) {
+function HitboxEntry(props) {
 
   let style = {}
   if (props.hitbox.frames.includes(props.currentFrame)) {
@@ -40,4 +40,4 @@ function DataEntry(props) {
   )
 }
 
-export default DataEntry
+export default HitboxEntry

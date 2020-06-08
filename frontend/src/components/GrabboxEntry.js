@@ -22,12 +22,23 @@ function GrabboxEntry(props) {
     frametd = <td></td>
   }
 
+  let ground_air;
+  if (props.hitbox.ground_air === "collision_situation_mask_g") {
+    ground_air = "Ground"
+  }
+  else if (props.hitbox.ground_air === "collision_situation_mask_a") {
+    ground_air = "Air"
+  }
+  else if (props.hitbox.ground_air === "collision_situation_mask_ga") {
+    ground_air = "Ground/Air"
+  }
+ 
   return (
     <tr style={style}>
 
       {frametd}
       <td>{props.hitbox.size}</td>
-      <td>{props.hitbox.ground_air === "collision_situation_mask_g" ? "Ground" : "Air"}</td>
+      <td>{ground_air}</td>
       <td><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td>
     </tr>
   )

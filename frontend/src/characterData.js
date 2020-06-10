@@ -172,7 +172,7 @@
     name: "Falco",
     value: "falco",
     number: "20",
-    completed: false,
+    completed: true,
     series: "star-fox"
   },
   {

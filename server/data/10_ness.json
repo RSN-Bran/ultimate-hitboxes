@@ -2233,6 +2233,7 @@
       "value": "NessGrab",
       "frames": 37,
       "faf": 37,
+      "type": "grab",
       "hitboxes": [
         {
           "id": "0",
@@ -2246,8 +2247,8 @@
           "z2": "8.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [6,7],
+          "color": "darkviolet",
           "notes": ""
         },
         {
@@ -2262,8 +2263,8 @@
           "z2": "10.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_a",
-          "frames": [],
-          "color": "",
+          "frames": [6,7],
+          "color": "purple",
           "notes": ""
         }
       ]
@@ -2273,6 +2274,7 @@
       "value": "NessDashGrab",
       "frames": 45,
       "faf": 45,
+      "type": "grab",
       "hitboxes": [
         {
           "id": "0",
@@ -2286,8 +2288,8 @@
           "z2": "9.8",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [9,10],
+          "color": "darkviolet",
           "notes": ""
         },
         {
@@ -2302,8 +2304,8 @@
           "z2": "11.4",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_a",
-          "frames": [],
-          "color": "",
+          "frames": [9,10],
+          "color": "purple",
           "notes": ""
         }
       ]
@@ -2313,6 +2315,7 @@
       "value": "NessPivotGrab",
       "frames": 40,
       "faf": 40,
+      "type": "grab",
       "hitboxes": [
         {
           "id": "0",
@@ -2326,8 +2329,8 @@
           "z2": "-14.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "darkviolet",
           "notes": ""
         },
         {
@@ -2342,8 +2345,8 @@
           "z2": "-16.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_a",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "purple",
           "notes": ""
         }
       ]

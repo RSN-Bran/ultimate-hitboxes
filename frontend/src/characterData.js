@@ -180,7 +180,7 @@
     name: "Marth",
     value: "marth",
     number: "21",
-    completed: false,
+    completed: true,
     series: "fire-emblem"
   },
   {

@@ -187,8 +187,8 @@
     id: 24,
     name: "Lucina",
     value: "lucina",
-    number: "21ε",
-    completed: false,
+    number: "21e",
+    completed: true,
     series: "fire-emblem"
   },
   {
@@ -227,7 +227,7 @@
     id: 29,
     name: "Chrom",
     value: "chrom",
-    number: "25ε",
+    number: "25e",
     completed: false,
     series: "fire-emblem"
   },
@@ -259,7 +259,7 @@
     id: 33,
     name: "Dark Pit",
     value: "dark-pit",
-    number: "28ε",
+    number: "28e",
     completed: false,
     series: "kid-icarus"
   },
@@ -523,7 +523,7 @@
     id: 66,
     name: "Ken",
     value: "ken",
-    number: "60ε",
+    number: "60e",
     completed: false,
     series: "street-fighter"
   },
@@ -579,7 +579,7 @@
     id: 73,
     name: "Richter",
     value: "richter",
-    number: "66ε",
+    number: "66e",
     completed: false,
     series: "castlevania"
   },

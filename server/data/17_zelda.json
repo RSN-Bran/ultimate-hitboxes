@@ -3444,6 +3444,7 @@
       "value": "ZeldaGrab",
       "frames": 39,
       "faf": 39,
+      "type": "grab",
       "hitboxes": [
         {
           "id": "0",
@@ -3457,8 +3458,8 @@
           "z2": "11.5",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "darkviolet",
           "notes": ""
         },
         {
@@ -3473,8 +3474,8 @@
           "z2": "13.4",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_a",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "purple",
           "notes": ""
         }
       ]
@@ -3484,6 +3485,7 @@
       "value": "ZeldaDashGrab",
       "frames": 47,
       "faf": 47,
+      "type": "grab",
       "hitboxes": [
         {
           "id": "0",
@@ -3497,8 +3499,8 @@
           "z2": "13.3",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [13,14],
+          "color": "darkviolet",
           "notes": ""
         },
         {
@@ -3513,8 +3515,8 @@
           "z2": "14.8",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_a",
-          "frames": [],
-          "color": "",
+          "frames": [13,14],
+          "color": "purple",
           "notes": ""
         }
       ]
@@ -3524,6 +3526,7 @@
       "value": "ZeldaPivotGrab",
       "frames": 42,
       "faf": 42,
+      "type": "grab",
       "hitboxes": [
         {
           "id": "0",
@@ -3537,8 +3540,8 @@
           "z2": "-19.200001",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [14,15],
+          "color": "darkviolet",
           "notes": ""
         },
         {
@@ -3553,8 +3556,8 @@
           "z2": "-21.1",
           "status": "fighter_status_kind_capture_pulled",
           "ground_air": "collision_situation_mask_a",
-          "frames": [],
-          "color": "",
+          "frames": [14,15],
+          "color": "purple",
           "notes": ""
         }
       ]

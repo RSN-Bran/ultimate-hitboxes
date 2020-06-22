@@ -196,7 +196,7 @@
     name: "Young Link",
     value: "young-link",
     number: "22",
-    completed: false,
+    completed: true,
     series: "legend-of-zelda"
   },
   {

@@ -204,7 +204,7 @@
     name: "Ganondorf",
     value: "ganondorf",
     number: "23",
-    completed: false,
+    completed: true,
     series: "legend-of-zelda"
   },
   {

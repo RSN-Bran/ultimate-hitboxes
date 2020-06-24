@@ -3,6 +3,7 @@ import ReactTooltip from "react-tooltip";
 
 import HitboxTable from './HitboxTable'
 import GrabboxTable from './GrabboxTable'
+import '../css/DataTable.css';
 
 function DataTable(props) {
   if (props.portalState === "hasMove" && !props.pickingCharacter) {
@@ -38,7 +39,7 @@ function DataTable(props) {
     return (
       <div>
         <input type="checkbox" onClick={props.changeHitboxTable} id="showAllHitboxData" name="showAllHitboxData" checked={props.showAllHitboxData} />
-        {props.showAllHitboxData ? "Showing all hitbox data" : "Showing only active hitbox data"}
+        <span>{props.showAllHitboxData ? "Showing all hitbox data" : "Showing only active hitbox data"}</span>
         {returnTable}
       </div>
      )

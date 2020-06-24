@@ -8,3 +8,7 @@ table, th, td {
 tr {
 	color: white;
 }
+
+span {
+	font-size: .6em;
+}

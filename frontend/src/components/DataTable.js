@@ -6,10 +6,11 @@ import GrabboxTable from './GrabboxTable'
 
 function DataTable(props) {
   if (props.portalState === "hasMove" && !props.pickingCharacter) {
-
+    let returnTable;
     if (props.move.type === "grab") {
-      return (
+      returnTable =
         <GrabboxTable
+          showAllHitboxData={props.showAllHitboxData}
           portalState={props.portalState}
           pickingCharacter={props.pickingCharacter}
           move={props.move}
@@ -19,11 +20,11 @@ function DataTable(props) {
           damageMultiplier={props.damageMultiplier}
           changeDamageMultiplier={props.changeDamageMultiplier}
         />
-      )
     }
     else {
-      return (
+      returnTable =
         <HitboxTable
+          showAllHitboxData={props.showAllHitboxData}
           portalState={props.portalState}
           pickingCharacter={props.pickingCharacter}
           move={props.move}
@@ -33,8 +34,14 @@ function DataTable(props) {
           damageMultiplier={props.damageMultiplier}
           changeDamageMultiplier={props.changeDamageMultiplier}
         />
-      )
     }
+    return (
+      <div>
+        <input type="checkbox" onClick={props.changeHitboxTable} id="showAllHitboxData" name="showAllHitboxData" checked={props.showAllHitboxData} />
+        {props.showAllHitboxData ? "Showing all hitbox data" : "Showing only active hitbox data"}
+        {returnTable}
+      </div>
+     )
   }
   else {
     return null;

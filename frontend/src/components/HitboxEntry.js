@@ -23,7 +23,8 @@ function HitboxEntry(props) {
     frametd = <td></td>
   }
 
-  return (
+  if (props.showAllHitboxData || props.hitbox.frames.includes(props.currentFrame)) {
+    return (
       <tr style={style}>
 
         {frametd}
@@ -36,12 +37,15 @@ function HitboxEntry(props) {
         <td>{props.hitbox.trip}</td>
         <td><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td>
 
-      <ReactTooltip id={"allFramesToolTip-" + props.index} place="top" effect="solid">
+        <ReactTooltip id={"allFramesToolTip-" + props.index} place="top" effect="solid">
           {props.hitbox.frames.join()}
         </ReactTooltip>
       </tr>
-
-  )
+    )
+  }
+  else {
+    return null;
+  }
 }
 
 export default HitboxEntry

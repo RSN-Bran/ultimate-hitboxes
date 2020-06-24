@@ -8,7 +8,7 @@ function HitboxTable(props) {
   if (props.portalState === "hasMove" && !props.pickingCharacter) {
     let hitboxData = [];
     props.move.hitboxes.forEach(function (hitbox, index) {
-      hitboxData.push(<HitboxEntry hitbox={hitbox} index={index} damageMultiplier={props.damageMultiplier} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)
+      hitboxData.push(<HitboxEntry hitbox={hitbox} index={index} damageMultiplier={props.damageMultiplier} showAllHitboxData={props.showAllHitboxData} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)
     })
     return (
       <div id="dataTable">

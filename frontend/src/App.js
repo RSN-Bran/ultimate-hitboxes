@@ -67,6 +67,8 @@ class App extends React.Component {
       search: "",
 
       damageMultiplier: false,
+
+      showAllHitboxData: true
     }
 
     //Bind functions so they are usable within components
@@ -88,6 +90,7 @@ class App extends React.Component {
     this.changeDamageMultiplier = this.changeDamageMultiplier.bind(this)
     this.nextMove = this.nextMove.bind(this)
     this.previousMove = this.previousMove.bind(this)
+    this.changeHitboxTable = this.changeHitboxTable.bind(this)
 
   }
 
@@ -327,6 +330,19 @@ class App extends React.Component {
     }
   }
 
+  changeHitboxTable() {
+    if (this.state.showAllHitboxData) {
+      this.setState({
+        showAllHitboxData: false
+      })
+    }
+    else {
+      this.setState({
+        showAllHitboxData: true
+      })
+    }
+  }
+
   nextMove() {
 
     console.log(this.state.moveList)
@@ -452,6 +468,8 @@ class App extends React.Component {
         />
 
         <DataTable
+          showAllHitboxData={this.state.showAllHitboxData}
+          changeHitboxTable={this.changeHitboxTable}
           portalState={this.state.portalState}
           pickingCharacter={this.state.pickingCharacter}
           move={this.state.currentMoveData}
@@ -460,6 +478,7 @@ class App extends React.Component {
           jumpToFrame={this.jumpToFrame}
           damageMultiplier={this.state.damageMultiplier}
           changeDamageMultiplier={this.changeDamageMultiplier}
+
         />
       </div>
     );

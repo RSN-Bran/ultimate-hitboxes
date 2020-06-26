@@ -141,7 +141,6 @@ class App extends React.Component {
     let characterFromCharacterData = characterData.filter(obj => {
       return obj.value === character
     })
-    console.log(characterFromCharacterData)
     //API call to server to get character data
     fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${character}/data`)
       .then(response => response.json())
@@ -345,7 +344,6 @@ class App extends React.Component {
 
   nextMove() {
 
-    console.log(this.state.moveList)
     //Get index of the move in the array
     let index = this.state.moveList.findIndex((element) => element.name === this.state.currentMoveData.name)
     
@@ -372,7 +370,6 @@ class App extends React.Component {
   }
 
   previousMove() {
-    console.log("here")
     //Get index of the move in the array
     let index = this.state.moveList.findIndex((element) => element.name === this.state.currentMoveData.name)
 

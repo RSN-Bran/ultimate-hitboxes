@@ -2,6 +2,7 @@ import React from "react"
 import ReactTooltip from "react-tooltip";
 
 import HitboxEntry from './HitboxEntry'
+import '../css/DataTable.css';
 
 function HitboxTable(props) {
 

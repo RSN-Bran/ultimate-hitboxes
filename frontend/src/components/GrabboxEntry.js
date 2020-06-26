@@ -32,16 +32,21 @@ function GrabboxEntry(props) {
   else if (props.hitbox.ground_air === "collision_situation_mask_ga") {
     ground_air = "Ground/Air"
   }
- 
-  return (
-    <tr style={style}>
 
-      {frametd}
-      <td>{props.hitbox.size}</td>
-      <td>{ground_air}</td>
-      <td><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td>
-    </tr>
-  )
+  if (props.showAllHitboxData || props.hitbox.frames.includes(props.currentFrame)) {
+    return (
+      <tr style={style}>
+
+        {frametd}
+        <td>{props.hitbox.size}</td>
+        <td>{ground_air}</td>
+        <td><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td>
+      </tr>
+    )
+  }
+  else {
+    return null;
+  }
 }
 
 export default GrabboxEntry

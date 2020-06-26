@@ -11,7 +11,6 @@ import previous from '../media/previous.png'
 import '../css/Button.css';
 
 function Buttons(props) {
-	console.log(props.index)
 	return (
 		<div>
 

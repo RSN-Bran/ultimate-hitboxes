@@ -23,7 +23,7 @@ function Slider(props) {
 	else {
 		return (
 			<div id="sliderContainer" style={sliderStyle}>
-				<p>Frame: {props.currentFrame}</p>
+				<h5>Frame: {props.currentFrame}</h5>
 				<div>
 					<input
 						id="videoSlider"

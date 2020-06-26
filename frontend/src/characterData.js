@@ -655,6 +655,14 @@
     completed: false,
     series: "fire-emblem"
   },
+  {
+    id: 83,
+    name: "Min Min",
+    value: "min-min",
+    number: "76",
+    completed: false,
+    series: "arms"
+  },
 ]
 
 export default characterData

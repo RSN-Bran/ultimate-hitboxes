@@ -15,7 +15,7 @@ app.get('/characterData', (req, res) => {
         return
     }
     res.setHeader('Access-Control-Allow-Origin', '*');
-    console.log(jsonString)
+    console.log("it worked")
     let json = JSON.parse(jsonString)
     res.send(json) 
     

@@ -8,7 +8,6 @@ function HitboxTable(props) {
 
   try {
     let hitboxData = [];
-    console.log(props)
     props.move.hitboxes.forEach(function (hitbox, index) {
       hitboxData.push(<HitboxEntry hitbox={hitbox} index={index} damageMultiplier={props.damageMultiplier} showAllHitboxData={props.showAllHitboxData} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)
     })

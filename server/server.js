@@ -15,7 +15,6 @@ app.get('/characterData', (req, res) => {
         return
     }
     res.setHeader('Access-Control-Allow-Origin', '*');
-    console.log("it worked")
     let json = JSON.parse(jsonString)
     res.send(json) 
     
@@ -36,6 +35,7 @@ app.get('/:character/data', (req, res) => {
       let move = {};
       move.name = allData.moves[i].name;
       move.value = allData.moves[i].value;
+      move.complete = allData.moves[i].complete;
       moveList.push(move)
     }
     allData.moves=moveList

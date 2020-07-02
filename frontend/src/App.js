@@ -41,11 +41,8 @@ class App extends React.Component {
       characterData: "empty",
 
       //Data for the character and moved currently selected
-      currentCharacterData: undefined,
+      currentCharacterData: { moves: [] },
       currentMoveData: undefined,
-
-      //List of moves to be generated, may remove from state later
-      moveList: [],
 
       //State of the viewing portal
       //* 'initial' initial state when the page is first loaded, shows a blank portal
@@ -140,7 +137,7 @@ class App extends React.Component {
   //Get all data for a character
   getCharacterData(character) {
 
-    //get the characters number from the locally stored sheet
+    //get the characters number by searching characterData
     let characterFromCharacterData = this.state.characterData.filter(obj => {
       return obj.value === character
     })
@@ -148,10 +145,9 @@ class App extends React.Component {
     fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${character}/data`)
       .then(response => response.json())
       .then(data => {
-        //Save the character data
+        //Save the character data to the state
         this.setState({
           currentCharacterData: data,
-          moveList: data.moves,
           //set the current move as the first one
           currentMoveData: data.moves[0],
           playing: false,
@@ -282,13 +278,10 @@ class App extends React.Component {
 
   //When entering the character select screen, set the boolean to true
   chooseCharacter() {
-    console.log(this.state.characterData)
     if (this.state.characterData === "empty") {
-      console.log("here")
       fetch(`http://${environment}:5000/characterData`)
         .then(response => response.json())
         .then(data => {
-          console.log(data)
           //Save the character data
           this.setState({
             pickingCharacter: true,
@@ -301,7 +294,6 @@ class App extends React.Component {
         })
     }
     else {
-      console.log("I'm here for some fucking reason")
       this.setState({
         pickingCharacter: true
       })
@@ -362,7 +354,7 @@ class App extends React.Component {
   nextMove() {
 
     //Get index of the move in the array
-    let index = this.state.moveList.findIndex((element) => element.name === this.state.currentMoveData.name)
+    let index = this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name)
     
     //Create a dummy event object to pass to the setMove function
     let event = {
@@ -373,8 +365,8 @@ class App extends React.Component {
     let nextMove = undefined;
     let increment = 1;
     while (nextMove === undefined) {
-      if (this.state.moveList[index + increment].complete !== false) {
-        nextMove = this.state.moveList[index + increment]
+      if (this.state.currentCharacterData.moves[index + increment].complete !== false) {
+        nextMove = this.state.currentCharacterData.moves[index + increment]
       }
       else {
         increment = increment + 1
@@ -388,7 +380,7 @@ class App extends React.Component {
 
   previousMove() {
     //Get index of the move in the array
-    let index = this.state.moveList.findIndex((element) => element.name === this.state.currentMoveData.name)
+    let index = this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name)
 
     //Create a dummy event object to pass to the setMove function
     let event = {
@@ -399,8 +391,8 @@ class App extends React.Component {
     let nextMove = undefined;
     let increment = 1;
     while (nextMove === undefined) {
-      if (this.state.moveList[index - increment].complete !== false) {
-        nextMove = this.state.moveList[index - increment]
+      if (this.state.currentCharacterData.moves[index - increment].complete !== false) {
+        nextMove = this.state.currentCharacterData.moves[index - increment]
       }
       else {
         increment = increment + 1
@@ -441,7 +433,7 @@ class App extends React.Component {
 
         <MoveSelect
           setMove={this.setMove}
-          moveList={this.state.moveList}
+          moveList={this.state.currentCharacterData.moves}
           currentMoveData={this.state.currentMoveData}
           characterData={this.state.currentCharacterData}
         />
@@ -472,8 +464,8 @@ class App extends React.Component {
           pause={this.pause}
           nextMove={this.nextMove}
           previousMove={this.previousMove}
-          index={this.state.currentMoveData !== undefined ? this.state.moveList.findIndex((element) => element.name === this.state.currentMoveData.name) : undefined}
-          totalMoves={this.state.moveList.length}
+          index={this.state.currentMoveData !== undefined ? this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name) : undefined}
+          totalMoves={this.state.currentCharacterData.moves.length}
 
           //Pass down values needed by the Speed Options
           changeSpeed={this.changeSpeed}

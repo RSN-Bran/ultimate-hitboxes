@@ -44,6 +44,7 @@ function Player(props) {
 			</div>
 		)
 	}
+
 	else {
 		portalRender = props.url + props.frame + '.png'
 		return (

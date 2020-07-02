@@ -7,17 +7,13 @@ import './css/App.css';
 
 //Import components
 import CharacterList from './components/CharacterList'
-import MoveChoice from './components/MoveChoice'
 import Player from './components/Player'
 import PlayOptions from './components/PlayOptions'
 import HitBoxDetail from './components/HitBoxDetail'
 import MoveSelect from './components/MoveSelect'
 import DataTable from './components/DataTable';
 
-//Get character data (will become an api call later)
-import characterData from './characterData.js'
-
-
+//Set hostname to query depending on dev vs PROD
 let environment;
 if (process.env.NODE_ENV === "development") {
   environment = "localhost"
@@ -32,6 +28,7 @@ class App extends React.Component {
     super();
 
     let playInterval;
+
     //State
     this.state = {
 
@@ -40,12 +37,15 @@ class App extends React.Component {
       frame: 1, /*frame that the image is on, starts at 1*/
       playing: false, /*Is the video currently playing?*/
 
+      //Data on basic info for all characters to be used by the character select screen
+      characterData: "empty",
+
       //Data for the character and moved currently selected
       currentCharacterData: undefined,
       currentMoveData: undefined,
 
       //List of moves to be generated, may remove from state later
-      moveList: [<MoveChoice key={0} name={"Choose a Move"} />],
+      moveList: [],
 
       //State of the viewing portal
       //* 'initial' initial state when the page is first loaded, shows a blank portal
@@ -63,6 +63,7 @@ class App extends React.Component {
 
       hitboxData: undefined,
 
+      //Values for sorting/filtering the character list
       sortBy: "number",
       search: "",
 
@@ -96,7 +97,6 @@ class App extends React.Component {
 
   //Increment the frame by 1
   incrementFrame() {
-
     //Increase the current frame by one if the current frame is not the final frame
     if (this.state.frame < this.state.currentMoveData.frames) {
       this.setState({
@@ -120,6 +120,7 @@ class App extends React.Component {
       playing: true
     })
 
+    //Create a repeating interval to increase the frame once per interval. loop back to 1 once final frame is hit
     this.playInterval = setInterval(() => {
       this.setState({
         frame: this.state.frame >= this.state.currentMoveData.frames ? 1 : this.state.frame+1
@@ -138,7 +139,9 @@ class App extends React.Component {
 
   //Get all data for a character
   getCharacterData(character) {
-    let characterFromCharacterData = characterData.filter(obj => {
+
+    //get the characters number from the locally stored sheet
+    let characterFromCharacterData = this.state.characterData.filter(obj => {
       return obj.value === character
     })
     //API call to server to get character data
@@ -157,22 +160,19 @@ class App extends React.Component {
         clearInterval(this.playInterval)
 
         //Call function to load the first move for the character
-        this.loadMove()
+        this.setMove({ target: data.moves[0]})
       })
 
       //TODO: MAKE ERROR HANDLING MORE ROBUST
       .catch(err => {
-        console.log("fail")
+        console.log(err)
       })
   }
 
   setMove(event) {
 
-    let characterFromCharacterData = characterData.filter(obj => {
-      return obj.value === this.state.currentCharacterData.value
-    })
     //GET data for the move to be loaded
-    fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${this.state.currentCharacterData.value}/${event.target.value}/data`)
+    fetch(`http://${environment}:5000/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${event.target.value}/data`)
       .then(response => response.json())
       .then(data => {
 
@@ -205,7 +205,7 @@ class App extends React.Component {
     //Fill array with all the images, one for each frame of the move
     for (var i = 1; i <= this.state.currentMoveData.frames; i++) {
       images[i] = new Image()
-      let number = characterData.find(element => element.value === this.state.currentCharacterData.value).number
+      let number = this.state.characterData.find(element => element.value === this.state.currentCharacterData.value).number
       images[i].src = `https://ultimate-hitboxes.s3.amazonaws.com/frames/${number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/${i}.png`
     }
 
@@ -242,7 +242,7 @@ class App extends React.Component {
   //Move loading has been completed, display the first frame of the move
   finishLoading() {
     
-    let number = characterData.find(element => element.value === this.state.currentCharacterData.value).number
+    let number = this.state.characterData.find(element => element.value === this.state.currentCharacterData.value).number
     this.setState({
       url: `https://ultimate-hitboxes.s3.amazonaws.com/frames/${number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/`,
       frame: 1,
@@ -252,6 +252,8 @@ class App extends React.Component {
 
   }
 
+  //When the slider value is manually altered, this function is called
+  //Updates the frame and stops the video from playing if it was already playing
   updateSlider(event) {
     this.setState({
       frame: parseInt(event.target.value),
@@ -278,12 +280,36 @@ class App extends React.Component {
     }
   }
 
+  //When entering the character select screen, set the boolean to true
   chooseCharacter() {
-    this.setState({
-      pickingCharacter: true
-    })
+    console.log(this.state.characterData)
+    if (this.state.characterData === "empty") {
+      console.log("here")
+      fetch(`http://${environment}:5000/characterData`)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+          //Save the character data
+          this.setState({
+            pickingCharacter: true,
+            characterData: data
+          })
+        })
+        //TODO: MAKE ERROR HANDLING MORE ROBUST
+        .catch(err => {
+          console.log(err)
+        })
+    }
+    else {
+      console.log("I'm here for some fucking reason")
+      this.setState({
+        pickingCharacter: true
+      })
+    }
+    
   }
 
+  //When exiting the character select screen, set the boolean to false
   exitCharacterPicker() {
     this.setState({
       pickingCharacter: false
@@ -296,50 +322,41 @@ class App extends React.Component {
     })
   }
 
+  //Called when clicking on a frame within the data table. Set the frame value to the designated frame and pause the player
   jumpToFrame(frame) {
-
     this.setState({
       frame: frame,
+      playing: false,
     })
-    this.pause();
+    clearInterval(this.playInterval)
   }
 
+  //Update the value to sort by in the character select
   changeSortBy(value) {
     this.setState({
       sortBy: value.target.id
     })
   }
 
+  //Update the search value to filter by in the character select
   changeSearchValue(value) {
     this.setState({
       search: value.target.value
     })
   }
 
+  //Flip the value for damageMultiplier from true to false and vice versa
   changeDamageMultiplier() {
-    if (this.state.damageMultiplier) {
-      this.setState({
-        damageMultiplier: false
-      })
-    }
-    else {
-      this.setState({
-        damageMultiplier: true
-      })
-    }
+    this.setState({
+      damageMultiplier: !this.state.damageMultiplier
+    })
   }
 
+  //Flip the value for changeHitboxTable from true to false and vice versa
   changeHitboxTable() {
-    if (this.state.showAllHitboxData) {
-      this.setState({
-        showAllHitboxData: false
-      })
-    }
-    else {
-      this.setState({
-        showAllHitboxData: true
-      })
-    }
+    this.setState({
+      showAllHitboxData: !this.state.showAllHitboxData
+    })
   }
 
   nextMove() {
@@ -398,7 +415,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-   
+ 
         <h3>Smash Ultimate Hitbox Viewer</h3>
         <button id="chooseCharacter"
           onClick={this.chooseCharacter}
@@ -408,7 +425,7 @@ class App extends React.Component {
         
         <CharacterList
           pickingCharacter={this.state.pickingCharacter}
-          characterData={characterData}
+          characterData={this.state.characterData}
           getCharacterData={this.getCharacterData}
           sortBy={this.state.sortBy}
           search={this.state.search}

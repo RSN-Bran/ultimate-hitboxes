@@ -1,6 +1,7 @@
 {
   "name": "Peach",
   "value": "peach",
+  "number": "13",
   "moves": [
     {
       "name": "Jab 1",

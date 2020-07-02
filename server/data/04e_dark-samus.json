@@ -1,6 +1,7 @@
 {
   "name": "Dark Samus",
   "value": "dark-samus",
+  "number": "04e",
   "moves": [
     {
       "name": "Jab 1",

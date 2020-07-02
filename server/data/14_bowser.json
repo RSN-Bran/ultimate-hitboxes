@@ -1,6 +1,7 @@
 {
   "name": "Bowser",
   "value": "bowser",
+  "number": "14",
   "moves": [
     {
       "name": "Jab 1",

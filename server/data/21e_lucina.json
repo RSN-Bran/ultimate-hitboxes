@@ -1,6 +1,7 @@
 {
   "name": "Lucina",
   "value": "lucina",
+  "number": "21e",
   "moves": [
     {
       "name": "Jab 1",

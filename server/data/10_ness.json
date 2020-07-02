@@ -1,6 +1,7 @@
 {
   "name": "Ness",
   "value": "ness",
+  "number": "10",
   "moves": [
     {
       "name": "Jab 1",

@@ -1,6 +1,7 @@
 {
   "name": "Young Link",
   "value": "young-link",
+  "number": "22",
   "moves": [
     {
       "name": "Jab 1",

@@ -1,6 +1,7 @@
 {
   "name": "Sheik",
   "value": "sheik",
+  "number": "16",
   "moves": [
     {
       "name": "Jab 1",

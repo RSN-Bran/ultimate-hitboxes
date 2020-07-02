@@ -1,0 +1,10 @@
+[
+  {
+    id: 1,
+    name: "Mario",
+    value: "mario",
+    number: "01",
+    completed: true,
+    series: "super-mario"
+  }
+]

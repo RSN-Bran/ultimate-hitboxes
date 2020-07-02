@@ -1,6 +1,7 @@
 {
   "name": "Pikachu",
   "value": "pikachu",
+  "number": "08",
   "moves": [
     {
       "name": "Jab",

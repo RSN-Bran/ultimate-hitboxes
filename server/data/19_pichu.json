@@ -1,6 +1,7 @@
 {
   "name": "Pichu",
   "value": "pichu",
+  "number": "19",
   "moves": [
     {
       "name": "Jab",

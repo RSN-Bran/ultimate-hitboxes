@@ -1,6 +1,7 @@
 {
   "name": "Kirby",
   "value": "kirby",
+  "number": "06",
   "moves": [
     {
       "name": "Jab 1",

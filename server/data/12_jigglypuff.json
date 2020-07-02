@@ -1,6 +1,7 @@
 {
   "name": "Jigglypuff",
   "value": "jigglypuff",
+  "number": "12",
   "moves": [
     {
       "name": "Jab 1",

@@ -1,6 +1,7 @@
 {
   "name": "Donkey Kong",
   "value": "donkey-kong",
+  "number": "02",
   "moves": [
     {
       "name": "Jab 1",

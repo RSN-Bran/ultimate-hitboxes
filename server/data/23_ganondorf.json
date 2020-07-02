@@ -1,6 +1,7 @@
 {
   "name": "Ganondorf",
   "value": "ganondorf",
+  "number": "23",
   "moves": [
     {
       "name": "Jab",

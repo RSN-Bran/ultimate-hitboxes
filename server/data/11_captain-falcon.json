@@ -1,6 +1,7 @@
 {
   "name": "Captain Falcon",
   "value": "captain-falcon",
+  "number": "11",
   "moves": [
     {
       "name": "Jab 1",

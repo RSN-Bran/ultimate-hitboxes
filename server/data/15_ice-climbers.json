@@ -1,6 +1,7 @@
 {
   "name": "Ice Climbers",
   "value": "ice-climbers",
+  "number": "15",
   "moves": [
     {
       "name": "Jab 1 (Popo)",

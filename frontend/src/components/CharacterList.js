@@ -9,18 +9,20 @@ function CharacterList(props) {
 	let characterButtonArray = []
 	let sortedCharacterData = []
 
-	//Sort Characters based on the criteria in the sortBy Field
-	sortedCharacterData = props.characterData.slice().sort((a, b) => (a[props.sortBy] > b[props.sortBy]) ? 1 : -1)
-
-	//Use a filter if the search bar is empty
-	if (props.search !== "") {
-		sortedCharacterData = sortedCharacterData.filter(obj => { return obj.name.toUpperCase().includes(props.search.toUpperCase()) })
-	}
-
-	//Create icons based on the constraints above
-	characterButtonArray = sortedCharacterData.map(character => <Character key={character.id} character={character} getCharacterData={props.getCharacterData} />)
-
 	if (props.pickingCharacter) {
+
+		//Sort Characters based on the criteria in the sortBy Field
+		sortedCharacterData = props.characterData.slice().sort((a, b) => (a[props.sortBy] > b[props.sortBy]) ? 1 : -1)
+
+		//Use a filter if the search bar is empty
+		if (props.search !== "") {
+			sortedCharacterData = sortedCharacterData.filter(obj => { return obj.name.toUpperCase().includes(props.search.toUpperCase()) })
+		}
+
+		//Create icons based on the constraints above
+		characterButtonArray = sortedCharacterData.map(character => <Character key={character.id} character={character} getCharacterData={props.getCharacterData} />)
+
+	
 		return (
 
 			

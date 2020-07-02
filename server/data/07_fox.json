@@ -1,6 +1,7 @@
 {
   "name": "Fox",
   "value": "fox",
+  "number": "07",
   "moves": [
     {
       "name": "Jab 1",

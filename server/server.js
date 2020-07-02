@@ -66,6 +66,11 @@ app.get('/:character/:move/data', (req, res) => {
   })
 });
 
+app.get('/no', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.send("no") 
+});
+
 // console.log that your server is up and running
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Listening on port ${port}`));

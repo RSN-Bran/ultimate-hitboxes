@@ -68,7 +68,7 @@ app.get('/:character/:move/data', (req, res) => {
 
 app.get('/no', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.send("noooooooOOOOOOOO11111122233") 
+  res.send("noooooooOOOOOOOO1111112223344") 
 });
 
 // console.log that your server is up and running

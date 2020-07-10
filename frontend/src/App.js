@@ -167,7 +167,7 @@ class App extends React.Component {
   }
 
   setMove(event) {
-
+    console.log("hi")
     //GET data for the move to be loaded
     fetch(`http://${environment}:5000/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${event.target.value}/data`)
       .then(response => response.json())

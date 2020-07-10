@@ -92,6 +92,7 @@ class App extends React.Component {
 
   }
 
+  
   //Increment the frame by 1
   incrementFrame() {
     //Increase the current frame by one if the current frame is not the final frame
@@ -352,7 +353,6 @@ class App extends React.Component {
   }
 
   nextMove() {
-
     //Get index of the move in the array
     let index = this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name)
     
@@ -364,7 +364,7 @@ class App extends React.Component {
     //Set the move to be passed as the next move in the list
     let nextMove = undefined;
     let increment = 1;
-    while (nextMove === undefined) {
+    while (nextMove === undefined && index + increment < this.state.currentCharacterData.moves.length) {
       if (this.state.currentCharacterData.moves[index + increment].complete !== false) {
         nextMove = this.state.currentCharacterData.moves[index + increment]
       }
@@ -372,10 +372,16 @@ class App extends React.Component {
         increment = increment + 1
       }
     }
-    event.target.value = nextMove.value
+    if (nextMove !== undefined) {
+      event.target.value = nextMove.value
+      //Call the setMove function
+      this.setMove(event);
+    }
+    else {
+      return undefined
+    }
 
-    //Call the setMove function
-    this.setMove(event);
+    
   }
 
   previousMove() {

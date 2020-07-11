@@ -1,34 +1,33 @@
 {
-  "name": "ultimate-hitboxes",
+  "name": "ultimate-hitboxes-frontend",
   "version": "1.0.0",
-  "description": "Smash Ultimate Hitbox Viewer",
+  "description": "React Frontend environment for ultimate-hitboxes.com",
   "main": "index.js",
   "scripts": {
     "serve": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
-  "author": "",
+  "author": "Brandon Sultana",
   "license": "ISC",
   "dependencies": {
-    "and": "^0.0.3",
-    "bootstrap-slider": "^10.6.2",
-    "file-loader": "^5.1.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-tooltip": "^4.2.6"
+    "@babel/plugin-syntax-jsx": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-tooltip": "^4.2.7",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
+    "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
-    "@babel/preset-react": "^7.8.3",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.4.2",
-    "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.3",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }

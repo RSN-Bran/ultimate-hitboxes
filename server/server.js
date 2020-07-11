@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 
-var gifFrames = require('gif-frames');
 var fs = require('fs');
 
 //Giver server access to these directories

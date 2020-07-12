@@ -5,7 +5,8 @@
     "value": "mario",
     "number": "01",
     "completed": true,
-    "series": "super-mario"
+    "series": "super-mario",
+    "version": "8.0.0"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "value": "donkey-kong",
     "number": "02",
     "completed": true,
-    "series": "donkey-kong"
+    "series": "donkey-kong",
+    "version": "8.0.0"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "value": "link",
     "number": "03",
     "completed": true,
-    "series": "legend-of-zelda"
+    "series": "legend-of-zelda",
+    "version": "8.0.0"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "value": "samus",
     "number": "04",
     "completed": true,
-    "series": "metroid"
+    "series": "metroid",
+    "version": "8.0.0"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "value": "dark-samus",
     "number": "04e",
     "completed": true,
-    "series": "metroid"
+    "series": "metroid",
+    "version": "8.0.0"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "value": "yoshi",
     "number": "05",
     "completed": true,
-    "series": "yoshi"
+    "series": "yoshi",
+    "version": "8.0.0"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "value": "kirby",
     "number": "06",
     "completed": true,
-    "series": "kirby"
+    "series": "kirby",
+    "version": "7.0.0"
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "value": "fox",
     "number": "07",
     "completed": true,
-    "series": "star-fox"
+    "series": "star-fox",
+    "version": "8.0.0"
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "value": "pikachu",
     "number": "08",
     "completed": true,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": "8.0.0"
   },
   {
     "id": 10,
@@ -77,7 +86,8 @@
     "value": "luigi",
     "number": "09",
     "completed": true,
-    "series": "super-mario"
+    "series": "super-mario",
+    "version": "8.0.0"
   },
   {
     "id": 11,
@@ -85,7 +95,8 @@
     "value": "ness",
     "number": "10",
     "completed": true,
-    "series": "earthbound"
+    "series": "earthbound",
+    "version": "8.0.0"
   },
   {
     "id": 12,
@@ -93,7 +104,8 @@
     "value": "captain-falcon",
     "number": "11",
     "completed": true,
-    "series": "f-zero"
+    "series": "f-zero",
+    "version": "7.0.0"
   },
   {
     "id": 13,
@@ -101,7 +113,8 @@
     "value": "jigglypuff",
     "number": "12",
     "completed": true,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": "8.0.0"
   },
   {
     "id": 14,
@@ -109,7 +122,8 @@
     "value": "peach",
     "number": "13",
     "completed": true,
-    "series": "super-mario"
+    "series": "super-mario",
+    "version": "8.0.0"
   },
   {
     "id": 15,
@@ -117,7 +131,8 @@
     "value": "daisy",
     "number": "13e",
     "completed": true,
-    "series": "super-mario"
+    "series": "super-mario",
+    "version": "8.0.0"
   },
   {
     "id": 16,
@@ -125,7 +140,8 @@
     "value": "bowser",
     "number": "14",
     "completed": true,
-    "series": "super-mario"
+    "series": "super-mario",
+    "version": "8.0.0"
   },
   {
     "id": 17,
@@ -133,7 +149,8 @@
     "value": "ice-climbers",
     "number": "15",
     "completed": true,
-    "series": "ice-climber"
+    "series": "ice-climber",
+    "version": "8.0.0"
   },
   {
     "id": 18,
@@ -141,7 +158,8 @@
     "value": "sheik",
     "number": "16",
     "completed": true,
-    "series": "legend-of-zelda"
+    "series": "legend-of-zelda",
+    "version": "7.0.0"
   },
   {
     "id": 19,
@@ -149,7 +167,8 @@
     "value": "zelda",
     "number": "17",
     "completed": true,
-    "series": "legend-of-zelda"
+    "series": "legend-of-zelda",
+    "version": "8.0.0"
   },
   {
     "id": 20,
@@ -157,7 +176,8 @@
     "value": "dr-mario",
     "number": "18",
     "completed": true,
-    "series": "super-mario"
+    "series": "super-mario",
+    "version": "8.0.0"
   },
   {
     "id": 21,
@@ -165,7 +185,8 @@
     "value": "pichu",
     "number": "19",
     "completed": true,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": "8.0.0"
   },
   {
     "id": 22,
@@ -173,7 +194,8 @@
     "value": "falco",
     "number": "20",
     "completed": true,
-    "series": "star-fox"
+    "series": "star-fox",
+    "version": "7.0.0"
   },
   {
     "id": 23,
@@ -181,7 +203,8 @@
     "value": "marth",
     "number": "21",
     "completed": true,
-    "series": "fire-emblem"
+    "series": "fire-emblem",
+    "version": "7.0.0"
   },
   {
     "id": 24,
@@ -189,7 +212,8 @@
     "value": "lucina",
     "number": "21e",
     "completed": true,
-    "series": "fire-emblem"
+    "series": "fire-emblem",
+    "version": "8.0.0"
   },
   {
     "id": 25,
@@ -197,7 +221,8 @@
     "value": "young-link",
     "number": "22",
     "completed": true,
-    "series": "legend-of-zelda"
+    "series": "legend-of-zelda",
+    "version": "8.0.0"
   },
   {
     "id": 26,
@@ -205,7 +230,8 @@
     "value": "ganondorf",
     "number": "23",
     "completed": true,
-    "series": "legend-of-zelda"
+    "series": "legend-of-zelda",
+    "version": "8.0.0"
   },
   {
     "id": 27,
@@ -213,7 +239,8 @@
     "value": "mewtwo",
     "number": "24",
     "completed": false,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": ""
   },
   {
     "id": 28,
@@ -221,7 +248,8 @@
     "value": "roy",
     "number": "25",
     "completed": false,
-    "series": "fire-emblem"
+    "series": "fire-emblem",
+    "version": ""
   },
   {
     "id": 29,
@@ -229,7 +257,8 @@
     "value": "chrom",
     "number": "25e",
     "completed": false,
-    "series": "fire-emblem"
+    "series": "fire-emblem",
+    "version": ""
   },
   {
     "id": 30,
@@ -237,7 +266,8 @@
     "value": "mr-game-watch",
     "number": "26",
     "completed": false,
-    "series": "game-watch"
+    "series": "game-watch",
+    "version": ""
   },
   {
     "id": 31,
@@ -245,7 +275,8 @@
     "value": "meta-knight",
     "number": "27",
     "completed": false,
-    "series": "kirby"
+    "series": "kirby",
+    "version": ""
   },
   {
     "id": 32,
@@ -253,7 +284,8 @@
     "value": "pit",
     "number": "28",
     "completed": false,
-    "series": "kid-icarus"
+    "series": "kid-icarus",
+    "version": ""
   },
   {
     "id": 33,
@@ -261,7 +293,8 @@
     "value": "dark-pit",
     "number": "28e",
     "completed": false,
-    "series": "kid-icarus"
+    "series": "kid-icarus",
+    "version": ""
   },
   {
     "id": 34,
@@ -269,7 +302,8 @@
     "value": "zero-suit-samus",
     "number": "29",
     "completed": false,
-    "series": "metroid"
+    "series": "metroid",
+    "version": ""
   },
   {
     "id": 35,
@@ -277,7 +311,8 @@
     "value": "wario",
     "number": "30",
     "completed": false,
-    "series": "wario"
+    "series": "wario",
+    "version": ""
   },
   {
     "id": 36,
@@ -285,7 +320,8 @@
     "value": "snake",
     "number": "31",
     "completed": false,
-    "series": "metal-gear"
+    "series": "metal-gear",
+    "version": ""
   },
   {
     "id": 37,
@@ -293,7 +329,8 @@
     "value": "ike",
     "number": "32",
     "completed": false,
-    "series": "fire-emblem"
+    "series": "fire-emblem",
+    "version": ""
   },
   {
     "id": 38,
@@ -301,7 +338,8 @@
     "value": "squirtle",
     "number": "33",
     "completed": false,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": ""
   },
   {
     "id": 39,
@@ -309,7 +347,8 @@
     "value": "ivysaur",
     "number": "34",
     "completed": false,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": ""
   },
   {
     "id": 40,
@@ -317,7 +356,8 @@
     "value": "charizard",
     "number": "35",
     "completed": false,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": ""
   },
   {
     "id": 41,
@@ -333,7 +373,8 @@
     "value": "lucas",
     "number": "37",
     "completed": false,
-    "series": "earthbound"
+    "series": "earthbound",
+    "version": ""
   },
   {
     "id": 43,
@@ -341,7 +382,8 @@
     "value": "sonic",
     "number": "38",
     "completed": false,
-    "series": "sonic"
+    "series": "sonic",
+    "version": ""
   },
   {
     "id": 44,
@@ -349,7 +391,8 @@
     "value": "king-dedede",
     "number": "39",
     "completed": false,
-    "series": "kirby"
+    "series": "kirby",
+    "version": ""
   },
   {
     "id": 45,
@@ -357,7 +400,8 @@
     "value": "olimar",
     "number": "40",
     "completed": false,
-    "series": "pikmin"
+    "series": "pikmin",
+    "version": ""
   },
   {
     "id": 46,
@@ -365,7 +409,8 @@
     "value": "lucario",
     "number": "41",
     "completed": false,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": ""
   },
   {
     "id": 47,
@@ -373,7 +418,8 @@
     "value": "rob",
     "number": "42",
     "completed": false,
-    "series": "rob"
+    "series": "rob",
+    "version": ""
   },
   {
     "id": 48,
@@ -381,7 +427,8 @@
     "value": "toon-link",
     "number": "43",
     "completed": false,
-    "series": "legend-of-zelda"
+    "series": "legend-of-zelda",
+    "version": ""
   },
   {
     "id": 49,
@@ -389,7 +436,8 @@
     "value": "wolf",
     "number": "44",
     "completed": false,
-    "series": "star-fox"
+    "series": "star-fox",
+    "version": ""
   },
   {
     "id": 50,
@@ -397,7 +445,8 @@
     "value": "villager",
     "number": "45",
     "completed": false,
-    "series": "animal-crossing"
+    "series": "animal-crossing",
+    "version": ""
   },
   {
     "id": 51,
@@ -405,7 +454,8 @@
     "value": "mega-man",
     "number": "46",
     "completed": false,
-    "series": "mega-man"
+    "series": "mega-man",
+    "version": ""
   },
   {
     "id": 52,
@@ -413,7 +463,8 @@
     "value": "wii-fit-trainer",
     "number": "47",
     "completed": false,
-    "series": "wii-fit"
+    "series": "wii-fit",
+    "version": ""
   },
   {
     "id": 53,
@@ -421,7 +472,8 @@
     "value": "rosalina-luma",
     "number": "48",
     "completed": false,
-    "series": "super-mario"
+    "series": "super-mario",
+    "version": ""
   },
   {
     "id": 54,
@@ -429,7 +481,8 @@
     "value": "little-mac",
     "number": "49",
     "completed": false,
-    "series": "punch-out"
+    "series": "punch-out",
+    "version": ""
   },
   {
     "id": 55,
@@ -437,7 +490,8 @@
     "value": "greninja",
     "number": "50",
     "completed": false,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": ""
   },
   {
     "id": 56,
@@ -445,7 +499,8 @@
     "value": "mii-brawler",
     "number": "51",
     "completed": false,
-    "series": "smash-bros"
+    "series": "smash-bros",
+    "version": ""
   },
   {
     "id": 57,
@@ -453,7 +508,8 @@
     "value": "mii-swordfighter",
     "number": "52",
     "completed": false,
-    "series": "smash-bros"
+    "series": "smash-bros",
+    "version": ""
   },
   {
     "id": 58,
@@ -461,7 +517,8 @@
     "value": "mii-gunner",
     "number": "53",
     "completed": false,
-    "series": "smash-bros"
+    "series": "smash-bros",
+    "version": ""
   },
   {
     "id": 59,
@@ -469,7 +526,8 @@
     "value": "palutena",
     "number": "54",
     "completed": false,
-    "series": "kid-icarus"
+    "series": "kid-icarus",
+    "version": ""
   },
   {
     "id": 60,
@@ -477,7 +535,8 @@
     "value": "pac-man",
     "number": "55",
     "completed": false,
-    "series": "pac-man"
+    "series": "pac-man",
+    "version": ""
   },
   {
     "id": 61,
@@ -485,7 +544,8 @@
     "value": "robin",
     "number": "56",
     "completed": false,
-    "series": "fire-emblem"
+    "series": "fire-emblem",
+    "version": ""
   },
   {
     "id": 62,
@@ -493,7 +553,8 @@
     "value": "shulk",
     "number": "57",
     "completed": false,
-    "series": "xenoblade"
+    "series": "xenoblade",
+    "version": ""
   },
   {
     "id": 63,
@@ -501,7 +562,8 @@
     "value": "bowser-jr",
     "number": "58",
     "completed": false,
-    "series": "super-mario"
+    "series": "super-mario",
+    "version": ""
   },
   {
     "id": 64,
@@ -509,7 +571,8 @@
     "value": "duck-hunt",
     "number": "59",
     "completed": false,
-    "series": "duck-hunt"
+    "series": "duck-hunt",
+    "version": ""
   },
   {
     "id": 65,
@@ -517,7 +580,8 @@
     "value": "ryu",
     "number": "60",
     "completed": false,
-    "series": "street-fighter"
+    "series": "street-fighter",
+    "version": ""
   },
   {
     "id": 66,
@@ -525,7 +589,8 @@
     "value": "ken",
     "number": "60e",
     "completed": false,
-    "series": "street-fighter"
+    "series": "street-fighter",
+    "version": ""
   },
   {
     "id": 67,
@@ -533,7 +598,8 @@
     "value": "cloud",
     "number": "61",
     "completed": false,
-    "series": "final-fantasy"
+    "series": "final-fantasy",
+    "version": ""
   },
   {
     "id": 68,
@@ -541,7 +607,8 @@
     "value": "corrin",
     "number": "62",
     "completed": false,
-    "series": "fire-emblem"
+    "series": "fire-emblem",
+    "version": ""
   },
   {
     "id": 69,
@@ -549,7 +616,8 @@
     "value": "bayonetta",
     "number": "63",
     "completed": false,
-    "series": "bayonetta"
+    "series": "bayonetta",
+    "version": ""
   },
   {
     "id": 70,
@@ -557,7 +625,8 @@
     "value": "inkling",
     "number": "64",
     "completed": false,
-    "series": "splatoon"
+    "series": "splatoon",
+    "version": ""
   },
   {
     "id": 71,
@@ -565,7 +634,8 @@
     "value": "ridley",
     "number": "65",
     "completed": false,
-    "series": "metroid"
+    "series": "metroid",
+    "version": ""
   },
   {
     "id": 72,
@@ -573,7 +643,8 @@
     "value": "simon",
     "number": "66",
     "completed": false,
-    "series": "castlevania"
+    "series": "castlevania",
+    "version": ""
   },
   {
     "id": 73,
@@ -581,7 +652,8 @@
     "value": "richter",
     "number": "66e",
     "completed": false,
-    "series": "castlevania"
+    "series": "castlevania",
+    "version": ""
   },
   {
     "id": 74,
@@ -589,7 +661,8 @@
     "value": "king-k-rool",
     "number": "67",
     "completed": false,
-    "series": "donkey-kong"
+    "series": "donkey-kong",
+    "version": ""
   },
   {
     "id": 75,
@@ -597,7 +670,8 @@
     "value": "isabelle",
     "number": "68",
     "completed": false,
-    "series": "animal-crossing"
+    "series": "animal-crossing",
+    "version": ""
   },
   {
     "id": 76,
@@ -605,7 +679,8 @@
     "value": "incineroar",
     "number": "69",
     "completed": false,
-    "series": "pokemon"
+    "series": "pokemon",
+    "version": ""
   },
   {
     "id": 77,
@@ -613,7 +688,8 @@
     "value": "piranha-plant",
     "number": "70",
     "completed": false,
-    "series": "super-mario"
+    "series": "super-mario",
+    "version": ""
   },
   {
     "id": 78,
@@ -621,7 +697,8 @@
     "value": "joker",
     "number": "71",
     "completed": false,
-    "series": "persona"
+    "series": "persona",
+    "version": ""
   },
   {
     "id": 79,
@@ -629,7 +706,8 @@
     "value": "hero",
     "number": "72",
     "completed": false,
-    "series": "dragon-quest"
+    "series": "dragon-quest",
+    "version": ""
   },
   {
     "id": 80,
@@ -637,7 +715,8 @@
     "value": "banjo-kazooie",
     "number": "73",
     "completed": false,
-    "series": "banjo-kazooie"
+    "series": "banjo-kazooie",
+    "version": ""
   },
   {
     "id": 81,
@@ -645,7 +724,8 @@
     "value": "terry",
     "number": "74",
     "completed": false,
-    "series": "fatal-fury"
+    "series": "fatal-fury",
+    "version": ""
   },
   {
     "id": 82,
@@ -653,7 +733,8 @@
     "value": "byleth",
     "number": "75",
     "completed": false,
-    "series": "fire-emblem"
+    "series": "fire-emblem",
+    "version": ""
   },
   {
     "id": 83,
@@ -661,6 +742,7 @@
     "value": "min-min",
     "number": "76",
     "completed": false,
-    "series": "arms"
+    "series": "arms",
+	"version": ""
   }
 ]

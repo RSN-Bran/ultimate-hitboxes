@@ -28,9 +28,16 @@
 	border: solid gold 2px;
 }
 
-small {
+.number {
 	left: 0%;
 	top: 0%;
+	text-align: right;
+	position: relative;
+}
+
+.version {
+	right: 0%;
+	bottom: 0%;
 	text-align: right;
 	position: relative;
 }

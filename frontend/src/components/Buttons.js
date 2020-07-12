@@ -10,10 +10,15 @@ import previous from '../media/previous.png'
 
 import '../css/Button.css';
 
+//Render 5 buttons for manipulating the video. Each button has a corresponding tool tip
+//Previous: Go the the previous move in the move list, not selectable if the video is currently playing or if there is no available previous move
+//Decrement: Move the video back by one frame, not selectable if the move if the video is currently playing or the move is on frame 1
+//Play/Pause: If the video is playing, shows a pause button to pause the video. If the video is puased, shows a play button to play the 
+//Increment: Move the video forward by one frame, not selectable if the move if the video is currently playing or the move is on its last frame
+//Next: Go the the next move in the move list, not selectable if the video is currently playing or if there is no available next move
 function Buttons(props) {
 	return (
 		<div>
-
 			<img
 				data-tip data-for="previousToolTip"
 				className={props.index !== 0 ? "button" : "buttonNoClick"}

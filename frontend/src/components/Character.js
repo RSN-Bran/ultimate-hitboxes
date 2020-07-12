@@ -3,29 +3,21 @@ import '../css/Character.css';
 
 
 function Character(props) {
-
+	//Get the character artwork from the S3 bucket using the character's name
 	let renderURL = "https://ultimate-hitboxes.s3.amazonaws.com/characters/" + props.character.value + ".png"
+	//Get the symbol for the character's series from the S3 bucket using the series field in Character data
 	let seriesURL = "https://ultimate-hitboxes.s3.amazonaws.com/series-symbol/" + props.character.series + ".png"
-	if (props.character.completed) {
-		return (
-			<div className="character" value={props.character.value} onClick={props.getCharacterData.bind(this, props.character.value)}>
-				<small style={{ "position": "absolute" }}>#{props.character.number.replace('e', 'ε')}</small>
-				<h2 style={{ "position": "absolute" }}>{props.character.name}</h2>
-				<img src={renderURL} height="100" alt={props.character.name}></img>
-				<img className="series-icon" src={seriesURL} alt={props.character.series}></img>
-			</div>
-		)
-	}
-	else {
-		return (
-			<div className="character-incomplete" value={props.character.value}>
-				<small style={{ "position": "absolute" }}>#{props.character.number.replace('e', 'ε')}</small>
-				<h2 style={{ "position": "absolute" }}>{props.character.name}</h2>
-				<img src={renderURL} height="100" alt={props.character.name}></img>
-				<img className="series-icon" src={seriesURL} alt={props.character.series}></img>
-			</div>
-		)
-	}
+
+	//Return a box for the character showing their name, number, artwork, and series symbol.
+	//Associated class varies based on if the character has completed data.Incomplete characters are not selectable and grayed out
+	return (
+		<div className={props.character.completed ? "character" : "character-incomplete"} value={props.character.value} onClick={props.getCharacterData.bind(this, props.character.value)}>
+			<small style={{ "position": "absolute" }}>#{props.character.number.replace('e', 'ε')}</small>
+			<h2 style={{ "position": "absolute" }}>{props.character.name}</h2>
+			<img src={renderURL} height="100" alt={props.character.name}></img>
+			<img className="series-icon" src={seriesURL} alt={props.character.series}></img>
+		</div>
+	)
 }
 
 export default Character

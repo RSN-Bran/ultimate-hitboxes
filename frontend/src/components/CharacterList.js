@@ -6,10 +6,12 @@ import '../css/CharacterList.css';
 import x from '../media/x.png'
 
 function CharacterList(props) {
-	let characterButtonArray = []
-	let sortedCharacterData = []
+	
 
 	if (props.pickingCharacter) {
+
+		let characterButtonArray = []
+		let sortedCharacterData = []
 
 		//Sort Characters based on the criteria in the sortBy Field
 		sortedCharacterData = props.characterData.slice().sort((a, b) => (a[props.sortBy] > b[props.sortBy]) ? 1 : -1)
@@ -21,11 +23,9 @@ function CharacterList(props) {
 
 		//Create icons based on the constraints above
 		characterButtonArray = sortedCharacterData.map(character => <Character key={character.id} character={character} getCharacterData={props.getCharacterData} />)
-
 	
 		return (
 
-			
 			<div id="characterList">
 				<h3>Choose a Character</h3>
 

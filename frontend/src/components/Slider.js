@@ -7,9 +7,7 @@ function Slider(props) {
 
 	let options = []
 	let ticks = []
-	//var style = {background_color: "black", height: "3px", width: (1/(props.totalFrames-1))*100 + "%", border: "1px solid black", float: "left"}
-	//var rectArray = []
-	//console.log((1 / (props.totalFrames)) * 100 * props.totalFrames + "%")
+
 	for (let i = 2; i <= props.totalFrames; i++) {
 		//rectArray.push(<div className="rectangle" style={style}></div>)
 		options.push(<option key={i}>{i}</option>)
@@ -35,7 +33,6 @@ function Slider(props) {
 						onInput={props.change}
 						onChange={props.change}
 						list="ticks"
-					//style={{ width: (1 / (props.totalFrames-1)) * 100 * (props.totalFrames-1) + "%"}}
 					/>
 				</div>
 				<datalist id="ticks">

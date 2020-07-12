@@ -27,6 +27,7 @@ class App extends React.Component {
     
     super();
 
+    //Interval used for playing the video
     let playInterval;
 
     //State
@@ -37,7 +38,8 @@ class App extends React.Component {
       frame: 1, /*frame that the image is on, starts at 1*/
       playing: false, /*Is the video currently playing?*/
 
-      //Data on basic info for all characters to be used by the character select screen
+      //Data on basic info for all characters to be used by the character select screen. 
+      //Initially set to "empty", filled with data from the backend when the user clicks the "Choose a Character" Button
       characterData: "empty",
 
       //Data for the character and moved currently selected
@@ -56,16 +58,20 @@ class App extends React.Component {
       //Default play speed, plays at .5 speed
       playSpeed: 2,
 
+      //Boolean to hold if the user is currently on the Character Select Screen
       pickingCharacter: false,
 
+      //Contains data for a specific hitbox, for use when displaying all data about a hitbox
       hitboxData: undefined,
 
       //Values for sorting/filtering the character list
       sortBy: "number",
       search: "",
 
+      //Boolean to determine if the native damage values, or the modified 1v1 damage values should be displayed
       damageMultiplier: false,
 
+      //Boolean to determine if all hitbox data should be showed at once, or data should only be shown on active frames
       showAllHitboxData: true
     }
 
@@ -142,7 +148,7 @@ class App extends React.Component {
     let characterFromCharacterData = this.state.characterData.filter(obj => {
       return obj.value === character
     })
-    //API call to server to get character data
+    //API call to the backend to get character data
     fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${character}/data`)
       .then(response => response.json())
       .then(data => {
@@ -154,6 +160,8 @@ class App extends React.Component {
           playing: false,
           pickingCharacter: false,
         })
+
+        //Turn off the play interval to pause the video
         clearInterval(this.playInterval)
 
         //Call function to load the first move for the character
@@ -166,8 +174,8 @@ class App extends React.Component {
       })
   }
 
+  //Get data for the move to be loaded
   setMove(event) {
-    console.log("hi")
     //GET data for the move to be loaded
     fetch(`http://${environment}:5000/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${event.target.value}/data`)
       .then(response => response.json())
@@ -189,10 +197,14 @@ class App extends React.Component {
       })
   }
 
+  //Load the image frames needed to play the video
   loadMove() {
+
+    //Set the video player state to "loading" to display a loading bar and loading gif
     this.setState({
       portalState: "loading",
     })
+
     //Number of frames currently loaded by browser
     var numLoaded = 0
 
@@ -216,9 +228,11 @@ class App extends React.Component {
         }
       }
 
+      //Calculate the current percent complete and save it, for use by the loading bar
       this.setState({
         loadingPercent: (numLoaded / this.state.currentMoveData.frames) * 100
       })
+
       //If all frame is loaded, break out of the loop
       if (numLoaded === this.state.currentMoveData.frames) {
         clearTimeout(loadingTimer);
@@ -236,9 +250,8 @@ class App extends React.Component {
 
   }
 
-  //Move loading has been completed, display the first frame of the move
+  //Move loading has been completed, display the first frame of the move and set needed values
   finishLoading() {
-    
     let number = this.state.characterData.find(element => element.value === this.state.currentCharacterData.value).number
     this.setState({
       url: `https://ultimate-hitboxes.s3.amazonaws.com/frames/${number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/`,
@@ -279,6 +292,7 @@ class App extends React.Component {
 
   //When entering the character select screen, set the boolean to true
   chooseCharacter() {
+    //If this is the first time opening the character select, use an api call to get the data to save
     if (this.state.characterData === "empty") {
       fetch(`http://${environment}:5000/characterData`)
         .then(response => response.json())
@@ -294,6 +308,7 @@ class App extends React.Component {
           console.log(err)
         })
     }
+    //Otherwise just use the data that was saved
     else {
       this.setState({
         pickingCharacter: true
@@ -309,6 +324,7 @@ class App extends React.Component {
     })
   }
 
+  //Save data for a particular hitbox for use in the "More Data button"
   updateHitboxData(hitbox) {
     this.setState({
       hitboxData: hitbox
@@ -352,6 +368,7 @@ class App extends React.Component {
     })
   }
 
+  //Jump to the next move in the list
   nextMove() {
     //Get index of the move in the array
     let index = this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name)
@@ -364,6 +381,8 @@ class App extends React.Component {
     //Set the move to be passed as the next move in the list
     let nextMove = undefined;
     let increment = 1;
+
+    //Look for the next available move (some moves are currently not selectable, skip over those)
     while (nextMove === undefined && index + increment < this.state.currentCharacterData.moves.length) {
       if (this.state.currentCharacterData.moves[index + increment].complete !== false) {
         nextMove = this.state.currentCharacterData.moves[index + increment]
@@ -379,11 +398,10 @@ class App extends React.Component {
     }
     else {
       return undefined
-    }
-
-    
+    }  
   }
 
+  //Jump to the previous move in the list
   previousMove() {
     //Get index of the move in the array
     let index = this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name)
@@ -394,22 +412,25 @@ class App extends React.Component {
     };
 
     //Set the move to be passed as the next move in the list
-    let nextMove = undefined;
+    let prevMove = undefined;
     let increment = 1;
-    while (nextMove === undefined) {
+
+    //Look for the next available move (some moves are currently not selectable, skip over those)
+    while (prevMove === undefined) {
       if (this.state.currentCharacterData.moves[index - increment].complete !== false) {
-        nextMove = this.state.currentCharacterData.moves[index - increment]
+        prevMove = this.state.currentCharacterData.moves[index - increment]
       }
       else {
         increment = increment + 1
       }
     }
-    event.target.value = nextMove.value
+    event.target.value = prevMove.value
 
     //Call the setMove function
     this.setMove(event);
   }
 
+  //Call components to render the page
   render() {
     return (
       <div className="App">

@@ -12,6 +12,10 @@ import PlayOptions from './components/PlayOptions'
 import HitBoxDetail from './components/HitBoxDetail'
 import MoveSelect from './components/MoveSelect'
 import DataTable from './components/DataTable';
+import Info from './components/Info';
+
+//Import info image
+import info from './media/info.png'
 
 //Set hostname to query depending on dev vs PROD
 let environment;
@@ -45,6 +49,8 @@ class App extends React.Component {
       //Data for the character and moved currently selected
       currentCharacterData: { moves: [] },
       currentMoveData: undefined,
+
+      info: false,
 
       //State of the viewing portal
       //* 'initial' initial state when the page is first loaded, shows a blank portal
@@ -95,6 +101,7 @@ class App extends React.Component {
     this.nextMove = this.nextMove.bind(this)
     this.previousMove = this.previousMove.bind(this)
     this.changeHitboxTable = this.changeHitboxTable.bind(this)
+    this.showInfo = this.showInfo.bind(this)
 
   }
 
@@ -368,6 +375,13 @@ class App extends React.Component {
     })
   }
 
+  showInfo() {
+    console.log("here")
+    this.setState({
+      info: !this.state.info
+    })
+  }
+
   //Jump to the next move in the list
   nextMove() {
     //Get index of the move in the array
@@ -436,6 +450,18 @@ class App extends React.Component {
       <div className="App">
  
         <h3>Smash Ultimate Hitbox Viewer</h3>
+
+        <img id="infoButton"
+          src={info}
+          onClick={this.showInfo}
+        />
+
+        <Info
+          info={this.state.info}
+          showInfo={this.showInfo}
+        />
+        
+
         <button id="chooseCharacter"
           onClick={this.chooseCharacter}
         >

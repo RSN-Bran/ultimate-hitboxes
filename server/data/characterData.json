@@ -238,9 +238,9 @@
     "name": "Mewtwo",
     "value": "mewtwo",
     "number": "24",
-    "completed": false,
+    "completed": true,
     "series": "pokemon",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 28,

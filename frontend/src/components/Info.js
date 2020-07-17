@@ -11,7 +11,7 @@ function Info(props) {
 		return (
 			<div id="infoText">
 				<br/>
-				All code written and hosted by Brandon "RSN_Bran" Sultana.
+				All code written and hosted by Brandon "<a href="https://twitter.com/RSN_Bran">RSN_Bran</a>" Sultana.
 		<br />
 				Hitbox image credits to <a href="https://twitter.com/Zeckemyro">Zeckemyro</a>. Images retreived from <a href="https://drive.google.com/drive/folders/1IvQvVTNIvvPeGzNCRIRnvOsVKQs1FgVR">here</a>.
 		<br />

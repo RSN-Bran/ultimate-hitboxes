@@ -59,3 +59,15 @@ h5 {
   }
 }
 
+#links {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  display: inline-block;
+}
+
+.linkButtons {
+  width: 5%;
+  cursor: pointer;
+  float: right;
+}

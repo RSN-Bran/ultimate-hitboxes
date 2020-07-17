@@ -16,6 +16,8 @@ import Info from './components/Info';
 
 //Import info image
 import info from './media/info.png'
+import twitter from './media/twitter.png'
+import github from './media/github.png'
 
 //Set hostname to query depending on dev vs PROD
 let environment;
@@ -451,6 +453,22 @@ class App extends React.Component {
  
         <h3>Smash Ultimate Hitbox Viewer</h3>
 
+        <div id="links">
+          <a href="https://twitter.com/SSBUHitboxes">
+            <img id="twitter" className="linkButtons"
+              src={twitter}
+            />
+          </a>
+          <a href="https://github.com/RSN-Bran/ultimate-hitboxes">
+            <img id="github" className="linkButtons"
+              src={github}
+            />
+          </a>
+        </div>
+          
+        
+        
+
         <img id="infoButton"
           src={info}
           onClick={this.showInfo}
@@ -460,6 +478,7 @@ class App extends React.Component {
           info={this.state.info}
           showInfo={this.showInfo}
         />
+
         
 
         <button id="chooseCharacter"

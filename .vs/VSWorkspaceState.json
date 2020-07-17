@@ -2,11 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\frontend",
+    "\\frontend\\dist",
     "\\frontend\\src",
     "\\frontend\\src\\components",
     "\\frontend\\src\\css",
     "\\server"
   ],
-  "SelectedNode": "\\frontend\\src\\App.js",
+  "SelectedNode": "\\frontend\\src\\components\\Info.js",
   "PreviewInSolutionExplorer": false
 }

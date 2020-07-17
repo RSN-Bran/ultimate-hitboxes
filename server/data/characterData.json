@@ -247,9 +247,9 @@
     "name": "Roy",
     "value": "roy",
     "number": "25",
-    "completed": false,
+    "completed": true,
     "series": "fire-emblem",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 29,

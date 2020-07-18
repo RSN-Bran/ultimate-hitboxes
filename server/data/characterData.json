@@ -256,9 +256,9 @@
     "name": "Chrom",
     "value": "chrom",
     "number": "25e",
-    "completed": false,
+    "completed": true,
     "series": "fire-emblem",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 30,

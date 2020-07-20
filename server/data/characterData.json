@@ -265,9 +265,9 @@
     "name": "Mr. Game & Watch",
     "value": "mr-game-watch",
     "number": "26",
-    "completed": false,
+    "completed": true,
     "series": "game-watch",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 31,

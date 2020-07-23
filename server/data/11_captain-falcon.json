@@ -1618,7 +1618,7 @@
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
           "frames": [22],
-          "color": "red",
+          "color": "purple",
           "notes": ""
         },
         {

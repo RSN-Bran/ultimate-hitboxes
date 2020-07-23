@@ -274,9 +274,9 @@
     "name": "Meta Knight",
     "value": "meta-knight",
     "number": "27",
-    "completed": false,
+    "completed": true,
     "series": "kirby",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 32,

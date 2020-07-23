@@ -28,3 +28,13 @@
 #tenthSpeed, #quarterSpeed, #halfSpeed, #baseSpeed, #doubleSpeed {
 	margin-left: 5%;
 }
+
+@media (max-width: 400px) {
+	.speedLabel {
+		font-size: .8em;
+	}
+
+	#tenthSpeed, #quarterSpeed, #halfSpeed, #baseSpeed, #doubleSpeed {
+		margin-left: 3%;
+	}
+}

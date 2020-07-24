@@ -18,7 +18,19 @@ app.get('/characterData', (req, res) => {
 
     res.send(json) 
 
-    fs.appendFile('serverlog.txt', `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/characterData\n`, function (err) {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    date = mm + '-' + dd + '-' + yyyy;
+
+    var time = new Date();
+    time=time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
+
+    console.log(today);
+
+    fs.appendFile(`serverlog/${date}_serverlog.txt`, `${date}@${time}\tRequest from ${req.connection.remoteAddress} for ultimate-hitboxes.com/characterData\n`, function (err) {
       if (err) throw err;
       console.log('Saved!');
     });
@@ -47,7 +59,19 @@ app.get('/:character/data', (req, res) => {
 
     res.send(allData)
 
-    fs.appendFile('serverlog.txt', `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data\n`, function (err) {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    date = mm + '-' + dd + '-' + yyyy;
+
+    var time = new Date();
+    time = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
+
+    console.log(today);
+
+    fs.appendFile(`serverlog/${date}_serverlog.txt`, `${date}@${time}\tRequest from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data\n`, function (err) {
       if (err) throw err;
       console.log('Saved!');
     });
@@ -79,7 +103,19 @@ app.get('/:character/:move/data', (req, res) => {
 
     res.send(move) 
 
-    fs.appendFile('serverlog.txt', `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data\n`, function (err) {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    date = mm + '-' + dd + '-' + yyyy;
+
+    var time = new Date();
+    time = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
+
+    console.log(today);
+
+    fs.appendFile(`serverlog/${date}_serverlog.txt`, `${date}@${time}\tRequest from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data\n`, function (err) {
       if (err) throw err;
       console.log('Saved!');
     });

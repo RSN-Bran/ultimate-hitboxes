@@ -283,9 +283,9 @@
     "name": "Pit",
     "value": "pit",
     "number": "28",
-    "completed": false,
+    "completed": true,
     "series": "kid-icarus",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 33,

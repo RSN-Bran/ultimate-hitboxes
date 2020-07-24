@@ -15,8 +15,14 @@ app.get('/characterData', (req, res) => {
     }
     res.setHeader('Access-Control-Allow-Origin', '*');
     let json = JSON.parse(jsonString)
+
     res.send(json) 
-    
+
+    fs.appendFile('serverlog.txt', `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/characterData\n`, function (err) {
+      if (err) throw err;
+      console.log('Saved!');
+    });
+
   })
 });
 
@@ -38,8 +44,13 @@ app.get('/:character/data', (req, res) => {
       moveList.push(move)
     }
     allData.moves=moveList
-    console.log(allData)
+
     res.send(allData)
+
+    fs.appendFile('serverlog.txt', `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data\n`, function (err) {
+      if (err) throw err;
+      console.log('Saved!');
+    });
   })
 });
 
@@ -50,7 +61,9 @@ app.get('/:character/:move/data', (req, res) => {
         console.log("File read failed:", err)
         return
     }
-    console.log(JSON.parse(jsonString))
+
+
+
     var data = JSON.parse(jsonString)
     var move = {};
     for(var i = 0; i < data.moves.length; i++) {
@@ -61,7 +74,15 @@ app.get('/:character/:move/data', (req, res) => {
     }
     
     res.setHeader('Access-Control-Allow-Origin', '*');
+
+    console.log();
+
     res.send(move) 
+
+    fs.appendFile('serverlog.txt', `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data\n`, function (err) {
+      if (err) throw err;
+      console.log('Saved!');
+    });
   })
 });
 

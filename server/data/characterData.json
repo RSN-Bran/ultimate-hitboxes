@@ -292,9 +292,9 @@
     "name": "Dark Pit",
     "value": "dark-pit",
     "number": "28e",
-    "completed": false,
+    "completed": true,
     "series": "kid-icarus",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 34,

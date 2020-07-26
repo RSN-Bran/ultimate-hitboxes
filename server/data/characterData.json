@@ -301,9 +301,9 @@
     "name": "Zero Suit Samus",
     "value": "zero-suit-samus",
     "number": "29",
-    "completed": false,
+    "completed": true,
     "series": "metroid",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 35,

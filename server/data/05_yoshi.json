@@ -2484,8 +2484,8 @@
           "z": "0.0",
           "status": "fighter_status_kind_capture_pulled_yoshi",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [14,15,16,17,18,19,20,21],
-          "color": "purple",
+          "frames": [ 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "color": "#400040",
           "notes": ""
         },
         {
@@ -2497,8 +2497,8 @@
           "z": "0.0",
           "status": "fighter_status_kind_capture_pulled_yoshi",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [14,15,16,17,18,19,20,21],
-          "color": "darkviolet",
+          "frames": [ 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2510,8 +2510,8 @@
           "z": "7.5",
           "status": "fighter_status_kind_capture_pulled_yoshi",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [14,15],
-          "color": "purple",
+          "frames": [ 14, 15 ],
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -2532,8 +2532,8 @@
           "z": "0.0",
           "status": "fighter_status_kind_capture_pulled_yoshi",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [16,17,18,19,20,21,22,23],
-          "color": "purple",
+          "frames": [ 16, 17, 18, 19, 20, 21, 22, 23 ],
+          "color": "#400040",
           "notes": ""
         },
         {
@@ -2545,8 +2545,8 @@
           "z": "0.0",
           "status": "fighter_status_kind_capture_pulled_yoshi",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [16,17,18,19,20,21,22,23],
-          "color": "darkviolet",
+          "frames": [ 16, 17, 18, 19, 20, 21, 22, 23 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2558,8 +2558,8 @@
           "z": "9.0",
           "status": "fighter_status_kind_capture_pulled_yoshi",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [16,17],
-          "color": "purple",
+          "frames": [ 16, 17 ],
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -2580,8 +2580,8 @@
           "z": "0.0",
           "status": "fighter_status_kind_capture_pulled_yoshi",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [17,18,19,20,21,22,23,24],
-          "color": "purple",
+          "frames": [ 17, 18, 19, 20, 21, 22, 23, 24 ],
+          "color": "#400040",
           "notes": ""
         },
         {
@@ -2593,8 +2593,8 @@
           "z": "0.0",
           "status": "fighter_status_kind_capture_pulled_yoshi",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [17,18,19,20,21,22,23,24],
-          "color": "darkviolet",
+          "frames": [ 17, 18, 19, 20, 21, 22, 23, 24 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2606,8 +2606,8 @@
           "z": "-8.0",
           "status": "fighter_status_kind_capture_pulled_yoshi",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [17,18],
-          "color": "purple",
+          "frames": [ 17, 18 ],
+          "color": "#400040",
           "notes": ""
         }
       ]

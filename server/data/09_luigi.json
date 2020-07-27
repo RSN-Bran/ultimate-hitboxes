@@ -2460,8 +2460,8 @@
           "z": "-1.5",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [14,15,16,17,18,19,20],
-          "color": "purple",
+          "frames": [ 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "#400040",
           "notes": ""
         },
         {
@@ -2476,8 +2476,8 @@
           "z2": "8.7",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [14,15],
-          "color": "darkviolet",
+          "frames": [ 14, 15 ],
+          "color": "#800080",
           "notes": ""
         }
       ]
@@ -2498,8 +2498,8 @@
           "z": "-1.5",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [16,17,18,19,20,21,22],
-          "color": "purple",
+          "frames": [ 16, 17, 18, 19, 20, 21, 22 ],
+          "color": "#400040",
           "notes": ""
         },
         {
@@ -2514,8 +2514,8 @@
           "z2": "10.4",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [16,17],
-          "color": "darkviolet",
+          "frames": [ 16, 17 ],
+          "color": "#800080",
           "notes": ""
         }
       ]
@@ -2536,8 +2536,8 @@
           "z": "1.5",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [17,18,19,20,21,22,23],
-          "color": "purple",
+          "frames": [ 17, 18, 19, 20, 21, 22, 23 ],
+          "color": "#400040",
           "notes": ""
         },
         {
@@ -2552,8 +2552,8 @@
           "z2": "-14.7",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [17,18],
-          "color": "darkviolet",
+          "frames": [ 17, 18 ],
+          "color": "#800080",
           "notes": ""
         }
       ]

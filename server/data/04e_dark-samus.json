@@ -3118,8 +3118,8 @@
           "z": "0.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [15,16,17],
-          "color": "purple",
+          "frames": [ 15, 16, 17 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -3134,8 +3134,8 @@
           "z2": "5.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [15,16,17,18,19,20,21,22],
-          "color": "purple",
+          "frames": [ 15, 16, 17, 18, 19, 20, 21, 22 ],
+          "color": "#800080",
           "notes": ""
         }
       ]
@@ -3156,8 +3156,8 @@
           "z": "0.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [17,18,19],
-          "color": "purple",
+          "frames": [ 17, 18, 19 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -3172,8 +3172,8 @@
           "z2": "5.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [17,18,19,20,21,22,23,24],
-          "color": "purple",
+          "frames": [ 17, 18, 19, 20, 21, 22, 23, 24 ],
+          "color": "#800080",
           "notes": ""
         }
       ]
@@ -3194,8 +3194,8 @@
           "z": "0.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [18,19,20],
-          "color": "purple",
+          "frames": [ 18, 19, 20 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -3210,8 +3210,8 @@
           "z2": "-5.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [18,19,20,21,22,23,24,25],
-          "color": "purple",
+          "frames": [ 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "color": "#800080",
           "notes": ""
         }
       ]

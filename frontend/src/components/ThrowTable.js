@@ -1,17 +1,17 @@
 import React from "react"
 import ReactTooltip from "react-tooltip";
 
-import HitboxEntry from './HitboxEntry'
+import ThrowEntry from './ThrowEntry'
 import '../css/DataTable.css';
 
-function HitboxTable(props) {
+function ThrowTable(props) {
 
   try {
     let hitboxData = [];
-    console.log(props.hitboxes)
     props.hitboxes.forEach(function (hitbox, index) {
-      hitboxData.push(<HitboxEntry hitbox={hitbox} index={index} damageMultiplier={props.damageMultiplier} showAllHitboxData={props.showAllHitboxData} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)
+      hitboxData.push(<ThrowEntry hitbox={hitbox} index={index} damageMultiplier={props.damageMultiplier} showAllHitboxData={props.showAllHitboxData} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)
     })
+    console.log("here")
     return (
       <div id="dataTable">
         <table>
@@ -19,12 +19,10 @@ function HitboxTable(props) {
             <tr>
               <th data-tip data-for="frameToolTip">Frame</th>
               <th data-tip data-for="dmgToolTip" onClick={props.changeDamageMultiplier}>Dmg</th>
-              <th data-tip data-for="sdToolTip">SD</th>
               <th data-tip data-for="angleToolTip">Angle</th>
               <th data-tip data-for="bkbToolTip">BKB</th>
               <th data-tip data-for="kbgToolTip">KBG</th>
               <th data-tip data-for="fkbToolTip">FKB</th>
-              <th data-tip data-for="tripToolTip">Trip</th>
               <th data-tip data-for="moreToolTip">More Data</th>
             </tr>
           </thead>
@@ -39,10 +37,6 @@ function HitboxTable(props) {
 
         <ReactTooltip id="dmgToolTip" place="top" effect="solid">
           {props.damageMultiplier ? "1v1 Damage, click to remove the 1v1 multiplier" : "Base Damage, click to apply the 1v1 multiplier"}
-        </ReactTooltip>
-
-        <ReactTooltip id="sdToolTip" place="top" effect="solid">
-          Shield Damage
         </ReactTooltip>
 
         <ReactTooltip id="angleToolTip" place="top" effect="solid">
@@ -61,10 +55,6 @@ function HitboxTable(props) {
           Fixed Knockback
         </ReactTooltip>
 
-        <ReactTooltip id="tripToolTip" place="top" effect="solid">
-          Trip Chance
-        </ReactTooltip>
-
         <ReactTooltip id="moreToolTip" place="top" effect="solid">
           Shows all raw data for a hitbox
         </ReactTooltip>
@@ -72,9 +62,9 @@ function HitboxTable(props) {
       </div>
     )
   }
-  catch(err) {
+  catch (err) {
     return null;
   }
 }
 
-export default HitboxTable
+export default ThrowTable

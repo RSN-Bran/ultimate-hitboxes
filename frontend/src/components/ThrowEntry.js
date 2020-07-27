@@ -2,7 +2,7 @@ import React from "react"
 import ReactTooltip from "react-tooltip";
 
 import '../css/DataTable.css'
-function HitboxEntry(props) {
+function ThrowEntry(props) {
 
   let style = {}
   if (props.hitbox.frames.includes(props.currentFrame)) {
@@ -17,7 +17,7 @@ function HitboxEntry(props) {
 
   let frametd;
   if (props.hitbox.frames[0] !== undefined) {
-    frametd = <td data-tip data-for={"allFramesToolTip-" + props.index} style={{ "cursor": "pointer"}}onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}> {props.hitbox.frames[0]}</td>
+    frametd = <td data-tip data-for={"allFramesToolTip-" + props.index} style={{ "cursor": "pointer" }} onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}> {props.hitbox.frames[0]}</td>
   }
   else {
     frametd = <td></td>
@@ -29,12 +29,10 @@ function HitboxEntry(props) {
 
         {frametd}
         <td>{props.damageMultiplier ? parseFloat(props.hitbox.damage * 1.2).toFixed(1) : parseFloat(props.hitbox.damage).toFixed(1)}</td>
-        <td>{props.hitbox.shielddamage === undefined ? "-" : props.hitbox.shielddamage}</td>
         <td>{props.hitbox.angle}&deg;</td>
         <td>{props.hitbox.bkb}</td>
         <td>{props.hitbox.kbg}</td>
         <td>{props.hitbox.fkb}</td>
-        <td>{props.hitbox.trip === undefined ? "-" : props.hitbox.trip}</td>
         <td><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td>
 
         <ReactTooltip id={"allFramesToolTip-" + props.index} place="top" effect="solid">
@@ -48,4 +46,4 @@ function HitboxEntry(props) {
   }
 }
 
-export default HitboxEntry
+export default ThrowEntry

@@ -3,6 +3,7 @@ import ReactTooltip from "react-tooltip";
 
 import HitboxTable from './HitboxTable'
 import GrabboxTable from './GrabboxTable'
+import ThrowTable from './ThrowTable'
 import '../css/DataTable.css';
 
 function DataTable(props) {
@@ -14,13 +15,29 @@ function DataTable(props) {
           showAllHitboxData={props.showAllHitboxData}
           portalState={props.portalState}
           pickingCharacter={props.pickingCharacter}
-          move={props.move}
+        move={props.move}
+        hitboxes={props.move.hitboxes}
           currentFrame={props.currentFrame}
           updateHitboxData={props.updateHitboxData}
           jumpToFrame={props.jumpToFrame}
           damageMultiplier={props.damageMultiplier}
           changeDamageMultiplier={props.changeDamageMultiplier}
         />
+    }
+    else if (props.move.type === "throw") {
+        returnTable =
+          <HitboxTable
+            showAllHitboxData={props.showAllHitboxData}
+            portalState={props.portalState}
+            pickingCharacter={props.pickingCharacter}
+            move={props.move}
+            hitboxes={props.move.hitboxes}
+            currentFrame={props.currentFrame}
+            updateHitboxData={props.updateHitboxData}
+            jumpToFrame={props.jumpToFrame}
+            damageMultiplier={props.damageMultiplier}
+            changeDamageMultiplier={props.changeDamageMultiplier}
+          />
     }
     else {
       returnTable =
@@ -28,7 +45,8 @@ function DataTable(props) {
           showAllHitboxData={props.showAllHitboxData}
           portalState={props.portalState}
           pickingCharacter={props.pickingCharacter}
-          move={props.move}
+        move={props.move}
+        hitboxes={props.move.hitboxes}
           currentFrame={props.currentFrame}
           updateHitboxData={props.updateHitboxData}
           jumpToFrame={props.jumpToFrame}
@@ -36,6 +54,7 @@ function DataTable(props) {
           changeDamageMultiplier={props.changeDamageMultiplier}
         />
     }
+    console.log(returnTable)
     return (
       <div>
         <input type="checkbox" onClick={props.changeHitboxTable} id="showAllHitboxData" name="showAllHitboxData" checked={props.showAllHitboxData} />

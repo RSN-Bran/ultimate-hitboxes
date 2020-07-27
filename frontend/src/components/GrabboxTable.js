@@ -6,7 +6,7 @@ import GrabboxEntry from './GrabboxEntry'
 function GrabboxTable(props) {
 
   let hitboxData = [];
-  props.move.hitboxes.forEach(function (hitbox) {
+  props.hitboxes.forEach(function (hitbox) {
     hitboxData.push(<GrabboxEntry hitbox={hitbox} damageMultiplier={props.damageMultiplier} showAllHitboxData={props.showAllHitboxData} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)
   })
   return (

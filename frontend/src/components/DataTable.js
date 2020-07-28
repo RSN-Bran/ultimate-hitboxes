@@ -3,7 +3,6 @@ import ReactTooltip from "react-tooltip";
 
 import HitboxTable from './HitboxTable'
 import GrabboxTable from './GrabboxTable'
-import ThrowTable from './ThrowTable'
 import '../css/DataTable.css';
 
 function DataTable(props) {

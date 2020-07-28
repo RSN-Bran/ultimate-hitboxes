@@ -2,11 +2,19 @@ import React from "react"
 import ReactTooltip from "react-tooltip";
 
 import '../css/DataTable.css'
+
+import id_colors from '../id_colors.js'
 function HitboxEntry(props) {
 
+  console.log(id_colors)
   let style = {}
   if (props.hitbox.frames.includes(props.currentFrame)) {
-    style.backgroundColor = props.hitbox.color
+    if (props.hitbox.color === "") {
+      style.backgroundColor = id_colors[props.hitbox.id]
+    }
+    else {
+      style.backgroundColor = props.hitbox.color
+    }
     if (props.hitbox.color === "yellow" || props.hitbox.color === "white") {
       style.color = "black"
     }

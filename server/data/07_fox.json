@@ -378,8 +378,8 @@
     {
       "name": "Rapid Jab (Finisher)",
       "value": "FoxJabRapidEnd",
-      "frames": 37,
-      "faf": 37,
+      "frames": 38,
+      "faf": 38,
       "hitboxes": [
         {
           "id": "0",

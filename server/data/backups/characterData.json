@@ -238,72 +238,72 @@
     "name": "Mewtwo",
     "value": "mewtwo",
     "number": "24",
-    "completed": false,
+    "completed": true,
     "series": "pokemon",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 28,
     "name": "Roy",
     "value": "roy",
     "number": "25",
-    "completed": false,
+    "completed": true,
     "series": "fire-emblem",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 29,
     "name": "Chrom",
     "value": "chrom",
     "number": "25e",
-    "completed": false,
+    "completed": true,
     "series": "fire-emblem",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 30,
     "name": "Mr. Game & Watch",
     "value": "mr-game-watch",
     "number": "26",
-    "completed": false,
+    "completed": true,
     "series": "game-watch",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 31,
     "name": "Meta Knight",
     "value": "meta-knight",
     "number": "27",
-    "completed": false,
+    "completed": true,
     "series": "kirby",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 32,
     "name": "Pit",
     "value": "pit",
     "number": "28",
-    "completed": false,
+    "completed": true,
     "series": "kid-icarus",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 33,
     "name": "Dark Pit",
     "value": "dark-pit",
     "number": "28e",
-    "completed": false,
+    "completed": true,
     "series": "kid-icarus",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 34,
     "name": "Zero Suit Samus",
     "value": "zero-suit-samus",
     "number": "29",
-    "completed": false,
+    "completed": true,
     "series": "metroid",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 35,

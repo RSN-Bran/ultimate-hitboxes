@@ -524,7 +524,7 @@
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
           "frames": [6,7,8],
-          "color": "red",
+          "color": "salmon",
           "notes": ""
         },
         {

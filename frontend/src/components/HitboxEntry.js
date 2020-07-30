@@ -6,7 +6,7 @@ import '../css/DataTable.css'
 import id_colors from '../id_colors.js'
 function HitboxEntry(props) {
 
-  console.log(id_colors)
+  console.log(screen.width)
   let style = {}
   if (props.hitbox.frames.includes(props.currentFrame)) {
     style.backgroundColor = props.hitbox.color

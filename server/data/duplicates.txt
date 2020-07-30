@@ -1,3 +1,5 @@
-Link Down Smash
-Link Forward Air
+Link Down Smash, Merged frames
+Link Forward Air,
 
+Luigi Dash Attack, has one extra frame at the end
+Luigi Down Smash, one extra frame at the end

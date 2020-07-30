@@ -830,8 +830,8 @@
     {
       "name": "Dash Attack",
       "value": "LuigiDashAttack",
-      "frames": 48,
-      "faf": 48,
+      "frames": 47,
+      "faf": 47,
       "hitboxes": [
         {
           "id": "0",
@@ -1554,8 +1554,8 @@
     {
       "name": "Down Smash",
       "value": "LuigiDSmash",
-      "frames": 38,
-      "faf": 38,
+      "frames": 37,
+      "faf": 37,
       "hitboxes": [
         {
           "id": "1",

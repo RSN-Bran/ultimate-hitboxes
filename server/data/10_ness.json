@@ -711,8 +711,8 @@
     {
       "name": "Down Tilt",
       "value": "NessDTilt",
-      "frames": 10,
-      "faf": 10,
+      "frames": 11,
+      "faf": 11,
       "hitboxes": [
         {
           "id": "0",
@@ -1218,9 +1218,8 @@
     {
       "name": "Down Smash",
       "value": "NessDSmash",
-      "frames": 12,
-      "faf": 12,
-      "complete": false,
+      "frames": 45,
+      "faf": 45,
       "hitboxes": [
         {
           "id": "0",
@@ -1256,8 +1255,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [12,13,14,15],
+          "color": "red",
           "notes": ""
         },
         {
@@ -1294,8 +1293,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [17,18],
+          "color": "red",
           "notes": ""
         },
         {
@@ -1332,46 +1331,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "id": "0",
-          "part": "0",
-          "bone": "attach",
-          "damage": "1.0",
-          "angle": "90",
-          "kbg": "100",
-          "fkb": "30",
-          "bkb": "0",
-          "size": "4.0",
-          "x": "0.0",
-          "y": "0.0",
-          "z": "0.0",
-          "hitlag": "1.0",
-          "sdi": "1.0",
-          "clang_rebound": "attack_setoff_kind_on",
-          "facingrestrict": "attack_lr_check_b",
-          "setweight": "false",
-          "shielddamage": "0",
-          "trip": "0.0",
-          "rehit": "4",
-          "reflectable": "false",
-          "absorbable": "false",
-          "flinchless": "false",
-          "disablehitlag": "false",
-          "direct_hitbox": "true",
-          "ground_or_air": "collision_situation_mask_ga",
-          "hitbits": "collision_category_mask_all",
-          "collisionpart": "collision_part_mask_all",
-          "friendlyfire": "false",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_kick",
-          "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [23,24,25],
+          "color": "red",
           "notes": ""
         },
         {
@@ -1408,8 +1369,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [31,32],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -2148,8 +2109,8 @@
     {
       "name": "Down Air",
       "value": "NessDAir",
-      "frames": 55,
-      "faf": 55,
+      "frames": 54,
+      "faf": 54,
       "hitboxes": [
         {
           "id": "0",
@@ -2355,8 +2316,8 @@
     {
       "name": "Pummel",
       "value": "NessPummel",
-      "frames": 5,
-      "faf": 5,
+      "frames": 6,
+      "faf": 6,
       "hitboxes": [
         {
           "id": "0",
@@ -2419,26 +2380,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "60",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [27],
           "color": "",
           "notes": ""
         }
@@ -2465,26 +2407,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "60",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [27],
           "color": "",
           "notes": ""
         }
@@ -2511,26 +2434,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "60",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [36],
           "color": "",
           "notes": ""
         }
@@ -2542,44 +2446,6 @@
       "frames": 50,
       "faf": 50,
       "hitboxes": [
-        {
-          "kind": "fighter_attack_absolute_kind_throw",
-          "id": "0",
-          "damage": "4.0",
-          "angle": "70",
-          "kbg": "80",
-          "fkb": "0",
-          "bkb": "70",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "60",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
         {
           "id": "0",
           "part": "0",
@@ -2617,8 +2483,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_psi",
-          "frames": [],
-          "color": "",
+          "frames": [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2658,7 +2524,26 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_psi",
-          "frames": [],
+          "frames": [ 26, 27, 28, 29 ],
+          "color": "red",
+          "notes": ""
+        },
+        {
+          "kind": "fighter_attack_absolute_kind_throw",
+          "id": "0",
+          "damage": "4.0",
+          "angle": "70",
+          "kbg": "80",
+          "fkb": "0",
+          "bkb": "70",
+          "hitlag": "0.0",
+          "unk": "true",
+          "facingrestrict": "attack_lr_check_f",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_s",
+          "sfxtype": "collision_sound_attr_none",
+          "type": "attack_region_throw",
+          "frames": [ 27 ],
           "color": "",
           "notes": ""
         }

@@ -30,7 +30,7 @@ function GrabboxEntry(props) {
     ground_air = "Air"
   }
   else if (props.hitbox.ground_or_air === "collision_situation_mask_ga") {
-    ground_air = "Ground/Air"
+    ground_air = "Both"
   }
 
   if (props.showAllHitboxData || props.hitbox.frames.includes(props.currentFrame)) {

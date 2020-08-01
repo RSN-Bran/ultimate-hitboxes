@@ -3,3 +3,7 @@ Link Forward Air,
 
 Luigi Dash Attack, has one extra frame at the end
 Luigi Down Smash, one extra frame at the end
+
+Ness Down Tilt missing 1 frame
+Ness Down Air has one extra frame
+Ness Pummel missing 1 frame

@@ -42,21 +42,24 @@ h5 {
   width: 5%
 }
 
-#infoButton {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  cursor: pointer;
-  width: 5%;
-}
 
 @media (min-width: 500px) {
   #exitInfo {
     width: 3%
   }
-  #infoButton {
-    width: 3%
-  }
+}
+
+#help {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  display: inline-block;
+}
+
+.helpButtons {
+  width: 5%;
+  cursor: pointer;
+  float: left;
 }
 
 #links {

@@ -34,7 +34,7 @@ function GrabboxTable(props) {
       </ReactTooltip>
 
       <ReactTooltip id="ground-airToolTip" place="top" effect="solid">
-        Determines if it affects grounded or aerial opponents
+        Determines if the hitbox affects grounded or aerial opponents
       </ReactTooltip>
 
       <ReactTooltip id="moreToolTip" place="top" effect="solid">

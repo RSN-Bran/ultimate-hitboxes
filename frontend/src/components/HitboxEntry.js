@@ -27,24 +27,67 @@ function HitboxEntry(props) {
   }
 
   if (props.showAllHitboxData || props.hitbox.frames.includes(props.currentFrame)) {
-    return (
-      <tr style={style}>
+    if (!props.showExtraInfo) {
+      return (
+        <tr style={style}>
 
-        {frametd}
-        <td>{props.damageMultiplier ? parseFloat(props.hitbox.damage * 1.2).toFixed(1) : parseFloat(props.hitbox.damage).toFixed(1)}</td>
-        <td>{props.hitbox.shielddamage === undefined ? "-" : props.hitbox.shielddamage}</td>
-        <td>{props.hitbox.angle}&deg;</td>
-        <td>{props.hitbox.bkb}</td>
-        <td>{props.hitbox.kbg}</td>
-        <td>{props.hitbox.fkb}</td>
-        <td>{props.hitbox.trip === undefined ? "-" : props.hitbox.trip}</td>
-        <td><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td>
+          {frametd}
+          <td>{props.damageMultiplier ? parseFloat(props.hitbox.damage * 1.2).toFixed(1) : parseFloat(props.hitbox.damage).toFixed(1)}</td>
+          <td>{props.hitbox.shielddamage === undefined ? "-" : props.hitbox.shielddamage}</td>
+          <td>{props.hitbox.angle}&deg;</td>
+          <td>{props.hitbox.bkb}</td>
+          <td>{props.hitbox.kbg}</td>
+          <td>{props.hitbox.fkb}</td>
+          <td>{props.hitbox.trip === undefined ? "-" : props.hitbox.trip}</td>
+          <td><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td>
 
-        <ReactTooltip id={"allFramesToolTip-" + props.index} place="top" effect="solid">
-          {props.hitbox.frames.join()}
-        </ReactTooltip>
-      </tr>
-    )
+          <ReactTooltip id={"allFramesToolTip-" + props.index} place="top" effect="solid">
+            {props.hitbox.frames.join()}
+          </ReactTooltip>
+        </tr>
+      )
+    }
+    else {
+
+      let ground_air;
+      if (props.hitbox.ground_or_air === "collision_situation_mask_g") {
+        ground_air = "Ground"
+      }
+      else if (props.hitbox.ground_or_air === "collision_situation_mask_a") {
+        ground_air = "Air"
+      }
+      else if (props.hitbox.ground_or_air === "collision_situation_mask_ga") {
+        ground_air = "Both"
+      }
+
+      return (
+        <tr style={style}>
+
+          <td>{props.hitbox.id}</td>
+          {frametd}
+          <td>{props.damageMultiplier ? parseFloat(props.hitbox.damage * 1.2).toFixed(1) : parseFloat(props.hitbox.damage).toFixed(1)}</td>
+          <td>{props.hitbox.shielddamage === undefined ? "-" : props.hitbox.shielddamage}</td>
+          <td>{props.hitbox.angle}&deg;</td>
+          <td>{props.hitbox.bkb}</td>
+          <td>{props.hitbox.kbg}</td>
+          <td>{props.hitbox.fkb}</td>
+          <td>{props.hitbox.trip === undefined ? "-" : props.hitbox.trip}</td>
+          <td>{props.hitbox.sdi === undefined ? "-" : props.hitbox.sdi + "x"}</td>
+          <td>{ground_air}</td>
+          <td>{props.hitbox.size === undefined ? "-" : props.hitbox.size}</td>
+          <td>{props.hitbox.bone === undefined ? "-" : props.hitbox.bone}</td>
+          <td>{props.hitbox.x === undefined ? "-" : props.hitbox.x}</td>
+          <td>{props.hitbox.y === undefined ? "-" : props.hitbox.y}</td>
+          <td>{props.hitbox.z === undefined ? "-" : props.hitbox.z}</td>
+          <td><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td>
+
+          <ReactTooltip id={"allFramesToolTip-" + props.index} place="top" effect="solid">
+            {props.hitbox.frames.join()}
+          </ReactTooltip>
+        </tr>
+      )
+    }
+    
   }
   else {
     return null;

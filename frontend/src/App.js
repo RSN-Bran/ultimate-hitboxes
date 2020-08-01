@@ -13,9 +13,11 @@ import HitBoxDetail from './components/HitBoxDetail'
 import MoveSelect from './components/MoveSelect'
 import DataTable from './components/DataTable';
 import Info from './components/Info';
+import Settings from './components/Settings';
 
 //Import info image
 import info from './media/info.png'
+import settings from './media/settings.png'
 import twitter from './media/twitter.png'
 import github from './media/github.png'
 
@@ -27,6 +29,8 @@ if (process.env.NODE_ENV === "development") {
 else {
   environment = "ultimate-hitboxes.com"
 }
+
+let cookieSet = false;
 
 class App extends React.Component {
   constructor() {
@@ -53,6 +57,7 @@ class App extends React.Component {
       currentMoveData: undefined,
 
       info: false,
+      settings: false,
 
       //State of the viewing portal
       //* 'initial' initial state when the page is first loaded, shows a blank portal
@@ -80,7 +85,10 @@ class App extends React.Component {
       damageMultiplier: false,
 
       //Boolean to determine if all hitbox data should be showed at once, or data should only be shown on active frames
-      showAllHitboxData: true
+      showAllHitboxData: true,
+
+      //Boolean to determine if extra data should be shown in the data table
+      showExtraInfo: false
     }
 
     //Bind functions so they are usable within components
@@ -104,6 +112,9 @@ class App extends React.Component {
     this.previousMove = this.previousMove.bind(this)
     this.changeHitboxTable = this.changeHitboxTable.bind(this)
     this.showInfo = this.showInfo.bind(this)
+    this.showSettings = this.showSettings.bind(this)
+    this.changeExtraInfo = this.changeExtraInfo.bind(this)
+    this.setCookie = this.setCookie.bind(this)
 
   }
 
@@ -384,6 +395,19 @@ class App extends React.Component {
     })
   }
 
+  showSettings() {
+    console.log("here")
+    this.setState({
+      settings: !this.state.settings
+    })
+  }
+
+  changeExtraInfo() {
+    this.setState({
+      showExtraInfo: !this.state.showExtraInfo
+    })
+  }
+
   //Jump to the next move in the list
   nextMove() {
     //Get index of the move in the array
@@ -446,8 +470,29 @@ class App extends React.Component {
     this.setMove(event);
   }
 
+  setCookie() {
+    cookieSet = true;
+    console.log("setcookie")
+    try {
+      let settings = JSON.parse(document.cookie)
+      this.setState({
+        damageMultiplier: settings.damageMultiplier,
+        showAllHitboxData: settings.showAllHitboxData,
+        showExtraInfo: settings.showExtraInfo,
+        sortBy: settings.sortBy
+      })
+    }
+    catch {
+
+    }
+  }
+
   //Call components to render the page
   render() {
+    if (!cookieSet) {
+      this.setCookie()
+    }
+    
     return (
       <div className="App">
  
@@ -468,17 +513,37 @@ class App extends React.Component {
           
         
         
+        <div id="help">
+          <img id="infoButton" className="helpButtons"
+            src={info}
+            onClick={this.showInfo}
+          />
 
-        <img id="infoButton"
-          src={info}
-          onClick={this.showInfo}
-        />
+          <img id="settingsButton" className="helpButtons"
+            src={settings}
+            onClick={this.showSettings}
+            
+          />
+        </div>
+        
 
         <Info
           info={this.state.info}
           showInfo={this.showInfo}
         />
 
+        <Settings
+          settings={this.state.settings}
+          showSettings={this.showSettings}
+          showAllHitboxData={this.state.showAllHitboxData}
+          changeHitboxTable={this.changeHitboxTable}
+          damageMultiplier={this.state.damageMultiplier}
+          changeDamageMultiplier={this.changeDamageMultiplier}
+          showExtraInfo={this.state.showExtraInfo}
+          changeExtraInfo={this.changeExtraInfo}
+          sortBy={this.state.sortBy}
+          setCookie={this.setCookie}
+        />
         
 
         <button id="chooseCharacter"
@@ -547,7 +612,6 @@ class App extends React.Component {
 
         <DataTable
           showAllHitboxData={this.state.showAllHitboxData}
-          changeHitboxTable={this.changeHitboxTable}
           portalState={this.state.portalState}
           pickingCharacter={this.state.pickingCharacter}
           move={this.state.currentMoveData}
@@ -555,7 +619,7 @@ class App extends React.Component {
           updateHitboxData={this.updateHitboxData}
           jumpToFrame={this.jumpToFrame}
           damageMultiplier={this.state.damageMultiplier}
-          changeDamageMultiplier={this.changeDamageMultiplier}
+          showExtraInfo={this.state.showExtraInfo}
 
         />
       </div>

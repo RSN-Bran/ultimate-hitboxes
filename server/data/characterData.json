@@ -310,9 +310,9 @@
     "name": "Wario",
     "value": "wario",
     "number": "30",
-    "completed": false,
+    "completed": true,
     "series": "wario",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 36,

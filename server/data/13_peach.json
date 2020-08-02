@@ -2918,7 +2918,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
+          "frames": [43],
           "color": "",
           "notes": ""
         }

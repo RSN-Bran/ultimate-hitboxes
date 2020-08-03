@@ -496,36 +496,39 @@ class App extends React.Component {
     return (
       <div className="App">
  
-        <h3>Smash Ultimate Hitbox Viewer</h3>
+        
 
-        <div id="links">
-          <a href="https://twitter.com/SSBUHitboxes">
-            <img id="twitter" className="linkButtons"
-              src={twitter}
-            />
-          </a>
-          <a href="https://github.com/RSN-Bran/ultimate-hitboxes">
-            <img id="github" className="linkButtons"
-              src={github}
-            />
-          </a>
-        </div>
+        
           
         
-        
-        <div id="help">
-          <img id="infoButton" className="helpButtons"
-            src={info}
-            onClick={this.showInfo}
-          />
+        <div id="headerButtons">
+          <div id="links">
+            <a href="https://twitter.com/SSBUHitboxes">
+              <img id="twitter" className="linkButtons"
+                src={twitter}
+              />
+            </a>
+            <a href="https://github.com/RSN-Bran/ultimate-hitboxes">
+              <img id="github" className="linkButtons"
+                src={github}
+              />
+            </a>
+          </div>
+          <div id="help">
+            <img id="infoButton" className="helpButtons"
+              src={info}
+              onClick={this.showInfo}
+            />
 
-          <img id="settingsButton" className="helpButtons"
-            src={settings}
-            onClick={this.showSettings}
+            <img id="settingsButton" className="helpButtons"
+              src={settings}
+              onClick={this.showSettings}
             
-          />
-        </div>
-        
+            />
+            </div>
+          </div>
+
+        <h3>Smash Ultimate Hitbox Viewer</h3>
 
         <Info
           info={this.state.info}

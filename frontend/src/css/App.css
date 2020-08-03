@@ -16,6 +16,11 @@
   color: white;
 }
 
+h3 {
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+
 @media (max-width: 1200px) {
   #chooseCharacter {
     cursor: pointer;
@@ -24,7 +29,7 @@
     font-size: 10px;
   }
   h3 {
-    margin-top: .5em;
+    margin-top: 0;
     margin-bottom: .5em;
   }
 }
@@ -39,7 +44,7 @@ h5 {
   left: 0%;
   top: 0%;
   cursor: pointer;
-  width: 5%
+  width: 10%
 }
 
 
@@ -49,28 +54,53 @@ h5 {
   }
 }
 
+#headerButtons {
+  display: inline;
+  width: 100%;
+  top: 0%;
+}
+
 #help {
-  position: absolute;
   left: 0%;
   top: 0%;
-  display: inline-block;
+}
+
+#links {
+  right: 0%;
+  top: 0%;
 }
 
 .helpButtons {
-  width: 5%;
+  width: 10%;
   cursor: pointer;
   float: left;
 }
 
-#links {
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  display: inline-block;
-}
-
 .linkButtons {
-  width: 5%;
+  width: 10%;
   cursor: pointer;
   float: right;
 }
+
+#twitter {
+  margin-left: 2%;
+}
+
+#settingsButton {
+  margin-left: 2%
+}
+
+@media (min-width: 500px) {
+  .helpButtons, .linkButtons {
+    width: 3%
+  }
+
+  #twitter {
+    margin-left: 1%;
+  }
+
+  #settingsButton {
+    margin-left: 1%
+  }
+}
+

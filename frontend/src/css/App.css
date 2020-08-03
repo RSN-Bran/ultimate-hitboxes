@@ -44,7 +44,7 @@ h5 {
   left: 0%;
   top: 0%;
   cursor: pointer;
-  width: 10%
+  width: 7%
 }
 
 
@@ -71,13 +71,13 @@ h5 {
 }
 
 .helpButtons {
-  width: 10%;
+  width: 7%;
   cursor: pointer;
   float: left;
 }
 
 .linkButtons {
-  width: 10%;
+  width: 7%;
   cursor: pointer;
   float: right;
 }

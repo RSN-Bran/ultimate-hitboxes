@@ -319,9 +319,9 @@
     "name": "Snake",
     "value": "snake",
     "number": "31",
-    "completed": false,
+    "completed": true,
     "series": "metal-gear",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 37,

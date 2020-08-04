@@ -23,6 +23,9 @@ function Settings(props) {
 		return (
 			<div id="settingsText">
 				<div className="setting">
+					<h3>Make sure cookies are enabled so your preferences are saved for future visits!</h3>
+				</div>
+				<div className="setting">
 					<input type="checkbox" onClick={props.changeHitboxTable} id="showAllHitboxData" name="showAllHitboxData" checked={props.showAllHitboxData} />
 					<span>Display all hitboxes at all times</span>
 					<p>

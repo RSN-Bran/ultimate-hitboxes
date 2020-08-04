@@ -7,3 +7,10 @@ Luigi Down Smash, one extra frame at the end
 Ness Down Tilt missing 1 frame
 Ness Down Air has one extra frame
 Ness Pummel missing 1 frame
+
+Jigglypuff has issues
+
+Ice Climbers Grab missing frames
+Ice Climbers Dash Grab missing frames
+
+Sheik grab, dash grab, pivot grab missing frames

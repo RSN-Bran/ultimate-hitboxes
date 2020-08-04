@@ -10,6 +10,9 @@ function Info(props) {
 	if (props.info) {
 		return (
 			<div id="infoText">
+				<div className="info">
+					<h3>Credits</h3>
+				</div>
 				<div className = "info">
 					All code written and hosted by Brandon "<a href="https://twitter.com/RSN_Bran">RSN_Bran</a>" Sultana.
 				</div>

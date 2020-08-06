@@ -8,7 +8,8 @@ function HitboxEntry(props) {
 
   console.log(screen.width)
   let style = {}
-  if (props.hitbox.frames.includes(props.currentFrame)) {
+  console.log(props.hitbox.frames.length)
+  if (props.hitbox.frames.includes(props.currentFrame) || props.hitbox.frames.length === 0) {
     style.backgroundColor = props.hitbox.color
     if (props.hitbox.color === "yellow" || props.hitbox.color === "white") {
       style.color = "black"
@@ -20,10 +21,10 @@ function HitboxEntry(props) {
 
   let frametd;
   if (props.hitbox.frames[0] !== undefined) {
-    frametd = <td data-tip data-for={"allFramesToolTip-" + props.index} style={{ "cursor": "pointer"}}onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}> {props.hitbox.frames[0]}</td>
+    frametd = <td data-tip data-for={"allFramesToolTip-" + props.index} style={{ "cursor": "pointer" }} onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}> {props.hitbox.frames[0]}</td>
   }
   else {
-    frametd = <td></td>
+    frametd = <td data-tip data-for={"allFramesToolTip-" + props.index} style={{ "cursor": "pointer", /*"display": "none"*/ }} onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}> {props.hitbox.frames[0]}</td>
   }
 
   if (props.showAllHitboxData || props.hitbox.frames.includes(props.currentFrame)) {

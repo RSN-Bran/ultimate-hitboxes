@@ -10,11 +10,19 @@ function HitboxTable(props) {
     let hitboxData = [];
     console.log(props.hitboxes)
     props.hitboxes.forEach(function (hitbox, index) {
-      hitboxData.push(<HitboxEntry hitbox={hitbox} index={index} showExtraInfo={props.showExtraInfo} damageMultiplier={props.damageMultiplier} showAllHitboxData={props.showAllHitboxData} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)
+      hitboxData.push(<HitboxEntry hitbox={hitbox} index={index} frames={props.move.frames} showExtraInfo={props.showExtraInfo} damageMultiplier={props.damageMultiplier} showAllHitboxData={props.showAllHitboxData} currentFrame={props.currentFrame} key={hitbox.id} updateHitboxData={props.updateHitboxData} jumpToFrame={props.jumpToFrame} />)
     })
 
     let table;
 
+    let frameHeader
+    if (props.move.frames === 1) {
+      frameHeader = <th data-tip data-for="frameToolTip" style={{ "cursor": "pointer", /*"display": "none"*/ }}>Frame</th>
+    }
+    else {
+      frameHeader = <th data-tip data-for="frameToolTip" style={{ "cursor": "pointer" }}>Frame</th>
+    }
+    
     //Mobile Table
     console.log("HitboxTable" + props.showExtraInfo)
     if (!props.showExtraInfo) {
@@ -22,7 +30,7 @@ function HitboxTable(props) {
         <table>
           <thead>
             <tr>
-              <th data-tip data-for="frameToolTip">Frame</th>
+              {frameHeader}
               <th data-tip data-for="dmgToolTip" onClick={props.changeDamageMultiplier}>Dmg</th>
               <th data-tip data-for="sdToolTip">SD</th>
               <th data-tip data-for="angleToolTip">Angle</th>

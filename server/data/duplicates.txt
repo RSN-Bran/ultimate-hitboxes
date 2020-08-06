@@ -15,4 +15,9 @@ Ice Climbers Dash Grab missing frames
 
 Sheik grab, dash grab, pivot grab missing frames
 
+Ganondorf UpTilt missing a frame
+
+Pit Jab has an extra frame
+Pit Upair has an extra frame
+
 Snake pivot grab missing 6 frames

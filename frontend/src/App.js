@@ -23,8 +23,10 @@ import github from './media/github.png'
 
 //Set hostname to query depending on dev vs PROD
 let environment;
+
 if (process.env.NODE_ENV === "development") {
   environment = "localhost"
+  
 }
 else {
   environment = "ultimate-hitboxes.com"

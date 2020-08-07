@@ -328,9 +328,9 @@
     "name": "Ike",
     "value": "ike",
     "number": "32",
-    "completed": false,
+    "completed": true,
     "series": "fire-emblem",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 38,

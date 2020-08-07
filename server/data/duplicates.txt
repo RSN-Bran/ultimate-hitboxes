@@ -21,3 +21,5 @@ Pit Jab has an extra frame
 Pit Upair has an extra frame
 
 Snake pivot grab missing 6 frames
+
+Ike Forward Air has 8 extra frames

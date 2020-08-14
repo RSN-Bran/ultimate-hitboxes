@@ -9,31 +9,16 @@
   color: white;
 }
 
-#chooseCharacter {
-  cursor: pointer;
-  background-color: black;
-  border-color: black;
-  color: white;
-  width: 10%;
-  height: 2em;
+/*General Header settings*/
+#header {
+  display: inline;
+  width: 100%;
+  top: 0%;
 }
 
 h3 {
   margin-top: 0;
   margin-bottom: .5em;
-}
-
-@media (max-width: 1200px) {
-  #chooseCharacter {
-    cursor: pointer;
-    width: 30%;
-    height: 3em;
-    font-size: 10px;
-  }
-  h3 {
-    margin-top: 0;
-    margin-bottom: .5em;
-  }
 }
 
 h5 {
@@ -46,55 +31,45 @@ h5 {
   left: 0%;
   top: 0%;
   cursor: pointer;
-  width: 7%
-}
-
-
-@media (min-width: 500px) {
-  #exitInfo {
-    width: 3%
-  }
-}
-
-#headerButtons {
-  display: inline;
-  width: 100%;
-  top: 0%;
 }
 
 #help {
   left: 0%;
   top: 0%;
+  position: absolute;
 }
 
 #links {
   right: 0%;
   top: 0%;
+  position: absolute;
 }
 
 .helpButtons {
-  width: 7%;
   cursor: pointer;
   float: left;
 }
 
 .linkButtons {
-  width: 7%;
   cursor: pointer;
   float: right;
 }
 
-#twitter {
-  margin-left: 2%;
+#chooseCharacter {
+  cursor: pointer;
+  background-color: black;
+  border-color: black;
+  color: white;
+  font-size: 10px;
 }
 
-#settingsButton {
-  margin-left: 2%
-}
-
+/*Sizing for Desktop*/
 @media (min-width: 500px) {
-  .helpButtons, .linkButtons {
+  #exitInfo {
     width: 3%
+  }
+  .helpButtons, .linkButtons {
+    width: 5%
   }
 
   #twitter {
@@ -104,5 +79,37 @@ h5 {
   #settingsButton {
     margin-left: 1%
   }
+
+  #chooseCharacter {
+    width: 10%;
+    height: 3em;
+  }
 }
 
+/*Sizing for Mobile*/
+@media (max-width: 500px) {
+  #exitInfo {
+    width: 7%
+  }
+
+  .helpButtons, .linkButtons {
+    width: 7%;
+  }
+
+  #twitter {
+    margin-left: 2%;
+  }
+
+  #settingsButton {
+    margin-left: 2%
+  }
+
+  #chooseCharacter {
+    width: 30%;
+    height: 3em;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+}

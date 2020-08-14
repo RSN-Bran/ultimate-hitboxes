@@ -503,7 +503,7 @@ class App extends React.Component {
         
           
         
-        <div id="headerButtons">
+        <div id="header">
           <div id="links">
             <a href="https://twitter.com/SSBUHitboxes">
               <img id="twitter" className="linkButtons"
@@ -515,6 +515,9 @@ class App extends React.Component {
                 src={github}
               />
             </a>
+          </div>
+          <div id="title">
+            <h3>Smash Ultimate Hitbox Viewer</h3>
           </div>
           <div id="help">
             <img id="infoButton" className="helpButtons"
@@ -530,7 +533,7 @@ class App extends React.Component {
             </div>
           </div>
 
-        <h3>Smash Ultimate Hitbox Viewer</h3>
+        
 
         <Info
           info={this.state.info}

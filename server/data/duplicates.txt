@@ -23,3 +23,11 @@ Pit Upair has an extra frame
 Snake pivot grab missing 6 frames
 
 Ike Forward Air has 8 extra frames
+
+Pichu FSmash missing frames at the end
+
+Ivyysaur Ftilt missing startup frames
+Ivysaur Neutral B has extra frames for both aerial and ground versions
+Back Throw missing a frame
+
+Mewtwo FSmash Up and neutral missing a frame

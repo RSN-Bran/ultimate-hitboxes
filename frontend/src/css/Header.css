@@ -1,0 +1,45 @@
+/*General Header settings*/
+#header {
+	display: inline;
+	width: 100%;
+	top: 0%;
+}
+
+h3 {
+	margin-top: 0;
+	margin-bottom: .5em;
+}
+
+h5 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#exitInfo {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	cursor: pointer;
+}
+
+#help {
+	left: 0%;
+	top: 0%;
+	position: absolute;
+}
+
+#links {
+	right: 0%;
+	top: 0%;
+	position: absolute;
+}
+
+.helpButtons {
+	cursor: pointer;
+	float: left;
+}
+
+.linkButtons {
+	cursor: pointer;
+	float: right;
+}

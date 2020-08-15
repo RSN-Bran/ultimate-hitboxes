@@ -1,14 +1,21 @@
-#settingsText {
-	position: absolute;
+#settingsPage {
 	left: 0%;
 	top: 0%;
-	background-color: #282c34;
 	width: 100%;
 	height: 100%
 }
 
-.setting {
+.settingDiv {
 	font-size: .8em;
 	width: 80%;
 	margin: auto;
+	margin-top: 10px;
+}
+
+.setting {
+	font-size: 2em;
+}
+
+.settingDescription {
+	font-size: 1em;
 }

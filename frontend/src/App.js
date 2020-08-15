@@ -6,20 +6,18 @@ import { useState, useCallback  } from "react";
 import './css/App.css';
 
 //Import components
+import Header from './components/Header'
 import CharacterList from './components/CharacterList'
 import Player from './components/Player'
 import PlayOptions from './components/PlayOptions'
 import HitBoxDetail from './components/HitBoxDetail'
 import MoveSelect from './components/MoveSelect'
 import DataTable from './components/DataTable';
-import Info from './components/Info';
 import Settings from './components/Settings';
+import Info from './components/Info';
 
-//Import info image
-import info from './media/info.png'
-import settings from './media/settings.png'
-import twitter from './media/twitter.png'
-import github from './media/github.png'
+
+
 
 //Set hostname to query depending on dev vs PROD
 let environment;
@@ -36,7 +34,7 @@ let cookieSet = false;
 
 class App extends React.Component {
   constructor() {
-    
+
     super();
 
     //Interval used for playing the video
@@ -90,7 +88,10 @@ class App extends React.Component {
       showAllHitboxData: true,
 
       //Boolean to determine if extra data should be shown in the data table
-      showExtraInfo: false
+      showExtraInfo: false,
+
+      //0 or 1 value to represent dark or light mode, respectively
+      dark_light: 0
     }
 
     //Bind functions so they are usable within components
@@ -116,6 +117,7 @@ class App extends React.Component {
     this.showInfo = this.showInfo.bind(this)
     this.showSettings = this.showSettings.bind(this)
     this.changeExtraInfo = this.changeExtraInfo.bind(this)
+    this.setLightDark = this.setLightDark.bind(this)
     this.setCookie = this.setCookie.bind(this)
 
   }
@@ -391,14 +393,12 @@ class App extends React.Component {
   }
 
   showInfo() {
-    console.log("here")
     this.setState({
       info: !this.state.info
     })
   }
 
   showSettings() {
-    console.log("here")
     this.setState({
       settings: !this.state.settings
     })
@@ -474,14 +474,14 @@ class App extends React.Component {
 
   setCookie() {
     cookieSet = true;
-    console.log("setcookie")
     try {
       let settings = JSON.parse(document.cookie)
       this.setState({
         damageMultiplier: settings.damageMultiplier,
         showAllHitboxData: settings.showAllHitboxData,
         showExtraInfo: settings.showExtraInfo,
-        sortBy: settings.sortBy
+        sortBy: settings.sortBy,
+        dark_light: settings.dark_light
       })
     }
     catch {
@@ -489,149 +489,174 @@ class App extends React.Component {
     }
   }
 
-  //Call components to render the page
-  render() {
+  setLightDark() {
+    this.setState({
+      dark_light: Math.abs(this.state.dark_light - 1)
+    })
+  }
+
+  //Call this upon a site load to set the cookies
+  componentDidMount() {
     if (!cookieSet) {
       this.setCookie()
     }
+  }
+
+  //Call components to render the page
+  render() {
     
-    return (
-      <div className="App">
- 
-        
 
-        
+    //Dark Mode Style
+    let pageStyle = {}
+    if (this.state.dark_light === 0) {
+      pageStyle.backgroundColor = "#000000"
+      pageStyle.color = "white"
+    }
+    //Light Mode Style
+    else {
+      pageStyle.backgroundColor = "#FFFFFF"
+      pageStyle.color = "black"
+    }
+
+    //This extends the background color to the whole screen
+    document.body.style.backgroundColor = pageStyle.backgroundColor;
+
+    //Display the Info Page
+    if (this.state.info) {
+      return (
+        <div className="App" style={pageStyle}>
+          <Info
+            info={this.state.info}
+            showInfo={this.showInfo}
+            dark_light={this.state.dark_light}
+          />
+        </div>
+      )
+    }
+
+    //Display the Settings Page
+    else if (this.state.settings) {
+      return (
+        <div className="App" style={pageStyle}>
+          <Settings
+            settings={this.state.settings}
+            showSettings={this.showSettings}
+            showAllHitboxData={this.state.showAllHitboxData}
+            changeHitboxTable={this.changeHitboxTable}
+            damageMultiplier={this.state.damageMultiplier}
+            changeDamageMultiplier={this.changeDamageMultiplier}
+            showExtraInfo={this.state.showExtraInfo}
+            changeExtraInfo={this.changeExtraInfo}
+            sortBy={this.state.sortBy}
+            setLightDark={this.setLightDark}
+            dark_light={this.state.dark_light}
+            setCookie={this.setCookie}
+          />
+        </div>
+      )
+    }
+
+    //Display the Character Select Page
+    else if (this.state.pickingCharacter) {
+      return (
+        <div className="App" style={pageStyle}>
+          <CharacterList
+            pickingCharacter={this.state.pickingCharacter}
+            characterData={this.state.characterData}
+            getCharacterData={this.getCharacterData}
+            sortBy={this.state.sortBy}
+            search={this.state.search}
+            changeSortBy={this.changeSortBy}
+            changeSearchValue={this.changeSearchValue}
+            exit={this.exitCharacterPicker}
+            dark_light={this.state.dark_light}
+          />
+        </div>
+      )
+    }
+
+    //Display the main page content
+    else {
+      return (
+        <div className="App" style={pageStyle}>
+          <Header
+            showInfo={this.showInfo}
+            showSettings={this.showSettings}
+            dark_light={this.state.dark_light}
+          />
           
-        
-        <div id="header">
-          <div id="links">
-            <a href="https://twitter.com/SSBUHitboxes">
-              <img id="twitter" className="linkButtons"
-                src={twitter}
-              />
-            </a>
-            <a href="https://github.com/RSN-Bran/ultimate-hitboxes">
-              <img id="github" className="linkButtons"
-                src={github}
-              />
-            </a>
-          </div>
-          <div id="title">
-            <h3>Smash Ultimate Hitbox Viewer</h3>
-          </div>
-          <div id="help">
-            <img id="infoButton" className="helpButtons"
-              src={info}
-              onClick={this.showInfo}
-            />
+          <button id="chooseCharacter" className={this.state.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
+            onClick={this.chooseCharacter}
+          >
+            Choose a Character
+          </button>
 
-            <img id="settingsButton" className="helpButtons"
-              src={settings}
-              onClick={this.showSettings}
-            
-            />
-            </div>
-          </div>
+          <HitBoxDetail
+            hitboxData={this.state.hitboxData}
+            updateHitboxData={this.updateHitboxData}
+            dark_light={this.state.dark_light}
+          />
 
-        
+          <MoveSelect
+            setMove={this.setMove}
+            moveList={this.state.currentCharacterData.moves}
+            currentMoveData={this.state.currentMoveData}
+            characterData={this.state.currentCharacterData}
+            dark_light={this.state.dark_light}
+          />
 
-        <Info
-          info={this.state.info}
-          showInfo={this.showInfo}
-        />
+          <Player
+            url={this.state.url}
+            frame={this.state.frame}
+            portalState={this.state.portalState}
+            width={this.state.loadingPercent}
+            pickingCharacter={this.state.pickingCharacter}
+          />
 
-        <Settings
-          settings={this.state.settings}
-          showSettings={this.showSettings}
-          showAllHitboxData={this.state.showAllHitboxData}
-          changeHitboxTable={this.changeHitboxTable}
-          damageMultiplier={this.state.damageMultiplier}
-          changeDamageMultiplier={this.changeDamageMultiplier}
-          showExtraInfo={this.state.showExtraInfo}
-          changeExtraInfo={this.changeExtraInfo}
-          sortBy={this.state.sortBy}
-          setCookie={this.setCookie}
-        />
-        
+          <PlayOptions
+            //Pass down boolean to show if video is playing or not
+            portalState={this.state.portalState}
+            pickingCharacter={this.state.pickingCharacter}
 
-        <button id="chooseCharacter"
-          onClick={this.chooseCharacter}
-        >
-        Choose a Character  
-        </button>
-        
-        <CharacterList
-          pickingCharacter={this.state.pickingCharacter}
-          characterData={this.state.characterData}
-          getCharacterData={this.getCharacterData}
-          sortBy={this.state.sortBy}
-          search={this.state.search}
-          changeSortBy={this.changeSortBy}
-          changeSearchValue={this.changeSearchValue}
-          exit={this.exitCharacterPicker}
-        />
+            //Pass down values needed by the Slider
+            totalFrames={this.state.currentMoveData === undefined ? 1 : this.state.currentMoveData.frames}
+            currentFrame={this.state.frame}
+            change={this.updateSlider}
 
-        <HitBoxDetail
-          hitboxData={this.state.hitboxData}
-          updateHitboxData={this.updateHitboxData}
-        />
+            //Pass down values needed by the Buttons
+            incrementFrame={this.incrementFrame}
+            decrementFrame={this.decrementFrame}
+            playing={this.state.playing}
+            play={this.play}
+            pause={this.pause}
+            nextMove={this.nextMove}
+            previousMove={this.previousMove}
+            index={this.state.currentMoveData !== undefined ? this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name) : undefined}
+            totalMoves={this.state.currentCharacterData.moves.length}
+            dark_light={this.state.dark_light}
 
-        <MoveSelect
-          setMove={this.setMove}
-          moveList={this.state.currentCharacterData.moves}
-          currentMoveData={this.state.currentMoveData}
-          characterData={this.state.currentCharacterData}
-        />
+            //Pass down values needed by the Speed Options
+            changeSpeed={this.changeSpeed}
+            playSpeed={this.state.playSpeed}
 
-        <Player
-          url={this.state.url}
-          frame={this.state.frame}
-          portalState={this.state.portalState}
-          width={this.state.loadingPercent}
-          pickingCharacter={this.state.pickingCharacter}
-        />
-        
-        <PlayOptions
-          //Pass down boolean to show if video is playing or not
-          portalState={this.state.portalState}
-          pickingCharacter={this.state.pickingCharacter}
+          />
 
-          //Pass down values needed by the Slider
-          totalFrames={this.state.currentMoveData === undefined ? 1 : this.state.currentMoveData.frames}
-          currentFrame={this.state.frame}
-          change={this.updateSlider}
-
-          //Pass down values needed by the Buttons
-          incrementFrame={this.incrementFrame}
-          decrementFrame={this.decrementFrame}
-          playing={this.state.playing}
-          play={this.play}
-          pause={this.pause}
-          nextMove={this.nextMove}
-          previousMove={this.previousMove}
-          index={this.state.currentMoveData !== undefined ? this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name) : undefined}
-          totalMoves={this.state.currentCharacterData.moves.length}
-
-          //Pass down values needed by the Speed Options
-          changeSpeed={this.changeSpeed}
-          playSpeed={this.state.playSpeed}
-
-        />
-
-        <DataTable
-          showAllHitboxData={this.state.showAllHitboxData}
-          portalState={this.state.portalState}
-          pickingCharacter={this.state.pickingCharacter}
-          move={this.state.currentMoveData}
-          currentFrame={this.state.frame}
-          updateHitboxData={this.updateHitboxData}
-          jumpToFrame={this.jumpToFrame}
-          damageMultiplier={this.state.damageMultiplier}
-          showExtraInfo={this.state.showExtraInfo}
-
-        />
-      </div>
-    );
+          <DataTable
+            showAllHitboxData={this.state.showAllHitboxData}
+            portalState={this.state.portalState}
+            pickingCharacter={this.state.pickingCharacter}
+            move={this.state.currentMoveData}
+            currentFrame={this.state.frame}
+            updateHitboxData={this.updateHitboxData}
+            jumpToFrame={this.jumpToFrame}
+            damageMultiplier={this.state.damageMultiplier}
+            showExtraInfo={this.state.showExtraInfo}
+            dark_light={this.state.dark_light}
+          />
+        </div>
+      );
+    }
+    
   }
   
 }

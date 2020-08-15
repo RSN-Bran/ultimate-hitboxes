@@ -1,13 +1,18 @@
 #hitboxDetail {
 	position: absolute;
-	left: 25%;
 	top: 10%;
-	width: 50%;
 	color: black;
 	background-color: white;
 	display: block;
 	font-size: 15px;
 	margin: 0;
+}
+
+@media (min-width: 1200px) {
+	#hitboxDetail {
+		width: 40%;
+		left: 30%;
+	}
 }
 
 @media (max-width: 1200px) {

@@ -1,12 +1,31 @@
 import React from "react"
 import ToolTip from './ToolTip';
 
-import minus from '../media/minus.png'
-import plus from '../media/plus.png'
-import play from '../media/play.png'
-import pause from '../media/pause.png'
-import next from '../media/next.png'
-import previous from '../media/previous.png'
+import minus_dark from '../media/darkmode/minus.png'
+import minus_light from '../media/lightmode/minus.png'
+let minus = [minus_dark, minus_light]
+
+import plus_dark from '../media/darkmode/plus.png'
+import plus_light from '../media/lightmode/plus.png'
+let plus = [plus_dark, plus_light]
+
+import play_dark from '../media/darkmode/play.png'
+import play_light from '../media/lightmode/play.png'
+let play = [play_dark, play_light]
+
+import pause_dark from '../media/darkmode/pause.png'
+import pause_light from '../media/lightmode/pause.png'
+let pause = [pause_dark, pause_light]
+
+import next_dark from '../media/darkmode/next.png'
+import next_light from '../media/lightmode/next.png'
+let next = [next_dark, next_light]
+
+import previous_dark from '../media/darkmode/previous.png'
+import previous_light from '../media/lightmode/previous.png'
+let previous = [previous_dark, previous_light]
+
+
 
 import '../css/Button.css';
 
@@ -23,7 +42,7 @@ function Buttons(props) {
 				data-tip data-for="previousToolTip"
 				className={props.index !== 0 ? "button" : "buttonNoClick"}
 				id="previous"
-				src={previous}
+				src={previous[props.dark_light]}
 				onClick={props.index !== 0 ? props.previousMove : null}
 				alt="Previous Move"
 			/>
@@ -38,7 +57,7 @@ function Buttons(props) {
 				data-tip data-for="minusToolTip"
 				className={props.currentFrame !== 1 && !props.playing ? "button" : "buttonNoClick"}
 				id="minus"
-				src={minus}
+				src={minus[props.dark_light]}
 				onClick={props.currentFrame !== 1 && !props.playing ? props.decrementFrame : null}
 				alt="Decrement Frame"
 			/>
@@ -53,7 +72,7 @@ function Buttons(props) {
 				data-tip data-for="playToolTip"
 				className={props.totalFrames !== 1 ? "button" : "buttonNoClick"}
 				id="pause-play"
-				src={props.playing ? pause : play}
+				src={props.playing ? pause[props.dark_light] : play[props.dark_light]}
 				onClick={props.playing ? props.pause : props.play}
 				alt="Play Move"
 			/>
@@ -67,7 +86,7 @@ function Buttons(props) {
 				data-tip data-for="plusToolTip"
 				className={props.currentFrame !== props.totalFrames && !props.playing ? "button" : "buttonNoClick"}
 				id="plus"
-				src={plus}
+				src={plus[props.dark_light]}
 				onClick={props.currentFrame !== props.totalFrames && !props.playing ? props.incrementFrame : null}
 				alt="Increment Frame"
 			/>
@@ -81,7 +100,7 @@ function Buttons(props) {
 				data-tip data-for="nextToolTip"
 				className={props.index !== props.totalMoves - 1 ? "button" : "buttonNoClick"}
 				id="next"
-				src={next}
+				src={next[props.dark_light]}
 				onClick={props.index !== props.totalMoves - 1 ? props.nextMove : null}
 				alt="NextMove"
 			/>

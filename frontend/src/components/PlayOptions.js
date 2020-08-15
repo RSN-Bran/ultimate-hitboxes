@@ -28,6 +28,7 @@ function PlayOptions(props) {
 					totalMoves={props.totalMoves}
 					totalFrames={props.totalFrames}
 					currentFrame={props.currentFrame}
+					dark_light={props.dark_light}
 
 				/>
 

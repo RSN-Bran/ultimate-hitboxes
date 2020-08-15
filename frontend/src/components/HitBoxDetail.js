@@ -3,8 +3,16 @@ import React from "react"
 import '../css/HitBoxDetail.css';
 import '../css/CharacterList.css';
 
-import x from '../media/x.png'
+import x_dark from '../media/darkmode/x.png'
+import x_light from '../media/lightmode/x.png'
+let x = [x_dark, x_light]
+
 function HitBoxDetail(props) {
+
+  let style = {
+    backgroundColor: props.dark_light === 0 ? "white" : "black",
+    color: props.dark_light === 0 ? "black" : "white"
+  }
 
   //If there is no data to show, don't render anything
   if (props.hitboxData === undefined) { return null; }
@@ -23,8 +31,8 @@ function HitBoxDetail(props) {
 
     //Render the array of game data strings, and an exit button
     return (
-      <div id="hitboxDetail">
-        <img id="exit" onClick={props.updateHitboxData.bind(this, undefined)} src={x}/>
+      <div id="hitboxDetail" style={style}>
+        <img id="exit" onClick={props.updateHitboxData.bind(this, undefined)} src={x[Math.abs(props.dark_light-1)]}/>
 
         {displayData}
       </div>

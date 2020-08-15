@@ -4,19 +4,25 @@ import MoveChoice from './MoveChoice'
 
 function MoveSelect(props) {
 
+	let style = {
+		backgroundColor: props.dark_light===0 ? "white" : "black",
+		color: props.dark_light === 0 ? "black" : "white"
+	}
+
 	//If the move List is empty, don't load a list of moves
 	if (props.moveList.length === 0) {
 		return null
 	}
 	else {
 		//For each move in the moveList, create a select object using <MoveChoice>
-		let moveList = props.characterData.moves.map(move => <MoveChoice key={move.value} name={move.name} value={move.value} complete={move.complete} currentMove={props.currentMoveData} />)
+		let moveList = props.characterData.moves.map(move => <MoveChoice key={move.value} name={move.name} value={move.value} complete={move.complete} currentMove={props.currentMoveData} dark_light={props.dark_light}/>)
 
 		//Add all the created select options to a drop down and render it
 		return (
 			<select
 				name="Select Move"
 				onChange={props.setMove}
+				style={style}
 			>
 				{moveList}
 			</select >

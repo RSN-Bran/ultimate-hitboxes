@@ -4,15 +4,20 @@
 	}
 }
 
-table, th, td {
+.darkTable {
+	color: white;
 	border: 1px solid white;
+}
+
+.lightTable {
+	color: black;
+	border: 1px solid black;
+}
+
+table, th, td {
 	border-collapse: collapse;
 	text-align: center;
 	margin: 0 auto;
-}
-
-tr {
-	color: white;
 }
 
 span {

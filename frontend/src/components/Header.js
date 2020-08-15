@@ -6,8 +6,8 @@ import '../css/Header.css';
 //import info from './media/info.png'
 import twitter from '../media/twitter.png'
 
-import github_dark from '../media/darkmode/github.png'
-import github_light from '../media/lightmode/github.png'
+import github_dark from '../media/github.png'
+import github_light from '../media/github.png'
 let github = [github_dark, github_light]
 
 import settings_dark from '../media/darkmode/settings.png'

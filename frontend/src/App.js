@@ -476,24 +476,14 @@ class App extends React.Component {
     cookieSet = true;
     try {
       let settings = JSON.parse(document.cookie)
-      if (settings.dark_light !== undefined) {
-        this.setState({
-          damageMultiplier: settings.damageMultiplier,
-          showAllHitboxData: settings.showAllHitboxData,
-          showExtraInfo: settings.showExtraInfo,
-          sortBy: settings.sortBy,
-        })
-      }
-      else {
-        this.setState({
-          damageMultiplier: settings.damageMultiplier,
-          showAllHitboxData: settings.showAllHitboxData,
-          showExtraInfo: settings.showExtraInfo,
-          sortBy: settings.sortBy,
-          dark_light: settings.dark_light
-        })
-      }
-      
+      settings.dark_light = settings.dark_light === undefined ? 0 : settings.dark_light
+      this.setState({
+        damageMultiplier: settings.damageMultiplier,
+        showAllHitboxData: settings.showAllHitboxData,
+        showExtraInfo: settings.showExtraInfo,
+        sortBy: settings.sortBy,
+        dark_light: settings.dark_light
+      })
     }
     catch {
 

@@ -31,3 +31,5 @@ Ivysaur Neutral B has extra frames for both aerial and ground versions
 Back Throw missing a frame
 
 Mewtwo FSmash Up and neutral missing a frame
+
+Charizard Dair missing a frame

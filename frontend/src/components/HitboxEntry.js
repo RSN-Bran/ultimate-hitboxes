@@ -10,9 +10,13 @@ function HitboxEntry(props) {
   let className = props.dark_light === 0 ? "darkTable" : "lightTable"
 
   let lightModeColorChange = ["#800080", "#400040", "purple"]
+  let darkModeColorChange = []
 
   if (props.hitbox.frames.includes(props.currentFrame) || props.hitbox.frames.length === 0) {
     style.backgroundColor = props.hitbox.color
+    if (props.dark_light === 0 && darkModeColorChange.includes(props.hitbox.color)) {
+      className = "darkTableDarkText"
+    }
     if (props.dark_light === 1 && lightModeColorChange.includes(props.hitbox.color)) {
       className = "lightTableLightText"
     }

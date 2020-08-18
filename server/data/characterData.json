@@ -364,8 +364,9 @@
     "name": "Diddy Kong",
     "value": "diddy-kong",
     "number": "36",
-    "completed": false,
-    "series": "donkey-kong"
+    "completed": true,
+    "series": "donkey-kong",
+    "version": "8.0.0"
   },
   {
     "id": 42,

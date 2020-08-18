@@ -33,3 +33,6 @@ Back Throw missing a frame
 Mewtwo FSmash Up and neutral missing a frame
 
 Charizard Dair missing a frame
+
+Diddy Kong down tilt has an extra frame
+Diddy Down Smash has 2 extra frames

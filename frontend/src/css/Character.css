@@ -20,6 +20,7 @@
 .character-dark {
 	background-color: white;
 	color: black;
+
 }
 
 .character-light {
@@ -31,6 +32,10 @@
 	border: solid gold 2px;
 }
 
+.name-dark {
+	text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+	left: 1%;
+}
 .number {
 	left: 0%;
 	top: 0%;

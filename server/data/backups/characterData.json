@@ -372,9 +372,9 @@
     "name": "Lucas",
     "value": "lucas",
     "number": "37",
-    "completed": false,
+    "completed": true,
     "series": "earthbound",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 43,

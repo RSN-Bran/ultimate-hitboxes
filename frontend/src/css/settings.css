@@ -19,3 +19,20 @@
 .settingDescription {
 	font-size: 1em;
 }
+
+.settingHeader {
+	cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+	
+}
+
+@media (min-width: 1200px) {
+	.settingCheckbox {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+}

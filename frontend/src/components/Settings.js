@@ -30,8 +30,8 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
-						<input type="checkbox" onClick={props.changeHitboxTable} id="showAllHitboxData" name="showAllHitboxData" checked={props.showAllHitboxData} />
-						<span><b>Display all hitboxes at all times</b></span>
+						<input className="settingCheckbox" type="checkbox" onClick={props.changeHitboxTable} id="showAllHitboxData" name="showAllHitboxData" checked={props.showAllHitboxData} />
+						<span className="settingHeader" onClick={props.changeHitboxTable}><b>Display all hitboxes at all times</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>
@@ -43,8 +43,8 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
-						<input type="checkbox" onClick={props.changeDamageMultiplier} id="changeDamageMultiplier" name="changeDamageMultiplier" checked={props.damageMultiplier} />
-						<span><b>Apply 1v1 Multiplier</b></span>
+						<input className="settingCheckbox" type="checkbox" onClick={props.changeDamageMultiplier} id="changeDamageMultiplier" name="changeDamageMultiplier" checked={props.damageMultiplier} />
+						<span className="settingHeader" onClick={props.changeDamageMultiplier}><b>Apply 1v1 Multiplier</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>
@@ -55,8 +55,8 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
-						<input type="checkbox" onClick={props.changeExtraInfo} id="changeExtraInfo" name="changeExtraInfo" checked={props.showExtraInfo} disabled={screen.width < 500} />
-						<span><b>Show extra hitbox info</b></span>
+						<input className="settingCheckbox" type="checkbox" onClick={props.changeExtraInfo} id="changeExtraInfo" name="changeExtraInfo" checked={props.showExtraInfo} disabled={screen.width < 500} />
+						<span className="settingHeader" onClick={props.changeExtraInfo}><b>Show extra hitbox info</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>
@@ -67,8 +67,8 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
-						<input type="checkbox" onClick={props.setLightDark} id="setLightDark" name="setLightDark" checked={darkMode} />
-						<span><b>Dark Mode</b></span>
+						<input className="settingCheckbox" type="checkbox" onClick={props.setLightDark} id="setLightDark" name="setLightDark" checked={darkMode} />
+						<span className="settingHeader" onClick={props.setLightDark}><b>Dark Mode</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>

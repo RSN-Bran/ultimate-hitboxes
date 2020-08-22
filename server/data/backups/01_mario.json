@@ -2742,7 +2742,7 @@
           "sfxtype": "collision_sound_attr_mario_fireball",
           "type": "attack_region_none",
           "frames": [],
-          "color": "",
+          "color": "red",
           "notes": ""
         },
         {
@@ -2780,7 +2780,7 @@
           "sfxtype": "collision_sound_attr_mario_fireball",
           "type": "attack_region_none",
           "frames": [],
-          "color": "",
+          "color": "red",
           "notes": ""
         },
         {
@@ -2818,7 +2818,7 @@
           "sfxtype": "collision_sound_attr_mario_fireball",
           "type": "attack_region_none",
           "frames": [],
-          "color": "",
+          "color": "purple",
           "notes": ""
         }
       ]
@@ -3304,7 +3304,7 @@
           "sfxtype": "collision_sound_attr_mario_water_pump",
           "type": "attack_region_object",
           "frames": [],
-          "color": "",
+          "color": "blue",
           "notes": ""
         }
       ]

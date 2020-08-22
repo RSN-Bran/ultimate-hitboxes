@@ -2596,7 +2596,7 @@
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
           "frames": [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
-          "color": "salmon",
+          "color": "pink",
           "notes": ""
         },
         {
@@ -2634,7 +2634,7 @@
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
           "frames": [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
-          "color": "pink",
+          "color": "salmon",
           "notes": ""
         }
       ]
@@ -3388,6 +3388,7 @@
       "value": "SnakePivotGrab",
       "frames": 37,
       "faf": 37,
+      "type":  "grab",
       "hitboxes": [
         {
           "id": "0",
@@ -4126,8 +4127,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [25,26,27],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -4175,8 +4176,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [15,16],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4216,8 +4217,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [19,20],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -4265,8 +4266,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [16,17],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4306,8 +4307,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [26,27],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -4355,8 +4356,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [19,20],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4396,8 +4397,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [31,32],
+          "color": "red",
           "notes": ""
         }
       ]

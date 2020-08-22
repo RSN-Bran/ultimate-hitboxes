@@ -2632,8 +2632,8 @@
     {
       "name": "Grab",
       "value": "MrGame_WatchGrab",
-      "frames": 18,
-      "faf": 18,
+      "frames": 34,
+      "faf": 34,
       "type": "grab",
       "hitboxes": [
         {
@@ -2649,7 +2649,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
           "frames": [ 6, 7 ],
-          "color": "purple",
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2665,7 +2665,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
           "frames": [ 6, 7 ],
-          "color": "purple",
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -2673,8 +2673,8 @@
     {
       "name": "Dash Grab",
       "value": "MrGame_WatchDashGrab",
-      "frames": 29,
-      "faf": 29,
+      "frames": 42,
+      "faf": 42,
       "type": "grab",
       "hitboxes": [
         {
@@ -2690,7 +2690,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
           "frames": [ 9, 10 ],
-          "color": "purple",
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2706,7 +2706,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
           "frames": [ 9, 10 ],
-          "color": "purple",
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -2714,8 +2714,8 @@
     {
       "name": "Pivot Grab",
       "value": "MrGame_WatchPivotGrab",
-      "frames": 36,
-      "faf": 36,
+      "frames": 37,
+      "faf": 37,
       "type": "grab",
       "hitboxes": [
         {
@@ -2731,7 +2731,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
           "frames": [ 10, 11 ],
-          "color": "purple",
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2747,7 +2747,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
           "frames": [ 10, 11 ],
-          "color": "purple",
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -2819,26 +2819,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "60",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [26],
           "color": "",
           "notes": ""
         }
@@ -2865,26 +2846,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "60",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [26],
           "color": "",
           "notes": ""
         }
@@ -2911,7 +2873,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
+          "frames": [26],
           "color": "",
           "notes": ""
         },
@@ -2957,26 +2919,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "60",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [35],
           "color": "",
           "notes": ""
         }
@@ -4315,9 +4258,8 @@
     {
       "name": "Ledge Attack",
       "value": "MrGame_WatchLedgeAttack",
-      "frames": 21,
-      "faf": 21,
-      "complete":  false,
+      "frames": 55,
+      "faf": 55,
       "hitboxes": [
         {
           "id": "0",
@@ -4356,8 +4298,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [24,25,26],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -4365,9 +4307,8 @@
     {
       "name": "Getup Attack (Up)",
       "value": "MrGame_WatchGetupAttackU",
-      "frames": 19,
-      "faf": 19,
-      "complete": false,
+      "frames": 45,
+      "faf": 45,
       "hitboxes": [
         {
           "id": "0",
@@ -4406,8 +4347,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [16,17],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4447,8 +4388,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [21,22],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -4456,9 +4397,8 @@
     {
       "name": "Getup Attack (Down)",
       "value": "MrGame_WatchGetupAttackD",
-      "frames": 33,
-      "faf": 33,
-      "complete": false,
+      "frames": 45,
+      "faf": 45,
       "hitboxes": [
         {
           "id": "0",
@@ -4497,8 +4437,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [16,17],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4538,8 +4478,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [21,22],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -4547,9 +4487,8 @@
     {
       "name": "Trip Attack",
       "value": "MrGame_WatchTripAttack",
-      "frames": 12,
-      "faf": 12,
-      "complete": false,
+      "frames": 49,
+      "faf": 49,
       "hitboxes": [
         {
           "id": "0",
@@ -4588,8 +4527,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [19,20],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4629,8 +4568,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [29,30],
+          "color": "red",
           "notes": ""
         }
       ]

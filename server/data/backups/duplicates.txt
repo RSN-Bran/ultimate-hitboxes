@@ -38,5 +38,3 @@ Charizard Dair missing a frame
 
 Diddy Kong down tilt has an extra frame
 Diddy Down Smash has 2 extra frames
-
-Young Link Ftilt missing 2 frames at the end

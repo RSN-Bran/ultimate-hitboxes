@@ -4014,8 +4014,8 @@
     {
       "name": "Farore's Wind (Ground)",
       "value": "ZeldaNFaroresWindG",
-      "frames": 63,
-      "faf": 63,
+      "frames": 75,
+      "faf": 75,
       "hitboxes": [
         {
           "id": "0",
@@ -4054,7 +4054,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_magic",
-          "frames": [6,7],
+          "frames": [ 6, 7 ],
           "color": "red",
           "notes": ""
         },
@@ -4092,7 +4092,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_magic",
-          "frames": [35,36],
+          "frames": [ 35, 36 ],
           "color": "#a01aa0",
           "notes": ""
         },
@@ -4130,7 +4130,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_magic",
-          "frames": [35,36],
+          "frames": [ 35, 36 ],
           "color": "purple",
           "notes": ""
         }
@@ -4139,8 +4139,8 @@
     {
       "name": "Farore's Wind (Aerial)",
       "value": "ZeldaNFaroresWindA",
-      "frames": 78,
-      "faf": 78,
+      "frames": 94,
+      "faf": 94,
       "hitboxes": [
         {
           "id": "0",
@@ -4176,8 +4176,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_magic",
-          "frames": [],
-          "color": "",
+          "frames": [6,7],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4252,7 +4252,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_magic",
-          "frames": [35,36],
+          "frames": [ 35, 36 ],
           "color": "purple",
           "notes": ""
         }

@@ -73,7 +73,7 @@ function Buttons(props) {
 				className={props.totalFrames !== 1 ? "button" : "buttonNoClick"}
 				id="pause-play"
 				src={props.playing ? pause[props.dark_light] : play[props.dark_light]}
-				onClick={props.playing ? props.pause : props.play}
+				onClick={props.totalFrames !== 1 ? (props.playing ? props.pause : props.play) : null}
 				alt="Play Move"
 			/>
 			<ToolTip

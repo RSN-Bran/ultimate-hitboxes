@@ -55,8 +55,8 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
-						<input className="settingCheckbox" type="checkbox" onClick={props.changeExtraInfo} id="changeExtraInfo" name="changeExtraInfo" checked={props.showExtraInfo} disabled={screen.width < 500} />
-						<span className="settingHeader" onClick={props.changeExtraInfo}><b>Show extra hitbox info</b></span>
+						<input className="settingCheckbox" type="checkbox" onClick={screen.width < 500 ? null : props.changeExtraInfo} id="changeExtraInfo" name="changeExtraInfo" checked={props.showExtraInfo} disabled={screen.width < 500} />
+						<span className="settingHeader" onClick={screen.width < 500 ? null : props.changeExtraInfo}><b>Show extra hitbox info</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>

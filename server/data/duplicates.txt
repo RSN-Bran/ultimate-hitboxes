@@ -42,4 +42,6 @@ Diddy Down Smash has 2 extra frames
 Young Link Ftilt missing 2 frames at the end
 YL Down Tilt missing 6 frames at the end
 
-Roy Forward Throw missing a frame
+Roy All throws missing a frame
+
+Chrom Forward smash missing a frame

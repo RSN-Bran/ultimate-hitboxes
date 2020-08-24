@@ -316,6 +316,8 @@ class App extends React.Component {
 
   //When entering the character select screen, set the boolean to true
   chooseCharacter() {
+
+    this.pause();
     //If this is the first time opening the character select, use an api call to get the data to save
     if (this.state.characterData === "empty") {
       fetch(`http://${environment}:5000/characterData`)

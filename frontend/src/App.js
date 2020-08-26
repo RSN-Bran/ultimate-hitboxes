@@ -512,12 +512,12 @@ class App extends React.Component {
     //Dark Mode Style
     let pageStyle = {}
     if (this.state.dark_light === 0) {
-      pageStyle.backgroundColor = "#000000"
+      pageStyle.backgroundColor = "1B1B1B"
       pageStyle.color = "white"
     }
     //Light Mode Style
     else {
-      pageStyle.backgroundColor = "#FFFFFF"
+      pageStyle.backgroundColor = "#F2F3F4"
       pageStyle.color = "black"
     }
 

@@ -4,10 +4,8 @@ import MoveChoice from './MoveChoice'
 
 function MoveSelect(props) {
 
-	let style = {
-		backgroundColor: props.dark_light===0 ? "white" : "black",
-		color: props.dark_light === 0 ? "black" : "white"
-	}
+	let className = props.dark_light === 0 ? "darkMoveDropDown" : "lightMoveDropDown"
+
 
 	//If the move List is empty, don't load a list of moves
 	if (props.moveList.length === 0) {
@@ -20,9 +18,10 @@ function MoveSelect(props) {
 		//Add all the created select options to a drop down and render it
 		return (
 			<select
+				id="moveDropDown"
+				className={className}
 				name="Select Move"
 				onChange={props.setMove}
-				style={style}
 			>
 				{moveList}
 			</select >

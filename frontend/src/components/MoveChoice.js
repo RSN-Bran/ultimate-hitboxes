@@ -1,17 +1,18 @@
 import React from "react"
 
+import '../css/MoveChoice.css';
+
 function MoveChoice(props) {
 	if (props.currentMove !== undefined) {
-		let style = {
-			backgroundColor: props.dark_light === 0 ? "white" : "black",
-			color: props.dark_light === 0 ? "black" : "white"
-		}
+
+		let className = props.dark_light === 0 ? "darkMoveEntry" : "lightMoveEntry"
+
 		return (
 			<option
 				value={props.value}
+				className={className}
 				selected={props.value === props.currentMove.value}
 				disabled={props.complete === false ? true : false}
-				style={style}
 			>
 				{props.name}
 			</option>

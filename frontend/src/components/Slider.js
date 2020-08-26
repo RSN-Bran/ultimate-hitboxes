@@ -6,12 +6,9 @@ function Slider(props) {
 	let sliderStyle = {width: "100%"}
 
 	let options = []
-	let ticks = []
 
-	for (let i = 2; i <= props.totalFrames; i++) {
-		//rectArray.push(<div className="rectangle" style={style}></div>)
+	for (let i = 1; i <= props.totalFrames; i++) {
 		options.push(<option key={i}>{i}</option>)
-		ticks.push(i)
 	}
 
 	var input = "value=" + props.currentFrame + ";"

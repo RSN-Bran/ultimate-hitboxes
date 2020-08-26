@@ -1,9 +1,7 @@
 /*General Header settings*/
 #header {
-	display: inline;
-	width: 100%;
 	top: 0%;
-	z-index: 99;
+	width: 100%;
 }
 
 h3 {
@@ -23,18 +21,14 @@ h5 {
 	cursor: pointer;
 }
 
-#help {
-	left: 0%;
-	top: 0%;
-	position: absolute;
-	z-index: 99;
+#help, #links {
+	width: 20%;
+	display: inline-block;
 }
 
-#links {
-	right: 0%;
-	top: 0%;
-	position: absolute;
-	z-index: 99;
+#title {
+	width: 60%;
+	display: inline-block;
 }
 
 .helpButtons {
@@ -45,4 +39,39 @@ h5 {
 .linkButtons {
 	cursor: pointer;
 	float: right;
+}
+
+
+
+@media (min-width: 500px) {
+	#exitInfo {
+		width: 3%
+	}
+
+	.helpButtons, .linkButtons {
+		width: 15%
+	}
+
+	#twitter, #settingsButton {
+		margin-left: 5%;
+	}
+}
+
+/*Sizing for Mobile*/
+@media (max-width: 500px) {
+	#exitInfo {
+		width: 7%
+	}
+
+	.helpButtons, .linkButtons {
+		width: 40%;
+	}
+
+	#twitter, #settingsButton {
+		margin-left: 10%;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
 }

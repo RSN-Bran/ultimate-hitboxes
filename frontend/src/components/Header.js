@@ -21,6 +21,23 @@ let info = [info_dark, info_light]
 function Header(props) {
   return (
     <div id="header">
+      <div id="help">
+        <img id="infoButton" className="helpButtons"
+          src={info[props.dark_light]}
+          onClick={props.showInfo}
+        />
+
+        <img id="settingsButton" className="helpButtons"
+          src={settings[props.dark_light]}
+          onClick={props.showSettings}
+
+        />
+      </div>
+
+      <div id="title">
+        <h3>Smash Ultimate Hitbox Viewer</h3>
+      </div>
+
       <div id="links">
         <a href="https://twitter.com/SSBUHitboxes">
           <img id="twitter" className="linkButtons"
@@ -33,21 +50,8 @@ function Header(props) {
           />
         </a>
       </div>
-      <div id="title">
-        <h3>Smash Ultimate Hitbox Viewer</h3>
-      </div>
-      <div id="help">
-        <img id="infoButton" className="helpButtons"
-          src={info[props.dark_light]}
-          onClick={props.showInfo}
-        />
-
-        <img id="settingsButton" className="helpButtons"
-          src={settings[props.dark_light]}
-            onClick={props.showSettings}
-
-        />
-      </div>
+      
+      
       </div>
       
 	)

@@ -27,6 +27,7 @@
 	#searchbar {
 		width: 60%
 	}
+	
 }
 
 @media (min-width: 1200px) {
@@ -36,9 +37,17 @@
 	#searchbar {
 		width: 40%
 	}
+	#name {
+		margin-left: 2%
+	}
+}
+
+#name, #number {
+	cursor: pointer;
 }
 
 label {
 	font-size: 15;
 }
+
 

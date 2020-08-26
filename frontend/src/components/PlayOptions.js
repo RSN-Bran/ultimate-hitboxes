@@ -32,6 +32,7 @@ function PlayOptions(props) {
 
 				/>
 
+				<h5>Play Speed: </h5>
 				<SpeedOptions
 					changeSpeed={props.changeSpeed}
 					playSpeed={props.playSpeed}

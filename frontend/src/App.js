@@ -70,6 +70,7 @@ class App extends React.Component {
 
       //Default play speed, plays at .5 speed
       playSpeed: 2,
+      defaultPlaySpeed: 2,
 
       //Boolean to hold if the user is currently on the Character Select Screen
       pickingCharacter: false,
@@ -104,6 +105,7 @@ class App extends React.Component {
     this.finishLoading = this.finishLoading.bind(this)
     this.updateSlider = this.updateSlider.bind(this)
     this.changeSpeed = this.changeSpeed.bind(this)
+    this.changeDefaultSpeed = this.changeDefaultSpeed.bind(this)
     this.chooseCharacter = this.chooseCharacter.bind(this)
     this.exitCharacterPicker = this.exitCharacterPicker.bind(this)
     this.updateHitboxData = this.updateHitboxData.bind(this)
@@ -314,6 +316,13 @@ class App extends React.Component {
     }
   }
 
+  changeDefaultSpeed(event) {
+    //Update the play speed variable in the state
+    this.setState({
+      defaultPlaySpeed: event.target.value
+    })
+  }
+
   //When entering the character select screen, set the boolean to true
   chooseCharacter() {
 
@@ -478,13 +487,17 @@ class App extends React.Component {
     cookieSet = true;
     try {
       let settings = JSON.parse(document.cookie)
+      console.log(settings)
       settings.dark_light = settings.dark_light === undefined ? 0 : settings.dark_light
+      settings.defaultSpeed = settings.defaultSpeed === undefined ? 2 : settings.defaultSpeed
       this.setState({
         damageMultiplier: settings.damageMultiplier,
         showAllHitboxData: settings.showAllHitboxData,
         showExtraInfo: settings.showExtraInfo,
         sortBy: settings.sortBy,
-        dark_light: settings.dark_light
+        dark_light: settings.dark_light,
+        playSpeed: settings.defaultSpeed,
+        defaultPlaySpeed: settings.defaultSpeed
       })
     }
     catch {
@@ -554,6 +567,8 @@ class App extends React.Component {
             setLightDark={this.setLightDark}
             dark_light={this.state.dark_light}
             setCookie={this.setCookie}
+            defaultPlaySpeed={this.state.defaultPlaySpeed}
+            changeDefaultSpeed={this.changeDefaultSpeed}
           />
         </div>
       )

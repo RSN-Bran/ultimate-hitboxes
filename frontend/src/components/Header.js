@@ -19,7 +19,6 @@ import info_light from '../media/lightmode/info.png'
 let info = [info_dark, info_light]
 
 function Header(props) {
-  console.log("test" + props.dark_light)
   return (
     <div id="header">
       <div id="links">

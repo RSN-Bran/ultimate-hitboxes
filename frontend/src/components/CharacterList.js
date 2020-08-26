@@ -1,5 +1,6 @@
 import React from "react"
 import Character from './Character'
+import SortBy from './SortBy'
 import '../css/CharacterList.css';
 
 
@@ -34,10 +35,7 @@ function CharacterList(props) {
 				<form>
 					<input id="searchbar" type="text" value={props.search} placeholder="Search for a Character" onChange={props.changeSearchValue} ></input>
 
-					<input type="radio" id="number" name="sort" value="number" onChange={props.changeSortBy} checked={props.sortBy === "number"}/>
-					<label htmlFor="numberSort"><b>Sort by Number</b></label>
-					<input type="radio" id="name" name="sort" value="name" onChange={props.changeSortBy} checked={props.sortBy === "name"}/>
-					<label htmlFor="letterSort"><b>Sort by Name</b></label>
+					<SortBy changeSortBy={props.changeSortBy} sortBy={props.sortBy}/>
          
         </form>
 				<img id="exit" onClick={props.exit} src={x[props.dark_light]} />

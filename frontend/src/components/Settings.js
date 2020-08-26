@@ -2,6 +2,8 @@ import React from "react"
 import ReactTooltip from "react-tooltip";
 import '../css/settings.css';
 
+import SpeedOptions from './SpeedOptions'
+
 import x_dark from '../media/darkmode/x.png'
 import x_light from '../media/lightmode/x.png'
 let x = [x_dark, x_light]
@@ -15,7 +17,8 @@ function Settings(props) {
 		damageMultiplier: props.damageMultiplier,
 		showExtraInfo: props.showExtraInfo,
 		sortBy: props.sortBy,
-		dark_light: props.dark_light
+		dark_light: props.dark_light,
+		defaultSpeed: props.defaultPlaySpeed
 	}
 
 
@@ -73,6 +76,19 @@ function Settings(props) {
 					<div className="settingDescription">
 						<p>
 							Enable dark mode.
+						</p>
+					</div>
+				</div>
+
+				<div className="settingDiv">
+					<div className="setting">
+						<span className="settingHeader"><b>Default Speed</b></span>
+						
+					</div>
+					<SpeedOptions changeSpeed={props.changeDefaultSpeed} playSpeed={props.defaultPlaySpeed} />
+					<div className="settingDescription">
+						<p>
+							Speed that will be selected upon loading the site
 						</p>
 					</div>
 				</div>

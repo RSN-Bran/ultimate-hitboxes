@@ -55,11 +55,18 @@ function HitboxEntry(props) {
       tdList.push(<td className={className}>{props.hitbox[field.variable] === undefined ? "-" : props.hitbox[field.variable]}</td>)
     }
   })
-  return (
-    <tr style={style}>
-      {tdList}
-    </tr>
-  )
+
+  if (!props.hitbox.frames.includes(props.currentFrame) && !props.showAllHitboxData) {
+    return null;
+  }
+  else {
+    return (
+      <tr style={style}>
+        {tdList}
+      </tr>
+    )
+  }
+  
 }
 
 export default HitboxEntry

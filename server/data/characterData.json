@@ -391,9 +391,9 @@
     "name": "King Dedede",
     "value": "king-dedede",
     "number": "39",
-    "completed": false,
+    "completed": true,
     "series": "kirby",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 45,

@@ -4156,7 +4156,6 @@
       "value": "LuigiDTaunt",
       "frames": 1,
       "faf": 1,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",

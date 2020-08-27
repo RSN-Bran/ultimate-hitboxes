@@ -38,29 +38,34 @@ function DataTable(props) {
   if (props.portalState === "hasMove" && !props.pickingCharacter) {
     let type = ""
 
-    props.move.type === "grab" ? type = type + "grab" : type = type + "attack";
-    props.showExtraInfo ? type = type + "Extra" : type = type + "Basic";
-    props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
+    try {
+      props.move.type === "grab" ? type = type + "grab" : type = type + "attack";
+      props.showExtraInfo ? type = type + "Extra" : type = type + "Basic";
+      props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
 
-    return (
-      <div>
-        <HitboxTable
-          showAllHitboxData={props.showAllHitboxData}
-          portalState={props.portalState}
-          pickingCharacter={props.pickingCharacter}
-          move={props.move}
-          hitboxes={props.move.hitboxes}
-          currentFrame={props.currentFrame}
-          updateHitboxData={props.updateHitboxData}
-          jumpToFrame={props.jumpToFrame}
-          damageMultiplier={props.damageMultiplier}
-          changeDamageMultiplier={props.changeDamageMultiplier}
-          showExtraInfo={props.showExtraInfo}
-          dark_light={props.dark_light}
-          fields={fields[type]}
-        />
-      </div>
-     )
+      return (
+        <div>
+          <HitboxTable
+            showAllHitboxData={props.showAllHitboxData}
+            portalState={props.portalState}
+            pickingCharacter={props.pickingCharacter}
+            move={props.move}
+            hitboxes={props.move.hitboxes}
+            currentFrame={props.currentFrame}
+            updateHitboxData={props.updateHitboxData}
+            jumpToFrame={props.jumpToFrame}
+            damageMultiplier={props.damageMultiplier}
+            changeDamageMultiplier={props.changeDamageMultiplier}
+            showExtraInfo={props.showExtraInfo}
+            dark_light={props.dark_light}
+            fields={fields[type]}
+          />
+        </div>
+      )
+    }
+    catch {
+      return null;
+    }
   }
   else {
     return null;

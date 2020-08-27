@@ -1,3 +1,8 @@
+#moveDropDown {
+	border-color: black;
+	border-width: 2px;
+}
+
 @media (min-width: 500px) {
 	#moveDropDown {
 		width: 10%;

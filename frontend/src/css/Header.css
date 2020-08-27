@@ -41,7 +41,16 @@ h5 {
 	float: right;
 }
 
+#settingsButton {
+	border-radius: 50%;
+	-webkit-transition: -webkit-transform .8s ease-in-out;
 
+}
+
+#settingsButton:hover {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
 
 @media (min-width: 500px) {
 	#exitInfo {

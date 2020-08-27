@@ -6,8 +6,9 @@
     "\\frontend\\src",
     "\\frontend\\src\\components",
     "\\frontend\\src\\css",
-    "\\server"
+    "\\server",
+    "\\server\\data"
   ],
-  "SelectedNode": "\\frontend\\src\\components\\Info.js",
+  "SelectedNode": "\\frontend\\src\\css\\Header.css",
   "PreviewInSolutionExplorer": false
 }

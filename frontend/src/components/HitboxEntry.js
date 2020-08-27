@@ -67,7 +67,7 @@ function HitboxEntry(props) {
     }
   })
 
-  if (!props.hitbox.frames.includes(props.currentFrame) && !props.showAllHitboxData) {
+  if (!props.hitbox.frames.includes(props.currentFrame) && !props.showAllHitboxData && props.hitbox.frames.length !== 0) {
     return null;
   }
   else {

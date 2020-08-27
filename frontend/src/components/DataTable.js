@@ -24,64 +24,23 @@ function DataTable(props) {
   let trip = { "variable": "trip", "name": "Trip", "toolTipID": "tripToolTip", "toolTipDescription": "Trip Chance" }
   let sdi = { "variable": "sdi", "name": "SDI", "toolTipID": "sdiToolTip", "toolTipDescription": "How much each SDI input affects the victim's position" }
 
+  let fields = {
+    grabBasic: [frames, size, ground_or_air, more],
+    grabExtra: [id, frames, size, ground_or_air, bone, x, y, z, more],
+    attackBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, more],
+    attackExtraNoFrame: [id, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, bone, x, y, z, more],
+    attackBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, more],
+    attackExtra: [id, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, bone, x, y, z, more]
+
+  }
+
   //Only render when needed
   if (props.portalState === "hasMove" && !props.pickingCharacter) {
-    let fields = [];
-    if (props.move.type === "grab" && !props.showExtraInfo) {
-      fields = [
-        frames,
-        size,
-        ground_or_air,
-        more
-      ]
-    }
-    else if (props.move.type === "grab" && props.showExtraInfo) {
-      fields = [
-        id,
-        frames,
-        size,
-        ground_or_air,
-        bone,
-        x,
-        y,
-        z,
-        more
-      ]
-    }
-    else if (props.move.type !== "grab" && !props.showExtraInfo) {
-      fields = [
-        frames,
-        damage,
-        shielddamage,
-        angle,
-        bkb,
-        kbg,
-        fkb,
-        trip,
-        more,
-      ]
-    }
-    else if (props.move.type !== "grab" && props.showExtraInfo) {
-      fields = [
-        id,
-        frames,
-        damage,
-        shielddamage,
-        angle,
-        bkb,
-        kbg,
-        fkb,
-        trip,
-        sdi,
-        ground_or_air,
-        size,
-        bone,
-        x,
-        y,
-        z,
-        more,
-      ]
-    }
+    let type = ""
+
+    props.move.type === "grab" ? type = type + "grab" : type = type + "attack";
+    props.showExtraInfo ? type = type + "Extra" : type = type + "Basic";
+    props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
 
     return (
       <div>
@@ -98,7 +57,7 @@ function DataTable(props) {
           changeDamageMultiplier={props.changeDamageMultiplier}
           showExtraInfo={props.showExtraInfo}
           dark_light={props.dark_light}
-          fields={fields}
+          fields={fields[type]}
         />
       </div>
      )

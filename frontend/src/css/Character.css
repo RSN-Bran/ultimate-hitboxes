@@ -36,6 +36,11 @@
 	text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
 	left: 1%;
 }
+
+.name-light {
+	left: 1%;
+	text-shadow: -1px 1px 0 gray, 1px 1px 0 gray, 1px -1px 0 gray, -1px -1px 0 gray;
+}
 .number {
 	left: 0%;
 	top: 0%;

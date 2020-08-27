@@ -3,6 +3,10 @@ import ReactTooltip from "react-tooltip";
 
 import '../css/DataTable.css'
 
+import info_dark from '../media/darkmode/info.png'
+import info_light from '../media/lightmode/info.png'
+let info = [info_dark, info_light]
+
 import id_colors from '../id_colors.js'
 function HitboxEntry(props) {
 
@@ -48,7 +52,10 @@ function HitboxEntry(props) {
 
     //If showing more data, create a button to click in the table
     else if (field.variable === "more") {
-      tdList.push(<td className={className}><button onClick={props.updateHitboxData.bind(this, props.hitbox)} src="moreInfo"> More Data </button></td >)
+      tdList.push(<td className={className} onClick={props.updateHitboxData.bind(this, props.hitbox)} style={{ cursor: "pointer", width: "5px" }}><img
+        src={info[props.dark_light]}
+        style={{ width: "30%" }}
+      /></td >)
     }
 
     else {

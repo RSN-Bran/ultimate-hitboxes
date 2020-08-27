@@ -38,6 +38,10 @@ function HitboxEntry(props) {
       </td>)
     }
 
+    else if (field.variable === "damage" && props.damageMultiplier) {
+      tdList.push(<td className={className}>{(props.hitbox[field.variable] * 1.2).toFixed(1)}</td>)
+    }
+
     //Parse Ground/Air value into something more readable
     else if (field.variable === "ground_or_air") {
       let ground_air = { "collision_situation_mask_g": "Ground", "collision_situation_mask_a": "Aerial", "collision_situation_mask_ga": "Both"};

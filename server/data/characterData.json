@@ -400,9 +400,9 @@
     "name": "Olimar",
     "value": "olimar",
     "number": "40",
-    "completed": false,
+    "completed": true,
     "series": "pikmin",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 46,

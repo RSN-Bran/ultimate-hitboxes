@@ -5,7 +5,7 @@
 
 @media (min-width: 500px) {
 	#moveDropDown {
-		width: 10%;
+		width: 15%;
 		font-size: 15px;
 	}
 }
@@ -13,7 +13,7 @@
 /*Sizing for Mobile*/
 @media (max-width: 500px) {
 	#moveDropDown {
-		width: 40%;
+		width: 60%;
 		font-size: 12px;
 	}
 }

@@ -24,8 +24,6 @@ ZSS Ftilt has 10 extra frames
 
 Snake pivot grab missing 6 frames
 
-Ike Forward Air has 8 extra frames
-
 Pichu FSmash missing frames at the end
 
 Ivyysaur Ftilt missing startup frames
@@ -45,3 +43,7 @@ YL Down Tilt missing 6 frames at the end
 Roy All throws missing a frame
 
 Chrom Forward smash missing a frame
+
+Olimiar All Up Smashes three merged frames a t the end
+
+Lucario Pummel missing a frame

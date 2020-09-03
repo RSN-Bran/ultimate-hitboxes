@@ -418,9 +418,9 @@
     "name": "R.O.B.",
     "value": "rob",
     "number": "42",
-    "completed": false,
+    "completed": true,
     "series": "rob",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 48,

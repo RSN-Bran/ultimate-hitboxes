@@ -13,7 +13,7 @@ import Settings from './components/Settings';
 import Info from './components/Info';
 import CharacterList from './components/CharacterList'
 import Main from './components/Main'
-import HitboxDetail from './components/HitboxDetail'
+import HitboxDetail from './components/HitBoxDetail'
 
 //Set hostname to query depending on dev vs PROD
 const environment = process.env.NODE_ENV === "development" ? "localhost" : "ultimate-hitboxes.com";

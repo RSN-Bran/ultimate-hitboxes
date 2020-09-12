@@ -1,40 +1,33 @@
+//React Imports
 import React from "react"
 import ReactTooltip from "react-tooltip";
+import { useHistory } from 'react-router'
+
+//Component Imports
+import DefaultSpeed from './DefaultSpeed'
+
+//CSS Imports
 import '../css/settings.css';
 
-import SpeedOptions from './SpeedOptions'
-
+//Media Imports
 import x_dark from '../media/darkmode/x.png'
 import x_light from '../media/lightmode/x.png'
 let x = [x_dark, x_light]
 
-
-
 function Settings(props) {
 
-	let settings = {
-		showAllHitboxData: props.showAllHitboxData,
-		damageMultiplier: props.damageMultiplier,
-		showExtraInfo: props.showExtraInfo,
-		sortBy: props.sortBy,
-		dark_light: props.dark_light,
-		defaultSpeed: props.defaultPlaySpeed
-	}
+	//Create a deep copy of the settings
+	let settings = JSON.parse(JSON.stringify(props.settings));
 
-
-	
-	document.cookie = JSON.stringify(settings) + ";Expires=Fri, 1 Jan 2025 00:00:00 EST"
-
-	let darkMode = props.dark_light === 0;
-
-	if (props.settings) {
+		//For each setting, when the setting is altered, change the corresponding value in the settings object
+		//Then pass that object to App and compare it to the settings in state
 		return (
 			<div id="settingsPage">
 
 				<div className="settingDiv">
 					<div className="setting">
-						<input className="settingCheckbox" type="checkbox" onClick={props.changeHitboxTable} id="showAllHitboxData" name="showAllHitboxData" checked={props.showAllHitboxData} />
-						<span className="settingHeader" onClick={props.changeHitboxTable}><b>Display all hitboxes at all times</b></span>
+						<input className="settingCheckbox" type="checkbox" onClick={() => { settings.showAllHitboxData = !settings.showAllHitboxData; props.changeSettings(settings) }} id="showAllHitboxData" name="showAllHitboxData" checked={settings.showAllHitboxData} />
+						<span className="settingHeader" onClick={() => { settings.showAllHitboxData = !settings.showAllHitboxData; props.changeSettings(settings) }}><b>Display all hitboxes at all times</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>
@@ -46,8 +39,8 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
-						<input className="settingCheckbox" type="checkbox" onClick={props.changeDamageMultiplier} id="changeDamageMultiplier" name="changeDamageMultiplier" checked={props.damageMultiplier} />
-						<span className="settingHeader" onClick={props.changeDamageMultiplier}><b>Apply 1v1 Multiplier</b></span>
+						<input className="settingCheckbox" type="checkbox" onClick={() => { settings.damageMultiplier = !settings.damageMultiplier; props.changeSettings(settings) }} id="changeDamageMultiplier" name="changeDamageMultiplier" checked={settings.damageMultiplier} />
+						<span className="settingHeader" onClick={() => { settings.damageMultiplier = !settings.damageMultiplier; props.changeSettings(settings) }}><b>Apply 1v1 Multiplier</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>
@@ -58,8 +51,8 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
-						<input className="settingCheckbox" type="checkbox" onClick={screen.width < 500 ? null : props.changeExtraInfo} id="changeExtraInfo" name="changeExtraInfo" checked={props.showExtraInfo} disabled={screen.width < 500} />
-						<span className="settingHeader" onClick={screen.width < 500 ? null : props.changeExtraInfo}><b>Show extra hitbox info</b></span>
+						<input className="settingCheckbox" type="checkbox" onClick={screen.width < 500 ? null : () => { settings.showExtraInfo = !settings.showExtraInfo; props.changeSettings(settings) }} id="changeExtraInfo" name="changeExtraInfo" checked={settings.showExtraInfo} disabled={screen.width < 500} />
+						<span className="settingHeader" onClick={screen.width < 500 ? null : () => { settings.showExtraInfo = !settings.showExtraInfo; props.changeSettings(settings) }}><b>Show extra hitbox info</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>
@@ -70,8 +63,8 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
-						<input className="settingCheckbox" type="checkbox" onClick={props.setLightDark} id="setLightDark" name="setLightDark" checked={darkMode} />
-						<span className="settingHeader" onClick={props.setLightDark}><b>Dark Mode</b></span>
+						<input className="settingCheckbox" type="checkbox" onClick={() => { settings.dark_light = Math.abs(settings.dark_light - 1); props.changeSettings(settings) }} id="setLightDark" name="setLightDark" checked={settings.dark_light === 0} />
+						<span className="settingHeader" onClick={() => { settings.dark_light = Math.abs(settings.dark_light - 1); props.changeSettings(settings) }}><b>Dark Mode</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>
@@ -79,13 +72,13 @@ function Settings(props) {
 						</p>
 					</div>
 				</div>
-
+				
 				<div className="settingDiv">
 					<div className="setting">
 						<span className="settingHeader"><b>Default Speed</b></span>
 						
 					</div>
-					<SpeedOptions changeSpeed={props.changeDefaultSpeed} playSpeed={props.defaultPlaySpeed} />
+					<DefaultSpeed changeSpeed={props.changeDefaultSpeed} playSpeed={props.defaultPlaySpeed} settings={settings} changeSettings={props.changeSettings} />
 					<div className="settingDescription">
 						<p>
 							Speed that will be selected upon loading the site
@@ -95,15 +88,10 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<h3>Make sure cookies are enabled so your preferences are saved for future visits!</h3>
+					<h3 style={{ cursor: "pointer" }} onClick={() => { document.cookie = "settings="; document.cookie = ""; history.go(0)}}>If you are experiencing issues with your settings, click here to clear your cookies</h3>
 				</div>
-
-				<img id="exitInfo" onClick={props.showSettings} src={x[props.dark_light]} />
 			</div>
 		)
-	}
-	else {
-		return null;
-	}
 
 }
 

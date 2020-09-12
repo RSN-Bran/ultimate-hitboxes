@@ -427,9 +427,9 @@
     "name": "Toon Link",
     "value": "toon-link",
     "number": "43",
-    "completed": false,
+    "completed": true,
     "series": "legend-of-zelda",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 49,

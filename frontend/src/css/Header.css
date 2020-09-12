@@ -61,7 +61,7 @@ h5 {
 		width: 15%
 	}
 
-	#twitter, #settingsButton {
+	#twitter, #settingsButton, #backButton {
 		margin-left: 5%;
 	}
 }
@@ -76,7 +76,7 @@ h5 {
 		width: 40%;
 	}
 
-	#twitter, #settingsButton {
+	#twitter, #settingsButton, #backButton {
 		margin-left: 10%;
 	}
 

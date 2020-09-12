@@ -1,0 +1,30 @@
+#moveDropDown {
+	border-color: black;
+	border-width: 2px;
+}
+
+/*Sizing for Desktop*/
+@media (min-width: 500px) {
+	#moveDropDown {
+		width: 20%;
+		font-size: 15px;
+	}
+}
+
+/*Sizing for Mobile*/
+@media (max-width: 500px) {
+	#moveDropDown {
+		width: 60%;
+		font-size: 12px;
+	}
+}
+
+.darkMoveDropDown, .darkMoveOption {
+	background-color: white;
+	color: black;
+}
+
+.lightMoveDropDown, .lightMoveOption {
+	background-color: black;
+	color: white;
+}

@@ -1,51 +1,48 @@
+//React Imports
 import React from "react"
+
+//Component Imports
 import Character from './Character'
 import SortBy from './SortBy'
+
+//CSS Imports
 import '../css/CharacterList.css';
 
-
-import x_dark from '../media/darkmode/x.png'
-import x_light from '../media/lightmode/x.png'
-let x = [x_dark, x_light]
-
 function CharacterList(props) {
-	
 
-	if (props.pickingCharacter) {
-
-		let characterButtonArray = []
+	//If chararacter data doesn't exist, query the backend server
+	if (props.characterListData === undefined) {
+		return null;
+	}
+	else {
+		//Create a deep copy of the settings
+		let settings = JSON.parse(JSON.stringify(props.settings));
+		
 		let sortedCharacterData = []
 
 		//Sort Characters based on the criteria in the sortBy Field
-		sortedCharacterData = props.characterData.slice().sort((a, b) => (a[props.sortBy] > b[props.sortBy]) ? 1 : -1)
+		sortedCharacterData = props.characterListData.slice().sort((a, b) => (a[props.settings.sortBy] > b[props.settings.sortBy]) ? 1 : -1)
 
-		//Use a filter if the search bar is empty
-		if (props.search !== "") {
-			sortedCharacterData = sortedCharacterData.filter(obj => { return obj.name.toUpperCase().includes(props.search.toUpperCase()) })
-		}
+		//Filter the results based on the searchBar
+		sortedCharacterData = sortedCharacterData.filter(obj => { return obj.name.toUpperCase().includes(props.search.toUpperCase()) })
 
 		//Create icons based on the constraints above
-		characterButtonArray = sortedCharacterData.map(character => <Character key={character.id} dark_light={props.dark_light} character={character} getCharacterData={props.getCharacterData} dark_light={props.dark_light} />)
-	
-		return (
+		let characterButtonArray = []
+		characterButtonArray = sortedCharacterData.map(character => <Character key={character.id} dark_light={props.settings.dark_light} character={character} getCharacterData={props.getCharacterData}/>)
 
+		return (
 			<div id="characterList">
 				<h3>Choose a Character</h3>
 
 				<form>
 					<input id="searchbar" type="text" value={props.search} placeholder="Search for a Character" onChange={props.changeSearchValue} ></input>
 
-					<SortBy changeSortBy={props.changeSortBy} sortBy={props.sortBy}/>
-         
-        </form>
-				<img id="exit" onClick={props.exit} src={x[props.dark_light]} />
+					<SortBy changeSettings={props.changeSettings} settings={settings} />
+
+				</form>
 				{characterButtonArray}
 			</div>
 		)
-	}
-
-	else {
-		return null;
 	}
 	
 }

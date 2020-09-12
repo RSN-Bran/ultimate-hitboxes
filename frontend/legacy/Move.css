@@ -1,0 +1,42 @@
+.move {
+	border: solid black 2px;
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+	margin: 10px;
+	position: relative;
+	font-size: .7em;
+}
+
+.move-complete {
+	opacity: 1.0;
+	cursor: pointer;
+}
+
+.move-incomplete {
+	opacity: 0.4;
+}
+
+.move-dark {
+	background-color: white;
+	color: black;
+}
+
+.move-light {
+	background-color: gray;
+	color: white;
+}
+
+.move-complete:hover {
+	border: solid gold 2px;
+}
+
+.move-dark {
+	text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+	left: 1%;
+}
+
+.move-light {
+	left: 1%;
+	text-shadow: -1px 1px 0 gray, 1px 1px 0 gray, 1px -1px 0 gray, -1px -1px 0 gray;
+}

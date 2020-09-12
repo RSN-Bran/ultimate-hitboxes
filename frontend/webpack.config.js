@@ -5,7 +5,8 @@
     entry: path.resolve(__dirname, 'src/index'),
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js'
+      filename: 'bundle.js',
+      publicPath: '/'
     },
     resolve: {
       alias: {
@@ -38,7 +39,8 @@
     },
     devServer: {
       contentBase:  path.resolve(__dirname, 'dist'),
-      port: 8080
+      port: 8080,
+      historyApiFallback: true
     },
     plugins: [
       new HtmlWebpackPlugin({

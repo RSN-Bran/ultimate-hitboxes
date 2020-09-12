@@ -1,44 +1,55 @@
+//React Imports
 import React from "react"
-import ReactTooltip from "react-tooltip";
 
+//CSS Imports
 import '../css/DataTable.css'
 
+//Media Imports
 import info_dark from '../media/darkmode/info.png'
 import info_light from '../media/lightmode/info.png'
 let info = [info_dark, info_light]
 
-import id_colors from '../id_colors.js'
+//import id_colors from '../id_colors.js'
+
 function HitboxEntry(props) {
 
   let style = {}
-  let className = props.dark_light === 0 ? "darkTable" : "lightTable"
 
+  //Use dark or light version of the table depending on settings
+  let className = props.settings.dark_light === 0 ? "darkTable" : "lightTable"
+
+  //Certain color codes need their text color to change to fit the background
   let lightModeColorChange = ["#800080", "#400040", "purple"]
   let darkModeColorChange = []
 
   if (props.hitbox.frames.includes(props.currentFrame) || props.hitbox.frames.length === 0) {
     style.backgroundColor = props.hitbox.color
-    if (props.dark_light === 0 && darkModeColorChange.includes(props.hitbox.color)) {
+    if (props.settings.dark_light === 0 && darkModeColorChange.includes(props.hitbox.color)) {
       className = "darkTableDarkText"
     }
-    if (props.dark_light === 1 && lightModeColorChange.includes(props.hitbox.color)) {
+    if (props.settings.dark_light === 1 && lightModeColorChange.includes(props.hitbox.color)) {
       className = "lightTableLightText"
     }
   }
 
   let tdList = [];
+
+  //For each column, fill in data
   props.fields.forEach(function (field) {
-    //If adding the frames variable, only show the first frame in the table
+
+    //If adding the frames variable, only show the first frame in the table and pass in a function to change to that frame on click
     if (field.variable === "frames") {
       tdList.push(<td
         className={className}
         style={props.hitbox.frames.length !== 0 ? { "cursor": "pointer" } : {}}
-        onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}>
+        onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}
+      >
         {props.hitbox[field.variable][0]}
       </td>)
     }
 
-    else if (field.variable === "damage" && props.damageMultiplier) {
+    //If adding the damage variable, multiply the value by 1.2 if the damageMultiplier setting is enabled
+    else if (field.variable === "damage" && props.settings.damageMultiplier) {
       tdList.push(<td className={className}>{(props.hitbox[field.variable] * 1.2).toFixed(1)}</td>)
     }
 
@@ -57,19 +68,22 @@ function HitboxEntry(props) {
     //If showing more data, create a button to click in the table
     else if (field.variable === "more") {
       tdList.push(<td className={className} onClick={props.updateHitboxData.bind(this, props.hitbox)} style={{ cursor: "pointer", width: "5px" }}><img
-        src={info[props.dark_light]}
+        src={info[props.settings.dark_light]}
         style={{ width: "30%" }}
       /></td >)
     }
 
+    //For any other value, display the value without alteration, unless the value doesn't exist, for which display a '-'
     else {
       tdList.push(<td className={className}>{props.hitbox[field.variable] === undefined ? "-" : props.hitbox[field.variable]}</td>)
     }
   })
 
-  if (!props.hitbox.frames.includes(props.currentFrame) && !props.showAllHitboxData && props.hitbox.frames.length !== 0) {
+  //If the current hitbox isn't active on the current frame and the showAllHitboxData setting is disabled and the hitbox has at least one frame, do not render the row
+  if (!props.hitbox.frames.includes(props.currentFrame) && !props.settings.showAllHitboxData && props.hitbox.frames.length !== 0) {
     return null;
   }
+  //Otherwise render the row with the styling from above
   else {
     return (
       <tr style={style}>

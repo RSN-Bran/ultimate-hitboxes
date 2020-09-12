@@ -12,7 +12,7 @@ function Slider(props) {
 	}
 
 	var input = "value=" + props.currentFrame + ";"
-	if (props.totalFrames == 1) {
+	if (props.totalFrames == 1 || props.loading) {
 		return null;
 	}
 	else {
@@ -27,8 +27,8 @@ function Slider(props) {
 						min="1"
 						max={props.totalFrames}
 						value={props.currentFrame}
-						onInput={props.change}
-						onChange={props.change}
+						onInput={props.updateSlider}
+						onChange={props.updateSlider}
 						list="ticks"
 					/>
 				</div>

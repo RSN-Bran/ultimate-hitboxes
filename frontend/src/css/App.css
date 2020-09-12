@@ -1,3 +1,8 @@
+a {
+  color: inherit;
+}
+
+
 .App {
   text-align: center;
   display: flex;
@@ -16,7 +21,9 @@
 }
 
 #chooseCharacter {
-  cursor: pointer;  
+  cursor: pointer;
+  width: 100%;
+  height: 3em;
 }
 
 
@@ -50,9 +57,16 @@
   }
 
   #chooseCharacter {
-    width: 15%;
+    font-size: 15px;
+  }
+  #chooseCharacterLink {
+    width: 20%;
     height: 3em;
     font-size: 15px;
+    margin: auto;
+  }
+  #main {
+    width: 80%;
   }
 }
 
@@ -75,12 +89,22 @@
   }
 
   #chooseCharacter {
+    font-size: 12px;
+  }
+  #chooseCharacterLink {
     width: 60%;
     height: 3em;
     font-size: 12px;
+    margin: auto;
   }
 
   h3 {
     font-size: 15px;
   }
+
+  #main {
+    width: 100%;
+  }
+
 }
+

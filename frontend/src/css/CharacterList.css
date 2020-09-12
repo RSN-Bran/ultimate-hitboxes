@@ -13,17 +13,7 @@
 	color: black;
 }
 
-#exit {
-	position: absolute;
-	left: 0%;
-	top: 0%;
-	cursor: pointer;
-}
-
 @media (max-width: 1200px) {
-	#exit {
-		width: 10%
-	}
 	#searchbar {
 		width: 60%
 	}
@@ -31,9 +21,6 @@
 }
 
 @media (min-width: 1200px) {
-	#exit {
-		width: 3%
-	}
 	#searchbar {
 		width: 40%
 	}
@@ -49,5 +36,3 @@
 label {
 	font-size: 15;
 }
-
-

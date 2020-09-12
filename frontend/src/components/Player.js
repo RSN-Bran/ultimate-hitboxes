@@ -1,36 +1,25 @@
+//React Imports
 import React from "react"
 
+//Component Imports
+import LoadingBar from './LoadingBar'
+
+//CSS Imports
+import '../css/Player.css';
+
+//Media Imports
 import placeholder from '../media/placeholder.png'
 import loading from '../media/loading.gif'
 
-import '../css/Player.css';
-
-import LoadingBar from './LoadingBar'
 
 function Player(props) {
-	var portalRender;
-	if (props.pickingCharacter) {
-		return null;
-	}
-	else if (props.portalState === "initial") {
-		portalRender = placeholder;
+
+	if (props.loading) {
 		return (
 			<div id="player">
 				<img
 					id="moveImg"
-					src={portalRender}
-					alt="Move Frames go here"
-				/>
-			</div>
-		)
-	}
-	else if (props.portalState === "loading") {
-		portalRender = placeholder;
-		return (
-			<div id="player">
-				<img
-					id="moveImg"
-					src={portalRender}
+					src={placeholder}
 					alt="Move Frames go here"
 				/>
 				<div id="loading">
@@ -39,19 +28,18 @@ function Player(props) {
 						src={loading}
 						alt="Move loading"
 					/>
-					<LoadingBar width={props.width} />
+					<LoadingBar loadingPercent={props.loadingPercent} />
 				</div>
 			</div>
 		)
 	}
 
 	else {
-		portalRender = props.url + props.frame + '.png'
 		return (
 			<div id="player">
 				<img
 					id="moveImg"
-					src={portalRender}
+					src={`${props.url}${props.currentFrame}.png`}
 					alt="Move Frames go here"
 				/>
 			</div>

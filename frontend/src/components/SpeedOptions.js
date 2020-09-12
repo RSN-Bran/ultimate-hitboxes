@@ -3,13 +3,13 @@ import React from "react"
 import '../css/SpeedOptions.css';
 
 function SpeedOptions(props) {
-	if (props.totalFrames === 1) {
+	if (props.totalFrames === 1 || props.loading) {
 		return null;
 	}
 	else {
 		return (
-			<div>
-				
+			<div id="speedOptions">
+				<h5>Play Speed: </h5>
 				<div className="speedButton" id="hundrethSpeed">
 					<input type="radio" name="playSpeed" value="60" onChange={props.changeSpeed} checked={props.playSpeed == 60} />
 					<label className="speedLabel" htmlFor="1fps">1fps</label>

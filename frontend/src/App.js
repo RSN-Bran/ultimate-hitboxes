@@ -1,36 +1,22 @@
+//Import React Elements
 import React from 'react';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
-import { useState, useCallback  } from "react";
 
 //Import css
 import './css/App.css';
 
 //Import components
 import Header from './components/Header'
-import CharacterList from './components/CharacterList'
-import Player from './components/Player'
-import PlayOptions from './components/PlayOptions'
-import HitBoxDetail from './components/HitBoxDetail'
-import MoveSelect from './components/MoveSelect'
-import DataTable from './components/DataTable';
 import Settings from './components/Settings';
 import Info from './components/Info';
-
-
-
+import CharacterList from './components/CharacterList'
+import Main from './components/Main'
+import HitboxDetail from './components/HitboxDetail'
 
 //Set hostname to query depending on dev vs PROD
-let environment;
-
-if (process.env.NODE_ENV === "development") {
-  environment = "localhost"
-  
-}
-else {
-  environment = "ultimate-hitboxes.com"
-}
-
-let cookieSet = false;
+const environment = process.env.NODE_ENV === "development" ? "localhost" : "ultimate-hitboxes.com";
 
 class App extends React.Component {
   constructor() {
@@ -45,54 +31,40 @@ class App extends React.Component {
 
       //Basic state information for image playback
       url : "", /*URL for the frame of the image*/
-      frame: 1, /*frame that the image is on, starts at 1*/
+      currentFrame: 1, /*frame that the image is on, starts at 1*/
       playing: false, /*Is the video currently playing?*/
 
       //Data on basic info for all characters to be used by the character select screen. 
-      //Initially set to "empty", filled with data from the backend when the user clicks the "Choose a Character" Button
-      characterData: "empty",
+      //Initially set to undefined, filled with data from the backend when the user clicks the "Choose a Character" Button
+      characterListData: undefined,
 
       //Data for the character and moved currently selected
-      currentCharacterData: { moves: [] },
+      currentCharacterData: undefined,
       currentMoveData: undefined,
-
-      info: false,
-      settings: false,
-
-      //State of the viewing portal
-      //* 'initial' initial state when the page is first loaded, shows a blank portal
-      //* 'loading' when a move is being loaded. Shows a loading gif and a loading percent bar
-      //* 'hasMove' Move has been loaded and one of the frames of the move is currently being displayed
-      portalState: "initial",
 
       //Current percent completion of the loading of a move
       loadingPercent: 0,
+      loading: false,
 
       //Default play speed, plays at .5 speed
       playSpeed: 2,
-      defaultPlaySpeed: 2,
-
-      //Boolean to hold if the user is currently on the Character Select Screen
-      pickingCharacter: false,
-
+      
       //Contains data for a specific hitbox, for use when displaying all data about a hitbox
       hitboxData: undefined,
 
       //Values for sorting/filtering the character list
-      sortBy: "number",
       search: "",
 
-      //Boolean to determine if the native damage values, or the modified 1v1 damage values should be displayed
-      damageMultiplier: false,
+      settings: {
+        showAllHitboxData: true,
+        damageMultiplier: false,
+        showExtraInfo: false,
+        dark_light: 0,
+        defaultPlaySpeed: 2,
+        sortBy: "number"
+      },
 
-      //Boolean to determine if all hitbox data should be showed at once, or data should only be shown on active frames
-      showAllHitboxData: true,
-
-      //Boolean to determine if extra data should be shown in the data table
-      showExtraInfo: false,
-
-      //0 or 1 value to represent dark or light mode, respectively
-      dark_light: 0
+      redirectMove: undefined
     }
 
     //Bind functions so they are usable within components
@@ -101,45 +73,37 @@ class App extends React.Component {
     this.play = this.play.bind(this)
     this.pause = this.pause.bind(this)
     this.getCharacterData = this.getCharacterData.bind(this)
-    this.setMove = this.setMove.bind(this)
-    this.finishLoading = this.finishLoading.bind(this)
     this.updateSlider = this.updateSlider.bind(this)
     this.changeSpeed = this.changeSpeed.bind(this)
     this.changeDefaultSpeed = this.changeDefaultSpeed.bind(this)
-    this.chooseCharacter = this.chooseCharacter.bind(this)
-    this.exitCharacterPicker = this.exitCharacterPicker.bind(this)
     this.updateHitboxData = this.updateHitboxData.bind(this)
     this.jumpToFrame = this.jumpToFrame.bind(this)
     this.changeSortBy = this.changeSortBy.bind(this)
     this.changeSearchValue = this.changeSearchValue.bind(this)
-    this.changeDamageMultiplier = this.changeDamageMultiplier.bind(this)
-    this.nextMove = this.nextMove.bind(this)
-    this.previousMove = this.previousMove.bind(this)
-    this.changeHitboxTable = this.changeHitboxTable.bind(this)
-    this.showInfo = this.showInfo.bind(this)
-    this.showSettings = this.showSettings.bind(this)
-    this.changeExtraInfo = this.changeExtraInfo.bind(this)
-    this.setLightDark = this.setLightDark.bind(this)
-    this.setCookie = this.setCookie.bind(this)
+    this.setInitialSettings = this.setInitialSettings.bind(this)
+    this.changeSettings = this.changeSettings.bind(this)
+    this.updateCharacterListData = this.updateCharacterListData.bind(this)
+    this.updateCurrentMove = this.updateCurrentMove.bind(this)
+    this.updateCurrentCharacter = this.updateCurrentCharacter.bind(this)
+    this.changeMove = this.changeMove.bind(this)
 
   }
-
   
   //Increment the frame by 1
   incrementFrame() {
     //Increase the current frame by one if the current frame is not the final frame
-    if (this.state.frame < this.state.currentMoveData.frames) {
+    if (this.state.currentFrame < this.state.currentMoveData.frames) {
       this.setState({
-        frame: this.state.frame + 1,
+        currentFrame: this.state.currentFrame + 1,
       })
     }
   }
 
   //Decrease the current frame by one if the current frame is not the first frame
   decrementFrame() {
-    if (this.state.frame > 1) {
+    if (this.state.currentFrame > 1) {
       this.setState({
-        frame: this.state.frame - 1,
+        currentFrame: this.state.currentFrame - 1,
       })
     }
   }
@@ -153,7 +117,7 @@ class App extends React.Component {
     //Create a repeating interval to increase the frame once per interval. loop back to 1 once final frame is hit
     this.playInterval = setInterval(() => {
       this.setState({
-        frame: this.state.frame >= this.state.currentMoveData.frames ? 1 : this.state.frame+1
+        currentFrame: this.state.currentFrame >= this.state.currentMoveData.frames ? 1 : this.state.currentFrame+1
       })
     }, ((1000 / 60) * this.state.playSpeed)) /*this value represents how fast the video is played*/
   }
@@ -184,7 +148,6 @@ class App extends React.Component {
           //set the current move as the first one
           currentMoveData: data.moves[0],
           playing: false,
-          pickingCharacter: false,
         })
 
         //Turn off the play interval to pause the video
@@ -200,48 +163,34 @@ class App extends React.Component {
       })
   }
 
-  //Get data for the move to be loaded
-  setMove(event) {
-    //GET data for the move to be loaded
-    fetch(`http://${environment}:5000/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${event.target.value}/data`)
-      .then(response => response.json())
-      .then(data => {
-
-        //Set state to loading and save the data for the move
-        this.setState({
-          currentMoveData: data,
-        })
-
-        //Remove playing interval in case gif is playing
-        clearInterval(this.playInterval)
-
-        //Next function to load the move frames
-        this.loadMove()
-      })
-      .catch(err => {
-        console.log("Failure")
-      })
-  }
-
   //Load the image frames needed to play the video
   loadMove() {
 
+    clearInterval(this.playInterval)
+
     //Set the video player state to "loading" to display a loading bar and loading gif
     this.setState({
-      portalState: "loading",
+      loading: true,
+      currentFrame: 1,
+      playing: false,
+      redirectMove: this.state.currentMoveData.value
     })
 
+    
     //Number of frames currently loaded by browser
     var numLoaded = 0
 
     //Empty array to hold all the images
     var images = [];
+    
+    let characterFromCharacterData = this.state.characterListData.filter(obj => {
+      return obj.value === this.state.currentCharacterData.value
+    })
 
     //Fill array with all the images, one for each frame of the move
     for (var i = 1; i <= this.state.currentMoveData.frames; i++) {
       images[i] = new Image()
-      let number = this.state.characterData.find(element => element.value === this.state.currentCharacterData.value).number
-      images[i].src = `https://ultimate-hitboxes.s3.amazonaws.com/frames/${number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/${i}.png`
+      images[i].src = `https://ultimate-hitboxes.s3.amazonaws.com/frames/${characterFromCharacterData[0].number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/${i}.png`
     }
 
     //Use an interval to halt the program while all the images load
@@ -278,12 +227,12 @@ class App extends React.Component {
 
   //Move loading has been completed, display the first frame of the move and set needed values
   finishLoading() {
-    let number = this.state.characterData.find(element => element.value === this.state.currentCharacterData.value).number
+    let characterFromCharacterData = this.state.characterListData.filter(obj => {
+      return obj.value === this.state.currentCharacterData.value
+    })
     this.setState({
-      url: `https://ultimate-hitboxes.s3.amazonaws.com/frames/${number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/`,
-      frame: 1,
-      playing: false,
-      portalState: "hasMove",
+      url: `https://ultimate-hitboxes.s3.amazonaws.com/frames/${characterFromCharacterData[0].number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/`,
+      loading: false,
     })
 
   }
@@ -292,7 +241,7 @@ class App extends React.Component {
   //Updates the frame and stops the video from playing if it was already playing
   updateSlider(event) {
     this.setState({
-      frame: parseInt(event.target.value),
+      currentFrame: parseInt(event.target.value),
       playing: false,
     })
     clearInterval(this.playInterval)
@@ -310,7 +259,7 @@ class App extends React.Component {
       clearInterval(this.playInterval)
       this.playInterval = setInterval(() => {
         this.setState({
-          frame: this.state.frame >= this.state.currentMoveData.frames ? 1 : this.state.frame + 1
+          currentFrame: this.state.currentFrame >= this.state.currentMoveData.frames ? 1 : this.state.currentFrame + 1
         })
       }, ((1000 / 60) * event.target.value))
     }
@@ -323,44 +272,9 @@ class App extends React.Component {
     })
   }
 
-  //When entering the character select screen, set the boolean to true
-  chooseCharacter() {
-
-    this.pause();
-    //If this is the first time opening the character select, use an api call to get the data to save
-    if (this.state.characterData === "empty") {
-      fetch(`http://${environment}:5000/characterData`)
-        .then(response => response.json())
-        .then(data => {
-          //Save the character data
-          this.setState({
-            pickingCharacter: true,
-            characterData: data
-          })
-        })
-        //TODO: MAKE ERROR HANDLING MORE ROBUST
-        .catch(err => {
-          console.log(err)
-        })
-    }
-    //Otherwise just use the data that was saved
-    else {
-      this.setState({
-        pickingCharacter: true
-      })
-    }
-    
-  }
-
-  //When exiting the character select screen, set the boolean to false
-  exitCharacterPicker() {
-    this.setState({
-      pickingCharacter: false
-    })
-  }
-
   //Save data for a particular hitbox for use in the "More Data button"
   updateHitboxData(hitbox) {
+    console.log(hitbox)
     this.setState({
       hitboxData: hitbox
     })
@@ -369,7 +283,7 @@ class App extends React.Component {
   //Called when clicking on a frame within the data table. Set the frame value to the designated frame and pause the player
   jumpToFrame(frame) {
     this.setState({
-      frame: frame,
+      currentFrame: frame,
       playing: false,
     })
     clearInterval(this.playInterval)
@@ -389,142 +303,84 @@ class App extends React.Component {
     })
   }
 
-  //Flip the value for damageMultiplier from true to false and vice versa
-  changeDamageMultiplier() {
-    this.setState({
-      damageMultiplier: !this.state.damageMultiplier
-    })
-  }
-
-  //Flip the value for changeHitboxTable from true to false and vice versa
-  changeHitboxTable() {
-    this.setState({
-      showAllHitboxData: !this.state.showAllHitboxData
-    })
-  }
-
-  showInfo() {
-    this.setState({
-      info: !this.state.info
-    })
-  }
-
-  showSettings() {
-    this.setState({
-      settings: !this.state.settings
-    })
-  }
-
-  changeExtraInfo() {
-    this.setState({
-      showExtraInfo: !this.state.showExtraInfo
-    })
-  }
-
-  //Jump to the next move in the list
-  nextMove() {
-    //Get index of the move in the array
-    let index = this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name)
+  //Set initial settings on a page load
+  setInitialSettings() {
     
-    //Create a dummy event object to pass to the setMove function
-    let event = {
-      target: { value: undefined }
-    };
-
-    //Set the move to be passed as the next move in the list
-    let nextMove = undefined;
-    let increment = 1;
-
-    //Look for the next available move (some moves are currently not selectable, skip over those)
-    while (nextMove === undefined && index + increment < this.state.currentCharacterData.moves.length) {
-      if (this.state.currentCharacterData.moves[index + increment].complete !== false) {
-        nextMove = this.state.currentCharacterData.moves[index + increment]
-      }
-      else {
-        increment = increment + 1
-      }
-    }
-    if (nextMove !== undefined) {
-      event.target.value = nextMove.value
-      //Call the setMove function
-      this.setMove(event);
-    }
-    else {
-      return undefined
-    }  
-  }
-
-  //Jump to the previous move in the list
-  previousMove() {
-    //Get index of the move in the array
-    let index = this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name)
-
-    //Create a dummy event object to pass to the setMove function
-    let event = {
-      target: { value: undefined }
-    };
-
-    //Set the move to be passed as the next move in the list
-    let prevMove = undefined;
-    let increment = 1;
-
-    //Look for the next available move (some moves are currently not selectable, skip over those)
-    while (prevMove === undefined) {
-      if (this.state.currentCharacterData.moves[index - increment].complete !== false) {
-        prevMove = this.state.currentCharacterData.moves[index - increment]
-      }
-      else {
-        increment = increment + 1
-      }
-    }
-    event.target.value = prevMove.value
-
-    //Call the setMove function
-    this.setMove(event);
-  }
-
-  setCookie() {
-    cookieSet = true;
+    //Attempt to parse the cookie and use the values acquired to change the settings
     try {
-      let settings = JSON.parse(document.cookie)
-      console.log(settings)
-      settings.dark_light = settings.dark_light === undefined ? 0 : settings.dark_light
-      settings.defaultSpeed = settings.defaultSpeed === undefined ? 2 : settings.defaultSpeed
+      console.log(document.cookie)
+      let settings = JSON.parse(document.cookie.split('=')[1])
+      console.log("settings")
       this.setState({
-        damageMultiplier: settings.damageMultiplier,
-        showAllHitboxData: settings.showAllHitboxData,
-        showExtraInfo: settings.showExtraInfo,
-        sortBy: settings.sortBy,
-        dark_light: settings.dark_light,
-        playSpeed: settings.defaultSpeed,
-        defaultPlaySpeed: settings.defaultSpeed
+        settings: settings,
+        playSpeed: settings.defaultPlaySpeed
+      })
+      
+    }
+    //No cookie available or cookie is unreadable, use the default settings and reset cookie
+    catch {
+      document.cookie = "settings="
+    }
+  }
+
+  changeSettings(settings) {
+    console.log("here")
+    if (this.state.settings !== settings) {
+      this.setState({
+        settings: settings
       })
     }
-    catch {
-
-    }
+    console.log(settings)
+    document.cookie = "settings=" + JSON.stringify(settings) + ";Expires=Fri, 1 Jan 2025 00:00:00 EST;"
+    console.log(document.cookie)
   }
 
-  setLightDark() {
+  componentDidMount() {
+    console.log(document.cookie)
+    this.setInitialSettings()
+
+    fetch(`http://${environment}:5000/characterData`)
+      .then(response => response.json())
+      .then(data => {
+        //Save the character data to the state by calling a method in app
+        this.updateCharacterListData(data)
+      })
+  }
+
+  updateCharacterListData(data) {
     this.setState({
-      dark_light: Math.abs(this.state.dark_light - 1)
+      characterListData: data
     })
   }
 
-  //Call this upon a site load to set the cookies
-  componentDidMount() {
-    if (!cookieSet) {
-      this.setCookie()
-    }
+  updateCurrentCharacter(data) {
+    this.setState({
+      currentCharacterData: data
+    })
   }
+
+  updateCurrentMove(data) {
+    this.setState({
+      currentMoveData: data
+    })
+    this.loadMove()
+  }
+
+  changeMove(event) {
+    console.log(event)
+    this.setState({
+      redirectMove: event.target.value
+    })
+  }
+
 
   //Call components to render the page
   render() {
-    
+
+    let pageStyle = {}
 
     //Dark Mode Style
-    let pageStyle = {}
-    if (this.state.dark_light === 0) {
+    if (this.state.settings.dark_light === 0) {
       pageStyle.backgroundColor = "1B1B1B"
       pageStyle.color = "white"
     }
@@ -534,147 +390,118 @@ class App extends React.Component {
       pageStyle.color = "black"
     }
 
-    //This extends the background color to the whole screen
+    ////This extends the background color to the whole screen
     document.body.style.backgroundColor = pageStyle.backgroundColor;
 
-    //Display the Info Page
-    if (this.state.info) {
-      return (
-        <div className="App" style={pageStyle}>
-          <Info
-            info={this.state.info}
-            showInfo={this.showInfo}
-            dark_light={this.state.dark_light}
-          />
-        </div>
-      )
-    }
+    return (
+      <div className="App" style={pageStyle}>
 
-    //Display the Settings Page
-    else if (this.state.settings) {
-      return (
-        <div className="App" style={pageStyle}>
-          <Settings
-            settings={this.state.settings}
-            showSettings={this.showSettings}
-            showAllHitboxData={this.state.showAllHitboxData}
-            changeHitboxTable={this.changeHitboxTable}
-            damageMultiplier={this.state.damageMultiplier}
-            changeDamageMultiplier={this.changeDamageMultiplier}
-            showExtraInfo={this.state.showExtraInfo}
-            changeExtraInfo={this.changeExtraInfo}
-            sortBy={this.state.sortBy}
-            setLightDark={this.setLightDark}
-            dark_light={this.state.dark_light}
-            setCookie={this.setCookie}
-            defaultPlaySpeed={this.state.defaultPlaySpeed}
-            changeDefaultSpeed={this.changeDefaultSpeed}
-          />
-        </div>
-      )
-    }
-
-    //Display the Character Select Page
-    else if (this.state.pickingCharacter) {
-      return (
-        <div className="App" style={pageStyle}>
-          <CharacterList
-            pickingCharacter={this.state.pickingCharacter}
-            characterData={this.state.characterData}
-            getCharacterData={this.getCharacterData}
-            sortBy={this.state.sortBy}
-            search={this.state.search}
-            changeSortBy={this.changeSortBy}
-            changeSearchValue={this.changeSearchValue}
-            exit={this.exitCharacterPicker}
-            dark_light={this.state.dark_light}
-          />
-        </div>
-      )
-    }
-
-    //Display the main page content
-    else {
-      return (
-        <div className="App" style={pageStyle}>
+        <Router>
           <Header
             showInfo={this.showInfo}
             showSettings={this.showSettings}
-            dark_light={this.state.dark_light}
-          />
-          
-          <button id="chooseCharacter" className={this.state.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
-            onClick={this.chooseCharacter}
-          >
-            Choose a Character
-          </button>
-
-          <HitBoxDetail
-            hitboxData={this.state.hitboxData}
-            updateHitboxData={this.updateHitboxData}
-            dark_light={this.state.dark_light}
+            dark_light={this.state.settings.dark_light}
           />
 
-          <MoveSelect
-            setMove={this.setMove}
-            moveList={this.state.currentCharacterData.moves}
-            currentMoveData={this.state.currentMoveData}
-            characterData={this.state.currentCharacterData}
-            dark_light={this.state.dark_light}
-          />
+          <Switch>
+            
+            <Route path='/' exact render={() => (
+              <div id="main">
+                <div id="chooseCharacterLink">
+                  <Link  to="/characters">
+                    <button
+                      id="chooseCharacter"
+                      className={this.state.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
+                    >
+                      Choose a Character
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            )} />
 
-          <Player
-            url={this.state.url}
-            frame={this.state.frame}
-            portalState={this.state.portalState}
-            width={this.state.loadingPercent}
-            pickingCharacter={this.state.pickingCharacter}
-          />
+            <Route path='/info' render={() => (
+              <Info
+                dark_light={this.state.settings.dark_light}
+              />
+            )} />
 
-          <PlayOptions
-            //Pass down boolean to show if video is playing or not
-            portalState={this.state.portalState}
-            pickingCharacter={this.state.pickingCharacter}
+            <Route path='/settings' render={() => (
+              <Settings
+                settings={this.state.settings}
+                setInitialSettings={this.setInitialSettings}
+                changeSettings={this.changeSettings}
+              />
+            )} />
 
-            //Pass down values needed by the Slider
-            totalFrames={this.state.currentMoveData === undefined ? 1 : this.state.currentMoveData.frames}
-            currentFrame={this.state.frame}
-            change={this.updateSlider}
+            <Route path='/characters' exact render={() => (
+              <CharacterList
+                characterListData={this.state.characterListData}
+                updateCharacterListData={this.updateCharacterListData}
+                getCharacterData={this.getCharacterData}
+                search={this.state.search}
+                changeSearchValue={this.changeSearchValue}
+                dark_light={this.state.dark_light}
+                setInitialSettings={this.setInitialSettings}
+                settings={this.state.settings}
+                changeSettings={this.changeSettings}
+              />
+            )} />
 
-            //Pass down values needed by the Buttons
-            incrementFrame={this.incrementFrame}
-            decrementFrame={this.decrementFrame}
-            playing={this.state.playing}
-            play={this.play}
-            pause={this.pause}
-            nextMove={this.nextMove}
-            previousMove={this.previousMove}
-            index={this.state.currentMoveData !== undefined ? this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name) : undefined}
-            totalMoves={this.state.currentCharacterData.moves.length}
-            dark_light={this.state.dark_light}
+            <Route path={['/:character', '/:character/:move']} exact render={() => (
+              <div id="main">
+                <div id="chooseCharacterLink">
+                  <Link to="/characters">
+                    <button
+                      id="chooseCharacter"
+                      className={this.state.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
+                    >
+                      Choose a Character
+                    </button>
+                  </Link>
+                </div>
+                <Main
+                  characterListData={this.state.characterListData}
+                  currentCharacterData={this.state.currentCharacterData}
+                  updateCurrentCharacter={this.updateCurrentCharacter}
+                  currentMoveData={this.state.currentMoveData}
+                  updateCurrentMove={this.updateCurrentMove}
+                  playSpeed={this.state.playSpeed}
+                  url={this.state.url}
+                  currentFrame={this.state.currentFrame}
+                  loading={this.state.loading}
+                  loadingPercent={this.state.loadingPercent}
+                  incrementFrame={this.incrementFrame}
+                  play={this.play}
+                  pause={this.pause}
+                  decrementFrame={this.decrementFrame}
+                  playing={this.state.playing}
+                  changeSpeed={this.changeSpeed}
+                  updateSlider={this.updateSlider}
+                  jumpToFrame={this.jumpToFrame}
+                  settings={this.state.settings}
+                  index={this.state.currentMoveData !== undefined ? this.state.currentCharacterData.moves.findIndex((element) => element.name === this.state.currentMoveData.name) : undefined}
+                  changeMove={this.changeMove}
+                  redirectMove={this.state.redirectMove}
+                  updateHitboxData={this.updateHitboxData}
+                />
+                <HitboxDetail
+                  updateHitboxData={this.updateHitboxData}
+                  hitboxData={this.state.hitboxData}
+                  settings={this.state.settings}
+                />
 
-            //Pass down values needed by the Speed Options
-            changeSpeed={this.changeSpeed}
-            playSpeed={this.state.playSpeed}
+              </div>
+            )} />
 
-          />
+            <Route path='*' exact render={() => (
+              <h2> This page is not available! </h2>
+            )} />
 
-          <DataTable
-            showAllHitboxData={this.state.showAllHitboxData}
-            portalState={this.state.portalState}
-            pickingCharacter={this.state.pickingCharacter}
-            move={this.state.currentMoveData}
-            currentFrame={this.state.frame}
-            updateHitboxData={this.updateHitboxData}
-            jumpToFrame={this.jumpToFrame}
-            damageMultiplier={this.state.damageMultiplier}
-            showExtraInfo={this.state.showExtraInfo}
-            dark_light={this.state.dark_light}
-          />
-        </div>
-      );
-    }
-    
+          </Switch>
+        </Router>
+      </div>
+    )
   }
   
 }

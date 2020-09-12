@@ -1,11 +1,16 @@
+//Import React Elements
 import React from "react"
 import ReactTooltip from "react-tooltip";
 
+//Import Components
 import HitboxTable from './HitboxTable'
+
+//Import CSS
 import '../css/DataTable.css';
 
 function DataTable(props) {
 
+  //Base data for each type of table entry
   let frames = { "variable": "frames", "name": "Frame", "toolTipID": "frameToolTip", "toolTipDescription": "First Active Frame of the hitbox.Click on the number to jump to that frame." }
   let size = { "variable": "size", "name": "Size", "toolTipID": "sizeToolTip", "toolTipDescription": "Size of the hitbox." }
   let ground_or_air = { "variable": "ground_or_air", "name": "Ground/Air", "toolTipID": "ground-airToolTip", "toolTipDescription": "Determines if the hitbox affects grounded or aerial opponents" }
@@ -24,6 +29,7 @@ function DataTable(props) {
   let trip = { "variable": "trip", "name": "Trip", "toolTipID": "tripToolTip", "toolTipDescription": "Trip Chance" }
   let sdi = { "variable": "sdi", "name": "SDI", "toolTipID": "sdiToolTip", "toolTipDescription": "How much each SDI input affects the victim's position" }
 
+  //Data for which table entries should be displayed during certain table configurations
   let fields = {
     grabBasic: [frames, size, ground_or_air, more],
     grabExtra: [id, frames, size, ground_or_air, bone, x, y, z, more],
@@ -35,40 +41,36 @@ function DataTable(props) {
   }
 
   //Only render when needed
-  if (props.portalState === "hasMove" && !props.pickingCharacter) {
-    let type = ""
+  let type = ""
 
-    try {
-      props.move.type === "grab" ? type = type + "grab" : type = type + "attack";
-      props.showExtraInfo ? type = type + "Extra" : type = type + "Basic";
-      props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
-
-      return (
-        <div>
-          <HitboxTable
-            showAllHitboxData={props.showAllHitboxData}
-            portalState={props.portalState}
-            pickingCharacter={props.pickingCharacter}
-            move={props.move}
-            hitboxes={props.move.hitboxes}
-            currentFrame={props.currentFrame}
-            updateHitboxData={props.updateHitboxData}
-            jumpToFrame={props.jumpToFrame}
-            damageMultiplier={props.damageMultiplier}
-            changeDamageMultiplier={props.changeDamageMultiplier}
-            showExtraInfo={props.showExtraInfo}
-            dark_light={props.dark_light}
-            fields={fields[type]}
-          />
-        </div>
-      )
-    }
-    catch {
-      return null;
-    }
+  if (props.loading) {
+    return null;
   }
   else {
-    return null;
+
+    //If the move is a grab, display only data pertaining to grabs
+    props.move.type === "grab" ? type = type + "grab" : type = type + "attack";
+
+    //If the "showExtraInfo" setting is enabled, show additional columns of the table
+    props.settings.showExtraInfo ? type = type + "Extra" : type = type + "Basic";
+
+    //If the move has no frames, omit the frame table
+    props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
+
+    return (
+      <div>
+        <HitboxTable
+          portalState={props.portalState}
+          move={props.move}
+          hitboxes={props.move.hitboxes}
+          currentFrame={props.currentFrame}
+          updateHitboxData={props.updateHitboxData}
+          jumpToFrame={props.jumpToFrame}
+          fields={fields[type]}
+          settings={props.settings}
+        />
+      </div>
+    )
   }
 }
 

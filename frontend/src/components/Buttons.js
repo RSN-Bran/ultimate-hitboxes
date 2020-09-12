@@ -48,8 +48,7 @@ function Buttons(props) {
 	else {
 
 		//Get character and move data from the URL
-		let character = useParams().character
-		let move = useParams().move
+		let character = useParams().character.toLowerCase()
 
 		//Set the move to be passed as the next move in the list
 		let nextMove = undefined;

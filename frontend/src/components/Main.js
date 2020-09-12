@@ -19,7 +19,7 @@ const environment = process.env.NODE_ENV === "development" ? "localhost" : "ulti
 function Main(props) {
 
   //Get character and move data from the URL
-  let character = useParams().character
+  let character = useParams().character.toLowerCase()
   let move = useParams().move
 
   if (move === undefined && props.currentCharacterData !== undefined) {
@@ -39,7 +39,7 @@ function Main(props) {
       return obj.value === character
     })
 
-    if (props.characterListData.filter(element => element.value === character).length === 0 || characterFromCharacterData[0].completed === false) {
+    if (props.characterListData.filter(element => element.value.toLowerCase() === character.toLowerCase()).length === 0 || characterFromCharacterData[0].completed === false) {
       return (
         <h2> This page is not available! </h2>
         )
@@ -62,14 +62,14 @@ function Main(props) {
   }
 
   //If move data doesn't exist or doesn't match the URL, query database to get move dat
-  else if (props.currentMoveData === undefined || props.currentMoveData.value !== move) {
+  else if (props.currentMoveData === undefined || props.currentMoveData.value.toLowerCase() !== move.toLowerCase()) {
 
-    if (props.currentCharacterData.moves.filter(element => element.value === move).length === 0) {
+    if (props.currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
       return (
         <h2> This page is not available! </h2>
       )
     }
-      fetch(`http://${environment}:5000/${props.currentCharacterData.number}_${props.currentCharacterData.value}/${move}/data`)
+    fetch(`http://${environment}:5000/${props.currentCharacterData.number}_${props.currentCharacterData.value}/${move.toLowerCase()}/data`)
         .then(response => response.json())
         .then(data => {
 

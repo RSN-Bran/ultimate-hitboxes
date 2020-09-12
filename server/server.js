@@ -40,7 +40,7 @@ app.get('/characterData', (req, res) => {
 
 //Get JSON data for this character, includes character name, attributes, move data, etc
 app.get('/:character/data', (req, res) => {
-  fs.readFile(`${__dirname}/data/${req.params.character}.json`, 'utf8', (err, jsonString) => {
+  fs.readFile(`${__dirname}/data/${req.params.character.toLowerCase()}.json`, 'utf8', (err, jsonString) => {
     if (err) {
       console.log("File read failed:", err)
       return
@@ -90,8 +90,9 @@ app.get('/:character/:move/data', (req, res) => {
 
     var data = JSON.parse(jsonString)
     var move = {};
-    for(var i = 0; i < data.moves.length; i++) {
-      if(data.moves[i].value === req.params.move) {
+    
+    for (var i = 0; i < data.moves.length; i++) {
+      if (data.moves[i].value.toLowerCase() === req.params.move.toLowerCase()) {
         move = data.moves[i]
         break;
       }

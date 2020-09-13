@@ -2093,7 +2093,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
           "frames": [7,8],
-          "color": "purple",
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2109,7 +2109,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
           "frames": [7,8],
-          "color": "purple",
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -2134,7 +2134,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
           "frames": [10,11],
-          "color": "purple",
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2150,7 +2150,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
           "frames": [10,11],
-          "color": "purple",
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -2175,7 +2175,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
           "frames": [11,12],
-          "color": "purple",
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2191,7 +2191,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
           "frames": [11,12],
-          "color": "purple",
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -2245,8 +2245,8 @@
     {
       "name": "Forward Throw",
       "value": "RoyFThrow",
-      "frames": 30,
-      "faf": 30,
+      "frames": 31,
+      "faf": 31,
       "hitboxes": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
@@ -2263,26 +2263,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "40",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [15],
           "color": "",
           "notes": ""
         }
@@ -2291,8 +2272,8 @@
     {
       "name": "Back Throw",
       "value": "RoyBThrow",
-      "frames": 43,
-      "faf": 43,
+      "frames": 44,
+      "faf": 44,
       "hitboxes": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
@@ -2309,26 +2290,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "40",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [8],
           "color": "",
           "notes": ""
         }
@@ -2337,8 +2299,8 @@
     {
       "name": "Up Throw",
       "value": "RoyUThrow",
-      "frames": 43,
-      "faf": 43,
+      "frames": 44,
+      "faf": 44,
       "hitboxes": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
@@ -2355,26 +2317,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "40",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [13],
           "color": "",
           "notes": ""
         }
@@ -2383,8 +2326,8 @@
     {
       "name": "Down Throw",
       "value": "RoyDThrow",
-      "frames": 40,
-      "faf": 40,
+      "frames": 41,
+      "faf": 41,
       "hitboxes": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
@@ -2401,26 +2344,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "3.0",
-          "angle": "361",
-          "kbg": "100",
-          "fkb": "0",
-          "bkb": "40",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [],
+          "frames": [16],
           "color": "",
           "notes": ""
         }

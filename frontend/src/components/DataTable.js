@@ -43,7 +43,7 @@ function DataTable(props) {
   //Only render when needed
   let type = ""
 
-  if (props.loading) {
+  if (props.loading || props.move.hitboxes.length === 0) {
     return null;
   }
   else {

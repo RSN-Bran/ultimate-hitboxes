@@ -375,70 +375,70 @@
     "number": "37",
     "completed": true,
     "series": "earthbound",
-    "version": "8.0.0"
+    "version": "8.1.0"
   },
   {
     "id": 43,
     "name": "Sonic",
     "value": "sonic",
     "number": "38",
-    "completed": false,
+    "completed": true,
     "series": "sonic",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 44,
     "name": "King Dedede",
     "value": "king-dedede",
     "number": "39",
-    "completed": false,
+    "completed": true,
     "series": "kirby",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 45,
     "name": "Olimar",
     "value": "olimar",
     "number": "40",
-    "completed": false,
+    "completed": true,
     "series": "pikmin",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 46,
     "name": "Lucario",
     "value": "lucario",
     "number": "41",
-    "completed": false,
+    "completed": true,
     "series": "pokemon",
-    "version": ""
+    "version": "8.0.0"
   },
   {
     "id": 47,
     "name": "R.O.B.",
     "value": "rob",
     "number": "42",
-    "completed": false,
+    "completed": true,
     "series": "rob",
-    "version": ""
+    "version": "8.1.0\""
   },
   {
     "id": 48,
     "name": "Toon Link",
     "value": "toon-link",
     "number": "43",
-    "completed": false,
+    "completed": true,
     "series": "legend-of-zelda",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 49,
     "name": "Wolf",
     "value": "wolf",
     "number": "44",
-    "completed": false,
+    "completed": true,
     "series": "star-fox",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 50,

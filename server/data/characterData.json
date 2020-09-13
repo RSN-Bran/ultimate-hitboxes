@@ -375,7 +375,7 @@
     "number": "37",
     "completed": true,
     "series": "earthbound",
-    "version": "8.0.0"
+    "version": "8.1.0"
   },
   {
     "id": 43,
@@ -384,7 +384,7 @@
     "number": "38",
     "completed": true,
     "series": "sonic",
-    "version": "8.0.0"
+    "version": "8.1.0"
   },
   {
     "id": 44,
@@ -393,7 +393,7 @@
     "number": "39",
     "completed": true,
     "series": "kirby",
-    "version": "8.0.0"
+    "version": "8.1.0"
   },
   {
     "id": 45,
@@ -402,7 +402,7 @@
     "number": "40",
     "completed": true,
     "series": "pikmin",
-    "version": "8.0.0"
+    "version": "8.1.0"
   },
   {
     "id": 46,
@@ -420,7 +420,7 @@
     "number": "42",
     "completed": true,
     "series": "rob",
-    "version": "8.0.0"
+    "version": "8.1.0\""
   },
   {
     "id": 48,
@@ -429,16 +429,16 @@
     "number": "43",
     "completed": true,
     "series": "legend-of-zelda",
-    "version": "8.0.0"
+    "version": "8.1.0"
   },
   {
     "id": 49,
     "name": "Wolf",
     "value": "wolf",
     "number": "44",
-    "completed": false,
+    "completed": true,
     "series": "star-fox",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 50,

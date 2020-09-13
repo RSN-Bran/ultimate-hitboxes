@@ -1962,8 +1962,8 @@
     {
       "name": "Back Air",
       "value": "ToonLinkBAir",
-      "frames": 28,
-      "faf": 28,
+      "frames": 35,
+      "faf": 35,
       "hitboxes": [
         {
           "id": "0",

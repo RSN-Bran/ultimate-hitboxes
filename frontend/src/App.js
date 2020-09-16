@@ -274,7 +274,6 @@ class App extends React.Component {
 
   //Save data for a particular hitbox for use in the "More Data button"
   updateHitboxData(hitbox) {
-    console.log(hitbox)
     this.setState({
       hitboxData: hitbox
     })
@@ -308,9 +307,7 @@ class App extends React.Component {
     
     //Attempt to parse the cookie and use the values acquired to change the settings
     try {
-      console.log(document.cookie)
       let settings = JSON.parse(document.cookie.split('=')[1])
-      console.log("settings")
       this.setState({
         settings: settings,
         playSpeed: settings.defaultPlaySpeed
@@ -324,19 +321,15 @@ class App extends React.Component {
   }
 
   changeSettings(settings) {
-    console.log("here")
     if (this.state.settings !== settings) {
       this.setState({
         settings: settings
       })
     }
-    console.log(settings)
     document.cookie = "settings=" + JSON.stringify(settings) + ";Expires=Fri, 1 Jan 2025 00:00:00 EST;"
-    console.log(document.cookie)
   }
 
   componentDidMount() {
-    console.log(document.cookie)
     this.setInitialSettings()
 
     fetch(`http://${environment}:5000/characterData`)
@@ -367,7 +360,6 @@ class App extends React.Component {
   }
 
   changeMove(event) {
-    console.log(event)
     this.setState({
       redirectMove: event.target.value
     })

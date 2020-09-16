@@ -45,8 +45,6 @@ function Main(props) {
         )
     }
 
-    
-    console.log(props.currentCharacterData)
     //API call to the backend to get character data
     fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${character}/data`)
       .then(response => response.json())
@@ -130,7 +128,7 @@ function Main(props) {
         <SpeedOptions
           changeSpeed={props.changeSpeed}
           playSpeed={props.playSpeed}
-          totalFrames={props.totalFrames}
+          totalFrames={props.currentMoveData.frames}
           loading={props.loading}
         />
 

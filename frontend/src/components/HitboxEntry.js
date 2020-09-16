@@ -55,7 +55,7 @@ function HitboxEntry(props) {
 
     //Parse Ground/Air value into something more readable
     else if (field.variable === "ground_or_air") {
-      let ground_air = { "collision_situation_mask_g": "Ground", "collision_situation_mask_a": "Aerial", "collision_situation_mask_ga": "Both"};
+      let ground_air = { "collision_situation_mask_g": "Ground", "collision_situation_mask_g_d": "Ground", "collision_situation_mask_a": "Aerial", "collision_situation_mask_ga": "Both"};
 
       tdList.push(<td className={className}>{ground_air[props.hitbox[field.variable]] === undefined ? "-" : ground_air[props.hitbox[field.variable]]}</td>)
     }

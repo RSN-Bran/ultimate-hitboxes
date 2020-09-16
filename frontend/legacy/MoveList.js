@@ -53,36 +53,6 @@ function MoveList(props) {
 			</div>
 		)
 	}
-		//if (!props.cookieSet) {
-		//	props.changeSettings()
-		//}
-
-		////Create a deep copy of the settings
-		//let settings = JSON.parse(JSON.stringify(props.settings));
-			
-		//let sortedCharacterData = []
-
-		////Sort Characters based on the criteria in the sortBy Field
-		//sortedCharacterData = props.characterListData.slice().sort((a, b) => (a[props.settings.sortBy] > b[props.settings.sortBy]) ? 1 : -1)
-
-		////Filter the results based on the searchBar
-		//sortedCharacterData = sortedCharacterData.filter(obj => { return obj.name.toUpperCase().includes(props.search.toUpperCase()) })
-
-		////Create icons based on the constraints above
-		//let moveButtonArray = []
-		//moveButtonArray = props.updateCurrentCharacter.moves.map(character => <Character key={character.id} dark_light={props.settings.dark_light} character={character} getCharacterData={props.getCharacterData} />)
-
-		
-
-			
-
-		
-	//<form>
-	//	<input id="searchbar" type="text" value={props.search} placeholder="Search for a Character" onChange={props.changeSearchValue} ></input>
-
-	//	<SortBy changeSettings={props.changeSettings} settings={settings} />
-
-	//</form>
 }
 
 

@@ -5,9 +5,6 @@ import { useParams, Link } from 'react-router-dom';
 //CSS Imports
 import '../css/MoveOption.css';
 
-function test() {
-	console.log("test")
-}
 function MoveOption(props) {
 
 	//Set the class based on dark/light mode

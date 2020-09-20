@@ -32,8 +32,6 @@ function CharacterList(props) {
 
 		return (
 			<div id="characterList">
-				<h3>Choose a Character</h3>
-
 				<form>
 					<input id="searchbar" type="text" value={props.search} placeholder="Search for a Character" onChange={props.changeSearchValue} ></input>
 

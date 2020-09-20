@@ -17,11 +17,9 @@
 }
 
 /*
-    thumbHeight = 20px,
-    thumbBorderWidth = 4px,
-    trackColor = #ccc,
-    activeTrackColor = #777,
-    trackHeight = 4px,
-    thumbColor = red,
-    activeThumbColor = darkOrange
-  */
+input[type='range'] {
+    -webkit-appearance: none;
+    height: 10px;
+    background: linear-gradient(to right, white 5.26%, red 5.26%, red 15.78%, white 15.78%)
+  }
+*/

@@ -396,21 +396,6 @@ class App extends React.Component {
           />
 
           <Switch>
-            
-            <Route path='/' exact render={() => (
-              <div id="main">
-                <div id="chooseCharacterLink">
-                  <Link  to="/characters">
-                    <button
-                      id="chooseCharacter"
-                      className={this.state.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
-                    >
-                      Choose a Character
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            )} />
 
             <Route path='/info' render={() => (
               <Info
@@ -426,7 +411,7 @@ class App extends React.Component {
               />
             )} />
 
-            <Route path='/characters' exact render={() => (
+            <Route path={['/', '/characters']} exact render={() => (
               <CharacterList
                 characterListData={this.state.characterListData}
                 updateCharacterListData={this.updateCharacterListData}

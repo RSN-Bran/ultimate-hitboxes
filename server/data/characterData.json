@@ -411,7 +411,7 @@
     "number": "41",
     "completed": true,
     "series": "pokemon",
-    "version": "8.0.0"
+    "version": "8.1.0"
   },
   {
     "id": 47,
@@ -454,9 +454,9 @@
     "name": "Mega Man",
     "value": "mega-man",
     "number": "46",
-    "completed": false,
+    "completed": true,
     "series": "mega-man",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 52,

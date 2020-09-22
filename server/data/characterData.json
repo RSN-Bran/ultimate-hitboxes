@@ -463,9 +463,9 @@
     "name": "Wii Fit Trainer",
     "value": "wii-fit-trainer",
     "number": "47",
-    "completed": false,
+    "completed": true,
     "series": "wii-fit",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 53,

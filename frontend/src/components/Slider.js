@@ -11,7 +11,6 @@ function Slider(props) {
 		options.push(<option key={i}>{i}</option>)
 	}
 
-	var input = "value=" + props.currentFrame + ";"
 	if (props.totalFrames == 1 || props.loading) {
 		return null;
 	}

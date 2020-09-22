@@ -28,15 +28,17 @@ function DataTable(props) {
   let fkb = { "variable": "fkb", "name": "FKB", "toolTipID": "fkbToolTip", "toolTipDescription": "Fixed Knockback" }
   let trip = { "variable": "trip", "name": "Trip", "toolTipID": "tripToolTip", "toolTipDescription": "Trip Chance" }
   let sdi = { "variable": "sdi", "name": "SDI", "toolTipID": "sdiToolTip", "toolTipDescription": "How much each SDI input affects the victim's position" }
+  let rehit = { "variable": "rehit", "name": "Rehit", "toolTipID": "rehitToolTip", "toolTipDescription": "Determines if a hitbox can hit an opponent multiple times" }
+  let part = { "variable": "part", "name": "Part", "toolTipID": "partToolTip", "toolTipDescription": "Determines if other hitboxes can hit an opponent"}
 
   //Data for which table entries should be displayed during certain table configurations
   let fields = {
     grabBasic: [frames, size, ground_or_air, more],
-    grabExtra: [id, frames, size, ground_or_air, bone, x, y, z, more],
+    grabExtra: [id, part, frames, size, ground_or_air, bone, x, y, z, more],
     attackBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, more],
-    attackExtraNoFrame: [id, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, bone, x, y, z, more],
+    attackExtraNoFrame: [id, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, more],
     attackBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, more],
-    attackExtra: [id, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, bone, x, y, z, more]
+    attackExtra: [id, part, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, more]
 
   }
 

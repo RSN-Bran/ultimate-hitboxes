@@ -51,3 +51,7 @@ Lucario Pummel missing a frame
 Toon Link Bair had 7 merged frames
 
 Wolf FSmash 1 merged frame
+
+Mega Man grabs merged frames
+
+Wii Fit Down Smash one extra frame

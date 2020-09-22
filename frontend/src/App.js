@@ -55,12 +55,14 @@ class App extends React.Component {
       //Values for sorting/filtering the character list
       search: "",
 
+      //All settings
       settings: {
         showAllHitboxData: true,
         damageMultiplier: false,
         showExtraInfo: false,
         dark_light: 0,
         defaultPlaySpeed: 2,
+        loopMove: true,
         sortBy: "number"
       },
 
@@ -116,9 +118,20 @@ class App extends React.Component {
 
     //Create a repeating interval to increase the frame once per interval. loop back to 1 once final frame is hit
     this.playInterval = setInterval(() => {
-      this.setState({
-        currentFrame: this.state.currentFrame >= this.state.currentMoveData.frames ? 1 : this.state.currentFrame+1
-      })
+      //If loopMove is enabled, increment the frame. If on the final frame, skip back to 1 and continue. If Loop is disabled but we are not on the final frame, increment and continue
+      if (this.state.settings.loopMove || this.state.currentFrame < this.state.currentMoveData.frames) {
+        this.setState({
+          currentFrame: this.state.currentFrame >= this.state.currentMoveData.frames ? 1 : this.state.currentFrame + 1
+        })
+      }
+      //If Loop Move is disabled and we have reached the final frame, go back to frame 1 and stop playing the video
+      else {
+        this.setState({
+          currentFrame: 1
+        })
+        this.pause();
+      }
+      
     }, ((1000 / 60) * this.state.playSpeed)) /*this value represents how fast the video is played*/
   }
 
@@ -166,13 +179,12 @@ class App extends React.Component {
   //Load the image frames needed to play the video
   loadMove() {
 
-    clearInterval(this.playInterval)
+    this.pause()
 
     //Set the video player state to "loading" to display a loading bar and loading gif
     this.setState({
       loading: true,
       currentFrame: 1,
-      playing: false,
       redirectMove: this.state.currentMoveData.value
     })
 
@@ -308,6 +320,9 @@ class App extends React.Component {
     //Attempt to parse the cookie and use the values acquired to change the settings
     try {
       let settings = JSON.parse(document.cookie.split('=')[1])
+      if (settings.loopMove === undefined) {
+        settings.loopMove = true
+      }
       this.setState({
         settings: settings,
         playSpeed: settings.defaultPlaySpeed
@@ -329,6 +344,7 @@ class App extends React.Component {
     document.cookie = "settings=" + JSON.stringify(settings) + ";Expires=Fri, 1 Jan 2025 00:00:00 EST;"
   }
 
+  //When the site initially loads, always get all character data
   componentDidMount() {
     this.setInitialSettings()
 
@@ -418,7 +434,6 @@ class App extends React.Component {
                 getCharacterData={this.getCharacterData}
                 search={this.state.search}
                 changeSearchValue={this.changeSearchValue}
-                dark_light={this.state.dark_light}
                 setInitialSettings={this.setInitialSettings}
                 settings={this.state.settings}
                 changeSettings={this.changeSettings}

@@ -33,3 +33,7 @@ table, th, td {
 span {
 	font-size: .6em;
 }
+
+.tableheader {
+	cursor: help;
+}

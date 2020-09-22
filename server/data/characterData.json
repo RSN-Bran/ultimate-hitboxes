@@ -472,9 +472,9 @@
     "name": "Rosalina & Luma",
     "value": "rosalina-luma",
     "number": "48",
-    "completed": false,
+    "completed": true,
     "series": "super-mario",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 54,

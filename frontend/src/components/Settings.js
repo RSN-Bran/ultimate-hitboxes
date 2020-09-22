@@ -72,6 +72,18 @@ function Settings(props) {
 						</p>
 					</div>
 				</div>
+
+				<div className="settingDiv">
+					<div className="setting">
+						<input className="settingCheckbox" type="checkbox" onClick={() => { settings.loopMove = !settings.loopMove; props.changeSettings(settings) }} id="changeLoopMove" name="changeLoopMove" checked={settings.loopMove} />
+						<span className="settingHeader" onClick={() => { settings.loopMove = !settings.loopMove; props.changeSettings(settings) }}><b>Loop Move Player</b></span>
+					</div>
+					<div className="settingDescription">
+						<p>
+							Loop back to the beginning of the video once it is complete
+						</p>
+					</div>
+				</div>
 				
 				<div className="settingDiv">
 					<div className="setting">

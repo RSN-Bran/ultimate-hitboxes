@@ -25,6 +25,10 @@ function Info(props) {
 				<div className="info">
 					Hitbox data credits to <a href="https://twitter.com/Ruben_dal">Ruben</a>. Data retreived from <a href="https://rubendal.github.io/ssbu/#/">here</a>.
 				</div>
+				<div className="info">
+					Website concept inspired by <a href="https://struz.github.io/smash-move-viewer/#/v1">Smash 4 Move Viewer</a> by <a href="https://twitter.com/StruzSmash">Strutz</a>.
+				</div>
+				
 		</div>
 		)
 	

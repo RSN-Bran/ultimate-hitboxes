@@ -12,8 +12,8 @@
   }
 }
 
-#sliderContainer {
-
+#videoSlider::-webkit-slider-thumb {
+  cursor: pointer;
 }
 
 /*

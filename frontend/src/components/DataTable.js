@@ -34,9 +34,9 @@ function DataTable(props) {
   //Data for which table entries should be displayed during certain table configurations
   let fields = {
     grabBasic: [frames, size, ground_or_air, more],
-    grabExtra: [id, part, frames, size, ground_or_air, bone, x, y, z, more],
+    grabExtra: [id, frames, size, ground_or_air, bone, x, y, z, more],
     attackBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, more],
-    attackExtraNoFrame: [id, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, more],
+    attackExtraNoFrame: [id, part, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, more],
     attackBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, more],
     attackExtra: [id, part, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, more]
 

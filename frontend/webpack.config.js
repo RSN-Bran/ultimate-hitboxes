@@ -20,6 +20,8 @@
           include: path.resolve(__dirname, 'src'),
           use: ['babel-loader']
         },
+          { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+          { test: /\.js$/, loader: "source-map-loader" },
         {
           test: /\.(png|svg|jpg|gif)$/,
           include: path.resolve(__dirname, 'src'),

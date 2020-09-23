@@ -481,9 +481,9 @@
     "name": "Little Mac",
     "value": "little-mac",
     "number": "49",
-    "completed": false,
+    "completed": true,
     "series": "punch-out",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 55,

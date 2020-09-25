@@ -55,3 +55,6 @@ Wolf FSmash 1 merged frame
 Mega Man grabs merged frames
 
 Wii Fit Down Smash one extra frame
+
+Greninja Down Smash missing frame of activity
+Greninja Pummel missing frame

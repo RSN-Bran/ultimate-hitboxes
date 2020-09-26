@@ -5,6 +5,7 @@
 }
 
 .buttonNoClick {
+	cursor: default;
 	width: 5%;
 	opacity: .2;
 }

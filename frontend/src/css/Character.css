@@ -8,6 +8,17 @@
 	font-size: .7em;
 }
 
+@media (max-width: 1200px) {
+	.character {
+	}
+}
+
+@media (min-width: 1200px) {
+	.character {
+	}
+
+}
+
 .character-complete {
 	opacity: 1.0;
 	cursor: pointer;
@@ -20,12 +31,13 @@
 .character-dark {
 	background-color: white;
 	color: black;
-
+	
 }
 
 .character-light {
 	background-color: gray;
 	color: white;
+	
 }
 
 .character-complete:hover {
@@ -35,24 +47,28 @@
 .name-dark {
 	text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
 	left: 1%;
+	font-size: 1.5vw;
+	position: absolute;
 }
 
 .name-light {
 	left: 1%;
 	text-shadow: -1px 1px 0 gray, 1px 1px 0 gray, 1px -1px 0 gray, -1px -1px 0 gray;
+	font-size: 1.5vw;
+	position: absolute;
 }
 .number {
 	left: 0%;
 	top: 0%;
 	text-align: right;
-	position: relative;
+	position: absolute;
 }
 
 .version {
 	right: 0%;
 	bottom: 0%;
 	text-align: right;
-	position: relative;
+	position: absolute;
 }
 
 .series-icon {

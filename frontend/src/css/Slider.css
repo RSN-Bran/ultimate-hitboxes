@@ -15,11 +15,3 @@
 #videoSlider::-webkit-slider-thumb {
   cursor: pointer;
 }
-
-/*
-input[type='range'] {
-    -webkit-appearance: none;
-    height: 10px;
-    background: linear-gradient(to right, white 5.26%, red 5.26%, red 15.78%, white 15.78%)
-  }
-*/

@@ -490,9 +490,9 @@
     "name": "Greninja",
     "value": "greninja",
     "number": "50",
-    "completed": false,
+    "completed": true,
     "series": "pokemon",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 56,

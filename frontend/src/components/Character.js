@@ -23,11 +23,13 @@ function Character(props) {
 	if (props.character.completed) {
 		return (
 			<Link to={`/${props.character.value}`}>
-				<div className={characterClassName} value={props.character.value} /*onClick={props.getCharacterData.bind(this, props.character.value)}*/>
-					<small className="number" style={{ "position": "absolute" }}>#{props.character.number.replace('e', 'ε')}</small>
-					<small className="version" style={{ "position": "absolute" }}>{props.character.completed ? "v" + props.character.version : "Coming Soon"}</small>
-					<h2 className={nameClass} style={{ "position": "absolute" }}>{props.character.name}</h2>
-					<img src={renderURL} height="100" alt={props.character.name}></img>
+				<div className={characterClassName} value={props.character.value}>
+					<small className="number">#{props.character.number.replace('e', 'ε')}</small>
+					<small className="version">{props.character.completed ? "v" + props.character.version : "Coming Soon"}</small>
+					<h2 className={nameClass}>
+						{props.character.name}
+					</h2>
+					<img className="characterArt" src={renderURL} alt={props.character.name}></img>
 					<img className="series-icon" src={seriesURL} alt={props.character.series}></img>
 				</div>
 			</Link>

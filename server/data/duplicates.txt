@@ -57,4 +57,4 @@ Mega Man grabs merged frames
 Wii Fit Down Smash one extra frame
 
 Greninja Down Smash missing frame of activity
-Greninja Pummel missing frame
+Greninja Rapid Jap Finisher merged frames

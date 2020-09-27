@@ -37,3 +37,7 @@ span {
 .tableheader {
 	cursor: help;
 }
+
+th {
+	background-color: gray;
+}

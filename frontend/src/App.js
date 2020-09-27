@@ -316,10 +316,11 @@ class App extends React.Component {
 
   //Set initial settings on a page load
   setInitialSettings() {
-    
+    console.log(document.cookie)
     //Attempt to parse the cookie and use the values acquired to change the settings
     try {
       let settings = JSON.parse(document.cookie.split('=')[1])
+      
       if (settings.loopMove === undefined) {
         settings.loopMove = true
       }
@@ -331,7 +332,6 @@ class App extends React.Component {
     }
     //No cookie available or cookie is unreadable, use the default settings and reset cookie
     catch {
-      document.cookie = "settings="
     }
   }
 
@@ -341,7 +341,8 @@ class App extends React.Component {
         settings: settings
       })
     }
-    document.cookie = "settings=" + JSON.stringify(settings) + ";Expires=Fri, 1 Jan 2025 00:00:00 EST;"
+    document.cookie = "settings=" + JSON.stringify(settings) + "; Expires=Fri, 1 Jan 2025 00:00:00 EST;" + "path=/";
+    console.log(document.cookie)
   }
 
   //When the site initially loads, always get all character data
@@ -448,7 +449,7 @@ class App extends React.Component {
                       id="chooseCharacter"
                       className={this.state.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
                     >
-                      Choose a Character
+                      <b>Choose a Character</b>
                     </button>
                   </Link>
                 </div>

@@ -61,6 +61,7 @@ function DataTable(props) {
 
     return (
       <div>
+        <h5>Hitbox Data: </h5>
         <HitboxTable
           portalState={props.portalState}
           move={props.move}

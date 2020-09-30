@@ -411,7 +411,7 @@
     "number": "41",
     "completed": true,
     "series": "pokemon",
-    "version": "8.0.0"
+    "version": "8.1.0"
   },
   {
     "id": 47,
@@ -420,7 +420,7 @@
     "number": "42",
     "completed": true,
     "series": "rob",
-    "version": "8.1.0\""
+    "version": "8.1.0"
   },
   {
     "id": 48,
@@ -445,63 +445,63 @@
     "name": "Villager",
     "value": "villager",
     "number": "45",
-    "completed": false,
+    "completed": true,
     "series": "animal-crossing",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 51,
     "name": "Mega Man",
     "value": "mega-man",
     "number": "46",
-    "completed": false,
+    "completed": true,
     "series": "mega-man",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 52,
     "name": "Wii Fit Trainer",
     "value": "wii-fit-trainer",
     "number": "47",
-    "completed": false,
+    "completed": true,
     "series": "wii-fit",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 53,
     "name": "Rosalina & Luma",
     "value": "rosalina-luma",
     "number": "48",
-    "completed": false,
+    "completed": true,
     "series": "super-mario",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 54,
     "name": "Little Mac",
     "value": "little-mac",
     "number": "49",
-    "completed": false,
+    "completed": true,
     "series": "punch-out",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 55,
     "name": "Greninja",
     "value": "greninja",
     "number": "50",
-    "completed": false,
+    "completed": true,
     "series": "pokemon",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 56,
     "name": "Mii Brawler",
     "value": "mii-brawler",
     "number": "51",
-    "completed": false,
+    "completed": true,
     "series": "smash-bros",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 57,

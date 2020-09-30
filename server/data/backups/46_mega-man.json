@@ -2274,7 +2274,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_none",
-          "frames": [ 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 52, 53, 54 ],
+          "frames": [ 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54 ],
           "color": "royalblue",
           "notes": ""
         },
@@ -2358,8 +2358,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [23,24],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2396,8 +2396,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+          "color": "magenta",
           "notes": ""
         },
         {
@@ -2434,8 +2434,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [25,26,27,28,29,30,31,32,33,34,35],
+          "color": "magenta",
           "notes": ""
         }
       ]
@@ -2460,7 +2460,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
           "frames": [ 6, 7 ],
-          "color": "#400040",
+          "color": "#800080",
           "notes": ""
         }
       ]
@@ -2485,7 +2485,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
           "frames": [ 9, 10 ],
-          "color": "#400040",
+          "color": "#800080",
           "notes": ""
         }
       ]
@@ -2510,7 +2510,7 @@
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
           "frames": [ 10, 11 ],
-          "color": "#400040",
+          "color": "#800080",
           "notes": ""
         }
       ]

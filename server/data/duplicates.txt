@@ -58,3 +58,5 @@ Wii Fit Down Smash one extra frame
 
 Greninja Down Smash missing frame of activity
 Greninja Rapid Jap Finisher merged frames
+
+Mii Brawler Down Smash Merged Frames

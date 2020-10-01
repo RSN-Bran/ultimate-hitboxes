@@ -744,6 +744,15 @@
     "number": "76",
     "completed": false,
     "series": "arms",
-	"version": ""
+    "version": ""
+  },
+  {
+    "id": 84,
+    "name": "Steve",
+    "value": "steve",
+    "number": "77",
+    "completed": false,
+    "series": "minecraft",
+    "version": ""
   }
 ]

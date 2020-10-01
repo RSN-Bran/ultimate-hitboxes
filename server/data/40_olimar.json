@@ -328,7 +328,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_punch",
-          "frames": [ 15, 16, 17 ],
+          "frames": [ 15 ],
           "color": "red",
           "notes": ""
         },
@@ -369,7 +369,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_punch",
-          "frames": [ 15 ],
+          "frames": [ 15,16,17 ],
           "color": "red",
           "notes": ""
         }

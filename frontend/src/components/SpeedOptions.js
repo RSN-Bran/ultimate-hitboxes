@@ -9,7 +9,7 @@ function SpeedOptions(props) {
 	else {
 		return (
 			<div id="speedOptions">
-				<h5>Play Speed: </h5>
+				<h5>Play Speed</h5>
 				<div className="speedButton" id="hundrethSpeed">
 					<input type="radio" name="playSpeed" value="60" onChange={props.changeSpeed} checked={props.playSpeed == 60} />
 					<label className="speedLabel" htmlFor="1fps">1fps</label>

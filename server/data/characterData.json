@@ -508,9 +508,9 @@
     "name": "Mii Swordfighter",
     "value": "mii-swordfighter",
     "number": "52",
-    "completed": false,
+    "completed": true,
     "series": "smash-bros",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 58,

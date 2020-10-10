@@ -517,9 +517,9 @@
     "name": "Mii Gunner",
     "value": "mii-gunner",
     "number": "53",
-    "completed": false,
+    "completed": true,
     "series": "smash-bros",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 59,

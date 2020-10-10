@@ -60,3 +60,5 @@ Greninja Down Smash missing frame of activity
 Greninja Rapid Jap Finisher merged frames
 
 Mii Brawler Down Smash Merged Frames
+
+Mii Gunner Fair missing a frame

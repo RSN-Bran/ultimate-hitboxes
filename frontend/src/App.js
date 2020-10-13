@@ -441,7 +441,7 @@ class App extends React.Component {
               />
             )} />
 
-            <Route path={['/:character', '/:character/:move']} exact render={() => (
+            <Route path={['/:character', '/:character/:move', '/:character/:move/:frame']} exact render={() => (
               <div id="main">
                 <div id="chooseCharacterLink">
                   <Link to="/characters">

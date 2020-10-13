@@ -21,6 +21,8 @@ function Main(props) {
   //Get character and move data from the URL
   let character = useParams().character.toLowerCase()
   let move = useParams().move
+  let frame = useParams().frame
+
 
   if (move === undefined && props.currentCharacterData !== undefined) {
     move = props.currentCharacterData.moves[0].value
@@ -59,7 +61,7 @@ function Main(props) {
     return null;
   }
 
-  //If move data doesn't exist or doesn't match the URL, query database to get move dat
+  //If move data doesn't exist or doesn't match the URL, query database to get move data
   else if (props.currentMoveData === undefined || props.currentMoveData.value.toLowerCase() !== move.toLowerCase()) {
 
     if (props.currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
@@ -74,6 +76,10 @@ function Main(props) {
           //Set state to loading and save the data for the move
           props.updateCurrentMove(data)
           props.changeMove({ target: { value: undefined } })
+          if (frame !== undefined) {
+            props.jumpToFrame(parseInt(frame))
+          }
+          
         })
         .catch(err => {
           console.log("Failure")
@@ -82,8 +88,15 @@ function Main(props) {
     
   }
 
+  else if (frame > props.currentMoveData.frames) {
+    return (
+      <h2> This page is not available! </h2>
+    )
+  }
+
   //Necessary data exists, render the main page
   else {
+
     return (
       <div>
         <MoveDropDown

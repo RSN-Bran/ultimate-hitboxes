@@ -526,9 +526,9 @@
     "name": "Palutena",
     "value": "palutena",
     "number": "54",
-    "completed": false,
+    "completed": true,
     "series": "kid-icarus",
-    "version": ""
+    "version": "8.1.0"
   },
   {
     "id": 60,

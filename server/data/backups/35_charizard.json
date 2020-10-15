@@ -5,7 +5,7 @@
   "moves": [
     {
       "name": "Jab 1",
-      "value": "CharitardJab1",
+      "value": "CharizardJab1",
       "frames": 22,
       "faf": 22,
       "hitboxes": [
@@ -165,7 +165,7 @@
     },
     {
       "name": "Jab 2",
-      "value": "CharitardJab2",
+      "value": "CharizardJab2",
       "frames": 25,
       "faf": 25,
       "hitboxes": [
@@ -290,7 +290,7 @@
     },
     {
       "name": "Jab 3",
-      "value": "CharitardJab3",
+      "value": "CharizardJab3",
       "frames": 33,
       "faf": 33,
       "hitboxes": [
@@ -415,7 +415,7 @@
     },
     {
       "name": "Forward Tilt",
-      "value": "CharitardFTilt",
+      "value": "CharizardFTilt",
       "frames": 37,
       "faf": 37,
       "hitboxes": [
@@ -765,7 +765,7 @@
     },
     {
       "name": "Forward Tilt (Up)",
-      "value": "CharitardFTiltUp",
+      "value": "CharizardFTiltUp",
       "frames": 37,
       "faf": 37,
       "hitboxes": [
@@ -1115,7 +1115,7 @@
     },
     {
       "name": "Forward Tilt (Down)",
-      "value": "CharitardFTiltDown",
+      "value": "CharizardFTiltDown",
       "frames": 37,
       "faf": 37,
       "hitboxes": [
@@ -1465,7 +1465,7 @@
     },
     {
       "name": "Up Tilt",
-      "value": "CharitardUTilt",
+      "value": "CharizardUTilt",
       "frames": 33,
       "faf": 33,
       "hitboxes": [
@@ -1634,7 +1634,7 @@
     },
     {
       "name": "Down Tilt",
-      "value": "CharitardDTilt",
+      "value": "CharizardDTilt",
       "frames": 30,
       "faf": 30,
       "hitboxes": [
@@ -1683,7 +1683,7 @@
     },
     {
       "name": "Dash Attack",
-      "value": "CharitardDashAttack",
+      "value": "CharizardDashAttack",
       "frames": 39,
       "faf": 39,
       "hitboxes": [
@@ -1843,7 +1843,7 @@
     },
     {
       "name": "Forward Smash",
-      "value": "CharitardFSmash",
+      "value": "CharizardFSmash",
       "frames": 69,
       "faf": 69,
       "hitboxes": [
@@ -1884,7 +1884,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_head",
-          "frames": [22],
+          "frames": [ 22 ],
           "color": "red",
           "notes": ""
         },
@@ -1925,7 +1925,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_head",
-          "frames": [23,24],
+          "frames": [ 23, 24 ],
           "color": "red",
           "notes": ""
         },
@@ -1966,7 +1966,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_head",
-          "frames": [23,24],
+          "frames": [ 23, 24 ],
           "color": "purple",
           "notes": ""
         }
@@ -1974,7 +1974,7 @@
     },
     {
       "name": "Up Smash",
-      "value": "CharitardUSmash",
+      "value": "CharizardUSmash",
       "frames": 46,
       "faf": 46,
       "hitboxes": [
@@ -2362,7 +2362,7 @@
     },
     {
       "name": "Down Smash",
-      "value": "CharitardDSmash",
+      "value": "CharizardDSmash",
       "frames": 60,
       "faf": 60,
       "hitboxes": [
@@ -2522,7 +2522,7 @@
     },
     {
       "name": "Neutral Air",
-      "value": "CharitardNAir",
+      "value": "CharizardNAir",
       "frames": 39,
       "faf": 39,
       "hitboxes": [
@@ -2682,7 +2682,7 @@
     },
     {
       "name": "Forward Air",
-      "value": "CharitardFAir",
+      "value": "CharizardFAir",
       "frames": 45,
       "faf": 45,
       "hitboxes": [
@@ -2842,7 +2842,7 @@
     },
     {
       "name": "Back Air",
-      "value": "CharitardBAir",
+      "value": "CharizardBAir",
       "frames": 45,
       "faf": 45,
       "hitboxes": [
@@ -3236,7 +3236,7 @@
     },
     {
       "name": "Up Air",
-      "value": "CharitardUAir",
+      "value": "CharizardUAir",
       "frames": 45,
       "faf": 45,
       "hitboxes": [
@@ -3396,7 +3396,7 @@
     },
     {
       "name": "Down Air",
-      "value": "CharitardDAir",
+      "value": "CharizardDAir",
       "frames": 51,
       "faf": 51,
       "hitboxes": [
@@ -3562,7 +3562,7 @@
     },
     {
       "name": "Grab",
-      "value": "CharitardGrab",
+      "value": "CharizardGrab",
       "frames": 39,
       "faf": 39,
       "type": "grab",
@@ -3603,7 +3603,7 @@
     },
     {
       "name": "Dash Grab",
-      "value": "CharitardDashGrab",
+      "value": "CharizardDashGrab",
       "frames": 45,
       "faf": 45,
       "type": "grab",
@@ -3644,7 +3644,7 @@
     },
     {
       "name": "Pivot Grab",
-      "value": "CharitardPivotGrab",
+      "value": "CharizardPivotGrab",
       "frames": 42,
       "faf": 42,
       "type": "grab",
@@ -3685,7 +3685,7 @@
     },
     {
       "name": "Pummel",
-      "value": "CharitardPummel",
+      "value": "CharizardPummel",
       "frames": 7,
       "faf": 7,
       "hitboxes": [
@@ -3731,7 +3731,7 @@
     },
     {
       "name": "Forward Throw",
-      "value": "CharitardFThrow",
+      "value": "CharizardFThrow",
       "frames": 59,
       "faf": 59,
       "hitboxes": [
@@ -3758,7 +3758,7 @@
     },
     {
       "name": "Back Throw",
-      "value": "CharitardBThrow",
+      "value": "CharizardBThrow",
       "frames": 32,
       "faf": 32,
       "hitboxes": [
@@ -3785,7 +3785,7 @@
     },
     {
       "name": "Up Throw",
-      "value": "CharitardUThrow",
+      "value": "CharizardUThrow",
       "frames": 79,
       "faf": 79,
       "hitboxes": [
@@ -3823,7 +3823,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_body",
-          "frames": [52,53,54,55,56,57,58],
+          "frames": [ 52, 53, 54, 55, 56, 57, 58 ],
           "color": "red",
           "notes": ""
         },
@@ -3842,7 +3842,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [58],
+          "frames": [ 58 ],
           "color": "",
           "notes": ""
         }
@@ -3851,7 +3851,7 @@
     },
     {
       "name": "Down Throw",
-      "value": "CharitardDThrow",
+      "value": "CharizardDThrow",
       "frames": 76,
       "faf": 76,
       "hitboxes": [
@@ -3918,17 +3918,17 @@
 
     {
       "name": "Flare Blitz",
-      "value": "CharitardFlareBlitz",
+      "value": "CharizardFlareBlitz",
       "frames": 29,
       "faf": 29,
-      "complete":  false,
+      "complete": false,
       "hitboxes": [
         {
           "id": "0",
           "part": "0",
           "bone": "neck",
           "damage": "6.0",
-          "angle": "60",
+          "angle": "366",
           "kbg": "78",
           "fkb": "46",
           "bkb": "60",
@@ -3966,7 +3966,7 @@
           "part": "0",
           "bone": "top",
           "damage": "6.0",
-          "angle": "60",
+          "angle": "366",
           "kbg": "78",
           "fkb": "46",
           "bkb": "60",
@@ -4003,7 +4003,7 @@
     },
     {
       "name": "Fly",
-      "value": "CharitardFly",
+      "value": "CharizardFly",
       "frames": 65,
       "faf": 65,
       "hitboxes": [
@@ -4012,18 +4012,21 @@
           "part": "0",
           "bone": "top",
           "damage": "5.0",
-          "angle": "80",
+          "angle": "100",
           "kbg": "100",
-          "fkb": "140",
+          "fkb": "120",
           "bkb": "0",
-          "size": "6.0",
+          "size": "5.0",
           "x": "0.0",
           "y": "5.0",
-          "z": "3.0",
+          "z": "11.0",
+          "x2": "lua_void",
+          "y2": "lua_void",
+          "z2": "lua_void",
           "hitlag": "1.0",
           "sdi": "1.0",
           "clang_rebound": "attack_setoff_kind_on",
-          "facingrestrict": "attack_lr_check_pos",
+          "facingrestrict": "attack_lr_check_f",
           "setweight": "false",
           "shielddamage": "0",
           "trip": "0.0",
@@ -4050,18 +4053,21 @@
           "part": "0",
           "bone": "top",
           "damage": "5.0",
-          "angle": "98",
+          "angle": "70",
           "kbg": "100",
-          "fkb": "140",
+          "fkb": "80",
           "bkb": "0",
-          "size": "5.0",
+          "size": "4.5",
           "x": "0.0",
-          "y": "5.0",
-          "z": "11.0",
+          "y": "14.0",
+          "z": "6.0",
+          "x2": "lua_void",
+          "y2": "lua_void",
+          "z2": "lua_void",
           "hitlag": "1.0",
           "sdi": "1.0",
           "clang_rebound": "attack_setoff_kind_on",
-          "facingrestrict": "attack_lr_check_pos",
+          "facingrestrict": "attack_lr_check_f",
           "setweight": "false",
           "shielddamage": "0",
           "trip": "0.0",
@@ -4088,18 +4094,21 @@
           "part": "0",
           "bone": "top",
           "damage": "5.0",
-          "angle": "80",
+          "angle": "65",
           "kbg": "100",
-          "fkb": "130",
+          "fkb": "115",
           "bkb": "0",
-          "size": "4.5",
+          "size": "6.0",
           "x": "0.0",
-          "y": "14.0",
-          "z": "6.0",
+          "y": "5.0",
+          "z": "3.0",
+          "x2": "lua_void",
+          "y2": "lua_void",
+          "z2": "lua_void",
           "hitlag": "1.0",
           "sdi": "1.0",
           "clang_rebound": "attack_setoff_kind_on",
-          "facingrestrict": "attack_lr_check_pos",
+          "facingrestrict": "attack_lr_check_f",
           "setweight": "false",
           "shielddamage": "0",
           "trip": "0.0",
@@ -4126,7 +4135,7 @@
           "part": "0",
           "bone": "top",
           "damage": "2.0",
-          "angle": "72",
+          "angle": "367",
           "kbg": "100",
           "fkb": "100",
           "bkb": "0",
@@ -4140,7 +4149,7 @@
           "hitlag": "0.3",
           "sdi": "1.0",
           "clang_rebound": "attack_setoff_kind_on",
-          "facingrestrict": "attack_lr_check_f",
+          "facingrestrict": "attack_lr_check_pos",
           "setweight": "false",
           "shielddamage": "0",
           "trip": "0.0",
@@ -4167,7 +4176,7 @@
           "part": "0",
           "bone": "top",
           "damage": "2.0",
-          "angle": "92",
+          "angle": "367",
           "kbg": "100",
           "fkb": "90",
           "bkb": "0",
@@ -4181,7 +4190,7 @@
           "hitlag": "0.3",
           "sdi": "1.0",
           "clang_rebound": "attack_setoff_kind_on",
-          "facingrestrict": "attack_lr_check_f",
+          "facingrestrict": "attack_lr_check_pos",
           "setweight": "false",
           "shielddamage": "0",
           "trip": "0.0",
@@ -4208,7 +4217,7 @@
           "part": "0",
           "bone": "top",
           "damage": "2.0",
-          "angle": "82",
+          "angle": "367",
           "kbg": "100",
           "fkb": "80",
           "bkb": "0",
@@ -4222,7 +4231,7 @@
           "hitlag": "0.3",
           "sdi": "1.0",
           "clang_rebound": "attack_setoff_kind_on",
-          "facingrestrict": "attack_lr_check_f",
+          "facingrestrict": "attack_lr_check_pos",
           "setweight": "false",
           "shielddamage": "0",
           "trip": "0.0",
@@ -4249,7 +4258,7 @@
           "part": "0",
           "bone": "top",
           "damage": "2.0",
-          "angle": "82",
+          "angle": "367",
           "kbg": "100",
           "fkb": "100",
           "bkb": "0",
@@ -4263,7 +4272,7 @@
           "hitlag": "0.3",
           "sdi": "1.0",
           "clang_rebound": "attack_setoff_kind_on",
-          "facingrestrict": "attack_lr_check_f",
+          "facingrestrict": "attack_lr_check_pos",
           "setweight": "false",
           "shielddamage": "0",
           "trip": "0.0",
@@ -4298,6 +4307,9 @@
           "x": "0.0",
           "y": "7.0",
           "z": "-3.5",
+          "x2": "lua_void",
+          "y2": "lua_void",
+          "z2": "lua_void",
           "hitlag": "1.0",
           "sdi": "1.0",
           "clang_rebound": "attack_setoff_kind_on",
@@ -4319,7 +4331,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_body",
-          "frames": [ 27, 28 ],
+          "frames": [27,28],
           "color": "red",
           "notes": ""
         },
@@ -4336,6 +4348,9 @@
           "x": "0.0",
           "y": "7.0",
           "z": "4.0",
+          "x2": "lua_void",
+          "y2": "lua_void",
+          "z2": "lua_void",
           "hitlag": "1.0",
           "sdi": "1.0",
           "clang_rebound": "attack_setoff_kind_on",
@@ -4366,7 +4381,7 @@
 
     {
       "name": "Ledge Attack",
-      "value": "CharitardLedgeAttack",
+      "value": "CharizardLedgeAttack",
       "frames": 55,
       "faf": 55,
       "hitboxes": [
@@ -4407,7 +4422,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_head",
-          "frames": [24,25,26],
+          "frames": [ 24, 25, 26 ],
           "color": "red",
           "notes": ""
         }
@@ -4415,7 +4430,7 @@
     },
     {
       "name": "Getup Attack (Up)",
-      "value": "CharitardGetupAttackU",
+      "value": "CharizardGetupAttackU",
       "frames": 45,
       "faf": 45,
       "hitboxes": [
@@ -4456,7 +4471,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_tail",
-          "frames": [17,18],
+          "frames": [ 17, 18 ],
           "color": "red",
           "notes": ""
         },
@@ -4497,7 +4512,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_tail",
-          "frames": [22,23],
+          "frames": [ 22, 23 ],
           "color": "red",
           "notes": ""
         }
@@ -4505,7 +4520,7 @@
     },
     {
       "name": "Getup Attack (Down)",
-      "value": "CharitardGetupAttackD",
+      "value": "CharizardGetupAttackD",
       "frames": 45,
       "faf": 45,
       "hitboxes": [
@@ -4546,7 +4561,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_tail",
-          "frames": [18,19],
+          "frames": [ 18, 19 ],
           "color": "red",
           "notes": ""
         },
@@ -4587,7 +4602,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_head",
-          "frames": [23,24],
+          "frames": [ 23, 24 ],
           "color": "red",
           "notes": ""
         }
@@ -4595,7 +4610,7 @@
     },
     {
       "name": "Trip Attack",
-      "value": "CharitardTripAttack",
+      "value": "CharizardTripAttack",
       "frames": 49,
       "faf": 49,
       "hitboxes": [
@@ -4636,7 +4651,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_punch",
-          "frames": [18,19],
+          "frames": [ 18, 19 ],
           "color": "red",
           "notes": ""
         },
@@ -4677,7 +4692,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_punch",
-          "frames": [23,24],
+          "frames": [ 23, 24 ],
           "color": "red",
           "notes": ""
         }

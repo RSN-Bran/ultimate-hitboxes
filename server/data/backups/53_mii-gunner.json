@@ -1915,8 +1915,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_miigunner_blaster",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
+          "frames": [12],
+          "color": "red",
           "notes": ""
         },
         {
@@ -1956,8 +1956,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_miigunner_blaster",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
+          "frames": [13,14,15,16,17],
+          "color": "red",
           "notes": ""
         },
         {
@@ -1997,8 +1997,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_miigunner_blaster",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
+          "frames": [18,19,20,21],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -3149,7 +3149,7 @@
           "sfxtype": "collision_sound_attr_bomb",
           "type": "attack_region_bomb",
           "frames": [],
-          "color": "",
+          "color": "red",
           "notes": ""
         }
       ]
@@ -3195,8 +3195,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [6,7],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3233,8 +3233,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [6,7],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3271,8 +3271,46 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [11,12,13,14,15,16],
+          "color": "red",
+          "notes": ""
+        },
+        {
+          "id": "0",
+          "part": "0",
+          "bone": "top",
+          "damage": "8.0",
+          "angle": "80",
+          "kbg": "100",
+          "fkb": "0",
+          "bkb": "83",
+          "size": "5.0",
+          "x": "0.0",
+          "y": "18.0",
+          "z": "1.0",
+          "hitlag": "2.0",
+          "sdi": "1.0",
+          "clang_rebound": "attack_setoff_kind_on",
+          "facingrestrict": "attack_lr_check_f",
+          "setweight": "false",
+          "shielddamage": "0",
+          "trip": "0.0",
+          "rehit": "0",
+          "reflectable": "false",
+          "absorbable": "false",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "true",
+          "ground_or_air": "collision_situation_mask_ga",
+          "hitbits": "collision_category_mask_all",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_l",
+          "sfxtype": "collision_sound_attr_kick",
+          "type": "attack_region_kick",
+          "frames": [17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],
+          "color": "purple",
           "notes": ""
         }
       ]
@@ -3327,7 +3365,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [3],
+          "frames": [ 3 ],
           "color": "red",
           "notes": ""
         },
@@ -3365,7 +3403,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [3],
+          "frames": [ 3 ],
           "color": "red",
           "notes": ""
         }
@@ -3411,7 +3449,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_energy",
-          "frames": [7,8,9,10,11,12],
+          "frames": [ 7, 8, 9, 10, 11, 12 ],
           "color": "#904f90",
           "notes": ""
         },
@@ -3449,7 +3487,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_none",
-          "frames": [37,38],
+          "frames": [ 37, 38 ],
           "color": "blue",
           "notes": ""
         }

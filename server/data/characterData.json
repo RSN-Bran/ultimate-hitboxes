@@ -15,7 +15,7 @@
     "number": "02",
     "completed": true,
     "series": "donkey-kong",
-    "version": "8.1.0"
+    "version": "9.0.0"
   },
   {
     "id": 3,
@@ -240,7 +240,7 @@
     "number": "24",
     "completed": true,
     "series": "pokemon",
-    "version": "8.1.0"
+    "version": "9.0.0"
   },
   {
     "id": 28,

@@ -6,8 +6,8 @@
     {
       "name": "Jab 1",
       "value": "LucarioJab1",
-      "frames": 31,
-      "faf": 31,
+      "frames": 26,
+      "faf": 26,
       "hitboxes": [
         {
           "id": "0",
@@ -166,8 +166,8 @@
     {
       "name": "Jab 2",
       "value": "LucarioJab2",
-      "frames": 34,
-      "faf": 34,
+      "frames": 26,
+      "faf": 26,
       "hitboxes": [
         {
           "id": "0",
@@ -250,8 +250,8 @@
     {
       "name": "Jab 3",
       "value": "LucarioJab3",
-      "frames": 38,
-      "faf": 38,
+      "frames": 35,
+      "faf": 35,
       "hitboxes": [
         {
           "id": "0",

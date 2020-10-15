@@ -4269,7 +4269,7 @@
     },
     {
       "name": "Reflector (Hit)",
-      "value": "WolfBlaster",
+      "value": "WolfReflectorHit",
       "frames": 52,
       "faf": 52,
       "hitboxes": [
@@ -4307,8 +4307,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
+          "frames": [2,3],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4345,8 +4345,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
+          "frames": [2,3],
+          "color": "red",
           "notes": ""
         }
       ]

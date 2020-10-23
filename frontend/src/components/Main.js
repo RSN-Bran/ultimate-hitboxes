@@ -96,7 +96,6 @@ function Main(props) {
 
   //Necessary data exists, render the main page
   else {
-
     return (
       <div>
         <MoveDropDown
@@ -121,38 +120,40 @@ function Main(props) {
           updateSlider={props.updateSlider}
           loading={props.loading}
         />
+        <div id="scrollable">
+          <Buttons
+            incrementFrame={props.incrementFrame}
+            decrementFrame={props.decrementFrame}
+            currentCharacterData={props.currentCharacterData}
+            playing={props.playing}
+            play={props.play}
+            pause={props.pause}
+            index={props.index}
+            totalMoves={props.totalMoves}
+            totalFrames={props.currentMoveData.frames}
+            currentFrame={props.currentFrame}
+            settings={props.settings}
+            loading={props.loading}
 
-        <Buttons
-          incrementFrame={props.incrementFrame}
-          decrementFrame={props.decrementFrame}
-          currentCharacterData={props.currentCharacterData}
-          playing={props.playing}
-          play={props.play}
-          pause={props.pause}
-          index={props.index}
-          totalMoves={props.totalMoves}
-          totalFrames={props.currentMoveData.frames}
-          currentFrame={props.currentFrame}
-          settings={props.settings}
-          loading={props.loading}
+          />
 
-        />
+          <SpeedOptions
+            changeSpeed={props.changeSpeed}
+            playSpeed={props.playSpeed}
+            totalFrames={props.currentMoveData.frames}
+            loading={props.loading}
+          />
 
-        <SpeedOptions
-          changeSpeed={props.changeSpeed}
-          playSpeed={props.playSpeed}
-          totalFrames={props.currentMoveData.frames}
-          loading={props.loading}
-        />
-
-        <DataTable
-          settings={props.settings}
-          move={props.currentMoveData}
-          jumpToFrame={props.jumpToFrame}
-          loading={props.loading}
-          currentFrame={props.currentFrame}
-          updateHitboxData={props.updateHitboxData}
-        />
+          <DataTable
+            settings={props.settings}
+            move={props.currentMoveData}
+            jumpToFrame={props.jumpToFrame}
+            loading={props.loading}
+            currentFrame={props.currentFrame}
+            updateHitboxData={props.updateHitboxData}
+          />
+        </div>
+        
 
       </div>
     )

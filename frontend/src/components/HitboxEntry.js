@@ -69,7 +69,7 @@ function HitboxEntry(props) {
     else if (field.variable === "more") {
       tdList.push(<td className={className} onClick={props.updateHitboxData.bind(this, props.hitbox)} style={{ cursor: "pointer", width: "5px" }}><img
         src={info[props.settings.dark_light]}
-        style={{ width: "30%" }}
+        style={{ width: "70%" }}
       /></td >)
     }
 

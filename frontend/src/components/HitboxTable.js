@@ -37,7 +37,7 @@ function HitboxTable(props) {
     })
 
     return (
-      <div>
+      <div id="hitboxTable">
         <table className={props.settings.dark_light === 0 ? "darkTable" : "lightTable"}>
           <thead>
             <tr className={props.settings.dark_light === 0 ? "darkTable" : "lightTable"}>

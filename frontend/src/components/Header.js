@@ -49,11 +49,11 @@ function Header(props) {
 
       </div>
 
-      <Link to="/">
-        <div id="title">
+      <div id="title">
+        <Link to="/">
           <h3>Smash Ultimate Hitbox Viewer</h3>
-        </div>
-      </Link>
+        </Link>
+      </div>
 
       <div id="links">
         <a href="https://twitter.com/SSBUHitboxes">

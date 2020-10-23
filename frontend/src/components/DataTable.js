@@ -14,7 +14,7 @@ function DataTable(props) {
   let frames = { "variable": "frames", "name": "Frame", "toolTipID": "frameToolTip", "toolTipDescription": "First Active Frame of the hitbox.Click on the number to jump to that frame." }
   let size = { "variable": "size", "name": "Size", "toolTipID": "sizeToolTip", "toolTipDescription": "Size of the hitbox." }
   let ground_or_air = { "variable": "ground_or_air", "name": "Ground/Air", "toolTipID": "ground-airToolTip", "toolTipDescription": "Determines if the hitbox affects grounded or aerial opponents" }
-  let more = { "variable": "more", "name": "More Data", "toolTipID": "moreToolTip", "toolTipDescription": "Shows all raw data for a hitbox" }
+  let more = { "variable": "more", "name": "Data", "toolTipID": "moreToolTip", "toolTipDescription": "Shows all raw data for a hitbox" }
   let id = { "variable": "id", "name": "ID", "toolTipID": "idToolTip", "toolTipDescription": "ID of the Hitbox" }
   let bone = { "variable": "bone", "name": "Bone", "toolTipID": "boneToolTip", "toolTipDescription": "Bone of the model the Hitbox is attached to" }
   let x = { "variable": "x", "name": "X", "toolTipID": "xToolTip", "toolTipDescription": "X Position of the hitbox in relation to the center of the bone" }
@@ -29,18 +29,21 @@ function DataTable(props) {
   let trip = { "variable": "trip", "name": "Trip", "toolTipID": "tripToolTip", "toolTipDescription": "Trip Chance" }
   let sdi = { "variable": "sdi", "name": "SDI", "toolTipID": "sdiToolTip", "toolTipDescription": "How much each SDI input affects the victim's position" }
   let rehit = { "variable": "rehit", "name": "Rehit", "toolTipID": "rehitToolTip", "toolTipDescription": "Determines if a hitbox can hit an opponent multiple times" }
-  let part = { "variable": "part", "name": "Part", "toolTipID": "partToolTip", "toolTipDescription": "Determines if other hitboxes can hit an opponent"}
+  let part = { "variable": "part", "name": "Part", "toolTipID": "partToolTip", "toolTipDescription": "Determines if other hitboxes can hit an opponent" }
+  let notes = { "variable": "notes", "name": "Notes", "toolTipID": "noteToolTip", "toolTipDescription": "Notes" }
 
   //Data for which table entries should be displayed during certain table configurations
   let fields = {
-    grabBasic: [frames, size, ground_or_air, more],
-    grabExtra: [id, frames, size, ground_or_air, bone, x, y, z, more],
-    attackBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, more],
-    attackExtraNoFrame: [id, part, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, more],
-    attackBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, more],
-    attackExtra: [id, part, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, more]
+    grabBasic: [frames, size, ground_or_air, notes, more],
+    grabExtra: [id, frames, size, ground_or_air, bone, x, y, z, notes, more],
+    attackBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
+    attackExtraNoFrame: [id, part, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
+    attackBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
+    attackExtra: [id, part, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more]
 
   }
+
+
 
   //Only render when needed
   let type = ""
@@ -59,8 +62,12 @@ function DataTable(props) {
     //If the move has no frames, omit the frame table
     props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
 
+    let table = JSON.parse(JSON.stringify(fields[type]));
+    if (props.move.hitboxes.every(hitbox => hitbox.notes === "")) {
+      table.splice(-2, 1);
+    }
     return (
-      <div>
+      <div id="dataTable">
         <h5>Hitbox Data</h5>
         <HitboxTable
           portalState={props.portalState}
@@ -69,9 +76,10 @@ function DataTable(props) {
           currentFrame={props.currentFrame}
           updateHitboxData={props.updateHitboxData}
           jumpToFrame={props.jumpToFrame}
-          fields={fields[type]}
+          fields={table}
           settings={props.settings}
         />
+        <p id="moveNotes">{props.move.notes === undefined ? null : props.move.notes}</p>
       </div>
     )
   }

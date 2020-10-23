@@ -29,7 +29,7 @@ function Character(props) {
 					<h2 className={nameClass}>
 						{props.character.name}
 					</h2>
-					<img className="characterArt" src={renderURL} alt={props.character.name}></img>
+					<img className="characterArt" height="100" src={renderURL} alt={props.character.name}></img>
 					<img className="series-icon" src={seriesURL} alt={props.character.series}></img>
 				</div>
 			</Link>

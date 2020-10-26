@@ -34,6 +34,7 @@ function DataTable(props) {
 
   //Data for which table entries should be displayed during certain table configurations
   let fields = {
+    grabBasicNoFrame: [size, ground_or_air, notes, more],
     grabBasic: [frames, size, ground_or_air, notes, more],
     grabExtra: [id, frames, size, ground_or_air, bone, x, y, z, notes, more],
     attackBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
@@ -61,7 +62,7 @@ function DataTable(props) {
 
     //If the move has no frames, omit the frame table
     props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
-
+    console.log(type)
     let table = JSON.parse(JSON.stringify(fields[type]));
     if (props.move.hitboxes.every(hitbox => hitbox.notes === "")) {
       table.splice(-2, 1);

@@ -535,9 +535,9 @@
     "name": "Pac-Man",
     "value": "pac-man",
     "number": "55",
-    "completed": false,
+    "completed": true,
     "series": "pac-man",
-    "version": ""
+    "version": "9.0.1"
   },
   {
     "id": 61,

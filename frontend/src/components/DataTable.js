@@ -67,6 +67,14 @@ function DataTable(props) {
     if (props.move.hitboxes.every(hitbox => hitbox.notes === "")) {
       table.splice(-2, 1);
     }
+
+    let notes = [];
+    let jsxNotes = []
+    if (props.move.notes !== undefined) {
+      notes = props.move.notes.split("\n");
+      jsxNotes = notes.map(text => <p>{text}</p>)
+    }
+    
     return (
       <div id="dataTable">
         <h5>Hitbox Data</h5>
@@ -80,7 +88,9 @@ function DataTable(props) {
           fields={table}
           settings={props.settings}
         />
-        <p id="moveNotes">{props.move.notes === undefined ? null : props.move.notes}</p>
+        <div id="moveNotes">
+          {jsxNotes === undefined ? null : jsxNotes}
+        </div>
       </div>
     )
   }

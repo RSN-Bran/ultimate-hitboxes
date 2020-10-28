@@ -544,9 +544,9 @@
     "name": "Robin",
     "value": "robin",
     "number": "56",
-    "completed": false,
+    "completed": true,
     "series": "fire-emblem",
-    "version": ""
+    "version": "9.0.1"
   },
   {
     "id": 62,

@@ -553,9 +553,9 @@
     "name": "Shulk",
     "value": "shulk",
     "number": "57",
-    "completed": false,
+    "completed": true,
     "series": "xenoblade",
-    "version": ""
+    "version": "9.0.1"
   },
   {
     "id": 63,

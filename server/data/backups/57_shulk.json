@@ -4854,7 +4854,7 @@
       "hitboxes": []
     },
     {
-      "name": "Vision (Attack, Forward)",
+      "name": "Vision (Attack)",
       "value": "ShulkVisionForward",
       "frames": 49,
       "faf": 49,
@@ -5026,7 +5026,7 @@
       ]
     },
     {
-      "name": "Vision (Attack, Back)",
+      "name": "Vision (Attack, Forward)",
       "value": "ShulkVisionBack",
       "frames": 56,
       "faf": 56,
@@ -5068,8 +5068,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [21,22],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -5109,8 +5109,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [21,22],
-          "color": "purple",
+          "frames": [],
+          "color": "",
           "notes": ""
         }
       ]

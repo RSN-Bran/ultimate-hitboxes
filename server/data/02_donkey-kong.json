@@ -4665,7 +4665,7 @@
       "value": "DonkeyKongHandSlapG",
       "frames": 21,
       "faf": 21,
-      "notes":  "7 additional startup frames on first use\n26 frames per mash"
+      "notes":  "7 additional startup frames on first use\n26 frames per mash",
       "hitboxes": [
         {
           "id": "0",

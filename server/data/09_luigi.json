@@ -2402,7 +2402,7 @@
       "value": "LuigiZAirHitbox",
       "frames": 1,
       "faf": 1,
-      "complete": false,
+      "notes":  "Active on frames 14-68\nFAF on frame 53",
       "hitboxes": [
         {
           "id": "0",
@@ -4156,6 +4156,7 @@
       "value": "LuigiDTaunt",
       "frames": 1,
       "faf": 1,
+      "notes":  "Active on frame 45\nFAF on frame 70",
       "hitboxes": [
         {
           "id": "0",

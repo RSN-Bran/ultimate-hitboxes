@@ -562,9 +562,9 @@
     "name": "Bowser Jr.",
     "value": "bowser-jr",
     "number": "58",
-    "completed": false,
+    "completed": true,
     "series": "super-mario",
-    "version": ""
+    "version": "9.0.1"
   },
   {
     "id": 64,

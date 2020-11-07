@@ -3,6 +3,36 @@ const app = express();
 
 var fs = require('fs');
 
+Date.prototype.toISOString = function () {
+  var tzo = -this.getTimezoneOffset(),
+    dif = tzo >= 0 ? '+' : '-',
+    pad = function (num) {
+      var norm = Math.floor(Math.abs(num));
+      return (norm < 10 ? '0' : '') + norm;
+    };
+  return this.getFullYear() +
+    '-' + pad(this.getMonth() + 1) +
+    '-' + pad(this.getDate()) +
+    'T' + pad(this.getHours()) +
+    ':' + pad(this.getMinutes()) +
+    ':' + pad(this.getSeconds()) +
+    dif + pad(tzo / 60) +
+    ':' + pad(tzo % 60);
+}
+
+function writeToLog(logEntry) {
+  var time = new Date().toLocaleString("en-US", { timeZone: "America/New_York" })
+  var convertedTime = new Date(time).toISOString()
+
+  var date = convertedTime.substring(0, 10)
+  console.log(time)
+  console.log(convertedTime);
+
+  fs.appendFile(`serverlog/${date}_serverlog.txt`, `${convertedTime}\t${logEntry}\n`, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+  });
+}
 //Giver server access to these directories
 app.use("/src", express.static('./src/'));
 
@@ -18,23 +48,8 @@ app.get('/characterData', (req, res) => {
 
     res.send(json) 
 
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-
-    date = mm + '-' + dd + '-' + yyyy;
-
-    var time = new Date();
-    time=time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
-
-    console.log(today);
-
-    fs.appendFile(`serverlog/${date}_serverlog.txt`, `${date}@${time}\tRequest from ${req.connection.remoteAddress} for ultimate-hitboxes.com/characterData\n`, function (err) {
-      if (err) throw err;
-      console.log('Saved!');
-    });
-
+    let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/characterData`
+    writeToLog(logMessage);
   })
 });
 
@@ -59,22 +74,8 @@ app.get('/:character/data', (req, res) => {
 
     res.send(allData)
 
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-
-    date = mm + '-' + dd + '-' + yyyy;
-
-    var time = new Date();
-    time = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
-
-    console.log(today);
-
-    fs.appendFile(`serverlog/${date}_serverlog.txt`, `${date}@${time}\tRequest from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data\n`, function (err) {
-      if (err) throw err;
-      console.log('Saved!');
-    });
+    let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data`
+    writeToLog(logMessage);
   })
 });
 
@@ -85,8 +86,6 @@ app.get('/:character/:move/data', (req, res) => {
         console.log("File read failed:", err)
         return
     }
-
-
 
     var data = JSON.parse(jsonString)
     var move = {};
@@ -100,26 +99,10 @@ app.get('/:character/:move/data', (req, res) => {
     
     res.setHeader('Access-Control-Allow-Origin', '*');
 
-    console.log();
+    res.send(move)
 
-    res.send(move) 
-
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-
-    date = mm + '-' + dd + '-' + yyyy;
-
-    var time = new Date();
-    time = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
-
-    console.log(today);
-
-    fs.appendFile(`serverlog/${date}_serverlog.txt`, `${date}@${time}\tRequest from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data\n`, function (err) {
-      if (err) throw err;
-      console.log('Saved!');
-    });
+    let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data`
+    writeToLog(logMessage);
   })
 });
 

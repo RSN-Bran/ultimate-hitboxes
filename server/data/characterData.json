@@ -571,9 +571,9 @@
     "name": "Duck Hunt",
     "value": "duck-hunt",
     "number": "59",
-    "completed": false,
+    "completed": true,
     "series": "duck-hunt",
-    "version": ""
+    "version": "9.0.1"
   },
   {
     "id": 65,

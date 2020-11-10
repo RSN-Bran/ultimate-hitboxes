@@ -36,11 +36,14 @@ function HitboxTable(props) {
       toolTipList.push(<ReactTooltip id={field.toolTipID} place="top" effect="solid">{field.toolTipDescription}</ReactTooltip>)
     })
 
+    let tableClass = props.settings.dark_light === 0 ? "darkTable" : "lightTable";
+    let headerClass = props.settings.dark_light === 0 ? "darkTable" : "lightTable";
+
     return (
       <div id="hitboxTable">
-        <table className={props.settings.dark_light === 0 ? "darkTable" : "lightTable"}>
+        <table className={tableClass}>
           <thead>
-            <tr className={props.settings.dark_light === 0 ? "darkTable" : "lightTable"}>
+            <tr className={headerClass}>
               {thList}
             </tr>
           </thead>

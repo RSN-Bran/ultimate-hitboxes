@@ -84,6 +84,18 @@ function Settings(props) {
 						</p>
 					</div>
 				</div>
+
+				<div className="settingDiv">
+					<div className="setting">
+						<input className="settingCheckbox" type="checkbox" onClick={() => { settings.scrollTable = !settings.scrollTable; props.changeSettings(settings) }} id="changeScrollTable" name="changeScrollTable" checked={settings.scrollTable} />
+						<span className="settingHeader" onClick={() => { settings.scrollTable = !settings.scrollTable; props.changeSettings(settings) }}><b>Scrollalbe Table (BETA)</b></span>
+					</div>
+					<div className="settingDescription">
+						<p>
+							Allows hitbox table to be scrolled through while keeping the hitbox visual & button positions fixed, useful for moves with lots of hitboxes.
+						</p>
+					</div>
+				</div>
 				
 				<div className="settingDiv">
 					<div className="setting">
@@ -102,6 +114,7 @@ function Settings(props) {
 					<h3>Make sure cookies are enabled so your preferences are saved for future visits!</h3>
 					<h3 style={{ cursor: "pointer" }} onClick={() => { document.cookie = "settings="; document.cookie = ""; history.go(0)}}>If you are experiencing issues with your settings, click here to clear your cookies</h3>
 				</div>
+
 			</div>
 		)
 

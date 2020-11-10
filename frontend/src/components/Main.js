@@ -120,7 +120,7 @@ function Main(props) {
           updateSlider={props.updateSlider}
           loading={props.loading}
         />
-        <div id="scrollable">
+
           <Buttons
             incrementFrame={props.incrementFrame}
             decrementFrame={props.decrementFrame}
@@ -136,7 +136,7 @@ function Main(props) {
             loading={props.loading}
 
           />
-
+        <div id={props.settings.scrollTable ? "scrollable" : "not-scrollable"}>
           <SpeedOptions
             changeSpeed={props.changeSpeed}
             playSpeed={props.playSpeed}

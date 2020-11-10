@@ -49,11 +49,11 @@ a {
   height: 100%;
 }
 
-/*#scrollable {
-  flex: 1;
+#scrollable {
   overflow-y: scroll;
-  height: 300px;
-}*/
+  flex-shrink: 0;
+  
+}
 
 /*Sizing for Desktop*/
 @media (min-width: 500px) {
@@ -85,7 +85,7 @@ a {
     height: 3em;
   }
   #scrollable {
-    height: 300px;
+    height: 25vh;
   }
 }
 
@@ -124,8 +124,7 @@ a {
     height: 2.5em;
   }
   #scrollable {
-    height: 400px;
+    height: 33vh;
   }
-
 }
 

@@ -63,7 +63,7 @@ class App extends React.Component {
         dark_light: 0,
         defaultPlaySpeed: 2,
         loopMove: true,
-        scrollTable: false,
+        scrollTable: true,
         sortBy: "number"
       },
 

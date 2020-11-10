@@ -88,7 +88,7 @@ function Settings(props) {
 				<div className="settingDiv">
 					<div className="setting">
 						<input className="settingCheckbox" type="checkbox" onClick={() => { settings.scrollTable = !settings.scrollTable; props.changeSettings(settings) }} id="changeScrollTable" name="changeScrollTable" checked={settings.scrollTable} />
-						<span className="settingHeader" onClick={() => { settings.scrollTable = !settings.scrollTable; props.changeSettings(settings) }}><b>Scrollalbe Table (BETA)</b></span>
+						<span className="settingHeader" onClick={() => { settings.scrollTable = !settings.scrollTable; props.changeSettings(settings) }}><b>Scrollalbe Table</b></span>
 					</div>
 					<div className="settingDescription">
 						<p>

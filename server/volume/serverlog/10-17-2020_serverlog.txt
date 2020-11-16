@@ -1,3 +1,0 @@
-10-17-2020@10:9:34	Request from ::1 for ultimate-hitboxes.com/characterData
-10-17-2020@10:9:34	Request from ::1 for ultimate-hitboxes.com/38_sonic/data
-10-17-2020@10:9:34	Request from ::1 for ultimate-hitboxes.com/38_sonic/sonicusmash/data

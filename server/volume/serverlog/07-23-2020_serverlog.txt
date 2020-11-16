@@ -1,8 +1,0 @@
-Request from ::1 for ultimate-hitboxes.com/characterData
-Thu Jul 23 2020 22:14:39 GMT-0400 (Eastern Daylight Time)	Request from ::1 for ultimate-hitboxes.com/characterData
-22:15:13	Request from ::1 for ultimate-hitboxes.com/characterData
-07-23-2020@22:17:19	Request from ::1 for ultimate-hitboxes.com/characterData
-07-23-2020@22:19:10	Request from ::1 for ultimate-hitboxes.com/characterData
-07-23-2020@22:19:11	Request from ::1 for ultimate-hitboxes.com/01_mario/data
-07-23-2020@22:19:11	Request from ::1 for ultimate-hitboxes.com/01_mario/MarioJab1/data
-07-23-2020@22:19:15	Request from ::1 for ultimate-hitboxes.com/01_mario/MarioDTilt/data

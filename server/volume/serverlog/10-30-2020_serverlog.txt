@@ -1,4 +1,0 @@
-10-30-2020@9:1:46	Request from ::1 for ultimate-hitboxes.com/characterData
-10-30-2020@9:1:46	Request from ::1 for ultimate-hitboxes.com/57_shulk/data
-10-30-2020@9:1:46	Request from ::1 for ultimate-hitboxes.com/57_shulk/shulkbackslashstart/data
-10-30-2020@10:9:36	Request from ::1 for ultimate-hitboxes.com/57_shulk/shulkutilt/data

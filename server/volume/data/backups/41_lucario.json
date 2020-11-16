@@ -374,8 +374,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [12,13,14],
+          "color": "red",
           "notes": ""
         },
         {
@@ -415,8 +415,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [12,13,14],
+          "color": "red",
           "notes": ""
         },
         {
@@ -456,8 +456,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [15,16],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -505,8 +505,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [12,13,14],
+          "color": "red",
           "notes": ""
         },
         {
@@ -546,8 +546,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [12,13,14],
+          "color": "red",
           "notes": ""
         },
         {
@@ -587,8 +587,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [15,16],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -636,8 +636,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [12,13,14],
+          "color": "red",
           "notes": ""
         },
         {
@@ -677,8 +677,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [12,13,14],
+          "color": "red",
           "notes": ""
         },
         {
@@ -718,8 +718,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [15,16],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -1439,7 +1439,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [ 19, 20, 21 ],
+          "frames": [16,17,18],
           "color": "red",
           "notes": ""
         },
@@ -1480,7 +1480,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_punch",
-          "frames": [ 19, 20, 21 ],
+          "frames": [ 16, 17, 18 ],
           "color": "red",
           "notes": ""
         }
@@ -2819,8 +2819,8 @@
           "z2": "1.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "#400040",
           "notes": ""
         },
         {
@@ -2835,8 +2835,8 @@
           "z2": "1.0",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -2876,8 +2876,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_none",
-          "frames": [],
-          "color": "",
+          "frames": [24,25],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2917,8 +2917,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_none",
-          "frames": [],
-          "color": "",
+          "frames": [24,25],
+          "color": "purple",
           "notes": ""
         },
         {
@@ -2958,8 +2958,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_none",
-          "frames": [],
-          "color": "",
+          "frames": [24,25],
+          "color": "red",
           "notes": ""
         }
       ]

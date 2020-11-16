@@ -510,7 +510,7 @@
           "z2": "11.0",
           "hitlag": "2.0",
           "sdi": "1.0",
-          "clang_rebound": "attack_setoff_kind_on",
+          "clang_rebound": "attack_setoff_kind_off",
           "facingrestrict": "attack_lr_check_f",
           "setweight": "false",
           "shielddamage": "0",
@@ -551,7 +551,7 @@
           "z2": "17.5",
           "hitlag": "2.0",
           "sdi": "1.0",
-          "clang_rebound": "attack_setoff_kind_on",
+          "clang_rebound": "attack_setoff_kind_off",
           "facingrestrict": "attack_lr_check_f",
           "setweight": "false",
           "shielddamage": "0",
@@ -570,7 +570,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [4,5],
+          "frames": [ 4, 5 ],
           "color": "red",
           "notes": ""
         }

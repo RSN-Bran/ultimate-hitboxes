@@ -2830,11 +2830,6 @@
       "faf": 35,
       "hitboxes": [
         {
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
           "id": "0",
           "part": "0",
           "bone": "top",
@@ -2868,8 +2863,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_mario_mant",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [ 12, 13, 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2906,9 +2901,14 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_mario_mant",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [ 12, 13, 14 ],
+          "color": "red",
           "notes": ""
+        },
+        {
+          "frames": [ 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "aqua",
+          "notes": "Reflector"
         }
       ]
     },

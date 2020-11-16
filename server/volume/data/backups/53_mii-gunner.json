@@ -1956,7 +1956,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_miigunner_blaster",
           "type": "attack_region_energy",
-          "frames": [13,14,15,16,17],
+          "frames": [13,14,15,16],
           "color": "red",
           "notes": ""
         },
@@ -1997,7 +1997,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_miigunner_blaster",
           "type": "attack_region_energy",
-          "frames": [18,19,20,21],
+          "frames": [17,18,19,20],
           "color": "red",
           "notes": ""
         }

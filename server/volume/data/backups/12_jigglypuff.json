@@ -2363,7 +2363,6 @@
       "value": "JigglypuffRolloutG",
       "frames": 1,
       "faf": 1,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -2410,7 +2409,6 @@
       "value": "JigglypuffRolloutA",
       "frames": 1,
       "faf": 1,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",

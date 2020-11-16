@@ -349,8 +349,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [2,8,14,20,26],
+          "color": "red",
           "notes": ""
         },
         {
@@ -390,8 +390,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [2,8,14,20,26],
+          "color": "red",
           "notes": ""
         },
         {
@@ -431,8 +431,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [5,11,17,23,29],
+          "color": "red",
           "notes": ""
         },
         {
@@ -472,8 +472,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 5, 11, 17, 23, 29 ],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -2545,7 +2545,7 @@
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
           "frames": [ 9, 10, 11, 12, 13 ],
-          "color": "#9f4949",
+          "color": "salmon",
           "notes": ""
         },
         {
@@ -2586,7 +2586,7 @@
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
           "frames": [ 9, 10, 11, 12, 13 ],
-          "color": "#9f4949",
+          "color": "salmon",
           "notes": ""
         },
         {
@@ -4992,4 +4992,4 @@
       ]
     }
   ]
-    }
+}

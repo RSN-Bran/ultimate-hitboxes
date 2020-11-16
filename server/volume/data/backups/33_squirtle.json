@@ -3513,7 +3513,7 @@
       "value": "SquirtleWithdraw",
       "frames": 36,
       "faf": 36,
-      "complete":  false,
+      "notes":  "Active on Frame 22",
       "hitboxes": [
         {
           "id": "0",

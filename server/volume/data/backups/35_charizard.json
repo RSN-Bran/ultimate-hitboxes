@@ -4331,7 +4331,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_body",
-          "frames": [27,28],
+          "frames": [ 27, 28 ],
           "color": "red",
           "notes": ""
         },

@@ -1,0 +1,4 @@
+08-23-2020@9:57:9	Request from ::1 for ultimate-hitboxes.com/characterData
+08-23-2020@23:55:56	Request from ::1 for ultimate-hitboxes.com/characterData
+08-23-2020@23:55:57	Request from ::1 for ultimate-hitboxes.com/01_mario/data
+08-23-2020@23:55:57	Request from ::1 for ultimate-hitboxes.com/01_mario/MarioJab1/data

@@ -1,4 +1,4 @@
-server/serverlog
+server/volume/serverlog
 server/node_modules
 server/package*
 server/Dockerfile

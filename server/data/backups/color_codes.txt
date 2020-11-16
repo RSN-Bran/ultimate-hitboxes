@@ -1,5 +1,0 @@
-Ground Purple
-#800080
-
-Air Purple
-#400040

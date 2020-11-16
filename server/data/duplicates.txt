@@ -62,3 +62,6 @@ Greninja Rapid Jap Finisher merged frames
 Mii Brawler Down Smash Merged Frames
 
 Mii Gunner Fair missing a frame
+
+Ryu Fair two merged frames
+Ryu Jab 1 4 frames too long

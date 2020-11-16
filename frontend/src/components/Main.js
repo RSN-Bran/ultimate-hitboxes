@@ -27,7 +27,7 @@ function Main(props) {
   if (move === undefined && props.currentCharacterData !== undefined) {
     move = props.currentCharacterData.moves[0].value
   }
-
+  console.log(props.currentMoveData)
   //If all character data doesn't exist yet, do nothing. Character data will be loaded in via componentDidMount
   if (props.characterListData === undefined) {
     return null;
@@ -58,6 +58,13 @@ function Main(props) {
       .catch(err => {
         console.log(err)
       })
+
+    //const request = async () => {
+    //  const response = await fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${character}/data`)
+    //  const json = await response.json();
+    //  console.log(json)
+    //}
+    //request();
     return null;
   }
 

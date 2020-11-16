@@ -3,6 +3,7 @@ const app = express();
 
 var fs = require('fs');
 
+//OverRide ISO String to give local timezone
 Date.prototype.toISOString = function () {
   var tzo = -this.getTimezoneOffset(),
     dif = tzo >= 0 ? '+' : '-',

@@ -3,3 +3,4 @@ server/node_modules
 server/package*
 server/Dockerfile
 server/.dockerignore
+server/.vs

@@ -2,13 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\frontend",
-    "\\frontend\\dist",
     "\\frontend\\src",
     "\\frontend\\src\\components",
     "\\frontend\\src\\css",
-    "\\server",
-    "\\server\\data"
+    "\\server"
   ],
-  "SelectedNode": "\\frontend\\src\\css\\Header.css",
+  "SelectedNode": "\\frontend\\src\\components\\Settings.js",
   "PreviewInSolutionExplorer": false
 }

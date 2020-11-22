@@ -27,7 +27,7 @@ function Main(props) {
   if (move === undefined && props.currentCharacterData !== undefined) {
     move = props.currentCharacterData.moves[0].value
   }
-  console.log(props.currentMoveData)
+
   //If all character data doesn't exist yet, do nothing. Character data will be loaded in via componentDidMount
   if (props.characterListData === undefined) {
     return null;

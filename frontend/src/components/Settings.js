@@ -7,7 +7,7 @@ import { useHistory } from 'react-router'
 import DefaultSpeed from './DefaultSpeed'
 
 //CSS Imports
-import '../css/settings.css';
+import '../css/Settings.css';
 
 //Media Imports
 import x_dark from '../media/darkmode/x.png'

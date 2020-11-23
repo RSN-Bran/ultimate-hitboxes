@@ -2,7 +2,7 @@
 import React from "react"
 
 //CSS Imports
-import '../css/info.css';
+import '../css/Info.css';
 
 //Import Media
 import x_dark from '../media/darkmode/x.png'

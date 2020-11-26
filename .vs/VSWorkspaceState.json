@@ -5,8 +5,10 @@
     "\\frontend\\src",
     "\\frontend\\src\\components",
     "\\frontend\\src\\css",
-    "\\server"
+    "\\server",
+    "\\server\\volume",
+    "\\server\\volume\\data"
   ],
-  "SelectedNode": "\\frontend\\src\\components\\Settings.js",
+  "SelectedNode": "\\server\\volume\\server.js",
   "PreviewInSolutionExplorer": false
 }

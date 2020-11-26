@@ -589,9 +589,9 @@
     "name": "Ken",
     "value": "ken",
     "number": "60e",
-    "completed": false,
+    "completed": true,
     "series": "street-fighter",
-    "version": ""
+    "version": "9.0.2"
   },
   {
     "id": 67,

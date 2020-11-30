@@ -598,9 +598,9 @@
     "name": "Cloud",
     "value": "cloud",
     "number": "61",
-    "completed": false,
+    "completed": true,
     "series": "final-fantasy",
-    "version": ""
+    "version": "9.0.2"
   },
   {
     "id": 68,

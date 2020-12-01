@@ -17,3 +17,22 @@
 
 #player {
 }
+
+#share {
+	position: absolute;
+	cursor: pointer;
+	width: 2%;
+}
+/*Sizing for Desktop*/
+@media (min-width: 500px) {
+	#share {
+		width: 2%;
+	}
+}
+
+/*Sizing for Mobile*/
+@media (max-width: 500px) {
+	#share {
+		width: 5%
+	}
+}

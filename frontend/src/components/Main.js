@@ -118,7 +118,11 @@ function Main(props) {
           url={props.url}
           currentFrame={props.currentFrame}
           loading={props.loading}
+          settings={props.settings}
+          character={character}
+          move={move}
           loadingPercent={props.loadingPercent}
+          urlNotification={props.urlNotification}
         />
 
         <Slider

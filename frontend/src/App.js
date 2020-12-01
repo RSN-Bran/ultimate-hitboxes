@@ -3,6 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { useHistory } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
+import 'react-notifications-component/dist/theme.css'
+import ReactNotification from 'react-notifications-component'
+import { store } from 'react-notifications-component';
 
 //Import css
 import './css/App.css';
@@ -89,6 +92,7 @@ class App extends React.Component {
     this.updateCurrentMove = this.updateCurrentMove.bind(this)
     this.updateCurrentCharacter = this.updateCurrentCharacter.bind(this)
     this.changeMove = this.changeMove.bind(this)
+    this.urlNotification = this.urlNotification.bind(this)
 
   }
   
@@ -383,6 +387,22 @@ class App extends React.Component {
     })
   }
 
+    urlNotification() {
+        console.log("url")
+        store.addNotification({
+
+            message: "URL saved to clipboard",
+            type: "success",
+            container: "top-center",
+            animationIn: ["animate__animated", "animate__fadeIn"],
+            animationOut: ["animate__animated", "animate__fadeOut"],
+            dismiss: {
+                duration: 3000,
+                onScreen: true
+            }
+        });
+    }
+
 
   //Call components to render the page
   render() {
@@ -405,14 +425,14 @@ class App extends React.Component {
 
     return (
       <div className="App" style={pageStyle}>
-
+            <ReactNotification />
         <Router>
           <Header
             showInfo={this.showInfo}
             showSettings={this.showSettings}
             dark_light={this.state.settings.dark_light}
           />
-
+                
           <Switch>
 
             <Route path='/info' render={() => (
@@ -478,6 +498,7 @@ class App extends React.Component {
                   changeMove={this.changeMove}
                   redirectMove={this.state.redirectMove}
                   updateHitboxData={this.updateHitboxData}
+                  urlNotification={this.urlNotification}
                 />
                 <HitboxDetail
                   updateHitboxData={this.updateHitboxData}

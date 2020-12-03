@@ -607,9 +607,9 @@
     "name": "Corrin",
     "value": "corrin",
     "number": "62",
-    "completed": false,
+    "completed": true,
     "series": "fire-emblem",
-    "version": ""
+    "version": "9.0.2"
   },
   {
     "id": 69,

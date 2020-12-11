@@ -616,9 +616,9 @@
     "name": "Bayonetta",
     "value": "bayonetta",
     "number": "63",
-    "completed": false,
+    "completed": true,
     "series": "bayonetta",
-    "version": ""
+    "version": "9.0.2"
   },
   {
     "id": 70,
@@ -753,6 +753,15 @@
     "number": "77",
     "completed": true,
     "series": "minecraft",
+    "version": "9.0.2"
+  },
+  {
+    "id": 85,
+    "name": "Sephiroth",
+    "value": "sephiroth",
+    "number": "78",
+    "completed": false,
+    "series": "final-fantasy",
     "version": "9.0.2"
   }
 ]

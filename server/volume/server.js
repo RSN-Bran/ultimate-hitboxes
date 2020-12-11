@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 var fs = require('fs');
+var AWS = require("aws-sdk");
 
 //OverRide ISO String to give local timezone
 Date.prototype.toISOString = function () {

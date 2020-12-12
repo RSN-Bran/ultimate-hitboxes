@@ -1,3 +1,0 @@
-2020-11-26T12:30:05+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/characterData
-2020-11-26T12:30:05+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/60e_ken/data
-2020-11-26T12:30:05+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/60e_ken/kentatsumakisenpukyakustrongaerial/data

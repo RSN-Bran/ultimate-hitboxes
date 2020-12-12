@@ -1,5 +1,0 @@
-2020-12-10T20:48:33+00:00	Request from ::ffff:172.26.0.1 for ultimate-hitboxes.com/characterData
-2020-12-10T20:53:08+00:00	Request from ::ffff:172.26.0.1 for ultimate-hitboxes.com/characterData
-2020-12-10T20:59:14+00:00	Request from ::ffff:172.26.0.1 for ultimate-hitboxes.com/characterData
-2020-12-10T21:00:10+00:00	Request from ::ffff:172.26.0.1 for ultimate-hitboxes.com/characterData
-2020-12-10T22:20:22+00:00	Request from ::ffff:172.26.0.1 for ultimate-hitboxes.com/characterData

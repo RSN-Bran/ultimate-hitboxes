@@ -1,0 +1,11 @@
+10-01-2020@12:8:6	Request from ::1 for ultimate-hitboxes.com/characterData
+10-01-2020@15:54:0	Request from ::1 for ultimate-hitboxes.com/characterData
+10-01-2020@15:54:1	Request from ::1 for ultimate-hitboxes.com/40_olimar/data
+10-01-2020@15:54:1	Request from ::1 for ultimate-hitboxes.com/40_olimar/olimarjab1/data
+10-01-2020@15:54:7	Request from ::1 for ultimate-hitboxes.com/40_olimar/olimarftilt/data
+10-01-2020@15:54:52	Request from ::1 for ultimate-hitboxes.com/characterData
+10-01-2020@15:54:53	Request from ::1 for ultimate-hitboxes.com/40_olimar/data
+10-01-2020@15:54:53	Request from ::1 for ultimate-hitboxes.com/40_olimar/olimarftilt/data
+10-01-2020@15:56:16	Request from ::1 for ultimate-hitboxes.com/characterData
+10-01-2020@15:56:16	Request from ::1 for ultimate-hitboxes.com/40_olimar/data
+10-01-2020@15:56:16	Request from ::1 for ultimate-hitboxes.com/40_olimar/olimarftilt/data

@@ -1,0 +1,9 @@
+09-14-2020@11:33:19	Request from ::1 for ultimate-hitboxes.com/characterData
+09-14-2020@11:33:22	Request from ::1 for ultimate-hitboxes.com/01_mario/data
+09-14-2020@11:33:22	Request from ::1 for ultimate-hitboxes.com/01_mario/mariojab1/data
+09-14-2020@11:33:59	Request from ::1 for ultimate-hitboxes.com/characterData
+09-14-2020@11:33:59	Request from ::1 for ultimate-hitboxes.com/01_mario/data
+09-14-2020@11:33:59	Request from ::1 for ultimate-hitboxes.com/01_mario/mariojab1/data
+09-14-2020@12:41:25	Request from ::1 for ultimate-hitboxes.com/characterData
+09-14-2020@12:41:26	Request from ::1 for ultimate-hitboxes.com/01_mario/data
+09-14-2020@12:41:26	Request from ::1 for ultimate-hitboxes.com/01_mario/mariojab1/data

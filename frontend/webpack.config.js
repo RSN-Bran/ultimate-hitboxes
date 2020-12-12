@@ -13,6 +13,9 @@
         "jquery": path.join(__dirname, "./jquery-stub.js")
       }
     },
+	watchOptions: {
+		poll: true
+	},
     module: {
       rules: 
         [{

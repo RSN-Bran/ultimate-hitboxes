@@ -1,0 +1,12 @@
+09-18-2020@0:46:44	Request from ::1 for ultimate-hitboxes.com/characterData
+09-18-2020@0:46:44	Request from ::1 for ultimate-hitboxes.com/01_mario/data
+09-18-2020@0:46:45	Request from ::1 for ultimate-hitboxes.com/01_mario/mariojab1/data
+09-18-2020@0:46:46	Request from ::1 for ultimate-hitboxes.com/characterData
+09-18-2020@0:46:46	Request from ::1 for ultimate-hitboxes.com/46_mega-man/data
+09-18-2020@0:46:46	Request from ::1 for ultimate-hitboxes.com/46_mega-man/megamandashattack/data
+09-18-2020@12:35:12	Request from ::1 for ultimate-hitboxes.com/characterData
+09-18-2020@12:35:12	Request from ::1 for ultimate-hitboxes.com/46_mega-man/data
+09-18-2020@12:35:12	Request from ::1 for ultimate-hitboxes.com/46_mega-man/megamandashattack/data
+09-18-2020@17:16:44	Request from ::1 for ultimate-hitboxes.com/characterData
+09-18-2020@17:16:44	Request from ::1 for ultimate-hitboxes.com/46_mega-man/data
+09-18-2020@17:16:44	Request from ::1 for ultimate-hitboxes.com/46_mega-man/megamandashattack/data

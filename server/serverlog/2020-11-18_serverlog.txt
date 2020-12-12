@@ -1,0 +1,10 @@
+2020-11-18T09:00:42+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/characterData
+2020-11-18T09:00:43+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/01_mario/data
+2020-11-18T09:00:43+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/01_mario/mariojab1/data
+2020-11-18T09:16:08+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/characterData
+2020-11-18T09:17:15+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/60_ryu/data
+2020-11-18T09:17:15+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/60_ryu/ryujab1/data
+2020-11-18T10:33:25+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/characterData
+2020-11-18T10:33:26+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/01_mario/data
+2020-11-18T10:33:26+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/01_mario/mariojab1/data
+2020-11-18T10:33:29+00:00	Request from ::ffff:172.17.0.1 for ultimate-hitboxes.com/01_mario/mariojab2/data

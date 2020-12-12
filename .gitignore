@@ -1,6 +1,9 @@
-server/volume/serverlog
+server/serverlog
 server/node_modules
-server/package*
-server/Dockerfile
-server/.dockerignore
-server/.vs
+.git
+.vs
+node_modules
+frontend/dist
+frontend/legacy
+frontend/node_modules
+frontend/.babelrc

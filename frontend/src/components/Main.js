@@ -156,6 +156,7 @@ function Main(props) {
           />
 
           <DataTable
+            type="Hitbox Data"
             settings={props.settings}
             move={props.currentMoveData}
             jumpToFrame={props.jumpToFrame}
@@ -163,6 +164,17 @@ function Main(props) {
             currentFrame={props.currentFrame}
             updateHitboxData={props.updateHitboxData}
           />
+
+          {props.currentMoveData.hurtboxes !== undefined ? <DataTable
+            type="Hurtbox Data"
+            settings={props.settings}
+            move={props.currentMoveData}
+            jumpToFrame={props.jumpToFrame}
+            loading={props.loading}
+            currentFrame={props.currentFrame}
+            updateHitboxData={props.updateHitboxData}
+          /> : null}
+          
         </div>
         
 

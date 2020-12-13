@@ -11,7 +11,7 @@ let info = [info_dark, info_light]
 
 //import id_colors from '../id_colors.js'
 
-function HitboxEntry(props) {
+function TableEntry(props) {
 
   let style = {}
 
@@ -20,7 +20,7 @@ function HitboxEntry(props) {
 
   //Certain color codes need their text color to change to fit the background
   let lightModeColorChange = ["#800080", "#400040", "purple"]
-  let darkModeColorChange = ["pink", "aqua", "khaki"]
+  let darkModeColorChange = ["pink", "aqua", "khaki", "lightgreen"]
 
   if (props.hitbox.frames.includes(props.currentFrame) || props.hitbox.frames.length === 0) {
     style.backgroundColor = props.hitbox.color
@@ -75,7 +75,7 @@ function HitboxEntry(props) {
 
     //For any other value, display the value without alteration, unless the value doesn't exist, for which display a '-'
     else {
-      tdList.push(<td className={className}>{props.hitbox[field.variable] === undefined ? "-" : props.hitbox[field.variable]}</td>)
+      tdList.push(<td className={className}>{props.hitbox[field.variable] === undefined || props.hitbox[field.variable] === "" ? "-" : props.hitbox[field.variable]}</td>)
     }
   })
 
@@ -94,4 +94,4 @@ function HitboxEntry(props) {
   
 }
 
-export default HitboxEntry
+export default TableEntry

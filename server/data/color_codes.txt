@@ -3,3 +3,6 @@ Ground Purple
 
 Air Purple
 #400040
+
+armor
+#2F152E

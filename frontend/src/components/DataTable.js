@@ -9,9 +9,9 @@ import HitboxTable from './HitboxTable'
 import '../css/DataTable.css';
 
 function DataTable(props) {
-
+  
   //Base data for each type of table entry
-  let frames = { "variable": "frames", "name": "Frame", "toolTipID": "frameToolTip", "toolTipDescription": "First Active Frame of the hitbox.Click on the number to jump to that frame." }
+  let frames = { "variable": "frames", "name": "Frame", "toolTipID": "frameToolTip", "toolTipDescription": "First Active Frame of the hitbox/hurtbox. Click on the number to jump to that frame." }
   let size = { "variable": "size", "name": "Size", "toolTipID": "sizeToolTip", "toolTipDescription": "Size of the hitbox." }
   let ground_or_air = { "variable": "ground_or_air", "name": "Ground/Air", "toolTipID": "ground-airToolTip", "toolTipDescription": "Determines if the hitbox affects grounded or aerial opponents" }
   let more = { "variable": "more", "name": "Data", "toolTipID": "moreToolTip", "toolTipDescription": "Shows all raw data for a hitbox" }
@@ -31,6 +31,9 @@ function DataTable(props) {
   let rehit = { "variable": "rehit", "name": "Rehit", "toolTipID": "rehitToolTip", "toolTipDescription": "Determines if a hitbox can hit an opponent multiple times" }
   let part = { "variable": "part", "name": "Part", "toolTipID": "partToolTip", "toolTipDescription": "Determines if other hitboxes can hit an opponent" }
   let notes = { "variable": "notes", "name": "Notes", "toolTipID": "noteToolTip", "toolTipDescription": "Notes" }
+  let hp = { "variable": "hp", "name": "HP", "toolTipID": "hpToolTip", "toolTipDescription": "How much damage the hurtbox can withstand (Super Armor Only)" }
+  let hurtboxType = { "variable": "type", "name": "Type", "toolTipID": "typeToolTip", "toolTipDescription": "Intangible, Invincible, or Super Armor" }
+
 
   //Data for which table entries should be displayed during certain table configurations
   let fields = {
@@ -40,48 +43,70 @@ function DataTable(props) {
     attackBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
     attackExtraNoFrame: [id, part, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
     attackBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
-    attackExtra: [id, part, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more]
+    attackExtra: [id, part, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
+    hurtbox: [frames, hurtboxType, bone, hp, notes]
 
   }
-
 
 
   //Only render when needed
   let type = ""
-
-  if (props.loading || props.move.hitboxes.length === 0) {
+  if (props.loading) {
+    return null
+  }
+  else if (props.move.hitboxes.length === 0 && props.type === "Hitbox Data") {
     return null;
   }
   else {
 
-    //If the move is a grab, display only data pertaining to grabs
-    props.move.type === "grab" ? type = type + "grab" : type = type + "attack";
+    if (props.type === "Hitbox Data") {
+      //If the move is a grab, display only data pertaining to grabs
+      props.move.type === "grab" ? type = type + "grab" : type = type + "attack";
 
-    //If the "showExtraInfo" setting is enabled, show additional columns of the table
-    props.settings.showExtraInfo ? type = type + "Extra" : type = type + "Basic";
+      //If the "showExtraInfo" setting is enabled, show additional columns of the table
+      props.settings.showExtraInfo ? type = type + "Extra" : type = type + "Basic";
 
-    //If the move has no frames, omit the frame table
-    props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
-    console.log(type)
-    let table = JSON.parse(JSON.stringify(fields[type]));
-    if (props.move.hitboxes.every(hitbox => hitbox.notes === "")) {
-      table.splice(-2, 1);
+      //If the move has no frames, omit the frame table
+      props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
+    }
+    
+    //Set type to hurtbox if showing hurtbox data
+    else if (props.type == "Hurtbox Data") {
+      type="hurtbox"
     }
 
+    //Remove the notes column if it is empty
+    let table = JSON.parse(JSON.stringify(fields[type]));
+
+    //Remove notes column if all note entries are empty
+    if (props.type == "Hurtbox Data") {
+      if (props.move.hurtboxes.every(hurtbox => hurtbox.notes === "")) {
+        table.splice(-1, 1);
+      }
+    }
+    else {
+      if (props.move.hitboxes.every(hitbox => hitbox.notes === "")) {
+        table.splice(-2, 1);
+      }
+    }
+
+    //Split notes into separate lines if it has \n
     let notes = [];
     let jsxNotes = []
     if (props.move.notes !== undefined) {
       notes = props.move.notes.split("\n");
       jsxNotes = notes.map(text => <p>{text}</p>)
     }
-    
+
+    //Render data
     return (
       <div id="dataTable">
-        <h5>Hitbox Data</h5>
+        <h5>{props.type}</h5>
         <HitboxTable
+          type={props.type}
           portalState={props.portalState}
           move={props.move}
-          hitboxes={props.move.hitboxes}
+          hitboxes={props.type === "Hitbox Data" ? props.move.hitboxes : props.move.hurtboxes}
           currentFrame={props.currentFrame}
           updateHitboxData={props.updateHitboxData}
           jumpToFrame={props.jumpToFrame}

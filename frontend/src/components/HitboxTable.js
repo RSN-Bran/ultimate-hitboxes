@@ -3,7 +3,7 @@ import React from "react"
 import ReactTooltip from "react-tooltip";
 
 //Component Imports
-import HitboxEntry from './HitboxEntry'
+import TableEntry from './TableEntry'
 
 //CSS Imports
 import '../css/DataTable.css';
@@ -14,7 +14,7 @@ function HitboxTable(props) {
     let hitboxData = [];
     props.hitboxes.forEach(function (hitbox, index) {
       hitboxData.push(
-        <HitboxEntry
+        <TableEntry
           settings={props.settings}
           hitbox={hitbox}
           frames={props.move.frames}

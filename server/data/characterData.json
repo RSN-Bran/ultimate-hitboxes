@@ -625,9 +625,9 @@
     "name": "Inkling",
     "value": "inkling",
     "number": "64",
-    "completed": false,
+    "completed": true,
     "series": "splatoon",
-    "version": ""
+    "version": "9.0.2"
   },
   {
     "id": 71,

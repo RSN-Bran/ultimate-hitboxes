@@ -155,18 +155,19 @@ function Main(props) {
             loading={props.loading}
           />
 
-          <DataTable
-            type="Hitbox Data"
+
+          {props.currentMoveData.hitboxes.length !== 0 ? <DataTable
+            type="hitboxes"
             settings={props.settings}
             move={props.currentMoveData}
             jumpToFrame={props.jumpToFrame}
             loading={props.loading}
             currentFrame={props.currentFrame}
             updateHitboxData={props.updateHitboxData}
-          />
+          /> : null}
 
           {props.currentMoveData.hurtboxes !== undefined ? <DataTable
-            type="Hurtbox Data"
+            type="hurtboxes"
             settings={props.settings}
             move={props.currentMoveData}
             jumpToFrame={props.jumpToFrame}

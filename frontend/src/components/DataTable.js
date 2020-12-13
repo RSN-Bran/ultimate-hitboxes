@@ -48,18 +48,23 @@ function DataTable(props) {
 
   }
 
+  //Establish data tible name
+  let tableTitle;
+  if (props.type === "hitboxes") {
+    tableTitle = "Hitbox Data"
+  }
+  else if (props.type === "hurtboxes") {
+    tableTitle = "Hurtbox Data"
+  }
 
   //Only render when needed
   let type = ""
   if (props.loading) {
     return null
   }
-  else if (props.move.hitboxes.length === 0 && props.type === "Hitbox Data") {
-    return null;
-  }
   else {
 
-    if (props.type === "Hitbox Data") {
+    if (props.type === "hitboxes") {
       //If the move is a grab, display only data pertaining to grabs
       props.move.type === "grab" ? type = type + "grab" : type = type + "attack";
 
@@ -70,24 +75,17 @@ function DataTable(props) {
       props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
     }
     
-    //Set type to hurtbox if showing hurtbox data
-    else if (props.type == "Hurtbox Data") {
+    //Set type to hurtbox if showing hurtboxes
+    else if (props.type === "hurtboxes") {
       type="hurtbox"
     }
 
-    //Remove the notes column if it is empty
-    let table = JSON.parse(JSON.stringify(fields[type]));
+    //Choose table headers
+    let table = fields[type];
 
     //Remove notes column if all note entries are empty
-    if (props.type == "Hurtbox Data") {
-      if (props.move.hurtboxes.every(hurtbox => hurtbox.notes === "")) {
-        table.splice(-1, 1);
-      }
-    }
-    else {
-      if (props.move.hitboxes.every(hitbox => hitbox.notes === "")) {
-        table.splice(-2, 1);
-      }
+    if (props.move[props.type].every(entry => entry.notes === "")) {
+      table = table.filter(element => element.variable !== "notes");
     }
 
     //Split notes into separate lines if it has \n
@@ -101,12 +99,12 @@ function DataTable(props) {
     //Render data
     return (
       <div id="dataTable">
-        <h5>{props.type}</h5>
+        <h5>{tableTitle}</h5>
         <HitboxTable
           type={props.type}
           portalState={props.portalState}
           move={props.move}
-          hitboxes={props.type === "Hitbox Data" ? props.move.hitboxes : props.move.hurtboxes}
+          hitboxes={props.move[props.type]}
           currentFrame={props.currentFrame}
           updateHitboxData={props.updateHitboxData}
           jumpToFrame={props.jumpToFrame}

@@ -65,3 +65,7 @@ Mii Gunner Fair missing a frame
 
 Ryu Fair two merged frames
 Ryu Jab 1 4 frames too long
+
+Bayonetta FTilt 3 too long
+Smashes missing startup
+Backthrow missing a frame at the end

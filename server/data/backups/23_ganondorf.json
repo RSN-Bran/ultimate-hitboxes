@@ -3515,33 +3515,14 @@
           "notes": ""
         }
       ]
-    },    
+    },
     {
       "name": "Flame Choke (Ground)",
       "value": "GanondorfFlameChokeG",
       "frames": 59,
       "faf": 59,
-      "complete": false,
+      "type": "grab",
       "hitboxes": [
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "4.0",
-          "angle": "0",
-          "kbg": "10",
-          "fkb": "0",
-          "bkb": "100",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_kick",
-          "type": "attack_region_none",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
         {
           "id": "0",
           "bone": "top",
@@ -3551,8 +3532,8 @@
           "z": "7.5",
           "status": "fighter_status_kind_catched_ganon",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -3564,8 +3545,8 @@
           "z": "7.2",
           "status": "fighter_status_kind_catched_ganon",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [],
-          "color": "",
+          "frames": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ],
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -3575,27 +3556,8 @@
       "value": "GanondorfFlameChokeA",
       "frames": 57,
       "faf": 57,
-      "complete": false,
+      "type":  "grab",
       "hitboxes": [
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "4.0",
-          "angle": "0",
-          "kbg": "10",
-          "fkb": "0",
-          "bkb": "100",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_kick",
-          "type": "attack_region_none",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
         {
           "id": "0",
           "bone": "top",
@@ -3605,8 +3567,8 @@
           "z": "7.5",
           "status": "fighter_status_kind_catched_air_ganon",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -3618,8 +3580,8 @@
           "z": "7.5",
           "status": "fighter_status_kind_catched_air_ganon",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [],
-          "color": "",
+          "frames": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
+          "color": "#800080",
           "notes": ""
         }
       ]
@@ -3629,7 +3591,6 @@
       "value": "GanondorfFlameChoke",
       "frames": 57,
       "faf": 57,
-      "complete": false,
       "hitboxes": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
@@ -3646,26 +3607,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_bomb",
           "type": "attack_region_none",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "4.0",
-          "angle": "0",
-          "kbg": "10",
-          "fkb": "0",
-          "bkb": "100",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_kick",
-          "type": "attack_region_none",
-          "frames": [],
+          "frames": [31],
           "color": "",
           "notes": ""
         }
@@ -3676,7 +3618,6 @@
       "value": "GanondorfDarkDive",
       "frames": 65,
       "faf": 65,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -3687,8 +3628,8 @@
           "z": "6.5",
           "status": "fighter_status_kind_clung_ganon",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [],
-          "color": "",
+          "frames": [ 14 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -3700,27 +3641,8 @@
           "z": "13.7",
           "status": "fighter_status_kind_clung_ganon",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "6.0",
-          "angle": "0",
-          "kbg": "50",
-          "fkb": "0",
-          "bkb": "70",
-          "hitlag": "0.0",
-          "unk": "false",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_kick",
-          "type": "attack_region_none",
-          "frames": [],
-          "color": "",
+          "frames": [ 14 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -3735,8 +3657,8 @@
           "z2": "3.0",
           "status": "fighter_status_kind_clung_ganon",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [],
-          "color": "",
+          "frames": [ 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 ],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -3773,8 +3695,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [34,35,36],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3811,8 +3733,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [34,35,36],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -3822,27 +3744,8 @@
       "value": "GanondorfDarkDiveCatch",
       "frames": 66,
       "faf": 66,
-      "complete": false,
       "hitboxes": [
-        {
-          "kind": "fighter_attack_absolute_kind_catch",
-          "id": "0",
-          "damage": "8.0",
-          "angle": "0",
-          "kbg": "10",
-          "fkb": "0",
-          "bkb": "100",
-          "hitlag": "0.0",
-          "unk": "false",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_kick",
-          "type": "attack_region_throw",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        },
+
         {
           "id": "0",
           "part": "0",
@@ -3877,7 +3780,26 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_none",
-          "frames": [],
+          "frames": [4,8,12,16],
+          "color": "red",
+          "notes": ""
+        },
+        {
+          "kind": "fighter_attack_absolute_kind_catch",
+          "id": "0",
+          "damage": "8.0",
+          "angle": "0",
+          "kbg": "10",
+          "fkb": "0",
+          "bkb": "100",
+          "hitlag": "0.0",
+          "unk": "false",
+          "facingrestrict": "attack_lr_check_f",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_s",
+          "sfxtype": "collision_sound_attr_kick",
+          "type": "attack_region_throw",
+          "frames": [17],
           "color": "",
           "notes": ""
         }

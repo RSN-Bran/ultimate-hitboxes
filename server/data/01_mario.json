@@ -3473,7 +3473,7 @@
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
           "frames": [ 19, 20 ],
-          "color": "",
+          "color": "red",
           "notes": ""
         },
         {

@@ -69,3 +69,6 @@ Ryu Jab 1 4 frames too long
 Bayonetta FTilt 3 too long
 Smashes missing startup
 Backthrow missing a frame at the end
+Bayo Landing missing 20 frames
+
+Ridley Rapid jab merged frame

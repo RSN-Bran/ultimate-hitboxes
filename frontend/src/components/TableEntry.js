@@ -11,6 +11,39 @@ let info = [info_dark, info_light]
 
 //import id_colors from '../id_colors.js'
 
+function condenseFrames(arr) {
+  let start, end;  // track start and end
+  end = start = arr[0];
+  let i;
+  let result = ""
+  for (i = 1; i < arr.length; i++)
+  {
+    // as long as entries are consecutive, move end forward
+    if (arr[i] == (arr[i - 1] + 1)) {
+      end = arr[i];
+    }
+    else {
+      // when no longer consecutive, add group to result
+      // depending on whether start=end (single item) or not
+      if (start == end)
+        result += start + ",";
+      else if (end == (start + 1))
+        result += start + "," + end + ",";
+      else
+        result += start + "-" + end + ",";
+
+      start = end = arr[i];
+    }
+  }
+
+  // handle the final group
+  if (start == end)
+    result += start;
+  else
+    result += start + "-" + end;
+  return result;
+}
+
 function TableEntry(props) {
 
   let style = {}
@@ -44,7 +77,7 @@ function TableEntry(props) {
         style={props.hitbox.frames.length !== 0 ? { "cursor": "pointer" } : {}}
         onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}
       >
-        {props.hitbox[field.variable][0]}
+        {condenseFrames(props.hitbox[field.variable])}
       </td>)
     }
 

@@ -40,6 +40,7 @@ function DataTable(props) {
     grabBasicNoFrame: [size, ground_or_air, notes, more],
     grabBasic: [frames, size, ground_or_air, notes, more],
     grabExtra: [id, frames, size, ground_or_air, bone, x, y, z, notes, more],
+    grabExtraNoFrame: [id, size, ground_or_air, bone, x, y, z, notes, more],
     attackBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
     attackExtraNoFrame: [id, part, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
     attackBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
@@ -82,7 +83,7 @@ function DataTable(props) {
 
     //Choose table headers
     let table = fields[type];
-
+    console.log(type)
     //Remove notes column if all note entries are empty
     if (props.move[props.type].every(entry => entry.notes === "")) {
       table = table.filter(element => element.variable !== "notes");
@@ -99,6 +100,7 @@ function DataTable(props) {
     //Render data
     return (
       <div id="dataTable">
+
         <h5>{tableTitle}</h5>
         <HitboxTable
           type={props.type}
@@ -112,7 +114,7 @@ function DataTable(props) {
           settings={props.settings}
         />
         <div id="moveNotes">
-          {jsxNotes === undefined ? null : jsxNotes}
+          {jsxNotes === undefined || props.type === "hurtboxes" ? null : jsxNotes}
         </div>
       </div>
     )

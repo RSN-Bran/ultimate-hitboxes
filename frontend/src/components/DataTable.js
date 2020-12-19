@@ -11,7 +11,7 @@ import '../css/DataTable.css';
 function DataTable(props) {
   
   //Base data for each type of table entry
-  let frames = { "variable": "frames", "name": "Frame", "toolTipID": "frameToolTip", "toolTipDescription": "First Active Frame of the hitbox/hurtbox. Click on the number to jump to that frame." }
+  let frames = { "variable": "frames", "name": "Frame", "toolTipID": "frameToolTip", "toolTipDescription": "Active frames of the hitbox/hurtbox. Click to jump to the first active frame." }
   let size = { "variable": "size", "name": "Size", "toolTipID": "sizeToolTip", "toolTipDescription": "Size of the hitbox." }
   let ground_or_air = { "variable": "ground_or_air", "name": "Ground/Air", "toolTipID": "ground-airToolTip", "toolTipDescription": "Determines if the hitbox affects grounded or aerial opponents" }
   let more = { "variable": "more", "name": "Data", "toolTipID": "moreToolTip", "toolTipDescription": "Shows all raw data for a hitbox" }

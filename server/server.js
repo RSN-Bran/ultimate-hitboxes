@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 
 var fs = require('fs');
-const mysql = require('mysql');
 
 //OverRide ISO String to give local timezone
 Date.prototype.toISOString = function () {

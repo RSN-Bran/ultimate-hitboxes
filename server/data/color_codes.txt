@@ -6,3 +6,14 @@ Air Purple
 
 armor
 #2F152E
+
+Sephiroth
+Red
+Fuchsia
+#FF5555
+#FF55FF
+#FF8080
+#FF80FF
+#FFAAAA
+#FFAAFF
+#999999

@@ -760,7 +760,7 @@
     "name": "Sephiroth",
     "value": "sephiroth",
     "number": "78",
-    "completed": false,
+    "completed": true,
     "series": "final-fantasy",
     "version": "10.0.0"
   }

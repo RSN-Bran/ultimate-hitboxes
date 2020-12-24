@@ -23,9 +23,9 @@ Date.prototype.toISOString = function () {
 }
 
 function writeToDB(database, dbparams) {
-  //if (process.env.NODE_ENV === "development") {
-  //  return;
-  //}
+  if (process.env.NODE_ENV === "development") {
+    return;
+  }
   conn = mysql.createConnection({
     host: "ultimate-hitboxes-logs-instance-1.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
     user: "dbuser",

@@ -9,6 +9,9 @@ services:
     volumes:
       - C:\\Users\\Brandon\\Documents\\ultimate-hitboxes\\server\\data:/data
       - C:\\Users\\Brandon\\Documents\\ultimate-hitboxes\\server\\serverlog:/serverlog
+    environment:
+      - NODE_ENV=development
+      - DB_PW=je109DK9XaoL
   frontend:
     image: bsultana75/ulthit_frontend:latest
     command: sh -c "yarn serve"

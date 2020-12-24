@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 var fs = require('fs');
+const mysql = require('mysql');
 
 //OverRide ISO String to give local timezone
 Date.prototype.toISOString = function () {
@@ -20,6 +21,23 @@ Date.prototype.toISOString = function () {
     dif + pad(tzo / 60) +
     ':' + pad(tzo % 60);
 }
+
+function writeToDB(database, dbparams) {
+  //if (process.env.NODE_ENV === "development") {
+  //  return;
+  //}
+  conn = mysql.createConnection({
+    host: "ultimate-hitboxes-logs-instance-1.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+    user: "dbuser",
+    password: process.env.DB_PW,
+    database: "ulthit_logs"
+  })
+
+  var sql = `INSERT INTO ${database} SET ?`;
+  conn.query(sql, dbparams, function (err, result) {
+    if (err) throw err;
+  });
+  conn.end()
 
 function writeToLog(logEntry) {
   if (process.env.NODE_ENV === "development") {
@@ -80,6 +98,14 @@ app.get('/:character/data', (req, res) => {
 
     let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data`
     writeToLog(logMessage);
+    let dbparams = {
+      "IP": req.connection.remoteAddress,
+      "URL": `/${req.params.character}/data`,
+      "CharacterNum": req.params.character.split("_")[0],
+      "CharacterName": req.params.character.split("_")[1],
+      "DateTime": new Date()
+    }
+    writeToDB("CharacterLogs", dbparams)
   })
 });
 
@@ -107,11 +133,20 @@ app.get('/:character/:move/data', (req, res) => {
 
     let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data`
     writeToLog(logMessage);
+
+    let dbparams = {
+      "IP": req.connection.remoteAddress,
+      "URL": `/${req.params.character}/data`,
+      "CharacterNum": req.params.character.split("_")[0],
+      "CharacterName": req.params.character.split("_")[1],
+      "MoveName": req.params.move,
+      "DateTime": new Date()
+    }
+    writeToDB("MoveLogs", dbparams)
   })
 });
 
 // console.log that your server is up and running
 const port = process.env.PORT || 5000;
-console.log(process.env.NODE_ENV)
 app.listen(port, () => console.log(`Listening on port ${port}`));
 

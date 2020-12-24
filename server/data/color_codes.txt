@@ -8,8 +8,8 @@ armor
 #2F152E
 
 Sephiroth
-Red
-Fuchsia
+red
+fuchsia
 #FF5555
 #FF55FF
 #FF8080
@@ -17,3 +17,14 @@ Fuchsia
 #FFAAAA
 #FFAAFF
 #999999
+
+17
+15.5
+13
+12.0
+11.5
+10.5
+
+
+
+

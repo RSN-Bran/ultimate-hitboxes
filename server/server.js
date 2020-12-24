@@ -22,6 +22,9 @@ Date.prototype.toISOString = function () {
 }
 
 function writeToLog(logEntry) {
+  if (process.env.NODE_ENV === "development") {
+    return;
+  }
   var time = new Date().toLocaleString("en-US", { timeZone: "America/New_York" })
   var convertedTime = new Date(time).toISOString()
 
@@ -109,5 +112,6 @@ app.get('/:character/:move/data', (req, res) => {
 
 // console.log that your server is up and running
 const port = process.env.PORT || 5000;
+console.log(process.env.NODE_ENV)
 app.listen(port, () => console.log(`Listening on port ${port}`));
 

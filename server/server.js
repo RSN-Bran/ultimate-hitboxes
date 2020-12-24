@@ -32,12 +32,12 @@ function writeToDB(database, dbparams) {
     password: process.env.DB_PW,
     database: "ulthit_logs"
   })
-
   var sql = `INSERT INTO ${database} SET ?`;
   conn.query(sql, dbparams, function (err, result) {
     if (err) throw err;
   });
   conn.end()
+}
 
 function writeToLog(logEntry) {
   if (process.env.NODE_ENV === "development") {
@@ -98,6 +98,7 @@ app.get('/:character/data', (req, res) => {
 
     let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data`
     writeToLog(logMessage);
+    console.log(req.params.character)
     let dbparams = {
       "IP": req.connection.remoteAddress,
       "URL": `/${req.params.character}/data`,

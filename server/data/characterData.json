@@ -643,9 +643,9 @@
     "name": "Simon",
     "value": "simon",
     "number": "66",
-    "completed": false,
+    "completed": true,
     "series": "castlevania",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 73,

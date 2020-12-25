@@ -1906,6 +1906,40 @@
           "color": "purple",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "kneer",
+          "hp": "",
+          "frames": [ 6, 7 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "kneel",
+          "hp": "",
+          "frames": [ 6, 7 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "legl",
+          "hp": "",
+          "frames": [ 6, 7 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "legr",
+          "hp": "",
+          "frames": [ 6, 7 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3658,6 +3692,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3721,6 +3765,16 @@
           "type": "attack_region_energy",
           "frames": [ 16, 19, 22 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -3788,6 +3842,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3851,6 +3915,16 @@
           "type": "attack_region_throw",
           "frames": [ 34 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -4236,6 +4310,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 2, 3 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -4296,6 +4380,16 @@
           "type": "attack_region_kick",
           "frames": [ 19, 20, 21 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -4388,6 +4482,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -4478,6 +4582,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -4566,6 +4680,16 @@
           "type": "attack_region_kick",
           "frames": [ 25, 26 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7],
+          "color": "darkblue",
           "notes": ""
         }
       ]

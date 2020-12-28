@@ -652,9 +652,9 @@
     "name": "Richter",
     "value": "richter",
     "number": "66e",
-    "completed": false,
+    "completed": true,
     "series": "castlevania",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 74,

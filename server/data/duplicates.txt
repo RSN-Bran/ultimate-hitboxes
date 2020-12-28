@@ -72,3 +72,8 @@ Backthrow missing a frame at the end
 Bayo Landing missing 20 frames
 
 Ridley Rapid jab merged frame
+
+Simon Dair merged frames
+
+Richter dair merged frames
+Richter Trip Attack missing final frame (frame 50)

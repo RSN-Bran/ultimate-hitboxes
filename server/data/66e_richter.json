@@ -5161,8 +5161,8 @@
     {
       "name": "Trip Attack",
       "value": "RichterTripAttack",
-      "frames": 50,
-      "faf": 50,
+      "frames": 49,
+      "faf": 49,
       "hitboxes": [
         {
           "id": "0",

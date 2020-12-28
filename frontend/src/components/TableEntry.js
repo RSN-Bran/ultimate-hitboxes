@@ -28,7 +28,7 @@ function condenseFrames(arr) {
       if (start == end)
         result += start + ",";
       else if (end == (start + 1))
-        result += start + "," + end + ",";
+        result += start + "-" + end + ",";
       else
         result += start + "-" + end + ",";
 

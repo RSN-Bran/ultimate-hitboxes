@@ -3,6 +3,7 @@ Link Forward Air,
 
 Luigi Dash Attack, has one extra frame at the end
 Luigi Down Smash, one extra frame at the end
+Luigi Green missile missing a startup frame
 
 Ness Down Tilt missing 1 frame
 Ness Down Air has one extra frame

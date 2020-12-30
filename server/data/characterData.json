@@ -661,9 +661,9 @@
     "name": "King K. Rool",
     "value": "king-k-rool",
     "number": "67",
-    "completed": false,
+    "completed": true,
     "series": "donkey-kong",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 75,

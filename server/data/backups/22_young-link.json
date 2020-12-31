@@ -4251,8 +4251,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [8,9,10],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4292,8 +4292,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [8,9,10],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4333,8 +4333,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [12,13],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4374,8 +4374,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [16,17,18],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4415,8 +4415,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [19,20],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4456,8 +4456,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [22,23,24],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4497,8 +4497,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [26,27],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4538,8 +4538,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [31,32,33],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4579,8 +4579,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [31,32,33],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4620,8 +4620,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [39,40],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4661,8 +4661,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [47,48,49,50,51],
+          "color": "red",
           "notes": ""
         }
       ]

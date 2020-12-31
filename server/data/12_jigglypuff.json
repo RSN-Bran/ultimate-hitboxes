@@ -2010,8 +2010,7 @@
       "value": "JigglypuffGrab",
       "frames": 32,
       "faf": 32,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2051,8 +2050,7 @@
       "value": "JigglypuffDashGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2092,8 +2090,7 @@
       "value": "JigglypuffPivotGrab",
       "frames": 34,
       "faf": 34,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2217,7 +2214,10 @@
           "frames": [ 10, 11 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2233,7 +2233,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [12],
+          "frames": [ 12 ],
           "color": "",
           "notes": ""
         }
@@ -2244,7 +2244,7 @@
       "value": "JigglypuffBThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2271,7 +2271,7 @@
       "value": "JigglypuffUThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2336,7 +2336,9 @@
           "frames": [ 60, 61 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2352,7 +2354,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [62],
+          "frames": [ 62 ],
           "color": "",
           "notes": ""
         }

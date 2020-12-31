@@ -3445,8 +3445,7 @@
       "value": "ZeldaGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3486,8 +3485,7 @@
       "value": "ZeldaDashGrab",
       "frames": 47,
       "faf": 47,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3527,8 +3525,7 @@
       "value": "ZeldaPivotGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3614,7 +3611,7 @@
       "value": "ZeldaFThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3641,7 +3638,7 @@
       "value": "ZeldaBThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3668,7 +3665,7 @@
       "value": "ZeldaUThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3733,7 +3730,9 @@
           "frames": [ 25, 26, 31, 32, 37, 38, 43, 44 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

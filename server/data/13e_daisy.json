@@ -2499,8 +2499,7 @@
       "value": "DaisyGrab",
       "frames": 36,
       "faf": 36,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2540,8 +2539,7 @@
       "value": "DaisyDashGrab",
       "frames": 44,
       "faf": 44,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2581,8 +2579,7 @@
       "value": "DaisyPivotGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2706,7 +2703,9 @@
           "frames": [ 14, 15 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2771,7 +2770,9 @@
           "frames": [ 20, 21 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2791,7 +2792,6 @@
           "color": "",
           "notes": ""
         }
-
       ]
     },
     {
@@ -2837,7 +2837,9 @@
           "frames": [ 19, 20 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2902,7 +2904,9 @@
           "frames": [ 34, 35 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2918,7 +2922,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [43],
+          "frames": [ 43 ],
           "color": "",
           "notes": ""
         }

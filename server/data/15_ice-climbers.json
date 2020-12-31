@@ -4966,8 +4966,7 @@
       "value": "IceClimbersPopoGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -5007,8 +5006,7 @@
       "value": "IceClimbersPopoDashGrab",
       "frames": 47,
       "faf": 47,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -5048,8 +5046,7 @@
       "value": "IceClimbersPopoPivotGrab",
       "frames": 40,
       "faf": 40,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -5173,7 +5170,9 @@
           "frames": [ 24 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -5200,7 +5199,7 @@
       "value": "IceClimbersPopoBThrow",
       "frames": 39,
       "faf": 39,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -5303,7 +5302,9 @@
           "frames": [ 25, 26 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -5330,7 +5331,7 @@
       "value": "IceClimbersPopoDThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

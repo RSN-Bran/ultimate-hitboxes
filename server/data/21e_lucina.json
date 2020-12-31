@@ -2570,8 +2570,7 @@
       "value": "LucinaGrab",
       "frames": 34,
       "faf": 34,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2611,8 +2610,7 @@
       "value": "LucinaDashGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2625,7 +2623,7 @@
           "z2": "9.4",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [9,10],
+          "frames": [ 9, 10 ],
           "color": "#800080",
           "notes": ""
         },
@@ -2641,7 +2639,7 @@
           "z2": "10.7",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [9,10],
+          "frames": [ 9, 10 ],
           "color": "#400040",
           "notes": ""
         }
@@ -2652,8 +2650,7 @@
       "value": "LucinaPivotGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2666,7 +2663,7 @@
           "z2": "-13.2",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [10,11],
+          "frames": [ 10, 11 ],
           "color": "#800080",
           "notes": ""
         },
@@ -2682,7 +2679,7 @@
           "z2": "-14.85",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [10,11],
+          "frames": [ 10, 11 ],
           "color": "#400040",
           "notes": ""
         }
@@ -2739,7 +2736,7 @@
       "value": "LucinaFThrow",
       "frames": 31,
       "faf": 31,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2766,7 +2763,7 @@
       "value": "LucinaBThrow",
       "frames": 47,
       "faf": 47,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2782,7 +2779,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [16],
+          "frames": [ 16 ],
           "color": "",
           "notes": ""
         }
@@ -2793,7 +2790,7 @@
       "value": "LucinaUThrow",
       "frames": 44,
       "faf": 44,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2809,7 +2806,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [13],
+          "frames": [ 13 ],
           "color": "",
           "notes": ""
         }
@@ -2820,7 +2817,7 @@
       "value": "LucinaDThrow",
       "frames": 42,
       "faf": 42,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2836,7 +2833,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [16],
+          "frames": [ 16 ],
           "color": "",
           "notes": ""
         }

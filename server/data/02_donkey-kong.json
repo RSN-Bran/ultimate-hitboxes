@@ -2408,8 +2408,7 @@
       "value": "DonkeyKongGrab",
       "frames": 38,
       "faf": 38,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2449,8 +2448,7 @@
       "value": "DonkeyKongDashGrab",
       "frames": 46,
       "faf": 46,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2490,8 +2488,7 @@
       "value": "DonkeyKongPivotGrab",
       "frames": 41,
       "faf": 41,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2577,7 +2574,7 @@
       "value": "DonkeyKongBThrow",
       "frames": 39,
       "faf": 39,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2614,7 +2611,7 @@
       "value": "DonkeyKongUThrow",
       "frames": 43,
       "faf": 43,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2640,7 +2637,7 @@
           "type": "Invincible",
           "bone": "all",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
           "color": "lightgreen",
           "notes": ""
         }
@@ -2651,7 +2648,7 @@
       "value": "DonkeyKongDThrow",
       "frames": 54,
       "faf": 54,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2677,7 +2674,7 @@
           "type": "Invincible",
           "bone": "all",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,16,17,18,19 ],
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
           "color": "lightgreen",
           "notes": ""
         }
@@ -2688,8 +2685,6 @@
       "value": "DonkeyKongCargo",
       "frames": 15,
       "faf": 15,
-      "hitboxes": [
-      ],
       "hurtboxes": [
         {
           "type": "Knockback Armor",
@@ -2706,7 +2701,7 @@
       "value": "DonkeyKongCargoFThrow",
       "frames": 45,
       "faf": 45,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2733,7 +2728,7 @@
       "value": "DonkeyKongCargoBThrow",
       "frames": 42,
       "faf": 42,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2760,7 +2755,7 @@
       "value": "DonkeyKongCargoUThrow",
       "frames": 29,
       "faf": 29,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2787,7 +2782,7 @@
       "value": "DonkeyKongCargoDThrow",
       "frames": 44,
       "faf": 44,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

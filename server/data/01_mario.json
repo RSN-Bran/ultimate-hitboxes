@@ -2394,8 +2394,7 @@
       "value": "MarioGrab",
       "frames": 34,
       "faf": 34,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2435,8 +2434,7 @@
       "value": "MarioDashGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2476,8 +2474,7 @@
       "value": "MarioPivotGrab",
       "frames": 36,
       "faf": 36,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2563,8 +2560,7 @@
       "value": "MarioFThrow",
       "frames": 27,
       "faf": 27,
-      "type": "throw",
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2601,7 +2597,6 @@
       "value": "MarioBThrow",
       "frames": 59,
       "faf": 59,
-      "type": "throw",
       "hitboxes": [
         {
           "id": "0",
@@ -2643,7 +2638,9 @@
           "frames": [ 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2680,8 +2677,7 @@
       "value": "MarioUThrow",
       "frames": 39,
       "faf": 39,
-      "type": "throw",
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2718,8 +2714,7 @@
       "value": "MarioDThrow",
       "frames": 39,
       "faf": 39,
-      "type": "throw",
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

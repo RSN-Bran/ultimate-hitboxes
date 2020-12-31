@@ -37,15 +37,18 @@ function DataTable(props) {
 
   //Data for which table entries should be displayed during certain table configurations
   let fields = {
-    grabBasicNoFrame: [size, ground_or_air, notes, more],
-    grabBasic: [frames, size, ground_or_air, notes, more],
-    grabExtra: [id, frames, size, ground_or_air, bone, x, y, z, notes, more],
-    grabExtraNoFrame: [id, size, ground_or_air, bone, x, y, z, notes, more],
-    attackBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
-    attackExtraNoFrame: [id, part, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
-    attackBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
-    attackExtra: [id, part, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
-    hurtbox: [frames, hurtboxType, bone, hp, notes]
+    grabsBasicNoFrame: [size, ground_or_air, notes, more],
+    grabsBasic: [frames, size, ground_or_air, notes, more],
+    grabsExtra: [id, frames, size, ground_or_air, bone, x, y, z, notes, more],
+    grabsExtraNoFrame: [id, size, ground_or_air, bone, x, y, z, notes, more],
+    hitboxesBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
+    hitboxesExtraNoFrame: [id, part, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
+    hitboxesBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
+    hitboxesExtra: [id, part, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
+    hurtboxesBasic: [frames, hurtboxType, bone, hp, notes],
+    throwsBasic: [frames, damage, angle, bkb, kbg, fkb, notes, more],
+    throwsExtra: [id, frames, damage, angle, bkb, kbg, fkb, notes, more],
+    hurtboxesExtra: [frames, hurtboxType, bone, hp, notes]
 
   }
 
@@ -53,6 +56,12 @@ function DataTable(props) {
   let tableTitle;
   if (props.type === "hitboxes") {
     tableTitle = "Hitbox Data"
+  }
+  else if (props.type === "grabs") {
+    tableTitle = "Grab Data"
+  }
+  else if (props.type === "throws") {
+    tableTitle = "Throw Data"
   }
   else if (props.type === "hurtboxes") {
     tableTitle = "Hurtbox Data"
@@ -64,22 +73,9 @@ function DataTable(props) {
     return null
   }
   else {
-
-    if (props.type === "hitboxes") {
-      //If the move is a grab, display only data pertaining to grabs
-      props.move.type === "grab" ? type = type + "grab" : type = type + "attack";
-
-      //If the "showExtraInfo" setting is enabled, show additional columns of the table
-      props.settings.showExtraInfo ? type = type + "Extra" : type = type + "Basic";
-
-      //If the move has no frames, omit the frame table
-      props.move.hitboxes[0].frames.length === 0 ? type = type + "NoFrame" : type = type;
-    }
-    
-    //Set type to hurtbox if showing hurtboxes
-    else if (props.type === "hurtboxes") {
-      type="hurtbox"
-    }
+    let extraInfo = props.settings.showExtraInfo ? "Extra" : "Basic";
+    let showFrames = props.move[props.type][0].frames.length === 0 ? "NoFrame" : "";
+    type = props.type + extraInfo + showFrames
 
     //Choose table headers
     let table = fields[type];

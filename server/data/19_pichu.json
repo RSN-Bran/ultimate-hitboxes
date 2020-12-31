@@ -1600,8 +1600,7 @@
       "value": "PichuGrab",
       "frames": 31,
       "faf": 31,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -1641,8 +1640,7 @@
       "value": "PichuDashGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -1682,8 +1680,7 @@
       "value": "PichuPivotGrab",
       "frames": 36,
       "faf": 36,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -1696,7 +1693,7 @@
           "z2": "-14.7",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [9,10],
+          "frames": [ 9, 10 ],
           "color": "#800080",
           "notes": ""
         },
@@ -1712,7 +1709,7 @@
           "z2": "-16.35",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [9,10],
+          "frames": [ 9, 10 ],
           "color": "#400040",
           "notes": ""
         }
@@ -1807,7 +1804,9 @@
           "frames": [ 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -1834,7 +1833,7 @@
       "value": "PichuBThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -1899,7 +1898,9 @@
           "frames": [ 14 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -1915,7 +1916,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [16],
+          "frames": [ 16 ],
           "color": "",
           "notes": ""
         }
@@ -1964,7 +1965,9 @@
           "frames": [ 14 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -1980,7 +1983,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [19],
+          "frames": [ 19 ],
           "color": "",
           "notes": ""
         }

@@ -2092,8 +2092,7 @@
       "value": "BowserGrab",
       "frames": 40,
       "faf": 40,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2133,8 +2132,7 @@
       "value": "BowserDashGrab",
       "frames": 48,
       "faf": 48,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2174,8 +2172,7 @@
       "value": "BowserPivotGrab",
       "frames": 43,
       "faf": 43,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2261,7 +2258,7 @@
       "value": "BowserFThrow",
       "frames": 58,
       "faf": 58,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2288,7 +2285,7 @@
       "value": "BowserBThrow",
       "frames": 38,
       "faf": 38,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2429,7 +2426,9 @@
           "frames": [ 57, 58 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2532,7 +2531,10 @@
           "frames": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2561,8 +2563,7 @@
       "value": "BowserFlyingSlamGrabG",
       "frames": 52,
       "faf": 52,
-      "type":  "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2625,8 +2626,7 @@
       "value": "BowserFlyingSlamGrabA",
       "frames": 52,
       "faf": 52,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",

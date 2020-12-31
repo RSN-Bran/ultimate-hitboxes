@@ -3015,8 +3015,7 @@
       "value": "CaptainFalconGrab",
       "frames": 35,
       "faf": 35,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3056,8 +3055,7 @@
       "value": "CaptainFalconDashGrab",
       "frames": 43,
       "faf": 43,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3097,8 +3095,7 @@
       "value": "CaptainFalconPivotGrab",
       "frames": 38,
       "faf": 38,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3222,7 +3219,10 @@
           "frames": [ 11, 12 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3363,7 +3363,10 @@
           "frames": [ 12 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3428,7 +3431,10 @@
           "frames": [ 12, 13 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3455,7 +3461,7 @@
       "value": "CaptainFalconDThrow",
       "frames": 33,
       "faf": 33,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

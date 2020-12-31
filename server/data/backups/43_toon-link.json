@@ -3630,8 +3630,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [8,9,10],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3671,8 +3671,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [8,9,10],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3712,8 +3712,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [8,9,10],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3753,8 +3753,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [12,13],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3794,8 +3794,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [16,17,18],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3835,8 +3835,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [16,17,18],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3876,8 +3876,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [19,20],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3917,8 +3917,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [22,23,24],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3958,8 +3958,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [22,23,24],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3999,8 +3999,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [27,28],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4040,8 +4040,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [31,32,33],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4081,8 +4081,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [35],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4122,8 +4122,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [44,45,46,47,48],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4163,8 +4163,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_toonlink_hit",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [44,45,46,47,48],
+          "color": "red",
           "notes": ""
         }
       ]

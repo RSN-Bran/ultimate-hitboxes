@@ -156,8 +156,28 @@ function Main(props) {
           />
 
 
-          {props.currentMoveData.hitboxes.length !== 0 ? <DataTable
+          {props.currentMoveData.hitboxes !== undefined ? <DataTable
             type="hitboxes"
+            settings={props.settings}
+            move={props.currentMoveData}
+            jumpToFrame={props.jumpToFrame}
+            loading={props.loading}
+            currentFrame={props.currentFrame}
+            updateHitboxData={props.updateHitboxData}
+          /> : null}
+
+          {props.currentMoveData.grabs !== undefined ? <DataTable
+            type="grabs"
+            settings={props.settings}
+            move={props.currentMoveData}
+            jumpToFrame={props.jumpToFrame}
+            loading={props.loading}
+            currentFrame={props.currentFrame}
+            updateHitboxData={props.updateHitboxData}
+          /> : null}
+
+          {props.currentMoveData.throws !== undefined ? <DataTable
+            type="throws"
             settings={props.settings}
             move={props.currentMoveData}
             jumpToFrame={props.jumpToFrame}

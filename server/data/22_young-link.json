@@ -3201,8 +3201,7 @@
       "value": "YoungLinkGrab",
       "frames": 51,
       "faf": 51,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -3249,8 +3248,7 @@
       "value": "YoungLinkDashGrab",
       "frames": 60,
       "faf": 60,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -3297,8 +3295,7 @@
       "value": "YoungLinkPivotGrab",
       "frames": 55,
       "faf": 55,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -3467,7 +3464,9 @@
           "frames": [ 11, 12 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3570,7 +3569,9 @@
           "frames": [ 11, 12 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3673,7 +3674,9 @@
           "frames": [ 26, 27, 28 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3738,7 +3741,9 @@
           "frames": [ 22, 23 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

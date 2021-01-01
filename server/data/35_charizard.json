@@ -3565,8 +3565,7 @@
       "value": "CharizardGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3606,8 +3605,7 @@
       "value": "CharizardDashGrab",
       "frames": 45,
       "faf": 45,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3647,8 +3645,7 @@
       "value": "CharizardPivotGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3734,7 +3731,7 @@
       "value": "CharizardFThrow",
       "frames": 59,
       "faf": 59,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3761,7 +3758,7 @@
       "value": "CharizardBThrow",
       "frames": 32,
       "faf": 32,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3826,7 +3823,9 @@
           "frames": [ 52, 53, 54, 55, 56, 57, 58 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3846,7 +3845,6 @@
           "color": "",
           "notes": ""
         }
-
       ]
     },
     {
@@ -3892,7 +3890,9 @@
           "frames": [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

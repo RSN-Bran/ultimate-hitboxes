@@ -2873,8 +2873,7 @@
       "value": "IkeGrab",
       "frames": 36,
       "faf": 36,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2914,8 +2913,7 @@
       "value": "IkeDashGrab",
       "frames": 44,
       "faf": 44,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2955,8 +2953,7 @@
       "value": "IkePivotGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3118,7 +3115,10 @@
           "frames": [ 5, 6, 7 ],
           "color": "red",
           "notes": ""
-        },
+        }
+
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3138,7 +3138,6 @@
           "color": "",
           "notes": ""
         }
-
       ]
     },
     {
@@ -3222,7 +3221,9 @@
           "frames": [ 20, 21 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3325,7 +3326,9 @@
           "frames": [ 18, 19 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3390,7 +3393,9 @@
           "frames": [ 35, 36, 37, 38, 39 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

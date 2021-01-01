@@ -156,7 +156,7 @@ function Main(props) {
           />
 
 
-          {props.currentMoveData.hitboxes !== undefined ? <DataTable
+          {props.currentMoveData.hitboxes !== undefined && props.currentMoveData.hitboxes.length > 0  ? <DataTable
             type="hitboxes"
             settings={props.settings}
             move={props.currentMoveData}

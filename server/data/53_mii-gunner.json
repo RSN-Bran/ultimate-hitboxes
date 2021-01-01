@@ -2617,8 +2617,7 @@
       "value": "MiiGunnerGrab",
       "frames": 34,
       "faf": 34,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2658,8 +2657,7 @@
       "value": "MiiGunnerDashGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2699,8 +2697,7 @@
       "value": "MiiGunnerPivotGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2824,7 +2821,9 @@
           "frames": [ 10, 11 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2851,7 +2850,7 @@
       "value": "MiiGunnerBThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2878,7 +2877,7 @@
       "value": "MiiGunnerUThrow",
       "frames": 51,
       "faf": 51,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2905,7 +2904,7 @@
       "value": "MiiGunnerDThrow",
       "frames": 40,
       "faf": 40,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

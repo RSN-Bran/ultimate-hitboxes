@@ -2583,8 +2583,7 @@
       "value": "PalutenaGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2624,8 +2623,7 @@
       "value": "PalutenaDashGrab",
       "frames": 47,
       "faf": 47,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2665,8 +2663,7 @@
       "value": "PalutenaPivotGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2752,7 +2749,7 @@
       "value": "PalutenaFThrow",
       "frames": 44,
       "faf": 44,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2779,7 +2776,7 @@
       "value": "PalutenaBThrow",
       "frames": 54,
       "faf": 54,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2806,7 +2803,7 @@
       "value": "PalutenaUThrow",
       "frames": 54,
       "faf": 54,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2833,7 +2830,7 @@
       "value": "PalutenaDThrow",
       "frames": 45,
       "faf": 45,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

@@ -3306,8 +3306,7 @@
       "value": "SnakeGrab",
       "frames": 34,
       "faf": 34,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3347,8 +3346,7 @@
       "value": "SnakeDashGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3388,8 +3386,7 @@
       "value": "SnakePivotGrab",
       "frames": 37,
       "faf": 37,
-      "type":  "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3475,7 +3472,7 @@
       "value": "SnakeFThrow",
       "frames": 39,
       "faf": 39,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3502,7 +3499,7 @@
       "value": "SnakeBThrow",
       "frames": 30,
       "faf": 30,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3567,7 +3564,10 @@
           "frames": [ 22 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3594,7 +3594,7 @@
       "value": "SnakeDThrow",
       "frames": 41,
       "faf": 41,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

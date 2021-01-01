@@ -3876,8 +3876,7 @@
       "value": "SimonGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3917,8 +3916,7 @@
       "value": "SimonDashGrab",
       "frames": 45,
       "faf": 45,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3958,8 +3956,7 @@
       "value": "SimonPivotGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -4048,7 +4045,7 @@
       "value": "SimonFThrow",
       "frames": 41,
       "faf": 41,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4085,7 +4082,7 @@
       "value": "SimonBThrow",
       "frames": 41,
       "faf": 41,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4163,7 +4160,9 @@
           "frames": [ 35 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4183,7 +4182,6 @@
           "color": "",
           "notes": ""
         }
-
       ],
       "hurtboxes": [
         {
@@ -4201,7 +4199,7 @@
       "value": "SimonDThrow",
       "frames": 39,
       "faf": 39,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

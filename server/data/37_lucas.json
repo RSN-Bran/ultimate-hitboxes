@@ -2626,8 +2626,7 @@
       "value": "LucasGrab",
       "frames": 46,
       "faf": 46,
-      "type":  "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -2664,8 +2663,7 @@
       "value": "LucasDashGrab",
       "frames": 54,
       "faf": 54,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -2702,8 +2700,7 @@
       "value": "LucasPivotGrab",
       "frames": 49,
       "faf": 49,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -2786,7 +2783,7 @@
       "value": "LucasFThrow",
       "frames": 52,
       "faf": 52,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2813,7 +2810,7 @@
       "value": "LucasBThrow",
       "frames": 52,
       "faf": 52,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2840,7 +2837,7 @@
       "value": "LucasUThrow",
       "frames": 55,
       "faf": 55,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2867,7 +2864,7 @@
       "value": "LucasDThrow",
       "frames": 57,
       "faf": 57,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

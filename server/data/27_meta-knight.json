@@ -2778,8 +2778,7 @@
       "value": "MetaKnightGrab",
       "frames": 36,
       "faf": 36,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2819,8 +2818,7 @@
       "value": "MetaKnightDashGrab",
       "frames": 44,
       "faf": 44,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2860,8 +2858,7 @@
       "value": "MetaKnightPivotGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3021,7 +3018,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [  9 ],
+          "frames": [ 9 ],
           "color": "red",
           "notes": ""
         },
@@ -3059,10 +3056,12 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [  9 ],
+          "frames": [ 9 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3078,7 +3077,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [10],
+          "frames": [ 10 ],
           "color": "",
           "notes": ""
         }
@@ -3165,7 +3164,9 @@
           "frames": [ 16, 17 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3181,11 +3182,10 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [18],
+          "frames": [ 18 ],
           "color": "",
           "notes": ""
         }
-
       ]
     },
     {
@@ -3231,7 +3231,9 @@
           "frames": [ 42, 43, 44, 45 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3247,11 +3249,10 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [46],
+          "frames": [ 46 ],
           "color": "",
           "notes": ""
         }
-
       ]
     },
     {
@@ -3335,7 +3336,9 @@
           "frames": [ 73, 74 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3351,11 +3354,10 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [75],
+          "frames": [ 75 ],
           "color": "",
           "notes": ""
         }
-
       ]
     },
 

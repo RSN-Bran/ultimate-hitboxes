@@ -28,6 +28,7 @@ class App extends React.Component {
 
     //Interval used for playing the video
     let playInterval;
+    let loadingTimer;
 
     //State
     this.state = {
@@ -68,9 +69,7 @@ class App extends React.Component {
         loopMove: true,
         scrollTable: true,
         sortBy: "number"
-      },
-
-      redirectMove: undefined
+      }
     }
 
     //Bind functions so they are usable within components
@@ -92,6 +91,7 @@ class App extends React.Component {
     this.updateCurrentMove = this.updateCurrentMove.bind(this)
     this.updateCurrentCharacter = this.updateCurrentCharacter.bind(this)
     this.changeMove = this.changeMove.bind(this)
+    this.changePage = this.changePage.bind(this)
     this.urlNotification = this.urlNotification.bind(this)
 
   }
@@ -186,6 +186,8 @@ class App extends React.Component {
 
     this.pause()
 
+    console.log("current")
+    console.log(this.state.currentMoveData)
     //Set the video player state to "loading" to display a loading bar and loading gif
     this.setState({
       loading: true,
@@ -210,8 +212,12 @@ class App extends React.Component {
       images[i].src = `https://ultimate-hitboxes.s3.amazonaws.com/frames/${characterFromCharacterData[0].number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/${i}.png`
     }
 
+    let loadingMove = this.state.currentMoveData.value
     //Use an interval to halt the program while all the images load
-    var loadingTimer = setInterval(function () {
+    this.loadingTimer = setInterval(function () {
+
+      console.log(images)
+      console.log(this.state.currentMoveData.value)
 
       //Check how many frames have been completed
       for (var i = 1; i <= this.state.currentMoveData.frames; i++) {
@@ -219,7 +225,7 @@ class App extends React.Component {
           numLoaded += 1;
         }
       }
-
+      console.log(numLoaded)
       //Calculate the current percent complete and save it, for use by the loading bar
       this.setState({
         loadingPercent: (numLoaded / this.state.currentMoveData.frames) * 100
@@ -227,7 +233,7 @@ class App extends React.Component {
 
       //If all frame is loaded, break out of the loop
       if (numLoaded === this.state.currentMoveData.frames) {
-        clearTimeout(loadingTimer);
+        clearTimeout(this.loadingTimer);
 
         //Call function to complete loading
         this.finishLoading()
@@ -236,7 +242,6 @@ class App extends React.Component {
       //Else, reset counter and try again
       else {
         numLoaded = 0;
-        
       }
     }.bind(this), 10)
 
@@ -369,12 +374,15 @@ class App extends React.Component {
   }
 
   updateCurrentCharacter(data) {
+    clearTimeout(this.loadingTimer);
+    console.log(data)
     this.setState({
       currentCharacterData: data
     })
   }
 
   updateCurrentMove(data) {
+    console.log("update")
     this.setState({
       currentMoveData: data
     })
@@ -385,6 +393,9 @@ class App extends React.Component {
     this.setState({
       redirectMove: event.target.value
     })
+  }
+  changePage() {
+
   }
 
     urlNotification() {
@@ -484,6 +495,7 @@ class App extends React.Component {
                   url={this.state.url}
                   currentFrame={this.state.currentFrame}
                   loading={this.state.loading}
+                  changePage={this.changePage}
                   loadingPercent={this.state.loadingPercent}
                   incrementFrame={this.incrementFrame}
                   play={this.play}
@@ -499,6 +511,7 @@ class App extends React.Component {
                   redirectMove={this.state.redirectMove}
                   updateHitboxData={this.updateHitboxData}
                   urlNotification={this.urlNotification}
+                  loadingTimer={this.loadingTimer}
                 />
                 <HitboxDetail
                   updateHitboxData={this.updateHitboxData}

@@ -5242,8 +5242,8 @@
     {
       "name": "After Burner Kick (Landing)",
       "value": "BayonettaAfterBurnerKickLanding",
-      "frames": 20,
-      "faf": 20,
+      "frames": 40,
+      "faf": 40,
       "hitboxes": [
         {
           "id": "0",

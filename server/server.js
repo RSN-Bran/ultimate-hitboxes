@@ -23,14 +23,13 @@ Date.prototype.toISOString = function () {
 }
 
 function writeToDB(database, dbparams) {
-  if (process.env.NODE_ENV === "development") {
-    return;
-  }
+  console.log("db")
+  console.log(process.env.DB_PW)
   conn = mysql.createConnection({
-    host: "ultimate-hitboxes-logs-instance-1.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
-    user: "dbuser",
+    host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+    user: "admin",
     password: process.env.DB_PW,
-    database: "ulthit_logs"
+    database: `ulthit_logs`
   })
   var sql = `INSERT INTO ${database} SET ?`;
   conn.query(sql, dbparams, function (err, result) {
@@ -106,7 +105,7 @@ app.get('/:character/data', (req, res) => {
       "CharacterName": req.params.character.split("_")[1],
       "DateTime": new Date()
     }
-    writeToDB("CharacterLogs", dbparams)
+    writeToDB(`CharacterLogs_${process.env.NODE_ENV}`, dbparams)
   })
 });
 
@@ -131,7 +130,7 @@ app.get('/:character/:move/data', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
 
     res.send(move)
-
+    console.log(req.params.move)
     let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data`
     writeToLog(logMessage);
 
@@ -143,7 +142,7 @@ app.get('/:character/:move/data', (req, res) => {
       "MoveName": req.params.move,
       "DateTime": new Date()
     }
-    writeToDB("MoveLogs", dbparams)
+    writeToDB(`MoveLogs_${process.env.NODE_ENV}`, dbparams)
   })
 });
 

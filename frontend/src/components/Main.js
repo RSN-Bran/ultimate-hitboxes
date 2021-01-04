@@ -23,6 +23,7 @@ function Main(props) {
   let move = useParams().move
   let frame = useParams().frame
 
+  
 
   if (move === undefined && props.currentCharacterData !== undefined) {
     move = props.currentCharacterData.moves[0].value
@@ -30,12 +31,14 @@ function Main(props) {
 
   //If all character data doesn't exist yet, do nothing. Character data will be loaded in via componentDidMount
   if (props.characterListData === undefined) {
+    console.log("no data")
     return null;
   }
 
   //If character data doesn't exist or doesn't match the URL, query database to get character data
   else if (props.currentCharacterData === undefined || props.currentCharacterData.value !== character) {
-
+    console.log("no character")
+    clearTimeout(props.loadingTimer);
     //get the character's number by searching characterData
     let characterFromCharacterData = props.characterListData.filter(obj => {
       return obj.value === character
@@ -44,54 +47,83 @@ function Main(props) {
     if (props.characterListData.filter(element => element.value.toLowerCase() === character.toLowerCase()).length === 0 || characterFromCharacterData[0].completed === false) {
       return (
         <h2> This page is not available! </h2>
-        )
+      )
+    }
+
+    if (localStorage.getItem(`/${characterFromCharacterData[0].number}_${character}/data`) !== null) {
+      let promise = new Promise(function (resolve, reject) {
+        resolve()
+      })
+
+      promise.then(() => {
+        props.updateCurrentCharacter(JSON.parse(localStorage.getItem(`/${characterFromCharacterData[0].number}_${character}/data`)))
+      })
+    }
+    else {
+      fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${character}/data`)
+        .then(response => response.json())
+        .then(data => {
+          localStorage.setItem(`/${characterFromCharacterData[0].number}_${character}/data`, JSON.stringify(data))
+          props.updateCurrentCharacter(data)
+        })
+
+        //TODO: MAKE ERROR HANDLING MORE ROBUST
+        .catch(err => {
+          console.log(err)
+        })
     }
 
     //API call to the backend to get character data
-    fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${character}/data`)
-      .then(response => response.json())
-      .then(data => {
-        props.updateCurrentCharacter(data)
-      })
-
-      //TODO: MAKE ERROR HANDLING MORE ROBUST
-      .catch(err => {
-        console.log(err)
-      })
-
-    //const request = async () => {
-    //  const response = await fetch(`http://${environment}:5000/${characterFromCharacterData[0].number}_${character}/data`)
-    //  const json = await response.json();
-    //  console.log(json)
-    //}
-    //request();
+    
     return null;
   }
 
   //If move data doesn't exist or doesn't match the URL, query database to get move data
   else if (props.currentMoveData === undefined || props.currentMoveData.value.toLowerCase() !== move.toLowerCase()) {
-
+    clearTimeout(props.loadingTimer);
+    console.log("no move")
     if (props.currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
       return (
         <h2> This page is not available! </h2>
       )
     }
-    fetch(`http://${environment}:5000/${props.currentCharacterData.number}_${props.currentCharacterData.value}/${move.toLowerCase()}/data`)
+    if (localStorage.getItem(`/${props.currentCharacterData.number}_${props.currentCharacterData.value}/${move.toLowerCase()}/data`) !== null) {
+      let promise = new Promise(function (resolve, reject) {
+        resolve()
+      })
+
+      promise.then(() => {
+        props.updateCurrentMove(JSON.parse(localStorage.getItem(`/${props.currentCharacterData.number}_${props.currentCharacterData.value}/${move.toLowerCase()}/data`)))
+        props.changeMove({ target: { value: undefined } })
+        if (frame !== undefined) {
+          props.jumpToFrame(parseInt(frame))
+        }
+      })
+      
+      
+    }
+    else {
+      fetch(`http://${environment}:5000/${props.currentCharacterData.number}_${props.currentCharacterData.value}/${move.toLowerCase()}/data`)
         .then(response => response.json())
         .then(data => {
 
           //Set state to loading and save the data for the move
+          console.log(data)
+          localStorage.setItem(`/${props.currentCharacterData.number}_${props.currentCharacterData.value}/${move.toLowerCase()}/data`, JSON.stringify(data))
           props.updateCurrentMove(data)
           props.changeMove({ target: { value: undefined } })
           if (frame !== undefined) {
             props.jumpToFrame(parseInt(frame))
           }
-          
+
         })
         .catch(err => {
           console.log("Failure")
         })
-      return null;
+    }
+    console.log(localStorage.getItem(`/${props.currentCharacterData.number}_${props.currentCharacterData.value}/${move.toLowerCase()}/data`))
+    
+    return null;
     
   }
 
@@ -103,6 +135,7 @@ function Main(props) {
 
   //Necessary data exists, render the main page
   else {
+    console.log("render")
     return (
       <div>
         <MoveDropDown

@@ -8,7 +8,6 @@ import MoveOption from './MoveOption'
 function MoveDropDown(props) {
 	if (props.redirectMove !== props.currentMoveData.value && props.redirectMove !== undefined) {
 
-		console.log(props.redirectMove)
 		let character = useParams().character
 
 		let history = useHistory();

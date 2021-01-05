@@ -52,7 +52,7 @@ function TableEntry(props) {
   let className = props.settings.dark_light === 0 ? "darkTable" : "lightTable"
 
   //Certain color codes need their text color to change to fit the background
-  let lightModeColorChange = ["#800080", "#400040", "purple"]
+  let lightModeColorChange = ["#800080", "#400040", "purple", "#2F152E", "2F152E", "darkblue"]
   let darkModeColorChange = ["pink", "aqua", "khaki", "lightgreen"]
 
   if (props.hitbox.frames.includes(props.currentFrame) || props.hitbox.frames.length === 0) {

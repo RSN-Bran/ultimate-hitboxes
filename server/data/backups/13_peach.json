@@ -1267,7 +1267,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_magic",
-          "frames": [14,15,16],
+          "frames": [ 14, 15, 16 ],
           "color": "red",
           "notes": ""
         },
@@ -1305,7 +1305,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_magic",
-          "frames": [14,15,16],
+          "frames": [ 14, 15, 16 ],
           "color": "purple",
           "notes": ""
         },
@@ -1343,7 +1343,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_magic",
-          "frames": [14,15,16],
+          "frames": [ 14, 15, 16 ],
           "color": "pink",
           "notes": ""
         },
@@ -1381,7 +1381,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_magic",
-          "frames": [14,15,16],
+          "frames": [ 14, 15, 16 ],
           "color": "pink",
           "notes": ""
         },
@@ -1419,7 +1419,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_magic",
-          "frames": [17,18,19,20],
+          "frames": [ 17, 18, 19, 20 ],
           "color": "salmon",
           "notes": ""
         },
@@ -1457,8 +1457,34 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_magic",
-          "frames": [17,18,19,20],
+          "frames": [ 17, 18, 19, 20 ],
           "color": "pink",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [ 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "arml",
+          "hp": "",
+          "frames": [ 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "armr",
+          "hp": "",
+          "frames": [ 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -2937,7 +2963,6 @@
       "value": "PeachPeachBomber",
       "frames": 1,
       "faf": 1,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -2974,7 +2999,7 @@
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_hip",
           "frames": [],
-          "color": "",
+          "color": "red",
           "notes": ""
         }
       ]
@@ -2984,7 +3009,6 @@
       "value": "PeachPeachBomberHit",
       "frames": 25,
       "faf": 25,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",

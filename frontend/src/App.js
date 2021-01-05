@@ -1,8 +1,6 @@
 //Import React Elements
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import { useHistory } from "react-router-dom";
-import ReactTooltip from "react-tooltip";
 import 'react-notifications-component/dist/theme.css'
 import ReactNotification from 'react-notifications-component'
 import { store } from 'react-notifications-component';
@@ -21,6 +19,7 @@ import HitboxDetail from './components/HitBoxDetail'
 //Set hostname to query depending on dev vs PROD
 const environment = process.env.NODE_ENV === "development" ? "localhost" : "ultimate-hitboxes.com";
 
+const loadingTimers = [];
 class App extends React.Component {
   constructor() {
 
@@ -28,6 +27,7 @@ class App extends React.Component {
 
     //Interval used for playing the video
     let playInterval;
+    //let loadingTimers = [];
     let loadingTimer;
 
     //State
@@ -87,7 +87,6 @@ class App extends React.Component {
     this.changeSearchValue = this.changeSearchValue.bind(this)
     this.setInitialSettings = this.setInitialSettings.bind(this)
     this.changeSettings = this.changeSettings.bind(this)
-    this.updateCharacterListData = this.updateCharacterListData.bind(this)
     this.updateCurrentMove = this.updateCurrentMove.bind(this)
     this.updateCurrentCharacter = this.updateCurrentCharacter.bind(this)
     this.changeMove = this.changeMove.bind(this)
@@ -186,8 +185,6 @@ class App extends React.Component {
 
     this.pause()
 
-    console.log("current")
-    console.log(this.state.currentMoveData)
     //Set the video player state to "loading" to display a loading bar and loading gif
     this.setState({
       loading: true,
@@ -212,12 +209,8 @@ class App extends React.Component {
       images[i].src = `https://ultimate-hitboxes.s3.amazonaws.com/frames/${characterFromCharacterData[0].number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/${i}.png`
     }
 
-    let loadingMove = this.state.currentMoveData.value
     //Use an interval to halt the program while all the images load
     this.loadingTimer = setInterval(function () {
-
-      console.log(images)
-      console.log(this.state.currentMoveData.value)
 
       //Check how many frames have been completed
       for (var i = 1; i <= this.state.currentMoveData.frames; i++) {
@@ -225,15 +218,19 @@ class App extends React.Component {
           numLoaded += 1;
         }
       }
-      console.log(numLoaded)
+
       //Calculate the current percent complete and save it, for use by the loading bar
       this.setState({
         loadingPercent: (numLoaded / this.state.currentMoveData.frames) * 100
       })
 
       //If all frame is loaded, break out of the loop
-      if (numLoaded === this.state.currentMoveData.frames) {
-        clearTimeout(this.loadingTimer);
+      if (numLoaded >= this.state.currentMoveData.frames) {
+        loadingTimers.forEach(timer => {
+          clearInterval(timer)
+          timer = undefined
+        })
+        //console.log(this.loadingTimers)
 
         //Call function to complete loading
         this.finishLoading()
@@ -245,6 +242,8 @@ class App extends React.Component {
       }
     }.bind(this), 10)
 
+    loadingTimers.push(this.loadingTimer)
+
   }
 
   //Move loading has been completed, display the first frame of the move and set needed values
@@ -255,6 +254,7 @@ class App extends React.Component {
     this.setState({
       url: `https://ultimate-hitboxes.s3.amazonaws.com/frames/${characterFromCharacterData[0].number}_${this.state.currentCharacterData.value}/${this.state.currentMoveData.value}/`,
       loading: false,
+      loadingPercent: 0
     })
 
   }
@@ -363,30 +363,90 @@ class App extends React.Component {
       .then(response => response.json())
       .then(data => {
         //Save the character data to the state by calling a method in app
-        this.updateCharacterListData(data)
+        this.setState({
+          characterListData: data
+        })
       })
   }
 
-  updateCharacterListData(data) {
-    this.setState({
-      characterListData: data
-    })
+  updateCurrentCharacter(character) {
+
+    clearInterval(this.loadingTimer);
+    this.loadingTimer = undefined
+
+    if (sessionStorage.getItem(`/${character.number}_${character.value}/data`) !== null && process.env.NODE_ENV === "production") {
+      let promise = new Promise(function (resolve, reject) {
+        resolve()
+      })
+
+      promise.then(() => {
+        this.setState({
+          currentCharacterData: data
+        })
+      })
+    }
+    else {
+      fetch(`http://${environment}:5000/${character.number}_${character.value}/data`)
+        .then(response => response.json())
+        .then(data => {
+          sessionStorage.setItem(`/${character.number}_${character.value}/data`, JSON.stringify(data))
+          this.setState({
+            currentCharacterData: data
+          })
+        })
+
+        //TODO: MAKE ERROR HANDLING MORE ROBUST
+        .catch(err => {
+          console.log(err)
+        })
+    }
   }
 
-  updateCurrentCharacter(data) {
-    clearTimeout(this.loadingTimer);
-    console.log(data)
-    this.setState({
-      currentCharacterData: data
-    })
-  }
+  updateCurrentMove(move, frame) {
 
-  updateCurrentMove(data) {
-    console.log("update")
-    this.setState({
-      currentMoveData: data
-    })
-    this.loadMove()
+    if (sessionStorage.getItem(`/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`) !== null && process.env.NODE_ENV === "production") {
+      let promise = new Promise(function (resolve, reject) {
+        resolve()
+      })
+
+      promise.then(() => {
+        
+        this.setState({
+          currentMoveData: data,
+        })
+        
+        this.loadMove()
+        this.changeMove({ target: { value: undefined } })
+        if (frame !== undefined) {
+          this.jumpToFrame(parseInt(frame))
+        }
+      })
+
+
+    }
+    else {
+      fetch(`http://${environment}:5000/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`)
+        .then(response => response.json())
+        .then(data => {
+
+          //Set state to loading and save the data for the move
+          sessionStorage.setItem(`/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`, JSON.stringify(data))
+          this.setState({
+            currentMoveData: data
+          })
+          
+          this.loadMove()
+          this.changeMove({ target: { value: undefined } })
+          if (frame !== undefined) {
+            this.jumpToFrame(parseInt(frame))
+          }
+        })
+        .catch(err => {
+          console.log("Failure")
+        })
+    }
+
+    
   }
 
   changeMove(event) {
@@ -463,7 +523,7 @@ class App extends React.Component {
             <Route path={['/', '/characters']} exact render={() => (
               <CharacterList
                 characterListData={this.state.characterListData}
-                updateCharacterListData={this.updateCharacterListData}
+                updateCurrentCharacter={this.updateCurrentCharacter}
                 getCharacterData={this.getCharacterData}
                 search={this.state.search}
                 changeSearchValue={this.changeSearchValue}

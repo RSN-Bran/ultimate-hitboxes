@@ -1,6 +1,6 @@
 //React Imports
 import React from "react"
-import { useParams } from 'react-router-dom';
+import { useParams, useEffect } from 'react-router-dom';
 
 //Component Imports
 import MoveDropDown from './MoveDropDown'
@@ -13,7 +13,6 @@ import DataTable from './DataTable';
 //CSS Imports
 import '../css/Player.css';
 
-
 function Main(props) {
 
   //Get character and move data from the URL
@@ -21,60 +20,63 @@ function Main(props) {
   let move = useParams().move
   let frame = useParams().frame
 
-  if (move === undefined && props.currentCharacterData !== undefined) {
-    move = props.currentCharacterData.moves[0].value
-  }
-
   //If all character data doesn't exist yet, do nothing. Character data will be loaded in via componentDidMount
   if (props.characterListData === undefined) {
     return null;
   }
 
-  //If character data doesn't exist or doesn't match the URL, query database to get character data
-  else if (props.currentCharacterData === undefined || props.currentCharacterData.value !== character) {
+  let characterFromCharacterData = props.characterListData.filter(obj => {
+    return obj.value === character
+  })
 
-    let characterFromCharacterData = props.characterListData.filter(obj => {
-      return obj.value === character
-    })
-
-    if (props.characterListData.filter(element => element.value.toLowerCase() === character.toLowerCase()).length === 0 || characterFromCharacterData[0].completed === false) {
-      return (
-        <h2> This page is not available! </h2>
-      )
-    }
-    else {
-      props.updateCurrentCharacter(characterFromCharacterData[0])
-    }
-    
-    
-    return null;
-  }
-
-  //If move data doesn't exist or doesn't match the URL, query database to get move data
-  else if (props.currentMoveData === undefined || props.currentMoveData.value.toLowerCase() !== move.toLowerCase()) {
-
-    if (props.currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
-      return (
-        <h2> This page is not available! </h2>
-      )
-    }
-    props.updateCurrentMove(move, frame)
-
-
-    return null;
-    
-  }
-
-  else if (frame > props.currentMoveData.frames) {
+  if (props.characterListData.filter(element => element.value.toLowerCase() === character.toLowerCase()).length === 0 || characterFromCharacterData[0].completed === false) {
     return (
       <h2> This page is not available! </h2>
     )
   }
 
-  //Necessary data exists, render the main page
+  //else if (props.currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
+  //  return (
+  //    <h2> This page is not available! </h2>
+  //  )
+ // }
+
   else {
-    return (
+    console.log("else")
+    React.useEffect(() => {
+
+      let promise = new Promise(function (resolve, reject) {
+        resolve()
+      })
       
+      promise.then(() => {
+        console.log(props)
+        props.updateCurrentCharacter(characterFromCharacterData[0])
+        props.updateCurrentMove(move)
+        console.log(props)
+      })
+      
+      
+    }, []);
+    return null;
+  }
+
+  
+
+  //if (move === undefined && props.currentCharacterData !== undefined) {
+  //  move = props.currentCharacterData.moves[0].value
+ // }
+
+ 
+
+  //if (frame > props.currentMoveData.frames) {
+  //  return (
+  //    <h2> This page is not available! </h2>
+  //  )
+ // }
+
+  //Necessary data exists, render the main page
+    return (
       <div>
         <MoveDropDown
           currentCharacterData={props.currentCharacterData}
@@ -104,21 +106,21 @@ function Main(props) {
           loading={props.loading}
         />
 
-          <Buttons
-            incrementFrame={props.incrementFrame}
-            decrementFrame={props.decrementFrame}
-            currentCharacterData={props.currentCharacterData}
-            playing={props.playing}
-            play={props.play}
-            pause={props.pause}
-            index={props.index}
-            totalMoves={props.totalMoves}
-            totalFrames={props.currentMoveData.frames}
-            currentFrame={props.currentFrame}
-            settings={props.settings}
-            loading={props.loading}
+        <Buttons
+          incrementFrame={props.incrementFrame}
+          decrementFrame={props.decrementFrame}
+          currentCharacterData={props.currentCharacterData}
+          playing={props.playing}
+          play={props.play}
+          pause={props.pause}
+          index={props.index}
+          totalMoves={props.totalMoves}
+          totalFrames={props.currentMoveData.frames}
+          currentFrame={props.currentFrame}
+          settings={props.settings}
+          loading={props.loading}
 
-          />
+        />
         <div id={props.settings.scrollTable ? "scrollable" : "not-scrollable"}>
           <SpeedOptions
             changeSpeed={props.changeSpeed}
@@ -128,7 +130,7 @@ function Main(props) {
           />
 
 
-          {props.currentMoveData.hitboxes !== undefined && props.currentMoveData.hitboxes.length > 0  ? <DataTable
+          {props.currentMoveData.hitboxes !== undefined && props.currentMoveData.hitboxes.length > 0 ? <DataTable
             type="hitboxes"
             settings={props.settings}
             move={props.currentMoveData}
@@ -167,13 +169,12 @@ function Main(props) {
             currentFrame={props.currentFrame}
             updateHitboxData={props.updateHitboxData}
           /> : null}
-          
+
         </div>
-        
+
 
       </div>
     )
-  }
   
 
 }

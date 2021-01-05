@@ -78,3 +78,6 @@ Simon Dair merged frames
 
 Richter dair merged frames
 Richter Trip Attack missing final frame (frame 50)
+
+Isabelle Dair extra frame
+Isabelle Up Throw Invincibility missing on frame 20

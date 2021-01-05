@@ -79,7 +79,6 @@ function DataTable(props) {
 
     //Choose table headers
     let table = fields[type];
-    console.log(type)
     //Remove notes column if all note entries are empty
     if (props.move[props.type].every(entry => entry.notes === "")) {
       table = table.filter(element => element.variable !== "notes");
@@ -108,6 +107,7 @@ function DataTable(props) {
           jumpToFrame={props.jumpToFrame}
           fields={table}
           settings={props.settings}
+          key={type}
         />
         <div id="moveNotes">
           {jsxNotes === undefined || props.type === "hurtboxes" ? null : jsxNotes}

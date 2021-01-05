@@ -1461,6 +1461,32 @@
           "color": "pink",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [ 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "arml",
+          "hp": "",
+          "frames": [ 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "armr",
+          "hp": "",
+          "frames": [ 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -2725,6 +2751,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -2790,6 +2826,16 @@
           "type": "attack_region_throw",
           "frames": [ 22 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -2859,6 +2905,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -2926,6 +2982,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -2933,15 +2999,22 @@
       "value": "DaisyToad",
       "frames": 62,
       "faf": 62,
-      "complete": false,
-      "hitboxes": []
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 8, 9, 10 ],
+          "color": "darkblue",
+          "notes": ""
+        }
+      ]
     },
     {
       "name": "Daisy Bomber",
       "value": "DaisyDaisyBomber",
       "frames": 1,
       "faf": 1,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -2978,7 +3051,7 @@
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_hip",
           "frames": [],
-          "color": "",
+          "color": "red",
           "notes": ""
         }
       ]
@@ -2988,7 +3061,6 @@
       "value": "DaisyDaisyBomberHit",
       "frames": 25,
       "faf": 25,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -3024,8 +3096,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_hip",
-          "frames": [],
-          "color": "",
+          "frames": [ 1, 2, 3 ],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -3035,7 +3107,6 @@
       "value": "DaisyDaisyParasol",
       "frames": 39,
       "faf": 39,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -3071,8 +3142,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [7,8,9],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3109,8 +3180,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [7,8,9],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3150,8 +3221,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [11,12,13,14,15],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3191,8 +3262,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [11,12,13,14,15,16,17,18,19,20,21],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3232,8 +3303,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [11,12,13,14,15,16,17,18,19,20,21],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3273,8 +3344,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [22,23,24,25,26,27],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3314,8 +3385,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [22,23,24,25,26,27],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3355,8 +3426,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [31,32],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3396,8 +3467,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_magic",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [31,32],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -3407,7 +3478,6 @@
       "value": "DaisyDaisyParasolFall",
       "frames": 95,
       "faf": 95,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -3446,12 +3516,59 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_daisy_parasol",
           "type": "attack_region_parasol",
-          "frames": [],
-          "color": "",
+          "frames": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95],
+          "color": "red",
           "notes": ""
         }
       ]
     },
+    {
+      "name": "Vegetable",
+      "value": "DaisyTurnip",
+      "frames": 1,
+      "faf": 1,
+      "hitboxes": [
+        {
+          "id": "0",
+          "part": "0",
+          "bone": "top",
+          "damage": "workmodule::get_int64(item_daisydaikon_instance_work_int_attack_power",
+          "angle": "30",
+          "kbg": "45",
+          "fkb": "0",
+          "bkb": "25",
+          "size": "2.1",
+          "x": "0",
+          "y": "-1",
+          "z": "0",
+          "hitlag": "0.8",
+          "sdi": "1",
+          "clang_rebound": "attack_setoff_kind_on",
+          "facingrestrict": "attack_lr_check_speed",
+          "setweight": "false",
+          "shielddamage": "-2.5",
+          "trip": "0",
+          "rehit": "100",
+          "reflectable": "true",
+          "absorbable": "false",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "false",
+          "ground_or_air": "collision_situation_mask_ga",
+          "hitbits": "collision_category_mask_no_stage",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_m",
+          "sfxtype": "collision_sound_attr_kamehit",
+          "type": "attack_region_none",
+          "frames": [],
+          "color": "red",
+          "notes": ""
+        }
+      ]
+    },
+
     {
       "name": "Ledge Attack",
       "value": "DaisyLedgeAttack",
@@ -3497,6 +3614,16 @@
           "type": "attack_region_punch",
           "frames": [ 18, 19, 20 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -3589,6 +3716,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3679,6 +3816,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3767,6 +3914,16 @@
           "type": "attack_region_kick",
           "frames": [ 27, 28 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]

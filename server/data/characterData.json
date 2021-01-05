@@ -670,9 +670,9 @@
     "name": "Isabelle",
     "value": "isabelle",
     "number": "68",
-    "completed": false,
+    "completed": true,
     "series": "animal-crossing",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 76,

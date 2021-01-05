@@ -23,7 +23,7 @@ function Character(props) {
 	if (props.character.completed) {
 		return (
 			<Link to={`/${props.character.value}`}>
-				<div className={characterClassName} value={props.character.value}>
+				<div className={characterClassName} value={props.character.value} onClick={() => console.log('Heading to /')}>
 					<small className="number">#{props.character.number.replace('e', 'ε')}</small>
 					<small className="version">{props.character.completed ? "v" + props.character.version : "Coming Soon"}</small>
 					<h2 className={nameClass}>

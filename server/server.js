@@ -23,8 +23,6 @@ Date.prototype.toISOString = function () {
 }
 
 function writeToDB(database, dbparams) {
-  console.log("db")
-  console.log(process.env.DB_PW)
   conn = mysql.createConnection({
     host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
     user: "admin",

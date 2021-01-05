@@ -10,7 +10,7 @@ services:
       - /home/ultimate-hitboxes/server/serverlog:/serverlog
     environment:
       - NODE_ENV=production
-      - DB_PW=je109DK9XaoL
+      - DB_PW=JY3Z8OvrlWZn
   frontend:
     image: bsultana75/ulthit_frontend:latest
     command: sh -c "yarn build"

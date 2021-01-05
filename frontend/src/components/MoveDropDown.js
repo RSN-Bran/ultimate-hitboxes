@@ -16,6 +16,9 @@ function MoveDropDown(props) {
 		
 		return null;
 	}
+	else if (props.loading) {
+		return null;
+  }
 	else {
 		let className = props.settings.dark_light === 0 ? "darkMoveDropDown" : "lightMoveDropDown"
 

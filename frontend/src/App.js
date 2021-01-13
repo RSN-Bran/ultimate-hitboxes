@@ -380,6 +380,7 @@ class App extends React.Component {
       })
 
       promise.then(() => {
+        let data = JSON.parse(localStorage.getItem(`/${character.number}_${character.value}/data`))
         this.setState({
           currentCharacterData: data
         })
@@ -410,7 +411,8 @@ class App extends React.Component {
       })
 
       promise.then(() => {
-        
+        let data = JSON.parse(localStorage.getItem(`/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`))
+        console.log(data)
         this.setState({
           currentMoveData: data,
         })

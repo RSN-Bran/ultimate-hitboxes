@@ -17,6 +17,10 @@ Ice Climbers Dash Grab missing frames
 Sheik grab, dash grab, pivot grab missing frames
 Sheik Down Throw, hitboxes last one frame too long, invincibility one frame too long
 
+Zelda Down Throw has extra frames, Invincibility has one extra frame
+Zelda Neutral Special has one extra frame of intangibility
+Zelda Up Special should disappear one frame earlier
+
 Ganondorf UpTilt missing a frame
 
 Pit Jab has an extra frame
@@ -85,3 +89,4 @@ Isabelle Up Throw Invincibility missing on frame 20
 
 Plant Up Tilt missing a frame
 Plant Back Throw invincibility wears off one frame early
+Plant Footstool attack missing startup frames

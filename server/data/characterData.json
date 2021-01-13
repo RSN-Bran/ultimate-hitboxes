@@ -679,18 +679,18 @@
     "name": "Incineroar",
     "value": "incineroar",
     "number": "69",
-    "completed": false,
+    "completed": true,
     "series": "pokemon",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 77,
     "name": "Piranha Plant",
     "value": "piranha-plant",
     "number": "70",
-    "completed": false,
+    "completed": true,
     "series": "super-mario",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 78,

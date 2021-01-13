@@ -8,6 +8,12 @@ import SortBy from './SortBy'
 //CSS Imports
 import '../css/CharacterList.css';
 
+const sortingMethods = {
+	"name": "ascending",
+	"number": "ascending",
+	"count": "descending"
+}
+
 function CharacterList(props) {
 
 	//If chararacter data doesn't exist, query the backend server
@@ -21,8 +27,13 @@ function CharacterList(props) {
 		let sortedCharacterData = []
 
 		//Sort Characters based on the criteria in the sortBy Field
-		sortedCharacterData = props.characterListData.slice().sort((a, b) => (a[props.settings.sortBy] > b[props.settings.sortBy]) ? 1 : -1)
-
+		if (sortingMethods[props.settings.sortBy] === "ascending") {
+			sortedCharacterData = props.characterListData.slice().sort((a, b) => (a[props.settings.sortBy] > b[props.settings.sortBy]) ? 1 : -1)
+		}
+		else {
+			sortedCharacterData = props.characterListData.slice().sort((a, b) => (a[props.settings.sortBy] < b[props.settings.sortBy]) ? 1 : -1)
+    }
+		console.log(sortedCharacterData)
 		//Filter the results based on the searchBar
 		sortedCharacterData = sortedCharacterData.filter(obj => { return obj.name.toUpperCase().includes(props.search.toUpperCase()) })
 

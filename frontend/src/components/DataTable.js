@@ -48,6 +48,8 @@ function DataTable(props) {
     hurtboxesBasic: [frames, hurtboxType, bone, hp, notes],
     throwsBasic: [frames, damage, angle, bkb, kbg, fkb, notes, more],
     throwsExtra: [id, frames, damage, angle, bkb, kbg, fkb, notes, more],
+    throwsBasicNoFrame: [damage, angle, bkb, kbg, fkb, notes, more],
+    throwsExtraNoFrame: [id, damage, angle, bkb, kbg, fkb, notes, more],
     hurtboxesExtra: [frames, hurtboxType, bone, hp, notes]
 
   }
@@ -76,7 +78,7 @@ function DataTable(props) {
     let extraInfo = props.settings.showExtraInfo ? "Extra" : "Basic";
     let showFrames = props.move[props.type][0].frames.length === 0 ? "NoFrame" : "";
     type = props.type + extraInfo + showFrames
-
+    console.log(type)
     //Choose table headers
     let table = fields[type];
     //Remove notes column if all note entries are empty

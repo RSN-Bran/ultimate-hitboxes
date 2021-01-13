@@ -15,6 +15,7 @@ Ice Climbers Grab missing frames
 Ice Climbers Dash Grab missing frames
 
 Sheik grab, dash grab, pivot grab missing frames
+Sheik Down Throw, hitboxes last one frame too long, invincibility one frame too long
 
 Ganondorf UpTilt missing a frame
 
@@ -81,3 +82,6 @@ Richter Trip Attack missing final frame (frame 50)
 
 Isabelle Dair extra frame
 Isabelle Up Throw Invincibility missing on frame 20
+
+Plant Up Tilt missing a frame
+Plant Back Throw invincibility wears off one frame early

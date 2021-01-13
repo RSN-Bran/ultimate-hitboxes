@@ -65,7 +65,35 @@ app.get('/characterData', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     let json = JSON.parse(jsonString)
 
-    res.send(json) 
+    
+
+    //console.log(json)
+
+    conn = mysql.createConnection({
+      host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+      user: "admin",
+      password: process.env.DB_PW,
+      database: `ulthit_logs`
+    })
+    var sql = `SELECT CharacterName, CharacterNum, COUNT(CharacterName) AS count FROM CharacterLogs_${process.env.NODE_ENV} GROUP BY CharacterName`;
+    conn.query(sql, function (err, result) {
+      if (err) throw err;
+      json.forEach(character => {
+        var sqlCharacter = result.filter(obj => {
+          return obj.CharacterName === character.value
+        })
+        if (sqlCharacter.length === 0) {
+          character.count = 0
+        }
+        else {
+          character.count = sqlCharacter[0].count
+        }
+      })
+
+      res.send(json) 
+
+    });
+    conn.end()
 
     let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/characterData`
     writeToLog(logMessage);

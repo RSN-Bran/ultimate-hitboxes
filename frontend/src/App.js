@@ -374,13 +374,14 @@ class App extends React.Component {
     clearInterval(this.loadingTimer);
     this.loadingTimer = undefined
 
-    if (sessionStorage.getItem(`/${character.number}_${character.value}/data`) !== null && process.env.NODE_ENV === "production") {
+    console.log(character)
+    if (sessionStorage.getItem(`/${character.number}_${character.value}/data`) !== null /*&& process.env.NODE_ENV === "production"*/) {
       let promise = new Promise(function (resolve, reject) {
         resolve()
       })
 
       promise.then(() => {
-        let data = JSON.parse(localStorage.getItem(`/${character.number}_${character.value}/data`))
+        let data = JSON.parse(sessionStorage.getItem(`/${character.number}_${character.value}/data`))
         this.setState({
           currentCharacterData: data
         })
@@ -405,13 +406,13 @@ class App extends React.Component {
 
   updateCurrentMove(move, frame) {
 
-    if (sessionStorage.getItem(`/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`) !== null && process.env.NODE_ENV === "production") {
+    if (sessionStorage.getItem(`/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`) !== null /*&& process.env.NODE_ENV === "production"*/) {
       let promise = new Promise(function (resolve, reject) {
         resolve()
       })
 
       promise.then(() => {
-        let data = JSON.parse(localStorage.getItem(`/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`))
+        let data = JSON.parse(sessionStorage.getItem(`/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`))
         console.log(data)
         this.setState({
           currentMoveData: data,

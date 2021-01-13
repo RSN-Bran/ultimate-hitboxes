@@ -22,6 +22,7 @@ function Main(props) {
   let frame = useParams().frame
 
   if (move === undefined && props.currentCharacterData !== undefined) {
+    console.log(props.currentCharacterData)
     move = props.currentCharacterData.moves[0].value
   }
 
@@ -52,7 +53,7 @@ function Main(props) {
 
   //If move data doesn't exist or doesn't match the URL, query database to get move data
   else if (props.currentMoveData === undefined || props.currentMoveData.value.toLowerCase() !== move.toLowerCase()) {
-
+    console.log(props.currentCharacterData)
     if (props.currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
       return (
         <h2> This page is not available! </h2>

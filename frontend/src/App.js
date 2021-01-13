@@ -374,7 +374,6 @@ class App extends React.Component {
     clearInterval(this.loadingTimer);
     this.loadingTimer = undefined
 
-    console.log(character)
     if (sessionStorage.getItem(`/${character.number}_${character.value}/data`) !== null /*&& process.env.NODE_ENV === "production"*/) {
       let promise = new Promise(function (resolve, reject) {
         resolve()

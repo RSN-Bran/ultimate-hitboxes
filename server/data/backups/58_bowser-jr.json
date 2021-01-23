@@ -3628,8 +3628,7 @@
       "value": "BowserJrGrab",
       "frames": 40,
       "faf": 40,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3669,8 +3668,7 @@
       "value": "BowserJrDashGrab",
       "frames": 48,
       "faf": 48,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3710,8 +3708,7 @@
       "value": "BowserJrPivotGrab",
       "frames": 43,
       "faf": 43,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3841,7 +3838,9 @@
           "frames": [ 14, 15 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3868,7 +3867,7 @@
       "value": "BowserJrBThrow",
       "frames": 61,
       "faf": 61,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3895,7 +3894,7 @@
       "value": "BowserJrUThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3963,7 +3962,9 @@
           "frames": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

@@ -3107,8 +3107,7 @@
       "value": "DarkSamusGrab",
       "frames": 59,
       "faf": 59,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -3145,8 +3144,7 @@
       "value": "DarkSamusDashGrab",
       "frames": 67,
       "faf": 67,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -3183,8 +3181,7 @@
       "value": "DarkSamusPivotGrab",
       "frames": 62,
       "faf": 62,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -3267,7 +3264,7 @@
       "value": "DarkSamusFThrow",
       "frames": 41,
       "faf": 41,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3304,7 +3301,7 @@
       "value": "DarkSamusBThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3379,7 +3376,9 @@
           "frames": [ 15 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3416,7 +3415,7 @@
       "value": "DarkSamusDThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

@@ -2452,8 +2452,7 @@
       "value": "LucarioGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2493,8 +2492,7 @@
       "value": "LucarioDashGrab",
       "frames": 46,
       "faf": 46,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2534,8 +2532,7 @@
       "value": "LucarioPivotGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2659,7 +2656,9 @@
           "frames": [ 6, 7 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2686,7 +2685,7 @@
       "value": "LucarioBThrow",
       "frames": 35,
       "faf": 35,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2751,7 +2750,9 @@
           "frames": [ 16, 17 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2778,7 +2779,7 @@
       "value": "LucarioDThrow",
       "frames": 50,
       "faf": 50,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2807,38 +2808,6 @@
       "frames": 63,
       "faf": 63,
       "hitboxes": [
-        {
-          "id": "0",
-          "bone": "top",
-          "size": "3.0",
-          "x": "0.0",
-          "y": "6.0",
-          "z": "5.3",
-          "x2": "0.0",
-          "y2": "6.0",
-          "z2": "1.0",
-          "status": "fighter_status_kind_capture_pulled",
-          "ground_or_air": "collision_situation_mask_ga",
-          "frames": [ 9 ],
-          "color": "#400040",
-          "notes": ""
-        },
-        {
-          "id": "1",
-          "bone": "top",
-          "size": "3.0",
-          "x": "0.0",
-          "y": "6.0",
-          "z": "7.4",
-          "x2": "0.0",
-          "y2": "6.0",
-          "z2": "1.0",
-          "status": "fighter_status_kind_capture_pulled",
-          "ground_or_air": "collision_situation_mask_g",
-          "frames": [ 9 ],
-          "color": "#800080",
-          "notes": ""
-        },
         {
           "id": "0",
           "part": "0",
@@ -2876,7 +2845,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_none",
-          "frames": [24,25],
+          "frames": [ 24, 25 ],
           "color": "red",
           "notes": ""
         },
@@ -2917,7 +2886,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_none",
-          "frames": [24,25],
+          "frames": [ 24, 25 ],
           "color": "purple",
           "notes": ""
         },
@@ -2958,8 +2927,42 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_lucario",
           "type": "attack_region_none",
-          "frames": [24,25],
+          "frames": [ 24, 25 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "grabs": [
+        {
+          "id": "0",
+          "bone": "top",
+          "size": "3.0",
+          "x": "0.0",
+          "y": "6.0",
+          "z": "5.3",
+          "x2": "0.0",
+          "y2": "6.0",
+          "z2": "1.0",
+          "status": "fighter_status_kind_capture_pulled",
+          "ground_or_air": "collision_situation_mask_ga",
+          "frames": [ 9 ],
+          "color": "#400040",
+          "notes": ""
+        },
+        {
+          "id": "1",
+          "bone": "top",
+          "size": "3.0",
+          "x": "0.0",
+          "y": "6.0",
+          "z": "7.4",
+          "x2": "0.0",
+          "y2": "6.0",
+          "z2": "1.0",
+          "status": "fighter_status_kind_capture_pulled",
+          "ground_or_air": "collision_situation_mask_g",
+          "frames": [ 9 ],
+          "color": "#800080",
           "notes": ""
         }
       ]

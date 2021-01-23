@@ -3462,8 +3462,7 @@
       "value": "FoxGrab",
       "frames": 36,
       "faf": 36,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3503,8 +3502,7 @@
       "value": "FoxDashGrab",
       "frames": 44,
       "faf": 44,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3544,8 +3542,7 @@
       "value": "FoxPivotGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3672,7 +3669,10 @@
           "frames": [ 10 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3710,25 +3710,6 @@
       "frames": 49,
       "faf": 49,
       "hitboxes": [
-        {
-          "kind": "fighter_attack_absolute_kind_throw",
-          "id": "0",
-          "damage": "2.0",
-          "angle": "56",
-          "kbg": "85",
-          "fkb": "0",
-          "bkb": "80",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [ 10 ],
-          "color": "",
-          "notes": ""
-        },
         {
           "id": "0",
           "part": "0",
@@ -3768,6 +3749,27 @@
           "notes": ""
         }
       ],
+      "throws": [
+        {
+          "kind": "fighter_attack_absolute_kind_throw",
+          "id": "0",
+          "damage": "2.0",
+          "angle": "56",
+          "kbg": "85",
+          "fkb": "0",
+          "bkb": "80",
+          "hitlag": "0.0",
+          "unk": "true",
+          "facingrestrict": "attack_lr_check_f",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_s",
+          "sfxtype": "collision_sound_attr_none",
+          "type": "attack_region_throw",
+          "frames": [ 10 ],
+          "color": "",
+          "notes": ""
+        }
+      ],
       "hurtboxes": [
         {
           "type": "Invincible",
@@ -3785,25 +3787,7 @@
       "frames": 49,
       "faf": 49,
       "hitboxes": [
-        {
-          "kind": "fighter_attack_absolute_kind_throw",
-          "id": "0",
-          "damage": "2.0",
-          "angle": "90",
-          "kbg": "110",
-          "fkb": "0",
-          "bkb": "75",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_normal",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [ 7 ],
-          "color": "",
-          "notes": ""
-        },
+        
         {
           "id": "0",
           "part": "0",
@@ -3840,6 +3824,27 @@
           "type": "attack_region_energy",
           "frames": [ 18, 21, 24 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "throws": [
+        {
+          "kind": "fighter_attack_absolute_kind_throw",
+          "id": "0",
+          "damage": "2.0",
+          "angle": "90",
+          "kbg": "110",
+          "fkb": "0",
+          "bkb": "75",
+          "hitlag": "0.0",
+          "unk": "true",
+          "facingrestrict": "attack_lr_check_f",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_s",
+          "sfxtype": "collision_sound_attr_none",
+          "type": "attack_region_throw",
+          "frames": [ 7 ],
+          "color": "",
           "notes": ""
         }
       ],
@@ -3897,7 +3902,10 @@
           "frames": [ 26, 29, 32 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

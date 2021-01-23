@@ -2818,8 +2818,7 @@
       "value": "VillagerGrab",
       "frames": 43,
       "faf": 43,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2859,8 +2858,7 @@
       "value": "VillagerDashGrab",
       "frames": 47,
       "faf": 47,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2900,8 +2898,7 @@
       "value": "VillagerPivotGrab",
       "frames": 44,
       "faf": 44,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2987,7 +2984,7 @@
       "value": "VillagerFThrow",
       "frames": 45,
       "faf": 45,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3014,7 +3011,7 @@
       "value": "VillagerBThrow",
       "frames": 45,
       "faf": 45,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3041,7 +3038,7 @@
       "value": "VillagerUThrow",
       "frames": 45,
       "faf": 45,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3068,7 +3065,7 @@
       "value": "VillagerDThrow",
       "frames": 35,
       "faf": 35,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

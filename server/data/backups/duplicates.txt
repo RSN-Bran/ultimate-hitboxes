@@ -3,6 +3,7 @@ Link Forward Air,
 
 Luigi Dash Attack, has one extra frame at the end
 Luigi Down Smash, one extra frame at the end
+Luigi Green missile missing a startup frame
 
 Ness Down Tilt missing 1 frame
 Ness Down Air has one extra frame
@@ -14,6 +15,11 @@ Ice Climbers Grab missing frames
 Ice Climbers Dash Grab missing frames
 
 Sheik grab, dash grab, pivot grab missing frames
+Sheik Down Throw, hitboxes last one frame too long, invincibility one frame too long
+
+Zelda Down Throw has extra frames, Invincibility has one extra frame
+Zelda Neutral Special has one extra frame of intangibility
+Zelda Up Special should disappear one frame earlier
 
 Ganondorf UpTilt missing a frame
 
@@ -69,3 +75,18 @@ Ryu Jab 1 4 frames too long
 Bayonetta FTilt 3 too long
 Smashes missing startup
 Backthrow missing a frame at the end
+Bayo Landing missing 20 frames
+
+Ridley Rapid jab merged frame
+
+Simon Dair merged frames
+
+Richter dair merged frames
+Richter Trip Attack missing final frame (frame 50)
+
+Isabelle Dair extra frame
+Isabelle Up Throw Invincibility missing on frame 20
+
+Plant Up Tilt missing a frame
+Plant Back Throw invincibility wears off one frame early
+Plant Footstool attack missing startup frames

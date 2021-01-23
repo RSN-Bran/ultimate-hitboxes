@@ -2005,8 +2005,7 @@
       "value": "DuckHuntGrab",
       "frames": 34,
       "faf": 34,
-      "type":  "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2046,8 +2045,7 @@
       "value": "DuckHuntDashGrab",
       "frames": 42,
       "faf": 42,
-      "type":  "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2060,7 +2058,7 @@
           "z2": "12.9",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [9,10],
+          "frames": [ 9, 10 ],
           "color": "#800080",
           "notes": ""
         },
@@ -2076,7 +2074,7 @@
           "z2": "14.2",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [9,10],
+          "frames": [ 9, 10 ],
           "color": "#400040",
           "notes": ""
         }
@@ -2087,8 +2085,7 @@
       "value": "DuckHuntPivotGrab",
       "frames": 37,
       "faf": 37,
-      "type" : "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2101,7 +2098,7 @@
           "z2": "-18.5",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [10,11],
+          "frames": [ 10, 11 ],
           "color": "#800080",
           "notes": ""
         },
@@ -2117,7 +2114,7 @@
           "z2": "-20.15",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [10,11],
+          "frames": [ 10, 11 ],
           "color": "#400040",
           "notes": ""
         }
@@ -2177,7 +2174,7 @@
       "value": "DuckHuntFThrow",
       "frames": 29,
       "faf": 29,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2204,7 +2201,7 @@
       "value": "DuckHuntBThrow",
       "frames": 39,
       "faf": 39,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2231,7 +2228,7 @@
       "value": "DuckHuntUThrow",
       "frames": 47,
       "faf": 47,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2296,7 +2293,9 @@
           "frames": [ 23 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

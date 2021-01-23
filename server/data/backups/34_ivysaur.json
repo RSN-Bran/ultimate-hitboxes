@@ -3312,8 +3312,7 @@
       "value": "IvysaurGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3353,8 +3352,7 @@
       "value": "IvysaurDashGrab",
       "frames": 48,
       "faf": 48,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3394,8 +3392,7 @@
       "value": "IvysaurPivotGrab",
       "frames": 44,
       "faf": 44,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3519,7 +3516,8 @@
           "frames": [ 16 ],
           "color": "red",
           "notes": ""
-        },
+        }      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_catch",
           "id": "0",
@@ -3546,7 +3544,7 @@
       "value": "IvysaurBThrow",
       "frames": 35,
       "faf": 35,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3611,7 +3609,9 @@
           "frames": [ 20 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3638,7 +3638,7 @@
       "value": "IvysaurDThrow",
       "frames": 34,
       "faf": 34,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

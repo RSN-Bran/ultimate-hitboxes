@@ -3941,8 +3941,7 @@
       "value": "BayonettaGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3982,8 +3981,7 @@
       "value": "BayonettaDashGrab",
       "frames": 45,
       "faf": 45,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -4023,8 +4021,7 @@
       "value": "BayonettaPivotGrab",
       "frames": 40,
       "faf": 40,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -4195,7 +4192,9 @@
           "frames": [ 14 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throows": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4263,7 +4262,9 @@
           "frames": [ 14 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4372,7 +4373,9 @@
           "frames": [ 9, 10, 11, 12, 13, 14 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4440,7 +4443,9 @@
           "frames": [ 20 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -5237,8 +5242,8 @@
     {
       "name": "After Burner Kick (Landing)",
       "value": "BayonettaAfterBurnerKickLanding",
-      "frames": 20,
-      "faf": 20,
+      "frames": 40,
+      "faf": 40,
       "hitboxes": [
         {
           "id": "0",

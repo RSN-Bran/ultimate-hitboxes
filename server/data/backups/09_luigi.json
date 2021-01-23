@@ -2467,8 +2467,7 @@
       "value": "LuigiGrab",
       "frames": 47,
       "faf": 47,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -2505,8 +2504,7 @@
       "value": "LuigiDashGrab",
       "frames": 51,
       "faf": 51,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -2543,8 +2541,7 @@
       "value": "LuigiPivotGrab",
       "frames": 49,
       "faf": 49,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "throw",
@@ -2627,7 +2624,7 @@
       "value": "LuigiFThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2664,7 +2661,7 @@
       "value": "LuigiBThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2739,7 +2736,10 @@
           "frames": [ 15 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2814,7 +2814,10 @@
           "frames": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

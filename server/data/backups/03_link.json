@@ -3329,8 +3329,7 @@
       "value": "LinkGrab",
       "frames": 34,
       "faf": 34,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3370,8 +3369,7 @@
       "value": "LinkDashGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3411,8 +3409,7 @@
       "value": "LinkPivotGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3528,7 +3525,9 @@
           "frames": [ 12, 13 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3641,7 +3640,10 @@
           "frames": [ 12, 13 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3754,7 +3756,10 @@
           "frames": [ 26, 27, 28, 29 ],
           "color": "red",
           "notes": ""
-        },
+        }
+        
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3829,7 +3834,9 @@
           "frames": [ 22, 23 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

@@ -4197,8 +4197,7 @@
       "value": "RosalinaLumaGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -4238,8 +4237,7 @@
       "value": "RosalinaLumaDashGrab",
       "frames": 46,
       "faf": 46,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -4279,8 +4277,7 @@
       "value": "RosalinaLumaPivotGrab",
       "frames": 41,
       "faf": 41,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -4366,7 +4363,7 @@
       "value": "RosalinaLumaFThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4393,7 +4390,7 @@
       "value": "RosalinaLumaBThrow",
       "frames": 42,
       "faf": 42,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4420,7 +4417,7 @@
       "value": "RosalinaLumaUThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4447,7 +4444,7 @@
       "value": "RosalinaLumaDThrow",
       "frames": 35,
       "faf": 35,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

@@ -2691,8 +2691,7 @@
       "value": "KirbyGrab",
       "frames": 34,
       "faf": 34,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2732,8 +2731,7 @@
       "value": "KirbyDashGrab",
       "frames": 41,
       "faf": 41,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2773,8 +2771,7 @@
       "value": "KirbyPivotGrab",
       "frames": 36,
       "faf": 36,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2863,7 +2860,7 @@
       "value": "KirbyFThrow",
       "frames": 58,
       "faf": 58,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2900,7 +2897,7 @@
       "value": "KirbyBThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2975,7 +2972,9 @@
           "frames": [ 45, 46 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3069,7 +3068,9 @@
           "frames": [ 56, 57 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3106,8 +3107,7 @@
       "value": "KirbyInhaleStart",
       "frames": 10,
       "faf": 10,
-      "type":  "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3171,7 +3171,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_none",
-          "frames": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ],
           "color": "blue",
           "notes": ""
         },
@@ -3212,10 +3212,18 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_none",
-          "frames": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ],
           "color": "blue",
           "notes": ""
         },
+        
+        {
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ],
+          "color": "#c08582",
+          "notes": "Projectile Absorb"
+        }
+      ],
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3225,7 +3233,7 @@
           "z": "10.2",
           "status": "fighter_status_kind_swallowed",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ],
           "color": "#800080",
           "notes": ""
         },
@@ -3238,14 +3246,9 @@
           "z": "6.2",
           "status": "fighter_status_kind_swallowed",
           "ground_or_air": "collision_situation_mask_ga",
-          "frames": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ],
           "color": "#800080",
           "notes": ""
-        },
-        {
-          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ],
-          "color": "#c08582",
-          "notes": "Projectile Absorb"
         }
       ]
     },

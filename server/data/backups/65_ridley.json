@@ -2746,8 +2746,7 @@
       "value": "RidleyGrab",
       "frames": 34,
       "faf": 34,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2787,8 +2786,7 @@
       "value": "RidleyDashGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2829,8 +2827,7 @@
       "value": "RidleyPivotGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2919,7 +2916,7 @@
       "value": "RidleyFThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2956,7 +2953,7 @@
       "value": "RidleyBThrow",
       "frames": 45,
       "faf": 45,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3075,7 +3072,9 @@
           "frames": [ 14, 15 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3095,7 +3094,6 @@
           "color": "",
           "notes": ""
         }
-
       ],
       "hurtboxes": [
         {
@@ -3113,7 +3111,7 @@
       "value": "RidleyDThrow",
       "frames": 38,
       "faf": 38,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3242,8 +3240,7 @@
       "value": "RidleySpacePirateRushG",
       "frames": 78,
       "faf": 78,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3290,8 +3287,7 @@
       "value": "RidleySpacePirateRushA",
       "frames": 60,
       "faf": 60,
-      "type":  "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",

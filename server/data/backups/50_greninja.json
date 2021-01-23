@@ -2847,8 +2847,7 @@
       "value": "GreninjaGrab",
       "frames": 38,
       "faf": 38,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2888,8 +2887,7 @@
       "value": "GreninjaDashGrab",
       "frames": 46,
       "faf": 46,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2929,8 +2927,7 @@
       "value": "GreninjaPivotGrab",
       "frames": 41,
       "faf": 41,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3092,7 +3089,9 @@
           "frames": [ 15 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3119,7 +3118,7 @@
       "value": "GreninjaBThrow",
       "frames": 44,
       "faf": 44,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3146,7 +3145,7 @@
       "value": "GreninjaUThrow",
       "frames": 42,
       "faf": 42,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3173,7 +3172,7 @@
       "value": "GreninjaDThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

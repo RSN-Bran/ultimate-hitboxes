@@ -2445,8 +2445,7 @@
       "value": "MegaManGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2470,8 +2469,7 @@
       "value": "MegaManDashGrab",
       "frames": 45,
       "faf": 45,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2495,8 +2493,7 @@
       "value": "MegaManPivotGrab",
       "frames": 40,
       "faf": 40,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2566,7 +2563,7 @@
       "value": "MegaManFThrow",
       "frames": 32,
       "faf": 32,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2593,7 +2590,7 @@
       "value": "MegaManBThrow",
       "frames": 43,
       "faf": 43,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2620,7 +2617,7 @@
       "value": "MegaManUThrow",
       "frames": 39,
       "faf": 39,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2647,7 +2644,7 @@
       "value": "MegaManDThrow",
       "frames": 39,
       "faf": 39,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

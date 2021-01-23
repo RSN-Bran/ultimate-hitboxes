@@ -3199,8 +3199,7 @@
       "value": "DiddyKongGrab",
       "frames": 36,
       "faf": 36,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3240,8 +3239,7 @@
       "value": "DiddyKongDashGrab",
       "frames": 44,
       "faf": 44,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3281,8 +3279,7 @@
       "value": "DiddyKongPivotGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3368,7 +3365,7 @@
       "value": "DiddyKongFThrow",
       "frames": 31,
       "faf": 31,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3395,7 +3392,7 @@
       "value": "DiddyKongBThrow",
       "frames": 51,
       "faf": 51,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3460,7 +3457,9 @@
           "frames": [ 17, 18 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3487,7 +3486,7 @@
       "value": "DiddyKongDThrow",
       "frames": 31,
       "faf": 31,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

@@ -2017,8 +2017,7 @@
       "value": "WarioGrab",
       "frames": 35,
       "faf": 35,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2058,8 +2057,7 @@
       "value": "WarioDashGrab",
       "frames": 43,
       "faf": 43,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2099,8 +2097,7 @@
       "value": "WarioPivotGrab",
       "frames": 38,
       "faf": 38,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2224,7 +2221,9 @@
           "frames": [ 20 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2415,7 +2414,9 @@
           "frames": [ 42, 43, 44, 45, 46 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2480,7 +2481,9 @@
           "frames": [ 24, 25 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2545,7 +2548,9 @@
           "frames": [ 22, 23, 24, 25, 26, 27, 28, 29 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

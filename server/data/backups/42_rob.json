@@ -2881,8 +2881,7 @@
       "value": "ROBGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2922,8 +2921,7 @@
       "value": "ROBDashGrab",
       "frames": 45,
       "faf": 45,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2963,8 +2961,7 @@
       "value": "ROBPivotGrab",
       "frames": 40,
       "faf": 40,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3050,7 +3047,7 @@
       "value": "ROBFThrow",
       "frames": 23,
       "faf": 23,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3077,7 +3074,7 @@
       "value": "ROBBThrow",
       "frames": 26,
       "faf": 26,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3104,7 +3101,7 @@
       "value": "ROBUThrow",
       "frames": 81,
       "faf": 81,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3131,7 +3128,7 @@
       "value": "ROBDThrow",
       "frames": 75,
       "faf": 75,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

@@ -2153,8 +2153,7 @@
       "value": "PacManGrab",
       "frames": 58,
       "faf": 58,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2239,8 +2238,7 @@
       "value": "PacManDashGrab",
       "frames": 66,
       "faf": 66,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2325,8 +2323,7 @@
       "value": "PacManPivotGrab",
       "frames": 61,
       "faf": 61,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2460,7 +2457,7 @@
       "value": "PacManFThrow",
       "frames": 33,
       "faf": 33,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2487,7 +2484,7 @@
       "value": "PacManBThrow",
       "frames": 59,
       "faf": 59,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2514,7 +2511,7 @@
       "value": "PacManUThrow",
       "frames": 37,
       "faf": 37,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2623,7 +2620,9 @@
           "frames": [ 32, 33 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

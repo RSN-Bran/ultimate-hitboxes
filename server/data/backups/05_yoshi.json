@@ -2532,13 +2532,13 @@
         }
       ]
     },
+
     {
       "name": "Grab",
       "value": "YoshiGrab",
       "frames": 48,
       "faf": 48,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "mouth2",
@@ -2585,8 +2585,7 @@
       "value": "YoshiDashGrab",
       "frames": 56,
       "faf": 56,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "mouth2",
@@ -2633,8 +2632,7 @@
       "value": "YoshiPivotGrab",
       "frames": 51,
       "faf": 51,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "mouth2",
@@ -2727,7 +2725,7 @@
       "value": "YoshiFThrow",
       "frames": 39,
       "faf": 39,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2764,7 +2762,7 @@
       "value": "YoshiBThrow",
       "frames": 43,
       "faf": 43,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2801,7 +2799,7 @@
       "value": "YoshiUThrow",
       "frames": 43,
       "faf": 43,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2838,7 +2836,7 @@
       "value": "YoshiDThrow",
       "frames": 50,
       "faf": 50,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2876,7 +2874,7 @@
       "frames": 41,
       "faf": 41,
       "type":  "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "mouth2",

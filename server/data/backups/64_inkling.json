@@ -2616,8 +2616,7 @@
       "value": "InklingGrab",
       "frames": 34,
       "faf": 34,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2657,8 +2656,7 @@
       "value": "InklingDashGrab",
       "frames": 41,
       "faf": 41,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2698,8 +2696,7 @@
       "value": "InklingPivotGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2830,7 +2827,9 @@
           "frames": [ 22 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2867,7 +2866,7 @@
       "value": "InklingBThrow",
       "frames": 36,
       "faf": 36,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2945,7 +2944,9 @@
           "frames": [ 21 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2982,7 +2983,7 @@
       "value": "InklingDThrow",
       "frames": 40,
       "faf": 40,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",

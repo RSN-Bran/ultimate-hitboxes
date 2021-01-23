@@ -4209,7 +4209,7 @@
       "value": "OlimarFThrow",
       "frames": 35,
       "faf": 35,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4312,7 +4312,7 @@
       "value": "OlimarBThrow",
       "frames": 39,
       "faf": 39,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -4431,10 +4431,12 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [21],
+          "frames": [ 21 ],
           "color": "",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "id": "0",
           "part": "0",
@@ -4469,7 +4471,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_pikmin",
-          "frames": [21],
+          "frames": [ 21 ],
           "color": "red",
           "notes": ""
         }
@@ -4481,25 +4483,7 @@
       "frames": 49,
       "faf": 49,
       "hitboxes": [
-        {
-          "kind": "weapon_pikmin_pikmin_attack_absolute_kind_throw",
-          "id": "0",
-          "damage": "7.0",
-          "angle": "85",
-          "kbg": "79",
-          "fkb": "0",
-          "bkb": "81",
-          "hitlag": "0.0",
-          "unk": "true",
-          "facingrestrict": "attack_lr_check_f",
-          "effect": "collision_attr_elec",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_none",
-          "type": "attack_region_throw",
-          "frames": [21],
-          "color": "",
-          "notes": ""
-        },
+        
         {
           "id": "0",
           "part": "0",
@@ -4534,8 +4518,29 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_pikmin",
-          "frames": [21],
+          "frames": [ 21 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "throws": [
+        {
+          "kind": "weapon_pikmin_pikmin_attack_absolute_kind_throw",
+          "id": "0",
+          "damage": "7.0",
+          "angle": "85",
+          "kbg": "79",
+          "fkb": "0",
+          "bkb": "81",
+          "hitlag": "0.0",
+          "unk": "true",
+          "facingrestrict": "attack_lr_check_f",
+          "effect": "collision_attr_elec",
+          "sfxlevel": "attack_sound_level_s",
+          "sfxtype": "collision_sound_attr_none",
+          "type": "attack_region_throw",
+          "frames": [ 21 ],
+          "color": "",
           "notes": ""
         }
       ]
@@ -4546,6 +4551,46 @@
       "frames": 49,
       "faf": 49,
       "hitboxes": [
+        {
+          "id": "0",
+          "part": "0",
+          "bone": "head1",
+          "damage": "1.0",
+          "angle": "90",
+          "kbg": "200",
+          "fkb": "0",
+          "bkb": "50",
+          "size": "5.0",
+          "x": "0.0",
+          "y": "0.0",
+          "z": "0.0",
+          "hitlag": "1.0",
+          "sdi": "1.0",
+          "clang_rebound": "attack_setoff_kind_off",
+          "facingrestrict": "attack_lr_check_f",
+          "setweight": "false",
+          "shielddamage": "0",
+          "trip": "0.0",
+          "rehit": "0",
+          "reflectable": "false",
+          "absorbable": "false",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "true",
+          "ground_or_air": "collision_situation_mask_ga",
+          "hitbits": "collision_category_mask_all",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_s",
+          "sfxtype": "collision_sound_attr_punch",
+          "type": "attack_region_pikmin",
+          "frames": [ 21 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "throws": [
         {
           "kind": "weapon_pikmin_pikmin_attack_absolute_kind_throw",
           "id": "0",
@@ -4561,10 +4606,19 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [21],
+          "frames": [ 21 ],
           "color": "",
           "notes": ""
-        },
+        }
+      ]
+    },
+    {
+      "name": "Up Throw (Purple)",
+      "value": "OlimarPurpleUThrow",
+      "frames": 49,
+      "faf": 49,
+      "hitboxes": [
+
         {
           "id": "0",
           "part": "0",
@@ -4599,18 +4653,12 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_pikmin",
-          "frames": [21],
+          "frames": [ 21 ],
           "color": "red",
           "notes": ""
         }
-      ]
-    },
-    {
-      "name": "Up Throw (Purple)",
-      "value": "OlimarPurpleUThrow",
-      "frames": 49,
-      "faf": 49,
-      "hitboxes": [
+      ],
+      "throws": [
         {
           "kind": "weapon_pikmin_pikmin_attack_absolute_kind_throw",
           "id": "0",
@@ -4626,10 +4674,19 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [21],
+          "frames": [ 21 ],
           "color": "",
           "notes": ""
-        },
+        }
+      ]
+    },
+    {
+      "name": "Up Throw (White)",
+      "value": "OlimarWhiteUThrow",
+      "frames": 49,
+      "faf": 49,
+      "hitboxes": [
+        
         {
           "id": "0",
           "part": "0",
@@ -4660,22 +4717,16 @@
           "hitbits": "collision_category_mask_all",
           "collisionpart": "collision_part_mask_all",
           "friendlyfire": "false",
-          "effect": "collision_attr_normal",
+          "effect": "collision_attr_purple",
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_pikmin",
-          "frames": [21],
+          "frames": [ 21 ],
           "color": "red",
           "notes": ""
         }
-      ]
-    },
-    {
-      "name": "Up Throw (White)",
-      "value": "OlimarWhiteUThrow",
-      "frames": 49,
-      "faf": 49,
-      "hitboxes": [
+      ],
+      "throws": [
         {
           "kind": "weapon_pikmin_pikmin_attack_absolute_kind_throw",
           "id": "0",
@@ -4691,46 +4742,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [21],
+          "frames": [ 21 ],
           "color": "",
-          "notes": ""
-        },
-        {
-          "id": "0",
-          "part": "0",
-          "bone": "head1",
-          "damage": "1.0",
-          "angle": "90",
-          "kbg": "200",
-          "fkb": "0",
-          "bkb": "50",
-          "size": "5.0",
-          "x": "0.0",
-          "y": "0.0",
-          "z": "0.0",
-          "hitlag": "1.0",
-          "sdi": "1.0",
-          "clang_rebound": "attack_setoff_kind_off",
-          "facingrestrict": "attack_lr_check_f",
-          "setweight": "false",
-          "shielddamage": "0",
-          "trip": "0.0",
-          "rehit": "0",
-          "reflectable": "false",
-          "absorbable": "false",
-          "flinchless": "false",
-          "disablehitlag": "false",
-          "direct_hitbox": "true",
-          "ground_or_air": "collision_situation_mask_ga",
-          "hitbits": "collision_category_mask_all",
-          "collisionpart": "collision_part_mask_all",
-          "friendlyfire": "false",
-          "effect": "collision_attr_purple",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_punch",
-          "type": "attack_region_pikmin",
-          "frames": [21],
-          "color": "red",
           "notes": ""
         }
       ]

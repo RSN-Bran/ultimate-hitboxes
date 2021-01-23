@@ -2201,8 +2201,7 @@
       "value": "NessGrab",
       "frames": 37,
       "faf": 37,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2242,8 +2241,7 @@
       "value": "NessDashGrab",
       "frames": 45,
       "faf": 45,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2283,8 +2281,7 @@
       "value": "NessPivotGrab",
       "frames": 40,
       "faf": 40,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -2370,7 +2367,7 @@
       "value": "NessFThrow",
       "frames": 52,
       "faf": 52,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2407,7 +2404,7 @@
       "value": "NessBThrow",
       "frames": 52,
       "faf": 52,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2444,7 +2441,7 @@
       "value": "NessUThrow",
       "frames": 55,
       "faf": 55,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2470,7 +2467,7 @@
           "type": "Invincible",
           "bone": "all",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36],
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 ],
           "color": "lightgreen",
           "notes": ""
         }
@@ -2563,7 +2560,9 @@
           "frames": [ 26, 27, 28, 29 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -2637,7 +2636,45 @@
           "type": "attack_region_psi",
           "frames": [],
           "color": "red",
-          "notes": ""
+          "notes": "Max Charge"
+        },
+        {
+          "id": "0",
+          "part": "0",
+          "bone": "top",
+          "damage": "1.0",
+          "angle": "70",
+          "kbg": "65",
+          "fkb": "0",
+          "bkb": "50",
+          "size": "10.0",
+          "x": "0.0",
+          "y": "0.0",
+          "z": "0.0",
+          "hitlag": "1.0",
+          "sdi": "1.0",
+          "clang_rebound": "attack_setoff_kind_off",
+          "facingrestrict": "attack_lr_check_f",
+          "setweight": "false",
+          "shielddamage": "0",
+          "trip": "0.0",
+          "rehit": "0",
+          "reflectable": "true",
+          "absorbable": "true",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "false",
+          "ground_or_air": "collision_situation_mask_ga",
+          "hitbits": "collision_category_mask_all",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_elec",
+          "sfxlevel": "attack_sound_level_l",
+          "sfxtype": "collision_sound_attr_fire",
+          "type": "attack_region_psi",
+          "frames": [],
+          "color": "purple",
+          "notes": "Min Charge"
         }
       ]
     },

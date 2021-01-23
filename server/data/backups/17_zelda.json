@@ -3445,8 +3445,7 @@
       "value": "ZeldaGrab",
       "frames": 39,
       "faf": 39,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3486,8 +3485,7 @@
       "value": "ZeldaDashGrab",
       "frames": 47,
       "faf": 47,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3527,8 +3525,7 @@
       "value": "ZeldaPivotGrab",
       "frames": 42,
       "faf": 42,
-      "type": "grab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -3614,7 +3611,7 @@
       "value": "ZeldaFThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3634,6 +3631,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3641,7 +3648,7 @@
       "value": "ZeldaBThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3661,6 +3668,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3668,7 +3685,7 @@
       "value": "ZeldaUThrow",
       "frames": 49,
       "faf": 49,
-      "hitboxes": [
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3686,6 +3703,16 @@
           "type": "attack_region_throw",
           "frames": [ 30 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -3733,7 +3760,9 @@
           "frames": [ 25, 26, 31, 32, 37, 38, 43, 44 ],
           "color": "red",
           "notes": ""
-        },
+        }
+      ],
+      "throws": [
         {
           "kind": "fighter_attack_absolute_kind_throw",
           "id": "0",
@@ -3749,8 +3778,18 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [ 51 ],
+          "frames": [ 50 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,45,46,47,48,49,50 ],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -3923,6 +3962,16 @@
           "type": "attack_region_magic",
           "frames": [ 26 ],
           "color": "d00890",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -4134,6 +4183,16 @@
           "color": "purple",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [17, 18, 19, 20, 21, 22, 23, 24, 25, 26,27,28,29,30,31,32,33,34 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -4176,7 +4235,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_magic",
-          "frames": [6,7],
+          "frames": [ 6, 7 ],
           "color": "red",
           "notes": ""
         },
@@ -4254,6 +4313,16 @@
           "type": "attack_region_magic",
           "frames": [ 35, 36 ],
           "color": "purple",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -5208,6 +5277,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -5296,6 +5375,16 @@
           "type": "attack_region_kick",
           "frames": [ 21, 22 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -5388,6 +5477,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -5476,6 +5575,16 @@
           "type": "attack_region_kick",
           "frames": [ 27, 28 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7],
+          "color": "darkblue",
           "notes": ""
         }
       ]

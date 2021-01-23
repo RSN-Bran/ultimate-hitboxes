@@ -697,9 +697,9 @@
     "name": "Joker",
     "value": "joker",
     "number": "71",
-    "completed": false,
+    "completed": true,
     "series": "persona",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 79,

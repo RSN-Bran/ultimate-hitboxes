@@ -72,13 +72,18 @@ function TableEntry(props) {
 
     //If adding the frames variable, only show the first frame in the table and pass in a function to change to that frame on click
     if (field.variable === "frames") {
-      tdList.push(<td
-        className={className}
-        style={props.hitbox.frames.length !== 0 ? { "cursor": "pointer" } : {}}
-        onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}
-      >
-        {condenseFrames(props.hitbox[field.variable])}
-      </td>)
+      if (props.hitbox.frames.length === 0) {
+        tdList.push(<td className={className}>-</td>)
+      }
+      else {
+        tdList.push(<td
+          className={className}
+          style={props.hitbox.frames.length !== 0 ? { "cursor": "pointer" } : {}}
+          onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}
+        >
+          {condenseFrames(props.hitbox[field.variable])}
+        </td>)
+      }
     }
 
     //If adding the damage variable, multiply the value by 1.2 if the damageMultiplier setting is enabled

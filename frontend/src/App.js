@@ -374,7 +374,7 @@ class App extends React.Component {
     clearInterval(this.loadingTimer);
     this.loadingTimer = undefined
 
-    if (sessionStorage.getItem(`/${character.number}_${character.value}/data`) !== null /*&& process.env.NODE_ENV === "production"*/) {
+    if (sessionStorage.getItem(`/${character.number}_${character.value}/data`) !== null && process.env.NODE_ENV === "production") {
       let promise = new Promise(function (resolve, reject) {
         resolve()
       })
@@ -405,7 +405,7 @@ class App extends React.Component {
 
   updateCurrentMove(move, frame) {
 
-    if (sessionStorage.getItem(`/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`) !== null /*&& process.env.NODE_ENV === "production"*/) {
+    if (sessionStorage.getItem(`/${this.state.currentCharacterData.number}_${this.state.currentCharacterData.value}/${move.toLowerCase()}/data`) !== null && process.env.NODE_ENV === "production") {
       let promise = new Promise(function (resolve, reject) {
         resolve()
       })

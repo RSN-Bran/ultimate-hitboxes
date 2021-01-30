@@ -706,9 +706,9 @@
     "name": "Hero",
     "value": "hero",
     "number": "72",
-    "completed": false,
+    "completed": true,
     "series": "dragon-quest",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 80,

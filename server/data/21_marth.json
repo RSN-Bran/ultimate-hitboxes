@@ -2752,8 +2752,18 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_throw",
-          "frames": [15],
+          "frames": [ 15 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -2783,6 +2793,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -2810,6 +2830,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -2835,6 +2865,16 @@
           "type": "attack_region_throw",
           "frames": [ 16 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -4650,7 +4690,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [5,6],
+          "frames": [ 5, 6 ],
           "color": "red",
           "notes": ""
         },
@@ -4688,7 +4728,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [5,6],
+          "frames": [ 5, 6 ],
           "color": "red",
           "notes": ""
         },
@@ -4726,7 +4766,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [6,7,8,9,10,11],
+          "frames": [ 6, 7, 8, 9, 10, 11 ],
           "color": "purple",
           "notes": ""
         },
@@ -4764,12 +4804,22 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [6,7,8,9,10,11],
+          "frames": [ 6, 7, 8, 9, 10, 11 ],
           "color": "purple",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [4, 5],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
-    },    
+    },
     {
       "name": "Dolphin Slash (Aerial)",
       "value": "MarthDolphinSlashA",
@@ -4810,7 +4860,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [5,6],
+          "frames": [ 5, 6 ],
           "color": "red",
           "notes": ""
         },
@@ -4848,7 +4898,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [5,6],
+          "frames": [ 5, 6 ],
           "color": "red",
           "notes": ""
         },
@@ -4886,7 +4936,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [6,7,8,9,10,11],
+          "frames": [ 6, 7, 8, 9, 10, 11 ],
           "color": "purple",
           "notes": ""
         },
@@ -4924,19 +4974,41 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [6,7,8,9,10,11],
+          "frames": [ 6, 7, 8, 9, 10, 11 ],
           "color": "purple",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
-    },    
+    },
     {
       "name": "Counter",
       "value": "MarthCounter",
       "frames": 64,
       "faf": 64,
       "hitboxes": [
-        
+
+
+      ],
+
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [5, 6 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -4979,7 +5051,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_sword",
-          "frames": [5,6,7],
+          "frames": [ 5, 6, 7 ],
           "color": "red",
           "notes": ""
         },
@@ -5017,7 +5089,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_sword",
-          "frames": [5,6,7],
+          "frames": [ 5, 6, 7 ],
           "color": "red",
           "notes": ""
         },
@@ -5055,7 +5127,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_sword",
-          "frames": [5,6,7],
+          "frames": [ 5, 6, 7 ],
           "color": "red",
           "notes": ""
         },
@@ -5093,8 +5165,18 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_sword",
-          "frames": [5,6,7],
+          "frames": [ 5, 6, 7 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -5142,8 +5224,18 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [23,24,25],
+          "frames": [ 23, 24, 25 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -5191,7 +5283,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [16,17],
+          "frames": [ 16, 17 ],
           "color": "red",
           "notes": ""
         },
@@ -5232,8 +5324,18 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [23,24],
+          "frames": [ 23, 24 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -5281,7 +5383,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [16,17],
+          "frames": [ 16, 17 ],
           "color": "red",
           "notes": ""
         },
@@ -5322,8 +5424,18 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [22,23],
+          "frames": [ 22, 23 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -5371,7 +5483,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [20,21],
+          "frames": [ 20, 21 ],
           "color": "red",
           "notes": ""
         },
@@ -5412,8 +5524,18 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [29,30],
+          "frames": [ 29, 30 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]

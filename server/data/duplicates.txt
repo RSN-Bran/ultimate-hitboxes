@@ -22,6 +22,7 @@ Zelda Neutral Special has one extra frame of intangibility
 Zelda Up Special should disappear one frame earlier
 
 Ganondorf UpTilt missing a frame
+Ganondorf Trip attack one extra frame of intangability
 
 Pit Jab has an extra frame
 Pit Upair has an extra frame

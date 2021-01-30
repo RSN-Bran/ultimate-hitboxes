@@ -1202,7 +1202,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [ 6, 7, 8, 9, 10, 11 ],
+          "frames": [ 6, 7, 8, 9, 10],
           "color": "red",
           "notes": ""
         },
@@ -1243,7 +1243,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [ 6, 7, 8, 9, 10, 11 ],
+          "frames": [ 6, 7, 8, 9, 10 ],
           "color": "red",
           "notes": ""
         },
@@ -1284,7 +1284,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_kick",
-          "frames": [ 6, 7, 8, 9, 10, 11 ],
+          "frames": [ 6, 7, 8, 9, 10 ],
           "color": "red",
           "notes": ""
         }
@@ -4736,8 +4736,8 @@
     {
       "name": "Kaboom",
       "value": "HeroKaboom",
-      "frames": 60,
-      "faf": 60,
+      "frames": 59,
+      "faf": 59,
       "hitboxes": [
         {
           "id": "0",
@@ -4776,8 +4776,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_fire",
           "type": "attack_region_magic",
-          "frames": [],
-          "color": "",
+          "frames": [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4817,8 +4817,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_none",
-          "frames": [],
-          "color": "",
+          "frames": [29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44],
+          "color": "goldenrod",
           "notes": ""
         },
         {
@@ -4858,8 +4858,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_none",
           "type": "attack_region_none",
-          "frames": [],
-          "color": "",
+          "frames": [ 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44 ],
+          "color": "yellow",
           "notes": ""
         },
         {
@@ -4899,8 +4899,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_bomb",
           "type": "attack_region_magic",
-          "frames": [],
-          "color": "",
+          "frames": [45,46,47,48,49,50,51,52,53,54,55,56,57,58,59],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4940,8 +4940,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_bomb",
           "type": "attack_region_magic",
-          "frames": [],
-          "color": "",
+          "frames": [45,46,47,48,49,50,51,52,53,54,55,56,57,58,59],
+          "color": "fuchsia",
           "notes": ""
         }
       ]
@@ -6311,7 +6311,7 @@
           "sfxtype": "collision_sound_attr_bomb",
           "type": "attack_region_magic",
           "frames": [4,5,6,7,8,9],
-          "color": "yellow",
+          "color": "goldenrod",
           "notes": ""
         },
         {

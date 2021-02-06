@@ -91,3 +91,5 @@ Isabelle Up Throw Invincibility missing on frame 20
 Plant Up Tilt missing a frame
 Plant Back Throw invincibility wears off one frame early
 Plant Footstool attack missing startup frames
+
+Banjo Wonderwing cooldown frames

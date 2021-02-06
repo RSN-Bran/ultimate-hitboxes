@@ -715,9 +715,9 @@
     "name": "Banjo & Kazooie",
     "value": "banjo-kazooie",
     "number": "73",
-    "completed": false,
+    "completed": true,
     "series": "banjo-kazooie",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 81,

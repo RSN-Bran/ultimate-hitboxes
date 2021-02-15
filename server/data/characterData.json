@@ -724,9 +724,9 @@
     "name": "Terry",
     "value": "terry",
     "number": "74",
-    "completed": false,
+    "completed": true,
     "series": "fatal-fury",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 82,

@@ -3366,7 +3366,7 @@
       "value": "MetaKnightMachTornado",
       "frames": 361,
       "faf": 361,
-      "complete": false,
+      "complete":  false,
       "hitboxes": [
         {
           "id": "0",

@@ -733,9 +733,9 @@
     "name": "Byleth",
     "value": "byleth",
     "number": "75",
-    "completed": false,
+    "completed": true,
     "series": "fire-emblem",
-    "version": ""
+    "version": "10.1.0"
   },
   {
     "id": 83,

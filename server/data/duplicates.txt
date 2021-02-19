@@ -95,3 +95,5 @@ Plant Footstool attack missing startup frames
 Banjo Wonderwing cooldown frames
 
 Terry Fsmash missing one startup frame
+
+Byleth DSmash merged frame

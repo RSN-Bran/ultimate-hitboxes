@@ -763,5 +763,23 @@
     "completed": true,
     "series": "final-fantasy",
     "version": "10.1.0"
+  },
+  {
+    "id": 86,
+    "name": "Pyra",
+    "value": "pyra",
+    "number": "79",
+    "completed": false,
+    "series": "xenoblade",
+    "version": ""
+  },
+  {
+    "id": 87,
+    "name": "Mythra",
+    "value": "mythra",
+    "number": "80",
+    "completed": false,
+    "series": "xenoblade",
+    "version": ""
   }
 ]

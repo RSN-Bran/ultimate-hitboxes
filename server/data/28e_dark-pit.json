@@ -3072,6 +3072,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 ],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3142,6 +3152,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3207,6 +3227,16 @@
           "type": "attack_region_throw",
           "frames": [ 16 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -3305,6 +3335,21 @@
           "type": "attack_region_none",
           "frames": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
           "color": "red",
+          "notes": ""
+        },
+        {
+          "frames": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+          "color": "aqua",
+          "notes": "Reflector"
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Super Armor",
+          "bone": "all",
+          "hp": "",
+          "frames": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
+          "color": "#2F152E",
           "notes": ""
         }
       ]
@@ -3851,6 +3896,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,27 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3939,6 +3994,16 @@
           "type": "attack_region_palutena",
           "frames": [ 24, 25 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -4031,6 +4096,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -4119,6 +4194,16 @@
           "type": "attack_region_palutena",
           "frames": [ 24, 25 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]

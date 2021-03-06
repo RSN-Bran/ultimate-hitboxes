@@ -3481,8 +3481,8 @@
     {
       "name": "Gordo Throw",
       "value": "KingDededeGordoThrow",
-      "frames": 60,
-      "faf": 60,
+      "frames": 58,
+      "faf": 58,
       "hitboxes": [
         {
           "id": "0",

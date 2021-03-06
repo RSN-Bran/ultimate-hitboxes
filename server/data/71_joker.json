@@ -15584,8 +15584,8 @@
     {
       "name": "Eiha",
       "value": "JokerEiha",
-      "frames": 49,
-      "faf": 49,
+      "frames": 52,
+      "faf": 52,
       "hitboxes": [
         {
           "id": "0",
@@ -16110,10 +16110,10 @@
     },
 
     {
-      "name": "Tetrakarn Makarakarn",
+      "name": "Tetrakarn & Makarakarn",
       "value": "JokerTetrakarn_Makarakarn",
-      "frames": 53,
-      "faf": 53,
+      "frames": 56,
+      "faf": 56,
       "hitboxes": [
         {
           "frames": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],

@@ -8,6 +8,7 @@ import '../css/Header.css';
 
 //Import Media
 import twitter from '../media/twitter.png'
+import discord from '../media/discord.png'
 
 import github_dark from '../media/darkmode/github.png'
 import github_light from '../media/lightmode/github.png'
@@ -21,7 +22,6 @@ import info_dark from '../media/darkmode/info.png'
 import info_light from '../media/lightmode/info.png'
 const info = [info_dark, info_light]
 
-//Import Media
 import back_dark from '../media/darkmode/back.png'
 import back_light from '../media/lightmode/back.png'
 const back = [back_dark, back_light]
@@ -45,7 +45,7 @@ function Header(props) {
           <img id="settingsButton" className="helpButtons" src={settings[props.dark_light]} onClick={props.showSettings} />
         </Link>
 
-        <img id="backButton" className="helpButtons" src={back[props.dark_light]} onClick={() => history.goBack()} hidden={screen.width < 500}/>
+        <img id="backButton" className="helpButtons" src={back[props.dark_light]} onClick={() => history.goBack()} />
 
       </div>
 
@@ -61,6 +61,9 @@ function Header(props) {
         </a>
         <a href="https://github.com/RSN-Bran/ultimate-hitboxes">
           <img id="github" className="linkButtons" src={github[props.dark_light]}/>
+        </a>
+        <a href="https://discord.gg/jZ9EKJpwde">
+          <img id="discord" className="linkButtons" src={discord} />
         </a>
       </div>
     </div>

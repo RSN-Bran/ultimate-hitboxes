@@ -21,10 +21,7 @@ h5 {
 	cursor: pointer;
 }
 
-#help, #links {
-	width: 20%;
-	display: inline-block;
-}
+
 
 #title {
 	width: 60%;
@@ -61,8 +58,12 @@ h5 {
 		width: 15%
 	}
 
-	#twitter, #settingsButton, #backButton {
+	#twitter, #github, #settingsButton, #backButton {
 		margin-left: 5%;
+	}
+	#help, #links {
+		width: 20%;
+		display: inline-block;
 	}
 }
 
@@ -73,14 +74,22 @@ h5 {
 	}
 
 	.helpButtons, .linkButtons {
-		width: 40%;
+		width: 30%;
 	}
 
-	#twitter, #settingsButton, #backButton {
-		margin-left: 10%;
+	#twitter, #github, #settingsButton, #backButton {
+		margin-left: 5%;
+	}
+
+	#title {
+		width: 40%
 	}
 
 	h3 {
 		font-size: 15px;
+	}
+	#help, #links {
+		width: 30%;
+		display: inline-block;
 	}
 }

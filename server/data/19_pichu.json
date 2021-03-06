@@ -1034,6 +1034,24 @@
           "color": "purple",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "mimir1",
+          "hp": "",
+          "frames": [ 3, 4, 5, 6, 7, 8, 9 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "mimil1",
+          "hp": "",
+          "frames": [ 3, 4, 5, 6, 7, 8, 9 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {

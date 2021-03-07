@@ -769,17 +769,17 @@
     "name": "Pyra",
     "value": "pyra",
     "number": "79",
-    "completed": false,
+    "completed": true,
     "series": "xenoblade",
-    "version": ""
+    "version": "11.0.0"
   },
   {
     "id": 87,
     "name": "Mythra",
     "value": "mythra",
     "number": "80",
-    "completed": false,
+    "completed": true,
     "series": "xenoblade",
-    "version": ""
+    "version": "11.0.0"
   }
 ]

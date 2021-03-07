@@ -101,3 +101,6 @@ Byleth DSmash merged frame
 Min Min Jab 1 missing startup frame
 Min Min Up Smash missing intang
 Min Min Dash attack extra frame
+
+Pyra Fsmash 2 merged frames
+Pyra Nair missing a frame

@@ -37,18 +37,18 @@ function DataTable(props) {
 
   //Data for which table entries should be displayed during certain table configurations
   let fields = {
-    grabsBasicNoFrame: [size, ground_or_air, notes, more],
-    grabsBasic: [frames, size, ground_or_air, notes, more],
+    grabsBasicNoFrame: [id, size, ground_or_air, notes, more],
+    grabsBasic: [id, frames, size, ground_or_air, notes, more],
     grabsExtra: [id, frames, size, ground_or_air, bone, x, y, z, notes, more],
     grabsExtraNoFrame: [id, size, ground_or_air, bone, x, y, z, notes, more],
-    hitboxesBasicNoFrame: [damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
+    hitboxesBasicNoFrame: [id, damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
     hitboxesExtraNoFrame: [id, part, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
-    hitboxesBasic: [frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
+    hitboxesBasic: [id, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, notes, more],
     hitboxesExtra: [id, part, frames, damage, shielddamage, angle, bkb, kbg, fkb, trip, sdi, ground_or_air, size, rehit, bone, x, y, z, notes, more],
     hurtboxesBasic: [frames, hurtboxType, bone, hp, notes],
-    throwsBasic: [frames, damage, angle, bkb, kbg, fkb, notes, more],
+    throwsBasic: [id, frames, damage, angle, bkb, kbg, fkb, notes, more],
     throwsExtra: [id, frames, damage, angle, bkb, kbg, fkb, notes, more],
-    throwsBasicNoFrame: [damage, angle, bkb, kbg, fkb, notes, more],
+    throwsBasicNoFrame: [id, damage, angle, bkb, kbg, fkb, notes, more],
     throwsExtraNoFrame: [id, damage, angle, bkb, kbg, fkb, notes, more],
     hurtboxesExtra: [frames, hurtboxType, bone, hp, notes]
 

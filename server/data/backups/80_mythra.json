@@ -9313,7 +9313,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+          "frames": [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60 ],
           "color": "red",
           "notes": ""
         },
@@ -9354,7 +9354,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+          "frames": [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60 ],
           "color": "red",
           "notes": ""
         },
@@ -9395,7 +9395,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+          "frames": [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60 ],
           "color": "red",
           "notes": ""
         }
@@ -11301,6 +11301,7 @@
       "value": "MythraLightningBusterMax",
       "frames": 68,
       "faf": 68,
+      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -13852,6 +13853,7 @@
       "value": "MythraPhotonEdge",
       "frames": 108,
       "faf": 108,
+      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -14020,10 +14022,11 @@
       ]
     },
     {
-      "name": "Photon Edge 2",
+      "name": "Photon Edge (Hurtbox)",
       "value": "MythraPhotonEdge2",
       "frames": 39,
       "faf": 39,
+      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -14234,56 +14237,6 @@
     },
 
     {
-      "name": "Ray of Punishment",
-      "value": "MythraRayOfPunishment",
-      "frames": 57,
-      "faf": 57,
-      "hitboxes": [
-        {
-          "id": "0",
-          "part": "0",
-          "bone": "top",
-          "damage": "2.0",
-          "angle": "72",
-          "kbg": "55",
-          "fkb": "0",
-          "bkb": "45",
-          "size": "6.0",
-          "x": "0.0",
-          "y": "0.0",
-          "z": "0.0",
-          "x2": "lua_void",
-          "y2": "lua_void",
-          "z2": "lua_void",
-          "hitlag": "1.0",
-          "sdi": "1.0",
-          "clang_rebound": "attack_setoff_kind_on",
-          "facingrestrict": "attack_lr_check_f",
-          "setweight": "false",
-          "shielddamage": "-4",
-          "trip": "0.0",
-          "rehit": "0",
-          "reflectable": "true",
-          "absorbable": "true",
-          "flinchless": "false",
-          "disablehitlag": "false",
-          "direct_hitbox": "false",
-          "ground_or_air": "collision_situation_mask_ga",
-          "hitbits": "collision_category_mask_all",
-          "collisionpart": "collision_part_mask_all",
-          "friendlyfire": "false",
-          "effect": "collision_attr_magic",
-          "sfxlevel": "attack_sound_level_s",
-          "sfxtype": "collision_sound_attr_magic",
-          "type": "attack_region_magic",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        }
-      ]
-
-    },
-    {
       "name": "Up Special",
       "value": "MythraUpSpecial",
       "frames": 27,
@@ -14326,8 +14279,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14367,8 +14320,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14408,8 +14361,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14449,8 +14402,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14490,8 +14443,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14531,8 +14484,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14572,8 +14525,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14613,8 +14566,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14654,8 +14607,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 12 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14695,8 +14648,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 12 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14736,8 +14689,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 12 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -14777,12 +14730,145 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_cutup",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [ 12 ],
+          "color": "red",
           "notes": ""
         }
       ]
+    },
+    {
+      "name": "Ray of Punishment",
+      "value": "MythraRayOfPunishment",
+      "frames": 57,
+      "faf": 57,
+      "hitboxes": [
+        {
+          "id": "0",
+          "part": "0",
+          "bone": "top",
+          "damage": "2.0",
+          "angle": "72",
+          "kbg": "55",
+          "fkb": "0",
+          "bkb": "45",
+          "size": "6.0",
+          "x": "0.0",
+          "y": "0.0",
+          "z": "0.0",
+          "x2": "lua_void",
+          "y2": "lua_void",
+          "z2": "lua_void",
+          "hitlag": "1.0",
+          "sdi": "1.0",
+          "clang_rebound": "attack_setoff_kind_on",
+          "facingrestrict": "attack_lr_check_f",
+          "setweight": "false",
+          "shielddamage": "-4",
+          "trip": "0.0",
+          "rehit": "0",
+          "reflectable": "true",
+          "absorbable": "true",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "false",
+          "ground_or_air": "collision_situation_mask_ga",
+          "hitbits": "collision_category_mask_all",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_magic",
+          "sfxlevel": "attack_sound_level_s",
+          "sfxtype": "collision_sound_attr_magic",
+          "type": "attack_region_magic",
+          "frames": [ 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ],
+          "color": "red",
+          "notes": ""
+        },
+        {
+          "id": "0",
+          "part": "0",
+          "bone": "top",
+          "damage": "4.5",
+          "angle": "56",
+          "kbg": "100",
+          "fkb": "0",
+          "bkb": "55",
+          "size": "6.0",
+          "x": "0.0",
+          "y": "3.0",
+          "z": "0.0",
+          "x2": "lua_void",
+          "y2": "lua_void",
+          "z2": "lua_void",
+          "hitlag": "1.4",
+          "sdi": "1.0",
+          "clang_rebound": "attack_setoff_kind_thru",
+          "facingrestrict": "attack_lr_check_f",
+          "setweight": "false",
+          "shielddamage": "0",
+          "trip": "0.0",
+          "rehit": "0",
+          "reflectable": "true",
+          "absorbable": "true",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "false",
+          "ground_or_air": "collision_situation_mask_ga",
+          "hitbits": "collision_category_mask_all",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_magic",
+          "sfxlevel": "attack_sound_level_l",
+          "sfxtype": "collision_sound_attr_magic",
+          "type": "attack_region_magic",
+          "frames": [],
+          "color": "",
+          "notes": "Burst"
+        },
+        {
+          "id": "1",
+          "part": "0",
+          "bone": "top",
+          "damage": "3.0",
+          "angle": "56",
+          "kbg": "80",
+          "fkb": "0",
+          "bkb": "55",
+          "size": "11.0",
+          "x": "0.0",
+          "y": "3.0",
+          "z": "0.0",
+          "x2": "lua_void",
+          "y2": "lua_void",
+          "z2": "lua_void",
+          "hitlag": "1.0",
+          "sdi": "1.0",
+          "clang_rebound": "attack_setoff_kind_thru",
+          "facingrestrict": "attack_lr_check_f",
+          "setweight": "false",
+          "shielddamage": "0",
+          "trip": "0.0",
+          "rehit": "0",
+          "reflectable": "true",
+          "absorbable": "true",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "false",
+          "ground_or_air": "collision_situation_mask_ga",
+          "hitbits": "collision_category_mask_all",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_magic",
+          "sfxlevel": "attack_sound_level_m",
+          "sfxtype": "collision_sound_attr_magic",
+          "type": "attack_region_magic",
+          "frames": [],
+          "color": "",
+          "notes": "Burst"
+        }
+      ]
+
     }
+
 
   ]
 }

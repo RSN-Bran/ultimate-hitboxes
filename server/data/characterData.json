@@ -742,7 +742,7 @@
     "name": "Min Min",
     "value": "min-min",
     "number": "76",
-    "completed": false,
+    "completed": true,
     "series": "arms",
     "version": "11.0.0"
   },

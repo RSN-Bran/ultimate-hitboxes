@@ -50,7 +50,8 @@ function DataTable(props) {
     throwsExtra: [id, frames, damage, angle, bkb, kbg, fkb, notes, more],
     throwsBasicNoFrame: [id, damage, angle, bkb, kbg, fkb, notes, more],
     throwsExtraNoFrame: [id, damage, angle, bkb, kbg, fkb, notes, more],
-    hurtboxesExtra: [frames, hurtboxType, bone, hp, notes]
+    hurtboxesExtra: [frames, hurtboxType, bone, hp, notes],
+    hurtboxesExtraNoFrame: [hurtboxType, bone, hp, notes]
 
   }
 

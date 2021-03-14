@@ -522,7 +522,23 @@ class App extends React.Component {
               />
             )} />
 
-            <Route path={['/', '/characters']} exact render={() => (
+            <Route path={['/']} exact render={() => (
+              <div>
+                <div className="info">Check out hundreds of moves from Smash Ultimate at various speeds and view in depth details on every hitbox related to each move! </div>
+                <CharacterList
+                  characterListData={this.state.characterListData}
+                  updateCurrentCharacter={this.updateCurrentCharacter}
+                  getCharacterData={this.getCharacterData}
+                  search={this.state.search}
+                  changeSearchValue={this.changeSearchValue}
+                  setInitialSettings={this.setInitialSettings}
+                  settings={this.state.settings}
+                  changeSettings={this.changeSettings}
+                  />
+              </div>
+            )} />
+
+            <Route path={['/characters']} exact render={() => (
               <CharacterList
                 characterListData={this.state.characterListData}
                 updateCurrentCharacter={this.updateCurrentCharacter}

@@ -586,7 +586,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [ 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
+          "frames": [ 11, 12, 13, 14, 15 ],
           "color": "purple",
           "notes": ""
         }
@@ -1009,6 +1009,16 @@
           "type": "attack_region_head",
           "frames": [ 13 ],
           "color": "purple",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [ 8, 9, 10, 11, 12, 13, 14 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -2747,6 +2757,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
 
@@ -2755,7 +2775,6 @@
       "value": "WarioBikeDrive",
       "frames": 38,
       "faf": 38,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -2791,8 +2810,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2829,8 +2848,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
-          "frames": [],
-          "color": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ],
+          "color": "fuchsia",
           "notes": ""
         }
       ]
@@ -2840,7 +2859,6 @@
       "value": "WarioBikeTurn",
       "frames": 64,
       "faf": 64,
-      "complete": false,
       "hitboxes": [
         {
           "id": "0",
@@ -2882,6 +2900,47 @@
           "frames": [],
           "color": "",
           "notes": ""
+        },
+        {
+          "id": "0",
+          "part": "0",
+          "bone": "top",
+          "damage": "3.0",
+          "angle": "25",
+          "kbg": "80",
+          "fkb": "0",
+          "bkb": "40",
+          "size": "4.5",
+          "x": "0.0",
+          "y": "4.0",
+          "z": "12.0",
+          "x2": "0.0",
+          "y2": "4.0",
+          "z2": "10.0",
+          "hitlag": "1.0",
+          "sdi": "1.0",
+          "clang_rebound": "attack_setoff_kind_on",
+          "facingrestrict": "attack_lr_check_pos",
+          "setweight": "false",
+          "shielddamage": "0",
+          "trip": "0.0",
+          "rehit": "10",
+          "reflectable": "false",
+          "absorbable": "false",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "true",
+          "ground_or_air": "collision_situation_mask_g",
+          "hitbits": "collision_category_mask_all",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_m",
+          "sfxtype": "collision_sound_attr_kick",
+          "type": "attack_region_object",
+          "frames": [],
+          "color": "",
+          "notes": ""
         }
       ]
     },
@@ -2890,8 +2949,48 @@
       "value": "WarioBikeWheelie",
       "frames": 82,
       "faf": 82,
-      "complete": false,
       "hitboxes": [
+        {
+          "id": "0",
+          "part": "0",
+          "bone": "hip",
+          "damage": "8.3",
+          "angle": "70",
+          "kbg": "100",
+          "fkb": "0",
+          "bkb": "50",
+          "size": "7.0",
+          "x": "0.0",
+          "y": "0.9",
+          "z": "8.0",
+          "x2": "0.0",
+          "y2": "0.9",
+          "z2": "6.0",
+          "hitlag": "1.0",
+          "sdi": "1.0",
+          "clang_rebound": "attack_setoff_kind_on",
+          "facingrestrict": "attack_lr_check_pos",
+          "setweight": "false",
+          "shielddamage": "0",
+          "trip": "0.0",
+          "rehit": "0",
+          "reflectable": "false",
+          "absorbable": "false",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "true",
+          "ground_or_air": "collision_situation_mask_ga",
+          "hitbits": "collision_category_mask_all",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_l",
+          "sfxtype": "collision_sound_attr_kick",
+          "type": "attack_region_object",
+          "frames": [],
+          "color": "",
+          "notes": ""
+        },
         {
           "id": "0",
           "part": "0",
@@ -2927,6 +3026,47 @@
           "friendlyfire": "false",
           "effect": "collision_attr_normal",
           "sfxlevel": "attack_sound_level_m",
+          "sfxtype": "collision_sound_attr_kick",
+          "type": "attack_region_object",
+          "frames": [],
+          "color": "",
+          "notes": ""
+        },
+        {
+          "id": "0",
+          "part": "0",
+          "bone": "hip",
+          "damage": "13.0",
+          "angle": "70",
+          "kbg": "105",
+          "fkb": "0",
+          "bkb": "70",
+          "size": "7.0",
+          "x": "0.0",
+          "y": "2.0",
+          "z": "8.0",
+          "x2": "0.0",
+          "y2": "0.9",
+          "z2": "4.0",
+          "hitlag": "1.0",
+          "sdi": "1.0",
+          "clang_rebound": "attack_setoff_kind_off",
+          "facingrestrict": "attack_lr_check_pos",
+          "setweight": "false",
+          "shielddamage": "0",
+          "trip": "0.0",
+          "rehit": "0",
+          "reflectable": "false",
+          "absorbable": "false",
+          "flinchless": "false",
+          "disablehitlag": "false",
+          "direct_hitbox": "true",
+          "ground_or_air": "collision_situation_mask_ga",
+          "hitbits": "collision_category_mask_all",
+          "collisionpart": "collision_part_mask_all",
+          "friendlyfire": "false",
+          "effect": "collision_attr_normal",
+          "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_object",
           "frames": [],
@@ -3526,8 +3666,8 @@
     {
       "name": "Wario Waft (Half)",
       "value": "WarioWarioWaftHalf",
-      "frames": 49,
-      "faf": 49,
+      "frames": 54,
+      "faf": 54,
       "hitboxes": [
         {
           "id": "0",
@@ -3563,7 +3703,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_bomb",
           "type": "attack_region_none",
-          "frames": [ 5, 6, 7, 8 ],
+          "frames": [ 8, 9, 10, 11 ],
           "color": "red",
           "notes": ""
         }
@@ -3572,8 +3712,8 @@
     {
       "name": "Wario Waft (Full)",
       "value": "WarioWarioWaftFull",
-      "frames": 60,
-      "faf": 60,
+      "frames": 63,
+      "faf": 63,
       "hitboxes": [
         {
           "id": "0",
@@ -3609,7 +3749,7 @@
           "sfxlevel": "attack_sound_level_ll",
           "sfxtype": "collision_sound_attr_bomb",
           "type": "attack_region_none",
-          "frames": [ 9, 10 ],
+          "frames": [ 12, 13 ],
           "color": "red",
           "notes": ""
         },
@@ -3647,7 +3787,7 @@
           "sfxlevel": "attack_sound_level_ll",
           "sfxtype": "collision_sound_attr_bomb",
           "type": "attack_region_none",
-          "frames": [ 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
+          "frames": [ 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 ],
           "color": "purple",
           "notes": ""
         }

@@ -42,26 +42,27 @@ let previous = [previous_dark, previous_light]
 //Next: Go the the next move in the move list, not selectable if the video is currently playing or if there is no available next move
 function Buttons(props) {
 
-	if (props.loading) {
-		return null;
-	}
-	else {
+	try { 
 
-		//Get character and move data from the URL
-		let character = useParams().character.toLowerCase()
+		//Establish the total number of frames the move has
+		let totalFrames = props.currentMoveData.frames
+
+		//Establish the index of the move within the move list
+		let index = -1;
+		index = props.currentCharacterData.moves.findIndex(move => move.value === props.currentMoveData.value)
 
 		//Set the move to be passed as the next move in the list
 		let nextMove = undefined;
 		let upIncrement = 1;
 
+		//Set the move to be passed as the previous move in the list
 		let prevMove = undefined
 		let downIncrement = 1;
 
-
 		//Look for the next available move (some moves are currently not selectable, skip over those)
-		while (nextMove === undefined && props.index + upIncrement < props.currentCharacterData.moves.length) {
-			if (props.currentCharacterData.moves[props.index + upIncrement].complete !== false) {
-				nextMove = props.currentCharacterData.moves[props.index + upIncrement]
+		while (nextMove === undefined && index + upIncrement < props.currentCharacterData.moves.length) {
+			if (props.currentCharacterData.moves[index + upIncrement].complete !== false) {
+				nextMove = props.currentCharacterData.moves[index + upIncrement]
 			}
 			else {
 				upIncrement = upIncrement + 1
@@ -69,9 +70,9 @@ function Buttons(props) {
 		}
 
 		//Look for the previous available move (some moves are currently not selectable, skip over those)
-		while (prevMove === undefined && props.index - downIncrement >= 0) {
-			if (props.currentCharacterData.moves[props.index - downIncrement].complete !== false) {
-				prevMove = props.currentCharacterData.moves[props.index - downIncrement]
+		while (prevMove === undefined && index - downIncrement >= 0) {
+			if (props.currentCharacterData.moves[index - downIncrement].complete !== false) {
+				prevMove = props.currentCharacterData.moves[index - downIncrement]
 			}
 			else {
 				downIncrement = downIncrement + 1
@@ -81,19 +82,20 @@ function Buttons(props) {
 		return (
 			<div id="buttons">
 
-				<Link to={prevMove !== undefined ? `/${character}/${prevMove.value}` : null}>
+				<Link to={prevMove !== undefined ? `/${props.currentCharacterData.value}/${prevMove.value}` : null}>
 					<img
 						data-tip data-for="previousToolTip"
-						className={props.index !== 0 ? "button" : "buttonNoClick"}
+						className={index !== 0 ? "button" : "buttonNoClick"}
 						id="previous"
 						src={previous[props.settings.dark_light]}
+						onClick={() => { props.newMove(prevMove.value) }}
 						alt="Previous Move"
 					/>
 				</Link>
 				<ToolTip
 					id="previousToolTip"
 					text="Show Previous Move"
-					render={props.index !== 0}
+					render={index !== 0}
 				/>
 
 				<img
@@ -101,7 +103,7 @@ function Buttons(props) {
 					className={props.currentFrame !== 1 && !props.playing ? "button" : "buttonNoClick"}
 					id="minus"
 					src={minus[props.settings.dark_light]}
-					onClick={props.currentFrame !== 1 && !props.playing ? props.decrementFrame : null}
+					onClick={() => { props.currentFrame !== 1 && !props.playing ? props.setCurrentFrame(props.currentFrame - 1) : null }}
 					alt="Decrement Frame"
 				/>
 
@@ -113,50 +115,55 @@ function Buttons(props) {
 
 				<img
 					data-tip data-for="playToolTip"
-					className={props.totalFrames !== 1 ? "button" : "buttonNoClick"}
+					className={totalFrames !== 1 ? "button" : "buttonNoClick"}
 					id="pause-play"
 					src={props.playing ? pause[props.settings.dark_light] : play[props.settings.dark_light]}
-					onClick={props.totalFrames !== 1 ? (props.playing ? props.pause : props.play) : null}
+					onClick={() => {props.setPlaying(!props.playing)}}
 					alt="Play Move"
 				/>
 				<ToolTip
 					id="playToolTip"
 					text={props.playing ? "Pause the Move" : "Play the Move"}
-					render={props.totalFrames !== 1}
+					render={totalFrames !== 1}
 				/>
 
 				<img
 					data-tip data-for="plusToolTip"
-					className={props.currentFrame !== props.totalFrames && !props.playing ? "button" : "buttonNoClick"}
+					className={props.currentFrame !== totalFrames && !props.playing ? "button" : "buttonNoClick"}
 					id="plus"
 					src={plus[props.settings.dark_light]}
-					onClick={props.currentFrame !== props.totalFrames && !props.playing ? props.incrementFrame : null}
+					onClick={() => { props.currentFrame !== totalFrames && !props.playing ? props.setCurrentFrame(props.currentFrame + 1) : null }}
 					alt="Increment Frame"
 				/>
 				<ToolTip
 					id="plusToolTip"
 					text="Go Forward 1 Frame"
-					render={props.currentFrame !== props.totalFrames && !props.playing}
+					render={props.currentFrame !== totalFrames && !props.playing}
 				/>
 
-				<Link to={nextMove !== undefined ? `/${character}/${nextMove.value}` : null}>
+				<Link to={nextMove !== undefined ? `/${props.currentCharacterData.value}/${nextMove.value}` : null}>
 					<img
 						data-tip data-for="nextToolTip"
-						className={props.index !== props.currentCharacterData.moves.length - 1 ? "button" : "buttonNoClick"}
+						className={index !== props.currentCharacterData.moves.length - 1 ? "button" : "buttonNoClick"}
 						id="next"
 						src={next[props.settings.dark_light]}
+						onClick={() => { props.newMove(nextMove.value) }}
 						alt="NextMove"
 					/>
 				</Link>
 				<ToolTip
 					id="nextToolTip"
 					text="Show Next Move"
-					render={props.index !== props.totalMoves - 1}
+					render={index !== props.totalMoves - 1}
 				/>
 
 
 			</div>
 		)
+	}
+	catch (err) {
+		return null
+		
 	}
 }
 

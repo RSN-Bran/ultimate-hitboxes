@@ -1,179 +1,261 @@
 //React Imports
 import React from "react"
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 //Component Imports
-import MoveDropDown from './MoveDropDown'
-import Player from './Player'
-import Slider from './Slider'
-import Buttons from './Buttons'
-import SpeedOptions from './SpeedOptions'
-import DataTable from './DataTable';
+import DataPortal from './DataPortal'
+import Loading from './Loading'
 
 //CSS Imports
 import '../css/Player.css';
 
+//Set the environment based on dev or PROD
+const environment = process.env.NODE_ENV === "development" ? "localhost" : "ultimate-hitboxes.com";
 
 function Main(props) {
+  const [character, setCharacter] = useState(useParams().character.toLowerCase())
+  const [move, setMove] = useState(useParams().move)
+  const [currentFrame, setCurrentFrame] = useState(useParams().frame === undefined ? 1 : parseInt(useParams().frame))
+  const [playing, setPlaying] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  //Get character and move data from the URL
-  let character = useParams().character.toLowerCase()
-  let move = useParams().move
-  let frame = useParams().frame
+  //Variables to store the next and previous characters
+  let nextChar;
+  let prevChar;
 
-  if (move === undefined && props.currentCharacterData !== undefined) {
-    move = props.currentCharacterData.moves[0].value
+  let characterIndex = 0;
+  let characterKey;
+
+  let jumpToFrame = function (frame) {
+    setPlaying(false)
+    setCurrentFrame(frame)
   }
 
-  //If all character data doesn't exist yet, do nothing. Character data will be loaded in via componentDidMount
-  if (props.characterListData === undefined) {
-    return null;
+  let newCharacter = function (character) {
+    setPlaying(false);
+    setMove(undefined);
+    setCharacter(character)
+    setCurrentFrame(1)
   }
 
-  //If character data doesn't exist or doesn't match the URL, query database to get character data
-  else if (props.currentCharacterData === undefined || props.currentCharacterData.value !== character) {
-
-    let characterFromCharacterData = props.characterListData.filter(obj => {
-      return obj.value === character
-    })
-
-    if (props.characterListData.filter(element => element.value.toLowerCase() === character.toLowerCase()).length === 0 || characterFromCharacterData[0].completed === false) {
-      return (
-        <h2> This page is not available! </h2>
-      )
+  let newMove = function (move) {
+    setPlaying(false);
+    setMove(move);
+    setCurrentFrame(1)
+  }
+   //Determine which character is the current character, save the data and the index
+  while (characterIndex < props.characterListData.length) {
+    if (props.characterListData[characterIndex].value === character) {
+      characterKey = props.characterListData[characterIndex]
+      break
     }
-    else {
-      props.updateCurrentCharacter(characterFromCharacterData[0])
-    }
-    
-    
-    return null;
+    characterIndex += 1;
   }
 
-  //If move data doesn't exist or doesn't match the URL, query database to get move data
-  else if (props.currentMoveData === undefined || props.currentMoveData.value.toLowerCase() !== move.toLowerCase()) {
-    if (props.currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
-      return (
-        <h2> This page is not available! </h2>
-      )
-    }
-    props.updateCurrentMove(move, frame)
-
-
-    return null;
-    
-  }
-
-  else if (frame > props.currentMoveData.frames) {
+  //Return nothing if the character doesn't exist
+  if (props.characterListData.filter(element => element.value.toLowerCase() === character.toLowerCase()).length === 0 || props.characterListData[characterIndex].completed === false) {
     return (
-      <h2> This page is not available! </h2>
+      <div id="characterChoiceBar">
+      <Link to="/characters">
+
+            <button
+              id="chooseCharacterButton"
+              className={props.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
+            >
+              <b>Choose a Character</b>
+            </button>
+
+      </Link>
+        <h2> This page is not available! </h2>
+      </div>
     )
   }
 
-  //Necessary data exists, render the main page
+  //Use the index to determine which characters are next and previous
+  if (characterIndex === 0) {
+    nextChar = props.characterListData[characterIndex + 1].value;
+    prevChar = props.characterListData[props.characterListData.length - 1].value;
+  }
+  else if (characterIndex === props.characterListData.length - 1) {
+    nextChar = props.characterListData[0].value
+    prevChar = props.characterListData[characterIndex - 1].value
+  }
   else {
-    return (
-      
-      <div>
-        <MoveDropDown
-          currentCharacterData={props.currentCharacterData}
-          setMove={props.setMove}
-          currentMoveData={props.currentMoveData}
-          settings={props.settings}
-          changeMove={props.changeMove}
-          redirectMove={props.redirectMove}
-          loading={props.loading}
-        />
+    nextChar = props.characterListData[characterIndex + 1].value;
+    prevChar = props.characterListData[characterIndex - 1].value;
+  }
 
-        <Player
-          url={props.url}
-          currentFrame={props.currentFrame}
-          loading={props.loading}
+
+  //Set up State variables
+  const [currentCharacterData, setCurrentCharacterData] = useState({})
+  const [currentMoveData, setCurrentMoveData] = useState({});
+
+  useEffect(() => {
+
+    let promise = new Promise(function (resolve, reject) {
+      resolve()
+    })
+
+    promise.then(() => {
+      if(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/data`) !== null && process.env.NODE_ENV === "production") {
+        let data = JSON.parse(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/data`))
+        setCurrentCharacterData(data)
+        if (move === undefined) { move = data.moves[0].value }
+      }
+      else {
+        fetch(`http://${environment}:5000/${characterKey.number}_${characterKey.value}/data`)
+          .then(response => response.json())
+          .then(data => {
+            sessionStorage.setItem(`/${characterKey.number}_${characterKey.value}/data`, JSON.stringify(data))
+            setCurrentCharacterData(data)
+            if (move === undefined) {
+              setMove(data.moves[0].value)
+            }
+          })
+
+          //TODO: MAKE ERROR HANDLING MORE ROBUST
+          .catch(err => {
+          })
+        }
+    })
+    
+  }, [character])
+
+  useEffect(() => {
+    setPlaying(false)
+
+
+    try {
+      if (sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`) !== null && process.env.NODE_ENV === "production") {
+        let promise = new Promise(function (resolve, reject) {
+          resolve()
+        })
+
+        promise.then(() => {
+          let data = JSON.parse(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`))
+          setCurrentMoveData(data)
+          setLoading(true)
+        })
+
+
+      }
+      else {
+        fetch(`http://${environment}:5000/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`)
+          .then(response => response.json())
+          .then(data => {
+
+            //Set state to loading and save the data for the move
+            sessionStorage.setItem(`/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`, JSON.stringify(data))
+            setCurrentMoveData(data)
+            setLoading(true)
+          })
+          .catch(err => {
+            console.log("Failure")
+          })
+      }
+      
+    }
+    catch(e) {
+      console.log(e)
+    }
+    
+  }, [move])
+
+  
+
+
+  //If move data doesn't exist or doesn't match the URL, query database to get move data
+  try {
+    if (currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
+      return (
+      <div id="characterChoiceBar">
+      <Link to="/characters">
+
+            <button
+              id="chooseCharacterButton"
+              className={props.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
+            >
+              <b>Choose a Character</b>
+            </button>
+
+      </Link>
+        <h2> This page is not available! </h2>
+      </div>
+    )
+    }
+  }
+  catch {
+
+  }
+
+
+  if (loading && currentMoveData.value !== undefined) {
+    return (
+      <Loading
+        url={`https://ultimate-hitboxes.s3.amazonaws.com/frames/${props.characterListData[characterIndex].number}_${character.toLowerCase()}/${currentMoveData.value}/`}
+        loading={loading}
+        setLoading={setLoading}
+        currentMoveData={currentMoveData}
+      />
+    )
+  }
+  else if (!loading && currentMoveData.value !== undefined) {
+    return (
+
+      <div>
+        <div id="characterChoiceBar">
+          <Link to={`/${prevChar}`}>
+            <img
+              id="prevChar"
+              class="nextprevChar"
+              src={`https://ultimate-hitboxes.s3.amazonaws.com/icons/${prevChar}.png`}
+              onClick={() => { newCharacter(prevChar) }}
+              alt="Previous Character"
+            />
+          </Link>
+          <Link to="/characters">
+
+            <button
+              id="chooseCharacterButton"
+              className={props.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
+            >
+              <b>Choose a Character</b>
+            </button>
+
+          </Link>
+          <Link to={`/${nextChar}`}>
+            <img
+              id="nextChar"
+              class="nextprevChar"
+              src={`https://ultimate-hitboxes.s3.amazonaws.com/icons/${nextChar}.png`}
+              onClick={() => { newCharacter(nextChar) }}
+              alt="Previous Character"
+            />
+          </Link>
+        </div>
+        <DataPortal
           settings={props.settings}
-          character={character}
-          move={move}
-          loadingPercent={props.loadingPercent}
+          characterListData={props.characterListData}
+          currentCharacterData={currentCharacterData}
+          currentMoveData={currentMoveData}
+          setCharacter={setCharacter}
+          newMove={newMove}
+          currentFrame={currentFrame}
+          setCurrentFrame={setCurrentFrame}
+          updateHitboxData={props.updateHitboxData}
+          playing={playing}
+          setPlaying={setPlaying}
+          jumpToFrame={jumpToFrame}
           urlNotification={props.urlNotification}
         />
-
-        <Slider
-          totalFrames={props.currentMoveData.frames}
-          currentFrame={props.currentFrame}
-          updateSlider={props.updateSlider}
-          loading={props.loading}
-        />
-
-          <Buttons
-            incrementFrame={props.incrementFrame}
-            decrementFrame={props.decrementFrame}
-            currentCharacterData={props.currentCharacterData}
-            playing={props.playing}
-            play={props.play}
-            pause={props.pause}
-            index={props.index}
-            totalMoves={props.totalMoves}
-            totalFrames={props.currentMoveData.frames}
-            currentFrame={props.currentFrame}
-            settings={props.settings}
-            loading={props.loading}
-
-          />
-        <div id={props.settings.scrollTable ? "scrollable" : "not-scrollable"}>
-          <SpeedOptions
-            changeSpeed={props.changeSpeed}
-            playSpeed={props.playSpeed}
-            totalFrames={props.currentMoveData.frames}
-            loading={props.loading}
-          />
-
-
-          {props.currentMoveData.hitboxes !== undefined && props.currentMoveData.hitboxes.length > 0  ? <DataTable
-            type="hitboxes"
-            settings={props.settings}
-            move={props.currentMoveData}
-            jumpToFrame={props.jumpToFrame}
-            loading={props.loading}
-            currentFrame={props.currentFrame}
-            updateHitboxData={props.updateHitboxData}
-          /> : null}
-
-          {props.currentMoveData.grabs !== undefined ? <DataTable
-            type="grabs"
-            settings={props.settings}
-            move={props.currentMoveData}
-            jumpToFrame={props.jumpToFrame}
-            loading={props.loading}
-            currentFrame={props.currentFrame}
-            updateHitboxData={props.updateHitboxData}
-          /> : null}
-
-          {props.currentMoveData.throws !== undefined ? <DataTable
-            type="throws"
-            settings={props.settings}
-            move={props.currentMoveData}
-            jumpToFrame={props.jumpToFrame}
-            loading={props.loading}
-            currentFrame={props.currentFrame}
-            updateHitboxData={props.updateHitboxData}
-          /> : null}
-
-          {props.currentMoveData.hurtboxes !== undefined ? <DataTable
-            type="hurtboxes"
-            settings={props.settings}
-            move={props.currentMoveData}
-            jumpToFrame={props.jumpToFrame}
-            loading={props.loading}
-            currentFrame={props.currentFrame}
-            updateHitboxData={props.updateHitboxData}
-          /> : null}
-          
-        </div>
-        
 
       </div>
     )
   }
-  
+  else {
+    return null;
+  }
 
 }
 

@@ -19,10 +19,12 @@ function HitboxTable(props) {
           hitbox={hitbox}
           frames={props.move.frames}
           currentFrame={props.currentFrame}
+          setCurrentFrame={props.setCurrentFrame}
           key={index}
           jumpToFrame={props.jumpToFrame}
           fields={props.fields}
           updateHitboxData={props.updateHitboxData}
+          jumpToFrame={props.jumpToFrame}
         />
       )
     })

@@ -8,7 +8,6 @@ function LoadingBar(props) {
 		width: props.loadingPercent + '%',
 		backgroundColor: "red",
 	}
-
 	return (
 		<div id="loadingContainer">
 			<div style={percentageStyle} id="loadingPercent">

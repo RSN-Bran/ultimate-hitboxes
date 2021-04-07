@@ -117,13 +117,14 @@ app.get('/:character/data', (req, res) => {
       move.complete = allData.moves[i].complete;
       moveList.push(move)
     }
-    allData.moves=moveList
+    allData.moves = moveList
+    
 
     res.send(allData)
 
     let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data`
     writeToLog(logMessage);
-    console.log(req.params.character)
+
     let dbparams = {
       "IP": req.connection.remoteAddress,
       "URL": `/${req.params.character}/data`,

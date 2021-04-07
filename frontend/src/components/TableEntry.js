@@ -79,7 +79,7 @@ function TableEntry(props) {
         tdList.push(<td
           className={className}
           style={props.hitbox.frames.length !== 0 ? { "cursor": "pointer" } : {}}
-          onClick={props.jumpToFrame.bind(this, props.hitbox.frames[0])}
+          onClick={() => { props.jumpToFrame(props.hitbox.frames[0]) }}
         >
           {condenseFrames(props.hitbox[field.variable])}
         </td>)

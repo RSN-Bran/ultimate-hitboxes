@@ -1,15 +1,8 @@
 //React Imports
 import React from "react"
 
-//Component Imports
-import LoadingBar from './LoadingBar'
-
 //CSS Imports
 import '../css/Player.css';
-
-//Media Imports
-import placeholder from '../media/placeholder.png'
-import loading from '../media/loading.gif'
 
 import share_dark from '../media/darkmode/share.png'
 import share_light from '../media/lightmode/share.png'
@@ -31,33 +24,10 @@ function Player(props) {
 		document.execCommand('copy');
 		document.body.removeChild(el);
 
-		console.log(props)
 		props.urlNotification()
-		console.log("here")
 		
 	};
 
-	if (props.loading) {
-		return (
-			<div id="player">
-				<img
-					id="moveImg"
-					src={placeholder}
-					alt="Move Frames go here"
-				/>
-				<div id="loading">
-
-					<img
-						src={loading}
-						alt="Move loading"
-					/>
-					<LoadingBar loadingPercent={props.loadingPercent} />
-				</div>
-			</div>
-		)
-	}
-
-	else {
 		return (
 			<div id="player">
 				
@@ -80,7 +50,6 @@ function Player(props) {
 				/>
 			</div>
 		)
-	}
 	
 }
 

@@ -3,18 +3,21 @@ import React from "react"
 import '../css/Slider.css';
 
 function Slider(props) {
-	let sliderStyle = {width: "100%"}
 
-	let options = []
-
-	for (let i = 1; i <= props.totalFrames; i++) {
-		options.push(<option key={i}>{i}</option>)
-	}
-
-	if (props.totalFrames == 1 || props.loading) {
+	if (props.totalFrames == 1) {
 		return null;
 	}
-	else {
+
+	//CSS, move to CSS file later
+	let sliderStyle = {width: "100%"}
+
+	//Create TickMarks for RAnge slider
+	let tickMarks = []
+	for (let i = 1; i <= props.totalFrames; i++) {
+		tickMarks.push(<option key={i}>{i}</option>)
+	}
+
+	try {
 		return (
 			<div id="sliderContainer" style={sliderStyle}>
 				<h5>Frame: {props.currentFrame}/{props.totalFrames}</h5>
@@ -26,16 +29,18 @@ function Slider(props) {
 						min="1"
 						max={props.totalFrames}
 						value={props.currentFrame}
-						onInput={props.updateSlider}
-						onChange={props.updateSlider}
+						onChange={e => props.setCurrentFrame(parseInt(e.target.value))}
 						list="ticks"
 					/>
 				</div>
 				<datalist id="ticks">
-					{options}
+					{tickMarks}
 				</datalist>
 			</div>
 		)
+	}
+	catch {
+		return null
 	}
 	
 }

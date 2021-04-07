@@ -79,7 +79,6 @@ function DataTable(props) {
     let extraInfo = props.settings.showExtraInfo ? "Extra" : "Basic";
     let showFrames = props.move[props.type][0].frames.length === 0 ? "NoFrame" : "";
     type = props.type + extraInfo + showFrames
-    console.log(type)
     //Choose table headers
     let table = fields[type];
     //Remove notes column if all note entries are empty
@@ -106,11 +105,13 @@ function DataTable(props) {
           move={props.move}
           hitboxes={props.move[props.type]}
           currentFrame={props.currentFrame}
+          setCurrentFrame={props.setCurrentFrame}
           updateHitboxData={props.updateHitboxData}
           jumpToFrame={props.jumpToFrame}
           fields={table}
           settings={props.settings}
           key={type}
+          jumpToFrame={props.jumpToFrame}
         />
         <div id="moveNotes">
           {jsxNotes === undefined || props.type === "hurtboxes" ? null : jsxNotes}

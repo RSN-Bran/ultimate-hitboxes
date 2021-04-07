@@ -6,37 +6,37 @@ import { useHistory, useParams } from "react-router-dom";
 import MoveOption from './MoveOption'
 
 function MoveDropDown(props) {
-	if (props.redirectMove !== props.currentMoveData.value && props.redirectMove !== undefined) {
 
-		let character = useParams().character
-
-		let history = useHistory();
-		props.changeMove({ target: { value: undefined } })
-		history.push(`/${character}/${props.redirectMove}`)
-		
-		return null;
-	}
-	else if (props.loading) {
-		return null;
-  }
-	else {
+	try {
 		let className = props.settings.dark_light === 0 ? "darkMoveDropDown" : "lightMoveDropDown"
 
-		//For each move in the moveList, create a select object using <MoveChoice>
-		let moveList = props.currentCharacterData.moves.map(move => <MoveOption key={move.value} move={move} currentMoveData={props.currentMoveData} settings={props.settings} />)
+		let history = useHistory();
+		let updateMove = function (option) {
+			history.push(`/${props.currentCharacterData.value}/${option.target.value}`)
+			props.newMove(option.target.value)
+    }
 
-		//Add all the created select options to a drop down and render it
-		return (
-			<select
-				id="moveDropDown"
-				className={className}
-				name="Select Move"
-				onChange={props.changeMove}
-			>
-				{moveList}
-			</select >
-		)
+			//For each move in the moveList, create a select object using <MoveChoice>
+		let moveList = props.currentCharacterData.moves.map(move => <MoveOption key={props.move} move={move} currentMoveData={props.currentMoveData} settings={props.settings} />)
+		
+			//Add all the created select options to a drop down and render it
+			return (
+				<select
+					id="moveDropDown"
+					className={className}
+					name="Select Move"
+					onChange={(e) => {updateMove(e)}}
+				>
+					{moveList}
+				</select >
+			)
+		//}
 	}
+	catch (e) {
+		console.log(e)
+		return null;
+  }
+	
 	
 	
 

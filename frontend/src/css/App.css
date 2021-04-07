@@ -22,13 +22,11 @@ a {
 
 }
 
-#chooseCharacter {
+#chooseCharacterButton {
   cursor: pointer;
-  width: 100%;
+  width: 60%;
   font-size: 17px;
-  vertical-align: middle;
 }
-
 
 .chooseCharacter_dark {
   color: black;
@@ -71,17 +69,19 @@ a {
     margin-left: 1%
   }
 
-  #chooseCharacterLink {
-    width: 20%;
-    height: 3em;
+  #characterChoiceBar {
+    width: 30%;
     font-size: 15px;
     margin: auto;
   }
+  #chooseCharacterButton {
+    height: 3em;
+  }
+  .nextprevChar {
+    width: 12%;
+  }
   #main {
     width: 80%;
-  }
-  #chooseCharacter {
-    height: 3em;
   }
   #scrollable {
     height: 25vh;
@@ -106,12 +106,16 @@ a {
     margin-left: 2%
   }
 
-  #chooseCharacterLink {
-    width: 60%;
-    height: 2.5em;
+  #characterChoiceBar {
+    width: 100%;
     margin: auto;
   }
-
+  #chooseCharacterButton {
+    height: 2.5em;
+  }
+  .nextprevChar {
+    width: 12%;
+  }
   h3 {
     font-size: 15px;
   }
@@ -119,9 +123,7 @@ a {
   #main {
     width: 100%;
   }
-  #chooseCharacter {
-    height: 2.5em;
-  }
+  
   #scrollable {
     height: 33vh;
   }

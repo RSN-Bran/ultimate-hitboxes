@@ -35,9 +35,6 @@ function Header(props) {
     //help - Contains Info and Settings Buttons
     //title - Contains site name
     //links - Contains links to github and twitter pages
-
-    //<img id="backButton" className="helpButtons" src={back[props.dark_light]} onClick={() => history.goBack()} />
-
     <div id="header">
       <div id="help">
         <Link to="/info">
@@ -48,7 +45,7 @@ function Header(props) {
           <img id="settingsButton" className="helpButtons" src={settings[props.dark_light]} onClick={props.showSettings} />
         </Link>
 
-        
+        <img id="backButton" className="helpButtons" src={back[props.dark_light]} onClick={() => history.goBack()} />
 
       </div>
 

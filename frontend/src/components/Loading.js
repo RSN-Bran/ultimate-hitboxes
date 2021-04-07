@@ -47,7 +47,6 @@ function Loading(props) {
 
 	//Create the timer upon a component load
 	useEffect(() => {
-		console.log("here")
 		const interval = setInterval(() => {
 			//Calculate number of images complete so far
 			setLoadedSoFar(images.filter((image) => image.complete).length)

@@ -20,6 +20,9 @@ function Main(props) {
   const [playing, setPlaying] = useState(false)
   const [loading, setLoading] = useState(false)
 
+  console.log(move)
+  console.log()
+
   //Variables to store the next and previous characters
   let nextChar;
   let prevChar;
@@ -101,7 +104,7 @@ function Main(props) {
       if(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/data`) !== null && process.env.NODE_ENV === "production") {
         let data = JSON.parse(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/data`))
         setCurrentCharacterData(data)
-        if (move === undefined) { move = data.moves[0].value }
+        if (move === undefined) { setMove(data.moves[0].value) }
       }
       else {
         fetch(`http://${environment}:5000/${characterKey.number}_${characterKey.value}/data`)

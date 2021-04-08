@@ -120,7 +120,7 @@ class App extends React.Component {
 
   //When the site initially loads, always get all character data
   componentDidMount() {
-    console.log("mount")
+
     this.setInitialSettings()
 
     fetch(`http://${environment}:5000/characterData`)

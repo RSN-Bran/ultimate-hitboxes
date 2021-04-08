@@ -33,9 +33,9 @@ function HitboxTable(props) {
     let thList = []
     let toolTipList = []
     let className = (props.settings.dark_light === 0 ? "darkTable" : "lightTable") + " tableheader"
-    props.fields.forEach(function (field) {
-      thList.push(<th className={className} data-tip data-for={field.toolTipID}>{field.name}</th>)
-      toolTipList.push(<ReactTooltip id={field.toolTipID} place="top" effect="solid">{field.toolTipDescription}</ReactTooltip>)
+    props.fields.forEach(function (field, index) {
+      thList.push(<th key={index} className={className} data-tip data-for={field.toolTipID}>{field.name}</th>)
+      toolTipList.push(<ReactTooltip key={index} id={field.toolTipID} place="top" effect="solid">{field.toolTipDescription}</ReactTooltip>)
     })
 
     let tableClass = props.settings.dark_light === 0 ? "darkTable" : "lightTable";

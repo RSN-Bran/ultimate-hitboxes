@@ -68,15 +68,16 @@ function TableEntry(props) {
   let tdList = [];
 
   //For each column, fill in data
-  props.fields.forEach(function (field) {
+  props.fields.forEach(function (field, index) {
 
     //If adding the frames variable, only show the first frame in the table and pass in a function to change to that frame on click
     if (field.variable === "frames") {
       if (props.hitbox.frames.length === 0) {
-        tdList.push(<td className={className}>-</td>)
+        tdList.push(<td key={index} className={className}>-</td>)
       }
       else {
         tdList.push(<td
+          key={index}
           className={className}
           style={props.hitbox.frames.length !== 0 ? { "cursor": "pointer" } : {}}
           onClick={() => { props.jumpToFrame(props.hitbox.frames[0]) }}
@@ -88,24 +89,24 @@ function TableEntry(props) {
 
     //If adding the damage variable, multiply the value by 1.2 if the damageMultiplier setting is enabled
     else if (field.variable === "damage" && props.settings.damageMultiplier) {
-      tdList.push(<td className={className}>{(props.hitbox[field.variable] * 1.2).toFixed(1)}</td>)
+      tdList.push(<td key={index} className={className}>{(props.hitbox[field.variable] * 1.2).toFixed(1)}</td>)
     }
 
     //Parse Ground/Air value into something more readable
     else if (field.variable === "ground_or_air") {
       let ground_air = { "collision_situation_mask_g": "Ground", "collision_situation_mask_g_d": "Ground", "collision_situation_mask_a": "Aerial", "collision_situation_mask_ga": "Both"};
 
-      tdList.push(<td className={className}>{ground_air[props.hitbox[field.variable]] === undefined ? "-" : ground_air[props.hitbox[field.variable]]}</td>)
+      tdList.push(<td key={index} className={className}>{ground_air[props.hitbox[field.variable]] === undefined ? "-" : ground_air[props.hitbox[field.variable]]}</td>)
     }
 
     //Add Degree symbol after the angle
     else if (field.variable === "angle") {
-      tdList.push(<td className={className}>{props.hitbox[field.variable]}&deg;</td>)
+      tdList.push(<td key={index} className={className}>{props.hitbox[field.variable]}&deg;</td>)
     }
 
     //If showing more data, create a button to click in the table
     else if (field.variable === "more") {
-      tdList.push(<td className={className} onClick={props.updateHitboxData.bind(this, props.hitbox)} style={{ cursor: "pointer", width: "5px" }}><img
+      tdList.push(<td key={index} className={className} onClick={props.updateHitboxData.bind(this, props.hitbox)} style={{ cursor: "pointer", width: "5px" }}><img
         src={info[props.settings.dark_light]}
         style={{ width: "70%" }}
       /></td >)
@@ -113,7 +114,7 @@ function TableEntry(props) {
 
     //For any other value, display the value without alteration, unless the value doesn't exist, for which display a '-'
     else {
-      tdList.push(<td className={className}>{props.hitbox[field.variable] === undefined || props.hitbox[field.variable] === "" ? "-" : props.hitbox[field.variable]}</td>)
+      tdList.push(<td key={index} className={className}>{props.hitbox[field.variable] === undefined || props.hitbox[field.variable] === "" ? "-" : props.hitbox[field.variable]}</td>)
     }
   })
 

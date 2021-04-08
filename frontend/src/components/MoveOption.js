@@ -14,7 +14,6 @@ function MoveOption(props) {
 		<option
 			value={props.move.value}
 			className={className}
-			selected={props.move.value === props.currentMoveData.value}
 			disabled={props.move.complete === false ? true : false}
 		>
 {props.move.name}

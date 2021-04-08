@@ -20,8 +20,6 @@ function Main(props) {
   const [playing, setPlaying] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  console.log(move)
-  console.log()
 
   //Variables to store the next and previous characters
   let nextChar;

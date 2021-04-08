@@ -211,7 +211,7 @@ function Main(props) {
           <Link to={`/${prevChar}`}>
             <img
               id="prevChar"
-              class="nextprevChar"
+              className="nextprevChar"
               src={`https://ultimate-hitboxes.s3.amazonaws.com/icons/${prevChar}.png`}
               onClick={() => { newCharacter(prevChar) }}
               alt="Previous Character"
@@ -230,7 +230,7 @@ function Main(props) {
           <Link to={`/${nextChar}`}>
             <img
               id="nextChar"
-              class="nextprevChar"
+              className="nextprevChar"
               src={`https://ultimate-hitboxes.s3.amazonaws.com/icons/${nextChar}.png`}
               onClick={() => { newCharacter(nextChar) }}
               alt="Previous Character"

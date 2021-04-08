@@ -19,9 +19,6 @@ import HitboxDetail from './components/HitBoxDetail'
 //Set hostname to query depending on dev vs PROD
 const environment = process.env.NODE_ENV === "development" ? "localhost" : "ultimate-hitboxes.com";
 
-//Import all the character Data
-//import characterData from './data/CharacterData.json'
-
 class App extends React.Component {
   constructor() {
 
@@ -60,15 +57,9 @@ class App extends React.Component {
     this.changeSettings = this.changeSettings.bind(this)
     this.changeMove = this.changeMove.bind(this)
     this.urlNotification = this.urlNotification.bind(this)
-    this.setCharacterData = this.setCharacterData.bind(this)
 
   }
 
-  setCharacterData(data) {
-    this.setState({
-      characterData: data
-    })
-  }
   changeDefaultSpeed(event) {
     //Update the play speed variable in the state
     this.setState({
@@ -99,7 +90,7 @@ class App extends React.Component {
 
   //Set initial settings on a page load
   setInitialSettings() {
-    console.log(document.cookie)
+
     //Attempt to parse the cookie and use the values acquired to change the settings
     try {
       let settings = JSON.parse(document.cookie.split('=')[1])
@@ -125,7 +116,6 @@ class App extends React.Component {
       })
     }
     document.cookie = "settings=" + JSON.stringify(settings) + "; Expires=Fri, 1 Jan 2025 00:00:00 EST;" + "path=/";
-    console.log(document.cookie)
   }
 
   //When the site initially loads, always get all character data
@@ -138,7 +128,9 @@ class App extends React.Component {
       .then(data => {
 
         //Set state to loading and save the data for the move
-        this.setCharacterData(data)
+        this.setState({
+          characterData: data
+        })
       })
       .catch(err => {
         console.log("Failure")
@@ -171,54 +163,56 @@ class App extends React.Component {
   //Call components to render the page
   render() {
 
-    let pageStyle = {}
-
-    //Dark Mode Style
-    if (this.state.settings.dark_light === 0) {
-      pageStyle.backgroundColor = "1B1B1B"
-      pageStyle.color = "white"
-    }
-    //Light Mode Style
-    else {
-      pageStyle.backgroundColor = "#F2F3F4"
-      pageStyle.color = "black"
-    }
-
     ////This extends the background color to the whole screen
-    document.body.style.backgroundColor = pageStyle.backgroundColor;
+    document.body.style.backgroundColor = this.state.settings.dark_light === 0 ? "#1B1B1B" : "#F2F3F4"
 
     if (this.state.characterData === undefined) {
       return null;
     }
-    return (
-      <div className="App" style={pageStyle}>
-        <ReactNotification />
-        <Router>
-          <Header
-            showInfo={this.showInfo}
-            showSettings={this.showSettings}
-            dark_light={this.state.settings.dark_light}
-          />
-                
-          <Switch>
+    else {
+      return (
+        <div id="App" className={this.state.settings.dark_light === 0 ? "app-light":"app-dark" } >
+          <ReactNotification />
+          <Router>
+            <Header
+              showInfo={this.showInfo}
+              showSettings={this.showSettings}
+              dark_light={this.state.settings.dark_light}
+            />
 
-            <Route path='/info' render={() => (
-              <Info
-                dark_light={this.state.settings.dark_light}
-              />
-            )} />
+            <Switch>
 
-            <Route path='/settings' render={() => (
-              <Settings
-                settings={this.state.settings}
-                setInitialSettings={this.setInitialSettings}
-                changeSettings={this.changeSettings}
-              />
-            )} />
+              <Route path='/info' render={() => (
+                <Info
+                  dark_light={this.state.settings.dark_light}
+                />
+              )} />
 
-            <Route path={['/']} exact render={() => (
-              <div>
-                <div className="info">Check out hundreds of moves from Smash Ultimate at various speeds and view in depth details on every hitbox related to each move! </div>
+              <Route path='/settings' render={() => (
+                <Settings
+                  settings={this.state.settings}
+                  setInitialSettings={this.setInitialSettings}
+                  changeSettings={this.changeSettings}
+                />
+              )} />
+
+              <Route path={['/']} exact render={() => (
+                <div>
+                  <div className="info">Check out hundreds of moves from Smash Ultimate at various speeds and view in depth details on every hitbox related to each move! </div>
+                  <CharacterList
+                    characterListData={this.state.characterData}
+                    updateCurrentCharacter={this.updateCurrentCharacter}
+                    getCharacterData={this.getCharacterData}
+                    search={this.state.search}
+                    changeSearchValue={this.changeSearchValue}
+                    setInitialSettings={this.setInitialSettings}
+                    settings={this.state.settings}
+                    changeSettings={this.changeSettings}
+                  />
+                </div>
+              )} />
+
+              <Route path={['/characters']} exact render={() => (
                 <CharacterList
                   characterListData={this.state.characterData}
                   updateCurrentCharacter={this.updateCurrentCharacter}
@@ -228,48 +222,35 @@ class App extends React.Component {
                   setInitialSettings={this.setInitialSettings}
                   settings={this.state.settings}
                   changeSettings={this.changeSettings}
+                />
+              )} />
+
+              <Route path={['/:character', '/:character/:move', '/:character/:move/:frame']} exact render={() => (
+                <div id="main">
+                  <Main
+                    characterListData={this.state.characterData}
+                    settings={this.state.settings}
+                    updateHitboxData={this.updateHitboxData}
+                    urlNotification={this.urlNotification}
                   />
-              </div>
-            )} />
+                  <HitboxDetail
+                    updateHitboxData={this.updateHitboxData}
+                    hitboxData={this.state.hitboxData}
+                    settings={this.state.settings}
+                  />
 
-            <Route path={['/characters']} exact render={() => (
-              <CharacterList
-                characterListData={this.state.characterData}
-                updateCurrentCharacter={this.updateCurrentCharacter}
-                getCharacterData={this.getCharacterData}
-                search={this.state.search}
-                changeSearchValue={this.changeSearchValue}
-                setInitialSettings={this.setInitialSettings}
-                settings={this.state.settings}
-                changeSettings={this.changeSettings}
-              />
-            )} />
+                </div>
+              )} />
 
-            <Route path={['/:character', '/:character/:move', '/:character/:move/:frame']} exact render={() => (
-              <div id="main">
-                <Main
-                  characterListData={this.state.characterData}
-                  settings={this.state.settings}
-                  updateHitboxData={this.updateHitboxData}
-                  urlNotification={this.urlNotification}
-                />
-                <HitboxDetail
-                  updateHitboxData={this.updateHitboxData}
-                  hitboxData={this.state.hitboxData}
-                  settings={this.state.settings}
-                />
+              <Route path='*' exact render={() => (
+                <h2> This page is not available! </h2>
+              )} />
 
-              </div>
-            )} />
-
-            <Route path='*' exact render={() => (
-              <h2> This page is not available! </h2>
-            )} />
-
-          </Switch>
-        </Router>
-      </div>
-    )
+            </Switch>
+          </Router>
+        </div>
+      )
+    }
   }
   
 }

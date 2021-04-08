@@ -7,13 +7,23 @@ a {
   color: inherit;
 }
 
-.App {
+#App {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   flex: 1;
+}
+
+.app-dark {
+  background-color: #F2F3F4;
+  color: black
+}
+
+.app-light {
+  background-color: #1B1B1B;
+  color: white;
 }
 
 #pageLength {

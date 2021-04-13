@@ -3815,8 +3815,8 @@
     {
       "name": "Dark Dive (Grab Success)",
       "value": "GanondorfDarkDiveCatch",
-      "frames": 66,
-      "faf": 66,
+      "frames": 39,
+      "faf": 39,
       "hitboxes": [
 
         {

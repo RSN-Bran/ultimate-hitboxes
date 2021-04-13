@@ -993,8 +993,8 @@
     {
       "name": "Dash Attack",
       "value": "PalutenaDashAttack",
-      "frames": 37,
-      "faf": 37,
+      "frames": 40,
+      "faf": 40,
       "hitboxes": [
         {
           "id": "0",
@@ -2593,7 +2593,7 @@
           "z": "4.0",
           "x2": "0.0",
           "y2": "8.0",
-          "z2": "11.4",
+          "z2": "9.4",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
           "frames": [ 7, 8 ],
@@ -2609,7 +2609,7 @@
           "z": "2.2",
           "x2": "0.0",
           "y2": "8.0",
-          "z2": "13.2",
+          "z2": "11.2",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
           "frames": [ 7, 8 ],

@@ -2038,6 +2038,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "flower",
+          "hp": "",
+          "frames": [26,27,28,29],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3145,6 +3155,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "flower",
+          "hp": "",
+          "frames": [ 12,13 ],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3516,7 +3536,8 @@
           "frames": [ 16 ],
           "color": "red",
           "notes": ""
-        }      ],
+        }
+      ],
       "throws": [
         {
           "kind": "fighter_attack_absolute_kind_catch",
@@ -3535,6 +3556,16 @@
           "type": "attack_region_throw",
           "frames": [ 17 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -3562,6 +3593,16 @@
           "type": "attack_region_throw",
           "frames": [ 20 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -3631,6 +3672,16 @@
           "color": "",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ],
+          "color": "lightgreen",
+          "notes": ""
+        }
       ]
     },
     {
@@ -3656,6 +3707,16 @@
           "type": "attack_region_throw",
           "frames": [ 19 ],
           "color": "",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Invincible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
+          "color": "lightgreen",
           "notes": ""
         }
       ]
@@ -4184,6 +4245,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -4272,6 +4343,16 @@
           "type": "attack_region_object",
           "frames": [ 22, 23 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -4364,6 +4445,16 @@
           "color": "red",
           "notes": ""
         }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+          "color": "darkblue",
+          "notes": ""
+        }
       ]
     },
     {
@@ -4452,6 +4543,16 @@
           "type": "attack_region_object",
           "frames": [ 31, 32 ],
           "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]

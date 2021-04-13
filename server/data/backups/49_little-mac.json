@@ -1578,7 +1578,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [ 11, 12, 13 ],
+          "frames": [ 11, 12, 13,14 ],
           "color": "purple",
           "notes": ""
         },
@@ -1616,7 +1616,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [ 11, 12, 13 ],
+          "frames": [ 11, 12, 13, 14 ],
           "color": "purple",
           "notes": ""
         },
@@ -1654,7 +1654,7 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [ 11, 12, 13 ],
+          "frames": [ 11, 12, 13, 14 ],
           "color": "purple",
           "notes": ""
         }

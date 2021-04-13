@@ -4602,8 +4602,8 @@
     {
       "name": "Falcon Dive (Catch)",
       "value": "CaptainFalconFalconDiveCatch",
-      "frames": 66,
-      "faf": 66,
+      "frames": 39,
+      "faf": 39,
       "hitboxes": [
         {
           "id": "0",

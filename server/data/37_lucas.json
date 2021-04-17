@@ -1722,6 +1722,48 @@
                     "color": "salmon",
                     "notes": ""
                 }
+            ],
+            "hurtboxes": [
+                {
+                    "type": "Invincible",
+                    "bone": "all",
+                    "hp": "",
+                    "frames": [1,2,3,4,5,6,7],
+                    "color": "lightgreen",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "arml",
+                    "hp": "",
+                    "frames": [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "armr",
+                    "hp": "",
+                    "frames": [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "shoulderl",
+                    "hp": "",
+                    "frames": [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "shoulderr",
+                    "hp": "",
+                    "frames": [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
+                    "color": "darkblue",
+                    "notes": ""
+                }
             ]
         },
         {
@@ -4089,6 +4131,16 @@
                         29
                     ],
                     "color": "red",
+                    "notes": ""
+                }
+            ],
+            "hurtboxes": [
+                {
+                    "type": "Intangible",
+                    "bone": "all",
+                    "hp": "",
+                    "frames": [1,2,3,4,5,6,7,8,9],
+                    "color": "darkblue",
                     "notes": ""
                 }
             ]

@@ -9,11 +9,6 @@ import DefaultSpeed from './DefaultSpeed'
 //CSS Imports
 import '../css/Settings.css';
 
-//Media Imports
-import x_dark from '../media/darkmode/x.png'
-import x_light from '../media/lightmode/x.png'
-let x = [x_dark, x_light]
-
 function Settings(props) {
 
 	//Create a deep copy of the settings

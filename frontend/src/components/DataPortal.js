@@ -86,7 +86,7 @@ function DataPortal(props) {
         <Slider
           totalFrames={props.currentMoveData.frames}
           currentFrame={props.currentFrame}
-          setCurrentFrame={props.setCurrentFrame}
+          jumpToFrame={props.jumpToFrame}
         />
 
         <Buttons

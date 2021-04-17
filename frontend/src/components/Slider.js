@@ -29,7 +29,7 @@ function Slider(props) {
 						min="1"
 						max={props.totalFrames}
 						value={props.currentFrame}
-						onChange={e => props.setCurrentFrame(parseInt(e.target.value))}
+						onChange={e => props.jumpToFrame(parseInt(e.target.value))}
 						list="ticks"
 					/>
 				</div>

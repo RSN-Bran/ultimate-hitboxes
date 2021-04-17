@@ -133,7 +133,7 @@ class App extends React.Component {
         })
       })
       .catch(err => {
-        console.log("Failure")
+        console.log(err)
       })
   }
 

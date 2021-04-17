@@ -4151,7 +4151,7 @@
       "value": "BayonettaFThrow",
       "frames": 42,
       "faf": 42,
-      "hitboxes": [
+      "throws": [
         {
           "id": "0",
           "part": "0",

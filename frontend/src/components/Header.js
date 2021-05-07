@@ -38,11 +38,11 @@ function Header(props) {
     <div id="header">
       <div id="help">
         <Link to="/info">
-          <img id="infoButton" className="helpButtons" src={info[props.dark_light]} onClick={props.showInfo} />
+          <img id="infoButton" className="helpButtons" src={info[props.dark_light]}/>
         </Link>
 
         <Link to="/settings">
-          <img id="settingsButton" className="helpButtons" src={settings[props.dark_light]} onClick={props.showSettings} />
+          <img id="settingsButton" className="helpButtons" src={settings[props.dark_light]}/>
         </Link>
 
         <img id="backButton" className="helpButtons" src={back[props.dark_light]} onClick={() => history.goBack()} />

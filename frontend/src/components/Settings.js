@@ -106,8 +106,7 @@ function Settings(props) {
 				</div>
 
 				<div className="settingDiv">
-					<h3>Make sure cookies are enabled so your preferences are saved for future visits!</h3>
-					<h3 style={{ cursor: "pointer" }} onClick={() => { document.cookie = "settings="; document.cookie = ""; history.go(0)}}>If you are experiencing issues with your settings, click here to clear your cookies</h3>
+					<h3 style={{ cursor: "pointer" }} onClick={() => { document.cookie = "settings="; document.cookie = ""; history.go(0)}}>Click here to reset settings to default</h3>
 				</div>
 
 			</div>

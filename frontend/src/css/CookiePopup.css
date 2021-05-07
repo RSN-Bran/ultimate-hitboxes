@@ -1,0 +1,43 @@
+#cookiePopup {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: calc(10px + 2vmin);
+}
+
+.cookiePopup-0 {
+    background-color: #F2F3F4;
+    color: black;
+}
+
+.cookiePopup-1 {
+    background-color: #1B1B1B;
+    color: white;
+}
+
+.cookieButton {
+    cursor: pointer;
+    font-size: 17px;
+}
+
+#acceptCookiesButton {
+    background-color: forestgreen;
+    border-color: forestgreen;
+    margin-right: 10%;
+}
+
+#rejectCookiesButton {
+    background-color: red;
+    border-color: red;
+    margin-right: 10%;
+}
+
+#moreInfoButton-0 {
+    background-color: black;
+    color: white;
+}
+
+#moreInfoButton-1 {
+    background-color: white;
+    color: black;
+}

@@ -1,6 +1,6 @@
 //Import React Elements
 import React from 'react';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Switch, Redirect } from 'react-router-dom'
 import 'react-notifications-component/dist/theme.css'
 import ReactNotification from 'react-notifications-component'
 import { store } from 'react-notifications-component';
@@ -15,6 +15,8 @@ import Info from './components/Info';
 import CharacterList from './components/CharacterList'
 import Main from './components/Main'
 import HitboxDetail from './components/HitBoxDetail'
+import CookiePopup from './components/CookiePopup'
+import Cookies from './components/Cookies'
 
 //Set hostname to query depending on dev vs PROD
 const environment = process.env.NODE_ENV === "development" ? "localhost" : "ultimate-hitboxes.com";
@@ -44,8 +46,11 @@ class App extends React.Component {
         defaultPlaySpeed: 2,
         loopMove: true,
         scrollTable: true,
-        sortBy: "number"
-      }
+        sortBy: "number",
+        cookiesEnabled: false
+      },
+
+      cookieMessage: true
     }
 
     //Bind functions so they are usable within components
@@ -98,6 +103,11 @@ class App extends React.Component {
       if (settings.loopMove === undefined) {
         settings.loopMove = true
       }
+      if(settings.cookiesEnabled) {
+        this.setState({
+          cookieMessage: false
+        })
+      }
       this.setState({
         settings: settings,
         playSpeed: settings.defaultPlaySpeed
@@ -109,13 +119,21 @@ class App extends React.Component {
     }
   }
 
-  changeSettings(settings) {
+  changeSettings(settings, displayCookieMessage) {
+    console.log(settings)
     if (this.state.settings !== settings) {
       this.setState({
         settings: settings
       })
     }
-    document.cookie = "settings=" + JSON.stringify(settings) + "; Expires=Fri, 1 Jan 2025 00:00:00 EST;" + "path=/";
+    if(displayCookieMessage === false) {
+      this.setState({
+        cookieMessage: false
+      })
+    }
+    if(settings.cookiesEnabled) {
+      document.cookie = "settings=" + JSON.stringify(settings) + "; Expires=Fri, 1 Jan 2025 00:00:00 EST;" + "path=/";
+    }
   }
 
   //When the site initially loads, always get all character data
@@ -175,8 +193,6 @@ class App extends React.Component {
           <ReactNotification />
           <Router>
             <Header
-              showInfo={this.showInfo}
-              showSettings={this.showSettings}
               dark_light={this.state.settings.dark_light}
             />
 
@@ -225,6 +241,10 @@ class App extends React.Component {
                 />
               )} />
 
+              <Route path={['/cookies']} exact render={() => 
+                  <Cookies />
+              } />
+
               <Route path={['/:character', '/:character/:move', '/:character/:move/:frame']} exact render={() => (
                 <div id="main">
                   <Main
@@ -247,7 +267,9 @@ class App extends React.Component {
               )} />
 
             </Switch>
+            {this.state.cookieMessage ? <CookiePopup settings={this.state.settings} changeSettings={this.changeSettings}/> : null}
           </Router>
+
         </div>
       )
     }

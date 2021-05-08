@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const environment = process.env.NODE_ENV === "development" ? "localhost:8080" : "ultimate-hitboxes.com";
-let cookieURL = `${environment}/cookies`
+let cookieURL = `ultimate-hitboxes.com/cookies`
 function Cookies(props) {
 
   return (

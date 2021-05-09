@@ -7,10 +7,10 @@ const https = require("https")
 var fs = require('fs');
 const mysql = require('mysql');
 
-const options = {
-  key: fs.readFileSync("/certs/privkey.pem"),
-  cert: fs.readFileSync("/certs/fullchain.pem")
-};
+//const options = {
+//  key: fs.readFileSync("/certs/privkey.pem"),
+//  cert: fs.readFileSync("/certs/fullchain.pem")
+//};
 
 //OverRide ISO String to give local timezone
 Date.prototype.toISOString = function () {
@@ -188,8 +188,8 @@ app.get('/:character/:move/data', (req, res) => {
 //https.createServer(options, app).listen(5080);
 
 var httpServer = http.createServer(app);
-var httpsServer = https.createServer(options, app);
+//var httpsServer = https.createServer(options, app);
 
 httpServer.listen(5080);
-httpsServer.listen(5443);
+//httpsServer.listen(5443);
 

@@ -7,10 +7,10 @@ const https = require("https")
 var fs = require('fs');
 const mysql = require('mysql');
 
-const options = {
-  key: fs.readFileSync("/certs/privkey.pem"),
-  cert: fs.readFileSync("/certs/fullchain.pem")
-};
+//const options = {
+//  key: fs.readFileSync("/certs/privkey.pem"),
+//  cert: fs.readFileSync("/certs/fullchain.pem")
+//};
 
 //OverRide ISO String to give local timezone
 Date.prototype.toISOString = function () {

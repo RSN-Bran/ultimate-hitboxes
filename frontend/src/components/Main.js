@@ -10,6 +10,7 @@ import Loading from './Loading'
 //CSS Imports
 import '../css/Player.css';
 
+//test
 //Set the environment based on dev or PROD
 //const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
 const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "http://ultimate-hitboxes.com:5080";

@@ -11,7 +11,7 @@ import Loading from './Loading'
 import '../css/Player.css';
 
 //Set the environment based on dev or PROD
-const environment = process.env.NODE_ENV === "development" ? "localhost" : "ultimate-hitboxes.com";
+const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
 
 function Main(props) {
   const [character, setCharacter] = useState(useParams().character.toLowerCase())
@@ -105,7 +105,7 @@ function Main(props) {
         if (move === undefined) { setMove(data.moves[0].value) }
       }
       else {
-        fetch(`http://${environment}:5000/${characterKey.number}_${characterKey.value}/data`)
+        fetch(`${environment}/${characterKey.number}_${characterKey.value}/data`)
           .then(response => response.json())
           .then(data => {
             sessionStorage.setItem(`/${characterKey.number}_${characterKey.value}/data`, JSON.stringify(data))
@@ -142,7 +142,7 @@ function Main(props) {
 
       }
       else {
-        fetch(`http://${environment}:5000/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`)
+        fetch(`${environment}/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`)
           .then(response => response.json())
           .then(data => {
 

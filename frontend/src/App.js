@@ -19,7 +19,7 @@ import CookiePopup from './components/CookiePopup'
 import Cookies from './components/Cookies'
 
 //Set hostname to query depending on dev vs PROD
-const environment = process.env.NODE_ENV === "development" ? "localhost" : "ultimate-hitboxes.com";
+const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
 
 class App extends React.Component {
   constructor() {
@@ -141,7 +141,7 @@ class App extends React.Component {
 
     this.setInitialSettings()
 
-    fetch(`http://${environment}:5000/characterData`)
+    fetch(`${environment}/characterData`)
       .then(response => response.json())
       .then(data => {
 

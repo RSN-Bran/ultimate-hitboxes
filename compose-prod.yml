@@ -5,9 +5,11 @@ services:
     image: bsultana75/ulthit_backend:latest
     command: sh -c "npm start"
     ports:
-      - 5000:5000
+      - 5080:5080
+      - 5443:5443
     volumes:
       - /home/ultimate-hitboxes/server/serverlog:/serverlog
+      - /etc/letsencrypt/live/ultimate-hitboxes.com:/certs
     environment:
       - NODE_ENV=production
       - DB_PW=JY3Z8OvrlWZn

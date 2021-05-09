@@ -1,13 +1,15 @@
 const express = require('express');
 const app = express();
 
+const http = require('http')
 const https = require("https")
+
 var fs = require('fs');
 const mysql = require('mysql');
 
 const options = {
-  key: fs.readFileSync("/etc/letsencrypt/live/ultimate-hitboxes.com/privkey.pem"),
-  cert: fs.readFileSync("/etc/letsencrypt/live/ultimate-hitboxes.com/fullchain.pem")
+  key: fs.readFileSync("/certs/privkey.pem"),
+  cert: fs.readFileSync("/certs/fullchain.pem")
 };
 
 //OverRide ISO String to give local timezone
@@ -180,10 +182,14 @@ app.get('/:character/:move/data', (req, res) => {
 });
 
 // console.log that your server is up and running
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Listening on port ${port}`));
+//const port = process.env.PORT || 5000;
+//app.listen(port, () => console.log(`Listening on port ${port}`));
 
-if (process.env.NODE_ENV !== "development") {
-  https.createServer(options, app).listen(5080);
-}
+//https.createServer(options, app).listen(5080);
+
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(options, app);
+
+httpServer.listen(5080);
+httpsServer.listen(5443);
 

@@ -2111,6 +2111,72 @@
                     "color": "purple",
                     "notes": ""
                 }
+            ],
+            "hurtboxes": [
+                {
+                    "type": "Intangible",
+                    "bone": "head",
+                    "hp": "",
+                    "frames": [20,21,22,23,24],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "neck",
+                    "hp": "",
+                    "frames": [20,21,22,23,24],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "hip",
+                    "hp": "",
+                    "frames": [20,21,22,23,24],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "shoulderl",
+                    "hp": "",
+                    "frames": [20,21,22,23,24],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "arml",
+                    "hp": "",
+                    "frames": [20,21,22,23,24],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "legl",
+                    "hp": "",
+                    "frames": [20,21,22,23,24],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "footl",
+                    "hp": "",
+                    "frames": [20,21,22,23,24],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "wingl2",
+                    "hp": "",
+                    "frames": [20,21,22,23,24],
+                    "color": "darkblue",
+                    "notes": ""
+                }
             ]
         },
         {
@@ -3703,6 +3769,24 @@
                     "color": "red",
                     "notes": ""
                 }
+            ],
+            "hurtboxes": [
+                {
+                    "type": "Intangible",
+                    "bone": "head",
+                    "hp": "",
+                    "frames": [11,12,13,14,15],
+                    "color": "darkblue",
+                    "notes": ""
+                },
+                {
+                    "type": "Intangible",
+                    "bone": "neck2",
+                    "hp": "",
+                    "frames": [11,12,13,14,15],
+                    "color": "darkblue",
+                    "notes": ""
+                }
             ]
         },
         {
@@ -4108,6 +4192,44 @@
                     "color": "",
                     "notes": ""
                 }
+            ],
+            "hurtboxes": [
+                {
+                    "type": "Invincible",
+                    "bone": "all",
+                    "hp": "",
+                    "frames": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27
+                    ],
+                    "color": "lightgreen",
+                    "notes": ""
+                }
             ]
         },
         {
@@ -4135,6 +4257,43 @@
                         26
                     ],
                     "color": "",
+                    "notes": ""
+                }
+            ],
+            "hurtboxes": [
+                {
+                    "type": "Invincible",
+                    "bone": "all",
+                    "hp": "",
+                    "frames": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26
+                    ],
+                    "color": "lightgreen",
                     "notes": ""
                 }
             ]
@@ -4212,6 +4371,75 @@
                         58
                     ],
                     "color": "",
+                    "notes": ""
+                }
+            ],
+            "hurtboxes": [
+                {
+                    "type": "Invincible",
+                    "bone": "all",
+                    "hp": "",
+                    "frames": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58
+                    ],
+                    "color": "lightgreen",
                     "notes": ""
                 }
             ]
@@ -4309,6 +4537,72 @@
                     "color": "",
                     "notes": ""
                 }
+            ],
+            "hurtboxes": [
+                {
+                    "type": "Invincible",
+                    "bone": "all",
+                    "hp": "",
+                    "frames": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55
+                    ],
+                    "color": "lightgreen",
+                    "notes": ""
+                }
             ]
         },
         {
@@ -4316,7 +4610,6 @@
             "value": "CharizardFlareBlitz",
             "frames": 29,
             "faf": 29,
-            "complete": false,
             "hitboxes": [
                 {
                     "id": "0",
@@ -4352,8 +4645,8 @@
                     "sfxlevel": "attack_sound_level_l",
                     "sfxtype": "collision_sound_attr_fire",
                     "type": "attack_region_body",
-                    "frames": [],
-                    "color": "",
+                    "frames": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
+                    "color": "red",
                     "notes": ""
                 },
                 {
@@ -4390,8 +4683,8 @@
                     "sfxlevel": "attack_sound_level_l",
                     "sfxtype": "collision_sound_attr_fire",
                     "type": "attack_region_body",
-                    "frames": [],
-                    "color": "",
+                    "frames": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
+                    "color": "red",
                     "notes": ""
                 }
             ]
@@ -4832,6 +5125,16 @@
                         28
                     ],
                     "color": "red",
+                    "notes": ""
+                }
+            ],
+            "hurtboxes": [
+                {
+                    "type": "Super Armor",
+                    "bone": "all",
+                    "hp": "",
+                    "frames": [4,5,6,7,8,9,10,11,12,13,14,15],
+                    "color": "#2F152E",
                     "notes": ""
                 }
             ]
@@ -5282,7 +5585,24 @@
                     "notes": ""
                 }
             ],
-            "hurtboxes": "[{\"type\": \"Intangible\",\"bone\": \"all\",\"hp\": \"\",\"frames\": [1,2,3,4,5,6,7],\"color\": \"darkblue\",\"notes\": \"\"}]"
+            "hurtboxes": [
+                {
+                    "type": "Intangible",
+                    "bone": "all",
+                    "hp": "",
+                    "frames": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                    ],
+                    "color": "darkblue",
+                    "notes": ""
+                }
+            ]
         }
     ]
 }

@@ -19,8 +19,8 @@ import CookiePopup from './components/CookiePopup'
 import Cookies from './components/Cookies'
 
 //Set hostname to query depending on dev vs PROD
-//const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
-const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "http://ultimate-hitboxes.com:5080";
+const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
+//const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "http://ultimate-hitboxes.com:5080";
 
 
 class App extends React.Component {

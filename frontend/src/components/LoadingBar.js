@@ -6,12 +6,13 @@ function LoadingBar(props) {
 	//Fill percentage meter based on how many images have been loaded
 	var percentageStyle = {
 		width: props.loadingPercent + '%',
-		backgroundColor: "red",
+		backgroundColor: "black",
 	}
 	return (
-		<div id="loadingContainer">
-			<div style={percentageStyle} id="loadingPercent">
-				{Math.round(props.loadingPercent) + '%'}
+		<div id="loadingContainer-outer">
+			<div id="loadingContainer-inner">
+				<div style={percentageStyle} id="loadingPercent">
+				</div>
 			</div>
 		</div>
 	)

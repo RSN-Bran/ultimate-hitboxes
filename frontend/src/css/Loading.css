@@ -1,0 +1,34 @@
+#loading {
+  position: absolute;
+  left:20%;
+  width: 60%;
+  top: 30%
+}
+
+#loadingContainer-outer {
+  width: 100%;
+  height: 1.9em;
+  background-color: grey;
+  border-color: black;
+  border-width: .4em;
+  border-style: solid;
+  border-radius: 15px;
+}
+
+#loadingContainer-inner {
+  border-color: white;
+  height: 1.5em;
+  border-width: .2em;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#loadingPercent {
+  height: 100%;
+}
+
+#loadingText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 100%;
+}

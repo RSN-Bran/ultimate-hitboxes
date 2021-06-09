@@ -9,6 +9,9 @@ import loading from '../media/loading.gif'
 //Component Imports
 import LoadingBar from './LoadingBar'
 
+//Import CSS
+import '../css/Loading.css';
+
 //Use Interval
 function useInterval(callback, delay) {
 	const savedCallback = useRef();
@@ -62,21 +65,20 @@ function Loading(props) {
 	return (
 		<div id="player">
 			<img
-				id="moveImg"
+				id="moveImg-loading"
 				src={placeholder}
 				alt="Move Frames go here"
 			/>
 			<div id="loading">
-
-				<img
-					src={loading}
-					alt="Move loading"
-				/>
+				<div id="loadingText">
+					<b><span>Loading...</span></b>
+					<b><span>{Math.round((loadedSoFar / props.currentMoveData.frames) * 100) + "%"}</span></b>
+				</div>
+				
 				<LoadingBar loadingPercent={(loadedSoFar / props.currentMoveData.frames) * 100} />
 			</div>
 		</div>
 	)
-
 }		
 
 export default Loading

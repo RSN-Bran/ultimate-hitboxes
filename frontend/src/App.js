@@ -76,6 +76,7 @@ class App extends React.Component {
 
   //Save data for a particular hitbox for use in the "More Data button"
   updateHitboxData(hitbox) {
+    
     this.setState({
       hitboxData: hitbox
     })

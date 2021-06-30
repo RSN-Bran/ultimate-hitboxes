@@ -75,7 +75,24 @@ function Main(props) {
     )
   }
 
-  //Use the index to determine which characters are next and previous
+  let i = 1;
+  while (nextChar === undefined || prevChar === undefined) {
+    let nextIndex = (characterIndex + i) % props.characterListData.length;
+    let prevIndex = characterIndex - i
+    if (prevIndex < 0) {
+      prevIndex = props.characterListData.length - Math.abs(prevIndex)
+    }
+
+    if (props.characterListData[nextIndex].completed && nextChar === undefined) {
+      nextChar = props.characterListData[nextIndex].value
+    }
+    if (props.characterListData[prevIndex].completed && prevChar === undefined) {
+      prevChar = props.characterListData[prevIndex].value
+    }
+
+    i=i+1
+  }
+/*  //Use the index to determine which characters are next and previous
   if (characterIndex === 0) {
     nextChar = props.characterListData[characterIndex + 1].value;
     prevChar = props.characterListData[props.characterListData.length - 1].value;
@@ -87,7 +104,7 @@ function Main(props) {
   else {
     nextChar = props.characterListData[characterIndex + 1].value;
     prevChar = props.characterListData[characterIndex - 1].value;
-  }
+  }*/
 
 
   //Set up State variables

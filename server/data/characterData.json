@@ -501,7 +501,7 @@
     "number": "51",
     "completed": true,
     "series": "smash-bros",
-    "version": "11.0.1"
+    "version": "12.0.0"
   },
   {
     "id": 57,
@@ -582,7 +582,7 @@
     "number": "60",
     "completed": true,
     "series": "street-fighter",
-    "version": "11.0.1"
+    "version": "12.0.0"
   },
   {
     "id": 66,
@@ -717,7 +717,7 @@
     "number": "73",
     "completed": true,
     "series": "banjo-kazooie",
-    "version": "11.0.1"
+    "version": "12.0.0"
   },
   {
     "id": 81,

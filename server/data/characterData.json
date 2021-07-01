@@ -78,7 +78,7 @@
     "number": "08",
     "completed": true,
     "series": "pokemon",
-    "version": "11.0.1"
+    "version": "12.0.0"
   },
   {
     "id": 10,
@@ -105,7 +105,7 @@
     "number": "11",
     "completed": true,
     "series": "f-zero",
-    "version": "11.0.1"
+    "version": "12.0.0"
   },
   {
     "id": 13,

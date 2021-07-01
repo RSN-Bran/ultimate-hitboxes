@@ -3586,8 +3586,8 @@
         {
             "name": "Cannon Jump Kick",
             "value": "MiiGunnerCannonJumpKick",
-            "frames": 60,
-            "faf": 60,
+            "frames": 59,
+            "faf": 59,
             "hitboxes": [
                 {
                     "id": "0",
@@ -3705,14 +3705,14 @@
                     "sfxlevel": "attack_sound_level_l",
                     "sfxtype": "collision_sound_attr_kick",
                     "type": "attack_region_kick",
-                    "frames": [
-                        11,
-                        12,
-                        13,
-                        14,
-                        15,
-                        16
-                    ],
+                  "frames": [
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
                     "color": "red",
                     "notes": ""
                 },
@@ -3751,7 +3751,8 @@
                     "sfxtype": "collision_sound_attr_kick",
                     "type": "attack_region_kick",
                     "frames": [
-                        17,
+                      16,
+                      17,
                         18,
                         19,
                         20,
@@ -3764,8 +3765,7 @@
                         27,
                         28,
                         29,
-                        30,
-                        31
+                        30
                     ],
                     "color": "purple",
                     "notes": ""

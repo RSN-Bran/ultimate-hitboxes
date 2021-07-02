@@ -2653,7 +2653,7 @@
       ]
     },
     {
-      "name": "Down Forward Tilt 1 (Tsunami Kick)",
+      "name": "Down Forward Tilt 1 - Tsunami Kick",
       "value": "KazuyaDFTilt1",
       "frames": 36,
       "faf": 36,
@@ -2695,8 +2695,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2736,8 +2736,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2777,8 +2777,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2818,8 +2818,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2859,8 +2859,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2900,14 +2900,32 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "legr",
+          "hp": "",
+          "frames": [ 8, 9, 10, 11 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "kneer",
+          "hp": "",
+          "frames": [ 8, 9, 10, 11 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Down Forward Tilt 2 (Tsunami Kick)",
+      "name": "Down Forward Tilt 2 - Tsunami Kick",
       "value": "KazuyaDFTilt2",
       "frames": 43,
       "faf": 43,
@@ -2949,8 +2967,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -2990,8 +3008,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3031,8 +3049,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3072,8 +3090,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3113,8 +3131,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3154,8 +3172,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3195,8 +3213,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3236,8 +3254,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 16 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3277,8 +3295,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 16 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3318,14 +3336,32 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 16 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "legr",
+          "hp": "",
+          "frames": [ 14, 15, 16 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "kneer",
+          "hp": "",
+          "frames": [ 14, 15, 16 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Down Tilt (Nejiri Uraken)",
+      "name": "Down Tilt - Nejiri Uraken",
       "value": "KazuyaDTilt",
       "frames": 45,
       "faf": 45,
@@ -3367,8 +3403,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61408",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 16, 17, 18 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3408,8 +3444,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61408",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 16, 17, 18 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3449,8 +3485,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61408",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 16, 17, 18 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3490,14 +3526,24 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61408",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 16, 17, 18 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [13,14,15],
+          "color": "darkblue",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Down Back Tilt (Stature Smash)",
+      "name": "Down Back Tilt - Stature Smash",
       "value": "KazuyaDBTilt",
       "frames": 39,
       "faf": 39,
@@ -3539,8 +3585,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 13, 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3580,8 +3626,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 13, 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3621,8 +3667,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 13, 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3662,8 +3708,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3703,8 +3749,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3744,8 +3790,26 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "legr",
+          "hp": "",
+          "frames": [ 13,14,15 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "kneer",
+          "hp": "",
+          "frames": [ 13, 14, 15 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -3793,8 +3857,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 11, 12, 13 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3834,14 +3898,64 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 11, 12, 13 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "bust",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderr",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "armr",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderl",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "arml",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Up Back Tilt (Jump Side Kick)",
+      "name": "Up Back Tilt - Jump Side Kick",
       "value": "KazuyaUBTilt",
       "frames": 39,
       "faf": 39,
@@ -3883,8 +3997,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14, 15, 16, 17 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3924,8 +4038,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14, 15, 16, 17 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3965,8 +4079,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14, 15, 16, 17 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4006,8 +4120,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14, 15, 16, 17 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4047,14 +4161,48 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14, 15, 16, 17 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "kneel",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "kneer",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "legl",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "legr",
+          "hp": "",
+          "frames": [ 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Up Tilt 1 (Twin Pistons)",
+      "name": "Up Tilt 1 - Twin Pistons",
       "value": "KazuyaUTilt1",
       "frames": 29,
       "faf": 29,
@@ -4096,8 +4244,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4137,8 +4285,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4178,8 +4326,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4219,8 +4367,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4260,8 +4408,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4301,8 +4449,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4342,8 +4490,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4383,8 +4531,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4424,8 +4572,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4465,8 +4613,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4506,8 +4654,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4547,14 +4695,64 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [ 9, 10 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "bust",
+          "hp": "",
+          "frames": [ 9, 10 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderl",
+          "hp": "",
+          "frames": [ 9, 10 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderr",
+          "hp": "",
+          "frames": [ 9, 10 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "arml",
+          "hp": "",
+          "frames": [ 9, 10 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "armr",
+          "hp": "",
+          "frames": [ 9, 10 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Up Tilt 2 (Twin Pistons)",
+      "name": "Up Tilt 2 - Twin Pistons",
       "value": "KazuyaUTilt2",
       "frames": 42,
       "faf": 42,
@@ -4596,8 +4794,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4637,8 +4835,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4678,8 +4876,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4719,8 +4917,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 14 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4760,8 +4958,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4801,8 +4999,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4842,8 +5040,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4883,8 +5081,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 15 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4924,8 +5122,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 16 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4965,8 +5163,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 16 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5006,8 +5204,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 16 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5047,14 +5245,64 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 16 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "bust",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderl",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderr",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "arml",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "armr",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,15,16 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Up Forward Tilt 1 (Roundhouse to Triple Spin Kicks)",
+      "name": "Up Forward Tilt 1 - Roundhouse to Triple Spin Kicks",
       "value": "KazuyaUFTilt1",
       "frames": 42,
       "faf": 42,
@@ -5096,8 +5344,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14, 15, 16 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5137,8 +5385,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14, 15, 16 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5178,14 +5426,48 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 14, 15, 16 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "legl",
+          "hp": "",
+          "frames": [ 4,5,6,7 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "kneel",
+          "hp": "",
+          "frames": [ 4, 5, 6, 7,8,9,10,11,12,13,14,15,16],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "kneer",
+          "hp": "",
+          "frames": [ 4, 5, 6, 7 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "kneer",
+          "hp": "",
+          "frames": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Up Forward Tilt 2 (Roundhouse to Triple Spin Kicks)",
+      "name": "Up Forward Tilt 2 - Roundhouse to Triple Spin Kicks",
       "value": "KazuyaUFTilt2",
       "frames": 45,
       "faf": 45,
@@ -5227,8 +5509,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [11],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5268,8 +5550,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [11],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5309,8 +5591,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [11],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5350,8 +5632,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [12],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5391,8 +5673,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [12],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5432,14 +5714,14 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [12],
+          "color": "red",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Up Forward Tilt 3 (Roundhouse to Triple Spin Kicks)",
+      "name": "Up Forward Tilt 3 - Roundhouse to Triple Spin Kicks",
       "value": "KazuyaUFTilt3",
       "frames": 47,
       "faf": 47,
@@ -5481,8 +5763,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [16,17],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5522,8 +5804,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [16,17],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5563,8 +5845,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [16,17],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -5612,8 +5894,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [14,15,16],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5653,8 +5935,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [14,15,16],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5694,8 +5976,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [14,15,16],
+          "color": "red",
           "notes": ""
         },
         {
@@ -5735,8 +6017,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [14,15,16],
+          "color": "red",
           "notes": ""
         }
       ]

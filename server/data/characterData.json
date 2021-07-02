@@ -787,8 +787,8 @@
     "name": "Kazuya",
     "value": "kazuya",
     "number": "81",
-    "completed": false,
+    "completed": true,
     "series": "tekken",
-    "version": ""
+    "version": "12.0.0"
   }
 ]

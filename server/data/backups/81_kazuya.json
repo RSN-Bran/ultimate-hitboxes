@@ -1316,7 +1316,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 24 ],
+          "frames": [24],
           "color": "red",
           "notes": ""
         },
@@ -1357,7 +1357,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 24 ],
+          "frames": [24],
           "color": "red",
           "notes": ""
         },
@@ -1398,7 +1398,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 24 ],
+          "frames": [24],
           "color": "red",
           "notes": ""
         },
@@ -1439,7 +1439,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 24 ],
+          "frames": [24],
           "color": "red",
           "notes": ""
         },
@@ -1480,7 +1480,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 24 ],
+          "frames": [24],
           "color": "red",
           "notes": ""
         },
@@ -1521,7 +1521,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 25 ],
+          "frames": [25],
           "color": "red",
           "notes": ""
         },
@@ -1562,7 +1562,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 25 ],
+          "frames": [25],
           "color": "red",
           "notes": ""
         },
@@ -1603,7 +1603,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 25 ],
+          "frames": [25],
           "color": "red",
           "notes": ""
         },
@@ -1644,7 +1644,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 25 ],
+          "frames": [25],
           "color": "red",
           "notes": ""
         },
@@ -1685,7 +1685,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 25 ],
+          "frames": [25],
           "color": "red",
           "notes": ""
         }
@@ -1734,7 +1734,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14 ],
+          "frames": [14],
           "color": "red",
           "notes": ""
         },
@@ -1775,7 +1775,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14 ],
+          "frames": [14],
           "color": "red",
           "notes": ""
         },
@@ -1816,7 +1816,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14 ],
+          "frames": [14],
           "color": "red",
           "notes": ""
         },
@@ -1857,7 +1857,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14 ],
+          "frames": [14],
           "color": "red",
           "notes": ""
         }
@@ -1906,7 +1906,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 18 ],
+          "frames": [18],
           "color": "red",
           "notes": ""
         },
@@ -1947,7 +1947,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 18 ],
+          "frames": [18],
           "color": "red",
           "notes": ""
         },
@@ -1988,7 +1988,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 18 ],
+          "frames": [18],
           "color": "red",
           "notes": ""
         },
@@ -2029,7 +2029,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 18 ],
+          "frames": [18],
           "color": "red",
           "notes": ""
         },
@@ -2070,7 +2070,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 18 ],
+          "frames": [18],
           "color": "red",
           "notes": ""
         }
@@ -2119,7 +2119,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [ 16 ],
+          "frames": [16],
           "color": "red",
           "notes": ""
         },
@@ -2160,7 +2160,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [ 16 ],
+          "frames": [16],
           "color": "red",
           "notes": ""
         }
@@ -2209,7 +2209,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [ 29 ],
+          "frames": [29],
           "color": "red",
           "notes": ""
         },
@@ -2250,7 +2250,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [ 29 ],
+          "frames": [29],
           "color": "red",
           "notes": ""
         },
@@ -2291,7 +2291,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [ 29 ],
+          "frames": [29],
           "color": "red",
           "notes": ""
         }
@@ -3536,7 +3536,7 @@
           "type": "Intangible",
           "bone": "all",
           "hp": "",
-          "frames": [ 13, 14, 15 ],
+          "frames": [13,14,15],
           "color": "darkblue",
           "notes": ""
         }
@@ -3800,7 +3800,7 @@
           "type": "Intangible",
           "bone": "legr",
           "hp": "",
-          "frames": [ 13, 14, 15 ],
+          "frames": [ 13,14,15 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -5255,7 +5255,7 @@
           "type": "Intangible",
           "bone": "head",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "frames": [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
           "color": "darkblue",
           "notes": ""
         },
@@ -5295,7 +5295,7 @@
           "type": "Intangible",
           "bone": "armr",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,15,16 ],
           "color": "darkblue",
           "notes": ""
         }
@@ -5436,7 +5436,7 @@
           "type": "Intangible",
           "bone": "legl",
           "hp": "",
-          "frames": [ 4, 5, 6, 7 ],
+          "frames": [ 4,5,6,7 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -5444,7 +5444,7 @@
           "type": "Intangible",
           "bone": "kneel",
           "hp": "",
-          "frames": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
+          "frames": [ 4, 5, 6, 7,8,9,10,11,12,13,14,15,16],
           "color": "darkblue",
           "notes": ""
         },
@@ -5509,7 +5509,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 11 ],
+          "frames": [11],
           "color": "red",
           "notes": ""
         },
@@ -5550,7 +5550,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 11 ],
+          "frames": [11],
           "color": "red",
           "notes": ""
         },
@@ -5591,7 +5591,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 11 ],
+          "frames": [11],
           "color": "red",
           "notes": ""
         },
@@ -5632,7 +5632,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 12 ],
+          "frames": [12],
           "color": "red",
           "notes": ""
         },
@@ -5673,7 +5673,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 12 ],
+          "frames": [12],
           "color": "red",
           "notes": ""
         },
@@ -5714,7 +5714,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 12 ],
+          "frames": [12],
           "color": "red",
           "notes": ""
         }
@@ -5763,7 +5763,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 16, 17 ],
+          "frames": [16,17],
           "color": "red",
           "notes": ""
         },
@@ -5804,7 +5804,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 16, 17 ],
+          "frames": [16,17],
           "color": "red",
           "notes": ""
         },
@@ -5845,7 +5845,7 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 16, 17 ],
+          "frames": [16,17],
           "color": "red",
           "notes": ""
         }
@@ -5894,7 +5894,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14, 15, 16 ],
+          "frames": [14,15,16],
           "color": "red",
           "notes": ""
         },
@@ -5935,7 +5935,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14, 15, 16 ],
+          "frames": [14,15,16],
           "color": "red",
           "notes": ""
         },
@@ -5976,7 +5976,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14, 15, 16 ],
+          "frames": [14,15,16],
           "color": "red",
           "notes": ""
         },
@@ -6017,7 +6017,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14, 15, 16 ],
+          "frames": [14,15,16],
           "color": "red",
           "notes": ""
         }
@@ -6200,14 +6200,14 @@
           "type": "Intangible",
           "bone": "arml",
           "hp": "",
-          "frames": [ 6, 7, 8 ],
+          "frames": [ 6,7,8 ],
           "color": "darkblue",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Crouch Forward Tilt - Tombstone Crusher",
+      "name": "Crouch Forward Tilt (Tombstone Crusher)",
       "value": "KazuyaCrouchFTilt",
       "frames": 50,
       "faf": 50,
@@ -6249,8 +6249,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14 ],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -6290,8 +6290,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14 ],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -6331,8 +6331,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 14 ],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -6372,8 +6372,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 15, 16 ],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -6413,8 +6413,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 15, 16 ],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -6454,56 +6454,14 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 15, 16 ],
-          "color": "red",
-          "notes": ""
-        }
-      ],
-      "hurtboxes": [
-        {
-          "type": "Intangible",
-          "bone": "all",
-          "hp": "",
-          "frames": [ 5,6,7,8,9,10,11,12,13,14 ],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "shoulderr",
-          "hp": "",
-          "frames": [15,16,17,18,19],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "armr",
-          "hp": "",
-          "frames": [ 15, 16, 17, 18, 19 ],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "legr",
-          "hp": "",
-          "frames": [15,16],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "kneer",
-          "hp": "",
-          "frames": [15,16],
-          "color": "darkblue",
+          "frames": [],
+          "color": "",
           "notes": ""
         }
       ]
     },
     {
-      "name": "Crouch Back Tilt - Crouch Spin Kick",
+      "name": "Crouch Back Tilt (Crouch Spin Kick)",
       "value": "KazuyaCrouchBTilt",
       "frames": 35,
       "faf": 35,
@@ -6545,8 +6503,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 11, 12, 13, 14, 15, 16 ],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -6586,8 +6544,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 11, 12, 13, 14, 15, 16 ],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -6627,26 +6585,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [ 11, 12, 13, 14, 15, 16 ],
-          "color": "red",
-          "notes": ""
-        }
-      ],
-      "hurtboxes": [
-        {
-          "type": "Intangible",
-          "bone": "legl",
-          "hp": "",
-          "frames": [11,12,13,14,15,16 ],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "kneel",
-          "hp": "",
-          "frames": [11,12,13,14,15,16 ],
-          "color": "darkblue",
+          "frames": [],
+          "color": "",
           "notes": ""
         }
       ]
@@ -6694,8 +6634,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61436",
           "type": "attack_region_punch",
-          "frames": [ 13, 14 ],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -6735,8 +6675,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61436",
           "type": "attack_region_punch",
-          "frames": [ 13, 14 ],
-          "color": "red",
+          "frames": [],
+          "color": "",
           "notes": ""
         },
         {
@@ -6776,58 +6716,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61436",
           "type": "attack_region_punch",
-          "frames": [ 13, 14 ],
-          "color": "red",
-          "notes": ""
-        }
-      ],
-      "hurtboxes": [
-        {
-          "type": "Intangible",
-          "bone": "head",
-          "hp": "",
-          "frames": [2,3,4,5,6],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "bust",
-          "hp": "",
-          "frames": [ 2, 3, 4, 5, 6 ],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "shoulderl",
-          "hp": "",
-          "frames": [ 2, 3, 4, 5, 6 ],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "shoulderr",
-          "hp": "",
-          "frames": [ 2, 3, 4, 5, 6, 13, 14 ],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "arml",
-          "hp": "",
-          "frames": [ 2, 3, 4, 5, 6 ],
-          "color": "darkblue",
-          "notes": ""
-        },
-        {
-          "type": "Intangible",
-          "bone": "armr",
-          "hp": "",
-          "frames": [ 2, 3, 4, 5, 6,13,14],
-          "color": "darkblue",
+          "frames": [],
+          "color": "",
           "notes": ""
         }
       ]

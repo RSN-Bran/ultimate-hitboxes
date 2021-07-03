@@ -6838,7 +6838,65 @@
       "value": "KazuyaCrouchDash",
       "frames": 19,
       "faf": 19,
-      "hitboxes": []
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [ 1, 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "torso",
+          "hp": "",
+          "frames": [ 1, 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderl",
+          "hp": "",
+          "frames": [ 1, 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "arml",
+          "hp": "",
+          "frames": [ 1, 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderr",
+          "hp": "",
+          "frames": [ 1, 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "color": "darkblue",
+          "notes": ""
+
+        },
+        {
+          "type": "Intangible",
+          "bone": "armr",
+          "hp": "",
+          "frames": [ 1, 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [2,3,4],
+          "color": "darkblue",
+          "notes": ""
+        }
+      ]
     },
     {
       "name": "Wind God Fist",
@@ -6883,8 +6941,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [8],
+          "color": "red",
           "notes": ""
         },
         {
@@ -6924,8 +6982,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [8],
+          "color": "red",
           "notes": ""
         },
         {
@@ -6965,8 +7023,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [8],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7006,8 +7064,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [8],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7047,8 +7105,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [8],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7088,8 +7146,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [8],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7129,8 +7187,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [9],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7170,8 +7228,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [9],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7211,8 +7269,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [9],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7252,8 +7310,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [9],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7293,8 +7351,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [9],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7334,8 +7392,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [9],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7375,8 +7433,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7416,8 +7474,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7457,8 +7515,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7498,8 +7556,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7539,8 +7597,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7580,8 +7638,59 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "torso",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderl",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "arml",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderr",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ],
+          "color": "darkblue",
+          "notes": ""
+
+        },
+        {
+          "type": "Intangible",
+          "bone": "armr",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -7629,8 +7738,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 8 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7670,8 +7779,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 8 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7711,8 +7820,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 8 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7752,8 +7861,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 8 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7793,8 +7902,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 8 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7834,8 +7943,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 8 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7875,8 +7984,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7916,8 +8025,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7957,8 +8066,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -7998,8 +8107,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8039,8 +8148,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8080,8 +8189,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 9 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8121,8 +8230,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8162,8 +8271,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8203,8 +8312,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8244,8 +8353,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8285,8 +8394,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8326,8 +8435,68 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61400",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 10, 11 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [1,2,3],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "torso",
+          "hp": "",
+          "frames": [ 1, 2, 3 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderl",
+          "hp": "",
+          "frames": [ 1, 2, 3 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "arml",
+          "hp": "",
+          "frames": [ 1, 2, 3 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderr",
+          "hp": "",
+          "frames": [ 1, 2, 3,8,9,10,11 ],
+          "color": "darkblue",
+          "notes": ""
+
+        },
+        {
+          "type": "Intangible",
+          "bone": "armr",
+          "hp": "",
+          "frames": [ 1, 2, 3, 8, 9, 10, 11 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 4,5,6,7 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -8375,8 +8544,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 22 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8416,8 +8585,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 22 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8457,8 +8626,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 22 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -8498,8 +8667,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 23 ],
+          "color": "fuchsia",
           "notes": ""
         },
         {
@@ -8539,8 +8708,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 23 ],
+          "color": "fuchsia",
           "notes": ""
         },
         {
@@ -8580,8 +8749,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 24 ],
+          "color": "salmon",
           "notes": ""
         },
         {
@@ -8621,8 +8790,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 24 ],
+          "color": "salmon",
           "notes": ""
         },
         {
@@ -8662,8 +8831,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 25, 26, 27 ],
+          "color": "pink",
           "notes": ""
         },
         {
@@ -8703,8 +8872,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 25 ],
+          "color": "pink",
           "notes": ""
         },
         {
@@ -8744,8 +8913,8 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 26 ],
+          "color": "pink",
           "notes": ""
         },
         {
@@ -8785,8 +8954,68 @@
           "sfxlevel": "attack_sound_level_l",
           "sfxtype": "61416",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [ 27 ],
+          "color": "pink",
+          "notes": ""
+        }
+      ],
+
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "head",
+          "hp": "",
+          "frames": [1,2,3,4,5,8,9,10,11,22,23,24],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "torso",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderl",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "arml",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "shoulderr",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "color": "darkblue",
+          "notes": ""
+
+        },
+        {
+          "type": "Intangible",
+          "bone": "armr",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "color": "darkblue",
+          "notes": ""
+        },
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 12,13,14,15,16,17,18,19,20,21,22 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]

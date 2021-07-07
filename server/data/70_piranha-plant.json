@@ -4244,7 +4244,8 @@
             "name": "Piranhacopter",
             "value": "PiranhaPlantPiranhacopter",
             "frames": 134,
-            "faf": 134,
+          "faf": 134,
+          "notes":  "Landing Lag between 17-21 frames",
             "hitboxes": [
                 {
                     "id": "0",

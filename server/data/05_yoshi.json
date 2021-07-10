@@ -3266,8 +3266,8 @@
         {
             "name": "Down Throw",
             "value": "YoshiDThrow",
-            "frames": 50,
-            "faf": 50,
+            "frames": 43,
+            "faf": 43,
             "throws": [
                 {
                     "kind": "fighter_attack_absolute_kind_throw",

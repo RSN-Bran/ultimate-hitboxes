@@ -3518,8 +3518,8 @@
         {
             "name": "Down Throw",
             "value": "RidleyDThrow",
-            "frames": 38,
-            "faf": 38,
+            "frames": 35,
+            "faf": 35,
             "throws": [
                 {
                     "kind": "fighter_attack_absolute_kind_throw",

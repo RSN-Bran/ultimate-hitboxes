@@ -3213,8 +3213,8 @@
         {
             "name": "Down Throw",
             "value": "IncineroarDThrow",
-            "frames": 33,
-            "faf": 33,
+            "frames": 35,
+            "faf": 35,
             "throws": [
                 {
                     "kind": "fighter_attack_absolute_kind_throw",

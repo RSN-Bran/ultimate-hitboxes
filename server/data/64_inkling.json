@@ -3330,8 +3330,8 @@
         {
             "name": "Down Throw",
             "value": "InklingDThrow",
-            "frames": 40,
-            "faf": 40,
+            "frames": 34,
+            "faf": 34,
             "throws": [
                 {
                     "kind": "fighter_attack_absolute_kind_throw",

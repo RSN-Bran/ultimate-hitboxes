@@ -6192,7 +6192,7 @@
           "type": "attack_region_punch",
           "frames": [ 7, 8 ],
           "color": "red",
-          "notes": ""
+          "notes": "Only hits downed opponents"
         }
       ],
       "hurtboxes": [
@@ -9576,7 +9576,7 @@
           "type": "attack_region_kick",
           "frames": [ 15, 16 ],
           "color": "fuchsia",
-          "notes": ""
+          "notes": "Only hits downed opponents"
         },
         {
           "id": "0",

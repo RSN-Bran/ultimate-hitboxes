@@ -11,7 +11,8 @@
     resolve: {
       alias: {
         "jquery": path.join(__dirname, "./jquery-stub.js")
-      }
+      },
+      extensions: ['*', '.js', '.jsx', '.json', '.ts', '.tsx'],
     },
 	watchOptions: {
 		poll: true
@@ -23,8 +24,8 @@
           include: path.resolve(__dirname, 'src'),
           use: ['babel-loader']
         },
-          { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
           { test: /\.js$/, loader: "source-map-loader" },
+          { test: /\.tsx$/, include: path.resolve(__dirname, 'src'), loader: "ts-loader" },
           {
             test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
             use: [

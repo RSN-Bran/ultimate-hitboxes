@@ -1,7 +1,5 @@
 //React Imports
-import React from "react"
-import ReactTooltip from "react-tooltip";
-import { useHistory } from 'react-router'
+import * as React from "react"
 
 //Component Imports
 import DefaultSpeed from './DefaultSpeed'

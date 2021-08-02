@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "jsx": "react"
+    },
+    "files": [
+      "src/components/Slider.tsx",
+      "src/components/SortBy.tsx",
+      "src/components/SpeedOptions.tsx",
+      "src/components/Settings.tsx"
+    ]
+  }

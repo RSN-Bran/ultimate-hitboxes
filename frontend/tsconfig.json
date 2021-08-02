@@ -2,10 +2,12 @@
     "compilerOptions": {
       "jsx": "react"
     },
+    "include": ["src", "index.d.ts"],
     "files": [
       "src/components/Slider.tsx",
       "src/components/SortBy.tsx",
       "src/components/SpeedOptions.tsx",
-      "src/components/Settings.tsx"
+      "src/components/Settings.tsx",
+      "src/components/Player.tsx"
     ]
   }

@@ -147,13 +147,13 @@ function Main(props) {
 
 
     try {
-      if (sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`) !== null && process.env.NODE_ENV === "production") {
+      if (sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move}/data`) !== null && process.env.NODE_ENV === "production") {
         let promise = new Promise(function (resolve, reject) {
           resolve()
         })
 
         promise.then(() => {
-          let data = JSON.parse(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`))
+          let data = JSON.parse(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move}/data`))
           setCurrentMoveData(data)
           setLoading(true)
         })
@@ -161,12 +161,12 @@ function Main(props) {
 
       }
       else {
-        fetch(`${environment}/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`)
+        fetch(`${environment}/${characterKey.number}_${characterKey.value}/${move}/data`)
           .then(response => response.json())
           .then(data => {
 
             //Set state to loading and save the data for the move
-            sessionStorage.setItem(`/${characterKey.number}_${characterKey.value}/${move.toLowerCase()}/data`, JSON.stringify(data))
+            sessionStorage.setItem(`/${characterKey.number}_${characterKey.value}/${move}/data`, JSON.stringify(data))
             setCurrentMoveData(data)
             setLoading(true)
           })

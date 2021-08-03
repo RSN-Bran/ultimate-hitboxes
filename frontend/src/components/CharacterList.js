@@ -33,7 +33,6 @@ function CharacterList(props) {
 		else {
 			sortedCharacterData = props.characterListData.slice().sort((a, b) => (a[props.settings.sortBy] < b[props.settings.sortBy]) ? 1 : -1)
     }
-		console.log(sortedCharacterData)
 		//Filter the results based on the searchBar
 		sortedCharacterData = sortedCharacterData.filter(obj => { return obj.name.toUpperCase().includes(props.search.toUpperCase()) })
 

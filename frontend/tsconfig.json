@@ -2,17 +2,9 @@
     "compilerOptions": {
       "jsx": "react"
     },
-    "include": ["src", "index.d.ts"],
-    "files": [
-      "src/components/Slider.tsx",
-      "src/components/SortBy.tsx",
-      "src/components/SpeedOptions.tsx",
-      "src/components/Settings.tsx",
-      "src/components/Player.tsx",
-      "src/components/MoveOption.tsx",
-      "src/components/ToolTip.tsx",
-      "src/components/Buttons.tsx",
-      "src/components/Main.tsx",
-      "src/components/InvalidPage.tsx"
+    "include": [
+      "src",
+      "index.d.ts",
+      "src/components/*.tsx"
     ]
-  }
+}

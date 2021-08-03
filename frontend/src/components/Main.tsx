@@ -1,11 +1,12 @@
 //React Imports
-import React from "react"
+import * as React from "react"
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 //Component Imports
 import DataPortal from './DataPortal'
 import Loading from './Loading'
+import InvalidPage from './InvalidPage'
 
 //CSS Imports
 import '../css/Player.css';
@@ -47,7 +48,8 @@ function Main(props) {
     setMove(move);
     setCurrentFrame(1)
   }
-   //Determine which character is the current character, save the data and the index
+
+  //Determine which character is the current character, save the data and the index
   while (characterIndex < props.characterListData.length) {
     if (props.characterListData[characterIndex].value === character) {
       characterKey = props.characterListData[characterIndex]
@@ -59,19 +61,9 @@ function Main(props) {
   //Return nothing if the character doesn't exist
   if (props.characterListData.filter(element => element.value.toLowerCase() === character.toLowerCase()).length === 0 || props.characterListData[characterIndex].completed === false) {
     return (
-      <div id="characterChoiceBar">
-      <Link to="/characters">
-
-            <button
-              id="chooseCharacterButton"
-              className={props.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
-            >
-              <b>Choose a Character</b>
-            </button>
-
-      </Link>
-        <h2> This page is not available! </h2>
-      </div>
+      <InvalidPage
+        settings={props.settings}
+      />
     )
   }
 
@@ -92,19 +84,6 @@ function Main(props) {
 
     i=i+1
   }
-/*  //Use the index to determine which characters are next and previous
-  if (characterIndex === 0) {
-    nextChar = props.characterListData[characterIndex + 1].value;
-    prevChar = props.characterListData[props.characterListData.length - 1].value;
-  }
-  else if (characterIndex === props.characterListData.length - 1) {
-    nextChar = props.characterListData[0].value
-    prevChar = props.characterListData[characterIndex - 1].value
-  }
-  else {
-    nextChar = props.characterListData[characterIndex + 1].value;
-    prevChar = props.characterListData[characterIndex - 1].value;
-  }*/
 
 
   //Set up State variables
@@ -113,7 +92,7 @@ function Main(props) {
 
   useEffect(() => {
 
-    let promise = new Promise(function (resolve, reject) {
+    let promise = new Promise<void>(function (resolve, reject) {
       resolve()
     })
 
@@ -148,7 +127,7 @@ function Main(props) {
 
     try {
       if (sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move}/data`) !== null && process.env.NODE_ENV === "production") {
-        let promise = new Promise(function (resolve, reject) {
+        let promise = new Promise<void>(function (resolve, reject) {
           resolve()
         })
 
@@ -182,27 +161,14 @@ function Main(props) {
     
   }, [move])
 
-  
-
-
   //If move data doesn't exist or doesn't match the URL, query database to get move data
   try {
     if (currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
       return (
-      <div id="characterChoiceBar">
-      <Link to="/characters">
-
-            <button
-              id="chooseCharacterButton"
-              className={props.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
-            >
-              <b>Choose a Character</b>
-            </button>
-
-      </Link>
-        <h2> This page is not available! </h2>
-      </div>
-    )
+        <InvalidPage
+          settings={props.settings}
+        />
+      )
     }
   }
   catch {

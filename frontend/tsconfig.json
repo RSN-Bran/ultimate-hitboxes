@@ -8,6 +8,11 @@
       "src/components/SortBy.tsx",
       "src/components/SpeedOptions.tsx",
       "src/components/Settings.tsx",
-      "src/components/Player.tsx"
+      "src/components/Player.tsx",
+      "src/components/MoveOption.tsx",
+      "src/components/ToolTip.tsx",
+      "src/components/Buttons.tsx",
+      "src/components/Main.tsx",
+      "src/components/InvalidPage.tsx"
     ]
   }

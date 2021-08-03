@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import ReactTooltip from "react-tooltip";
 
 function ToolTip(props) {

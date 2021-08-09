@@ -1,0 +1,217 @@
+{
+    "frames":
+    { 
+        "variable": "frames",
+        "name": "Frame",
+        "toolTipID": "frameToolTip",
+        "toolTipDescription": "Active frames of the hitbox/hurtbox. Click to jump to the first active frame."
+    },
+    "id":
+    {
+        "variable": "id",
+        "name": "ID",
+        "toolTipID": "idToolTip",
+        "toolTipDescription": "ID of the Hitbox"
+    },
+    "part":
+    {
+        "variable": "part",
+        "name": "Part",
+        "toolTipID": "partToolTip",
+        "toolTipDescription": "Determines if other hitboxes can hit an opponent" 
+    },
+    "bone":
+    {
+        "variable": "bone",
+        "name": "Bone",
+        "toolTipID": "boneToolTip",
+        "toolTipDescription": "Bone of the model the Hitbox is attached to"
+    },
+    "damage":
+    {
+        "variable": "damage",
+        "name": "Dmg",
+        "toolTipID": "dmgToolTip",
+        "toolTipDescription": "Damage dealt by the hitbox"
+    },
+    "angle":
+    {
+        "variable": "angle",
+        "name": "Angle",
+        "toolTipID": "angleToolTip",
+        "toolTipDescription": "Launch Angle, 361 denotes the \"Sakurai Angle\""
+    },
+    "kbg":
+    {
+        "variable": "kbg",
+        "name": "KBG",
+        "toolTipID": "kbgToolTip",
+        "toolTipDescription": "Knockback Growth"
+    },
+    "fkb":
+    {
+        "variable": "fkb",
+        "name": "FKB",
+        "toolTipID": "fkbToolTip",
+        "toolTipDescription": "Fixed Knockback"
+    },
+    "size":
+    {
+        "variable": "size",
+        "name": "Size",
+        "toolTipID": "sizeToolTip",
+        "toolTipDescription": "Size of the hitbox"
+    },
+    "bkb": 
+    {
+        "variable": "bkb",
+        "name": "BKB",
+        "toolTipID": "bkbToolTip",
+        "toolTipDescription": "Base Knockback"
+    },
+    "x":
+    {
+        "variable": "x",
+        "name": "X",
+        "toolTipID": "xToolTip",
+        "toolTipDescription": "X Position of the hitbox in relation to the center of the bone"
+    },
+    "y":
+    {
+        "variable": "y",
+        "name": "Y", 
+        "toolTipID": "yToolTip", 
+        "toolTipDescription": "Y Position of the hitbox in relation to the center of the bone"
+    },
+    "z":
+    {
+        "variable": "z", 
+        "name": "Z", 
+        "toolTipID": "zToolTip", 
+        "toolTipDescription": "Z Position of the hitbox in relation to the center of the bone"
+    },
+    "x2":
+    {
+        "variable": "dummy"
+    },
+    "y2":
+    {
+        "variable": "dummy"
+    },
+    "z2":
+    {
+        "variable": "dummy"
+    },
+    "hitlag":
+    {
+        "variable": "dummy"
+    },
+    "sdi":
+    {
+        "variable": "sdi",
+        "name": "SDI",
+        "toolTipID": "sdiToolTip",
+        "toolTipDescription": "How much each SDI input affects the victim's position"
+    },
+    "clang_rebound":
+    {
+        "variable": "dummy"
+    },
+    "facingrestrict":
+    {
+        "variable": "dummy"
+    },
+    "setweight":
+    {
+        "variable": "dummy"
+    },
+    "shielddamage":
+    {
+        "variable": "shielddamage",
+        "name": "SD",
+        "toolTipID": "sdToolTip",
+        "toolTipDescription": "Shield Damage"
+    },
+    "trip":
+    {
+        "variable": "trip",
+        "name": "Trip",
+        "toolTipID": "tripToolTip",
+        "toolTipDescription": "Trip Chance"
+    },
+    "rehit":
+    {
+        "variable": "rehit",
+        "name": "Rehit",
+        "toolTipID": "rehitToolTip",
+        "toolTipDescription": "Determines if a hitbox can hit an opponent multiple times"
+    },
+    "reflectable":
+    {
+        "variable": "dummy"
+    },
+    "absorbable":
+    {
+        "variable": "dummy"
+    },
+    "flinchless":
+    {
+        "variable": "dummy"
+    },
+    "disablehitlag":
+    {
+        "variable": "dummy"
+    },
+    "direct_hitbox":
+    {
+        "variable": "dummy"
+    },
+    "ground_or_air":
+    {
+        "variable": "ground_or_air",
+        "name": "Ground/Air",
+        "toolTipID": "ground-airToolTip",
+        "toolTipDescription": "Determines if the hitbox affects grounded or aerial opponents"},
+    "hitbits":
+    {
+        "variable": "dummy"
+    },
+    "collisionpart":
+    {
+        "variable": "dummy"
+    },
+    "friendlyfire":
+    {
+        "variable": "dummy"
+    },
+    "effect":
+    {
+        "variable": "dummy"
+    },
+    "sfxlevel":
+    {
+        "variable": "dummy"
+    },
+    "sfxtype":
+    {
+        "variable": "dummy"
+    },
+    "type":
+    {
+        "variable": "dummy"
+    },
+    "more":
+    {
+        "variable": "more",
+        "name": "Data",
+        "toolTipID": "moreToolTip",
+        "toolTipDescription": "Shows all raw data for a hitbox"
+    },
+    "notes": 
+    {
+        "variable": "notes",
+        "name": "Notes",
+        "toolTipID": "noteToolTip",
+        "toolTipDescription": "Notes"
+    }
+}

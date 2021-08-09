@@ -1,5 +1,5 @@
 //React Imports
-import React from "react"
+import * as React from "react"
 
 //Component Imports
 import Character from './Character'

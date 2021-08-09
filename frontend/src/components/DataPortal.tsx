@@ -1,5 +1,5 @@
 //React Imports
-import React from "react"
+import * as React from "react"
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 

@@ -1,5 +1,5 @@
 //React Imports
-import React from "react"
+import * as React from "react"
 
 //CSS Imports
 import '../css/DataTable.css'
@@ -46,7 +46,7 @@ function condenseFrames(arr) {
 
 function TableEntry(props) {
 
-  let style = {}
+  let style = {backgroundColor:null}
 
   //Use dark or light version of the table depending on settings
   let className = props.settings.dark_light === 0 ? "darkTable" : "lightTable"

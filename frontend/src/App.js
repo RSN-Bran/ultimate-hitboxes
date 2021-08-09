@@ -1,5 +1,5 @@
 //Import React Elements
-import React from 'react';
+import * as React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch, Redirect } from 'react-router-dom'
 import 'react-notifications-component/dist/theme.css'
 import ReactNotification from 'react-notifications-component'

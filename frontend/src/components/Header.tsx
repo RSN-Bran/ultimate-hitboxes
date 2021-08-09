@@ -1,5 +1,5 @@
 //Import React Elements
-import React from "react"
+import * as React from "react"
 import { useHistory } from "react-router-dom";
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 

@@ -1,5 +1,5 @@
 ﻿//React Imports
-import React from "react"
+import * as React from "react"
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 //CSS Imports

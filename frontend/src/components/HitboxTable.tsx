@@ -1,5 +1,5 @@
 //React Imports
-import React from "react"
+import * as React from "react"
 import ReactTooltip from "react-tooltip";
 
 //Component Imports
@@ -24,7 +24,6 @@ function HitboxTable(props) {
           jumpToFrame={props.jumpToFrame}
           fields={props.fields}
           updateHitboxData={props.updateHitboxData}
-          jumpToFrame={props.jumpToFrame}
         />
       )
     })

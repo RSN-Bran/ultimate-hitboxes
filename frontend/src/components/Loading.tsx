@@ -4,13 +4,14 @@ import { useState, useEffect, useRef } from 'react';
 
 //Media Imports
 import placeholder from '../media/placeholder.png'
-import loading from '../media/loading.gif'
 
 //Component Imports
 import LoadingBar from './LoadingBar'
 
 //Import CSS
 import '../css/Loading.css';
+
+const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
 
 //Use Interval
 function useInterval(callback, delay) {
@@ -37,22 +38,40 @@ function useInterval(callback, delay) {
 function Loading(props) {
 
 	//Number of images loaded so far, initialize as zero
+	//Empty array of images
 	const [loadedSoFar, setLoadedSoFar] = useState(0)
 
-	//Empty array of images
 	let images = [];
 
+	fetch(`${environment}/s3/${props.currentMoveData.frames}/${props.url}`)
+	.then(response => response.json())
+	.then(data => {
+		props.setUrls(data)
+
+		for (var i = 1; i <= props.currentMoveData.frames; i++) {
+			
+			let image = new Image()
+			image.src = data[i-1]
+			images.push(image)
+		
+		
+		}
+
+	})
+	.catch(err => {
+		console.log(err)
+	})
+
+
 	//Fill array with all the images, one for each frame of the move
-	for (var i = 1; i <= props.currentMoveData.frames; i++) {
-		images[i] = new Image()
-		images[i].src = `${props.url}${i}.png`
-	}
+		
 
 	//Create the timer upon a component load
 	useEffect(() => {
 		const interval = setInterval(() => {
-			//Calculate number of images complete so far
+			//Calculate number of images complete so far\
 			setLoadedSoFar(images.filter((image) => image.complete).length)
+
 		}, 10)
 	}, [])
 

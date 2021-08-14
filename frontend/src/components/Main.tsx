@@ -22,6 +22,7 @@ function Main(props) {
   const [currentFrame, setCurrentFrame] = useState(useParams().frame === undefined ? 1 : parseInt(useParams().frame))
   const [playing, setPlaying] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [urls, setUrls] = useState([])
 
 
   //Variables to store the next and previous characters
@@ -48,6 +49,7 @@ function Main(props) {
     setMove(move);
     setCurrentFrame(1)
   }
+
 
   //Determine which character is the current character, save the data and the index
   while (characterIndex < props.characterListData.length) {
@@ -135,6 +137,7 @@ function Main(props) {
           let data = JSON.parse(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move}/data`))
           setCurrentMoveData(data)
           setLoading(true)
+          setUrls([])
         })
 
 
@@ -148,6 +151,7 @@ function Main(props) {
             sessionStorage.setItem(`/${characterKey.number}_${characterKey.value}/${move}/data`, JSON.stringify(data))
             setCurrentMoveData(data)
             setLoading(true)
+            setUrls([])
           })
           .catch(err => {
             console.log("Failure")
@@ -175,14 +179,14 @@ function Main(props) {
 
   }
 
-
   if (loading && currentMoveData.value !== undefined) {
     return (
       <Loading
-        url={`https://ultimate-hitboxes.s3.amazonaws.com/frames/${props.characterListData[characterIndex].number}_${character.toLowerCase()}/${currentMoveData.value}/`}
+        url={`frames+${props.characterListData[characterIndex].number}_${character.toLowerCase()}+${currentMoveData.value}`}
         loading={loading}
         setLoading={setLoading}
         currentMoveData={currentMoveData}
+        setUrls={setUrls}
       />
     )
   }
@@ -234,6 +238,7 @@ function Main(props) {
           setPlaying={setPlaying}
           jumpToFrame={jumpToFrame}
           urlNotification={props.urlNotification}
+          urls={urls}
         />
 
       </div>

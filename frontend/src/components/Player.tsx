@@ -27,13 +27,12 @@ function Player(props) {
 		props.urlNotification()
 		
 	};
-
 		return (
 			<div id="player">
 				
 				<img
 					id="moveImg"
-					src={`${props.url}${props.currentFrame}.png`}
+					src={props.urls[props.currentFrame-1]}
 					alt="Move Frames go here"
 				/>
 				<img

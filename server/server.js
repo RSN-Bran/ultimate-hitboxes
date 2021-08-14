@@ -5,49 +5,65 @@ const http = require('http')
 const https = require("https")
 
 var fs = require('fs');
+
 const mysql = require('mysql');
+const mysqlssh  = require('mysql-ssh')
 
-let options = {};
+const aws = require('aws-sdk')
 
-if (process.env.NODE_ENV === "development") {
-  options.key = fs.readFileSync(`${__dirname}/certs/privkey.pem`)
-  options.cert = fs.readFileSync(`${__dirname}/certs/fullchain.pem`)
-}
-else {
-  options.key = fs.readFileSync(`${__dirname}/certs/server.key`)
-  options.cert = fs.readFileSync(`${__dirname}/certs/ultimate-hitboxes_com.crt`)
-}
+//Configs to authenticate with AWS
+aws.config = new aws.Config({
+  accessKeyId: process.env.ACCESSKEYID,
+  secretAccessKey: process.env.SECRETACCESSKEY,
+  region: "us-east-1",
+  signatureVersion: "v4",
+})
 
-//OverRide ISO String to give local timezone
-Date.prototype.toISOString = function () {
-  var tzo = -this.getTimezoneOffset(),
-    dif = tzo >= 0 ? '+' : '-',
-    pad = function (num) {
-      var norm = Math.floor(Math.abs(num));
-      return (norm < 10 ? '0' : '') + norm;
-    };
-  return this.getFullYear() +
-    '-' + pad(this.getMonth() + 1) +
-    '-' + pad(this.getDate()) +
-    'T' + pad(this.getHours()) +
-    ':' + pad(this.getMinutes()) +
-    ':' + pad(this.getSeconds()) +
-    dif + pad(tzo / 60) +
-    ':' + pad(tzo % 60);
-}
+const s3 = new aws.S3()
+
+//Key and Certificate for SSL
+let options = {
+  key: fs.readFileSync(`${__dirname}${process.env.KEY}`),
+  cert: fs.readFileSync(`${__dirname}${process.env.CERT}`)
+};
 
 function writeToDB(database, dbparams) {
-  conn = mysql.createConnection({
-    host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
-    user: "admin",
-    password: process.env.DB_PW,
-    database: `ulthit_logs`
-  })
-  var sql = `INSERT INTO ${database} SET ?`;
-  conn.query(sql, dbparams, function (err, result) {
-    if (err) throw err;
-  });
-  conn.end()
+  if(process.env.NODE_ENV === "development") {
+    mysqlssh.connect(
+      {
+        host: "52.72.66.212",
+        user: "ec2-user",
+        privateKey: fs.readFileSync(`${__dirname}/certs/ulthitbox_key.pem`),
+      },
+      {
+        host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+        user: "admin",
+        password: process.env.DB_PW,
+        database: `ulthit_logs`
+      }
+    )
+    .then(client => {
+      var sql = `INSERT INTO ${database} SET ?`;
+      client.query(sql, dbparams, function (err, result) {
+        if (err) throw err;
+      });
+      client.end()
+    })
+  }
+  else {
+    conn = mysql.createConnection({
+      host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+      user: "admin",
+      password: process.env.DB_PW,
+      database: `ulthit_logs`
+    })
+    var sql = `INSERT INTO ${database} SET ?`;
+    conn.query(sql, dbparams, function (err, result) {
+      if (err) throw err;
+    });
+    conn.end()
+  }
+
 }
 
 function writeToLog(logEntry) {
@@ -79,38 +95,71 @@ app.get('/characterData', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     let json = JSON.parse(jsonString)
 
+    if(process.env.NODE_ENV === "development") {
+      mysqlssh.connect(
+        {
+          host: "52.72.66.212",
+          user: "ec2-user",
+          privateKey: fs.readFileSync(`${__dirname}/certs/ulthitbox_key.pem`),
+        },
+        {
+          host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+          user: "admin",
+          password: process.env.DB_PW,
+          database: `ulthit_logs`
+        }
+      )
+      .then(client => {
+        var sql = `SELECT CharacterName, CharacterNum, COUNT(CharacterName) AS count FROM CharacterLogs_${process.env.NODE_ENV} GROUP BY CharacterName`;
+        client.query(sql, function (err, result) {
+          if (err) throw err;
+          json.forEach(character => {
+            var sqlCharacter = result.filter(obj => {
+              return obj.CharacterName === character.value
+            })
+            if (sqlCharacter.length === 0) {
+              character.count = 0
+            }
+            else {
+              character.count = sqlCharacter[0].count
+            }
+          })
     
-
-    //console.log(json)
-
-    conn = mysql.createConnection({
-      host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
-      user: "admin",
-      password: process.env.DB_PW,
-      database: `ulthit_logs`
-    })
-    var sql = `SELECT CharacterName, CharacterNum, COUNT(CharacterName) AS count FROM CharacterLogs_${process.env.NODE_ENV} GROUP BY CharacterName`;
-    conn.query(sql, function (err, result) {
-      if (err) throw err;
-      json.forEach(character => {
-        var sqlCharacter = result.filter(obj => {
-          return obj.CharacterName === character.value
-        })
-        if (sqlCharacter.length === 0) {
-          character.count = 0
-        }
-        else {
-          character.count = sqlCharacter[0].count
-        }
+          res.send(json) 
+    
+        });
+        client.end()
       })
-
-      res.send(json) 
-
-    });
-    conn.end()
-
+    }
+    else {
+      conn = mysql.createConnection({
+        host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+        user: "admin",
+        password: process.env.DB_PW,
+        database: `ulthit_logs`
+      })
+      var sql = `SELECT CharacterName, CharacterNum, COUNT(CharacterName) AS count FROM CharacterLogs_${process.env.NODE_ENV} GROUP BY CharacterName`;
+      conn.query(sql, function (err, result) {
+        if (err) throw err;
+        json.forEach(character => {
+          var sqlCharacter = result.filter(obj => {
+            return obj.CharacterName === character.value
+          })
+          if (sqlCharacter.length === 0) {
+            character.count = 0
+          }
+          else {
+            character.count = sqlCharacter[0].count
+          }
+        })
+  
+        res.send(json) 
+  
+      });
+      conn.end()
+    }
     let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/characterData`
-    writeToLog(logMessage);
+    //writeToLog(logMessage);
   })
 });
 
@@ -137,7 +186,7 @@ app.get('/:character/data', (req, res) => {
     res.send(allData)
 
     let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data`
-    writeToLog(logMessage);
+    //writeToLog(logMessage);
 
     let dbparams = {
       "IP": req.connection.remoteAddress,
@@ -152,15 +201,21 @@ app.get('/:character/data', (req, res) => {
 
 //Get JSON data for this character, includes character name, attributes, move data, etc
 app.get('/:character/:move/data', (req, res) => {
+
+  //Grab the JSON file for a character
   fs.readFile(`${__dirname}/data/${req.params.character}.json`, 'utf8', (err, jsonString) => {
     if (err) {
         console.log("File read failed:", err)
         return
     }
 
+    //Parse the data from the file into a variable
     var data = JSON.parse(jsonString)
+
+    //Create a variable to store the data for the move
     var move = {};
     
+    //Loop through all the moves, if the move matches the one requested, save it to the variable
     for (var i = 0; i < data.moves.length; i++) {
       if (data.moves[i].value.toLowerCase() === req.params.move.toLowerCase()) {
         move = data.moves[i]
@@ -170,10 +225,11 @@ app.get('/:character/:move/data', (req, res) => {
     
     res.setHeader('Access-Control-Allow-Origin', '*');
 
+    //Send the move data back as a response
     res.send(move)
-    console.log(req.params.move)
-    let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data`
-    writeToLog(logMessage);
+
+    //let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data`
+    //writeToLog(logMessage);
 
     let dbparams = {
       "IP": req.connection.remoteAddress,
@@ -187,15 +243,36 @@ app.get('/:character/:move/data', (req, res) => {
   })
 });
 
-// console.log that your server is up and running
-//const port = process.env.PORT || 5000;
-//app.listen(port, () => console.log(`Listening on port ${port}`));
+//Get API Endpoint for grabbing S3 bucket images
+app.get('/s3/:frames/:path', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
 
-//https.createServer(options, app).listen(5080);
+  //The path value passed into the API Endpoint has it's subdirectories separated by '+' symbols
+  //Below statement will replace those with the appropriate '/' symbols
+  let newPath = req.params.path.replace(/\+/g, '/')
 
-var httpServer = http.createServer(app);
+  //Get a signed URL for each frame, then add it to the array
+  let urls = []
+  for(var i = 0; i < req.params.frames; i++) {
+    let url = s3.getSignedUrl('getObject', {
+      Bucket: "ultimate-hitboxes",
+      Key: newPath+"/"+(i+1)+".png",
+      Expires: 100
+    })
+
+    urls.push(url)
+  }
+  
+  //Send back the signed urls
+  res.send(urls)
+})
+
+//Create HTTP Server (Development only)
+if(process.env.NODE_ENV === "development") {
+  var httpServer = http.createServer(app);
+  httpServer.listen(5080);
+}
+
+//Create Secure HTTPS Server (Dev+Prod)
 var httpsServer = https.createServer(options, app);
-
-httpServer.listen(5080);
 httpsServer.listen(5443);
-

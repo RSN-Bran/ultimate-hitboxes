@@ -17,7 +17,6 @@ function DataTable(props) {
   let hp = { "variable": "hp", "name": "HP", "toolTipID": "hpToolTip", "toolTipDescription": "How much damage the hurtbox can withstand (Super Armor Only)" }
   let hurtboxType = { "variable": "type", "name": "Type", "toolTipID": "typeToolTip", "toolTipDescription": "Intangible, Invincible, or Super Armor" }
 
-  console.log(hitboxFields)
   //Data for which table entries should be displayed during certain table configurations
   let fields = {
     grabsBasicNoFrame: [hitboxFields["id"], hitboxFields["size"], hitboxFields["ground_or_air"], hitboxFields["notes"], hitboxFields["more"]],

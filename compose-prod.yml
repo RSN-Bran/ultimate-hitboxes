@@ -13,6 +13,10 @@ services:
     environment:
       - NODE_ENV=production
       - DB_PW=JY3Z8OvrlWZn
+      - ACCESSKEYID=AKIAQCKJTZIQBQGEPYBH
+      - SECRETACCESSKEY=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
+      - KEY=/certs/server.key
+      - CERT=/certs/ultimate-hitboxes_com.crt
   frontend:
     image: bsultana75/ulthit_frontend:latest
     command: sh -c "yarn build"

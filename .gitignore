@@ -9,3 +9,4 @@ frontend/legacy
 frontend/node_modules
 frontend/.babelrc
 dbtest
+compose*

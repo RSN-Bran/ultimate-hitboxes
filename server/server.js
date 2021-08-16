@@ -249,29 +249,32 @@ app.get('/s3/:frames/:path', (req, res) => {
   const allowedOrigins = ['http://localhost:8080','https://ultimate-hitboxes.com']
   if(allowedOrigins.includes(req.headers.origin)) {
     res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+
+    //The path value passed into the API Endpoint has it's subdirectories separated by '+' symbols
+    //Below statement will replace those with the appropriate '/' symbols
+    let newPath = req.params.path.replace(/\+/g, '/')
+
+    //Get a signed URL for each frame, then add it to the array
+    let urls = []
+    for(var i = 0; i < req.params.frames; i++) {
+      let url = s3.getSignedUrl('getObject', {
+        Bucket: "ultimate-hitboxes",
+        Key: newPath+"/"+(i+1)+".png",
+        Expires: 100
+      })
+
+      urls.push(url)
+    }
+    
+    //Send back the signed urls
+    res.send(urls)
+
   }
   else {
-
+    res.send("Request not available")
   }
   
-  //The path value passed into the API Endpoint has it's subdirectories separated by '+' symbols
-  //Below statement will replace those with the appropriate '/' symbols
-  let newPath = req.params.path.replace(/\+/g, '/')
-
-  //Get a signed URL for each frame, then add it to the array
-  let urls = []
-  for(var i = 0; i < req.params.frames; i++) {
-    let url = s3.getSignedUrl('getObject', {
-      Bucket: "ultimate-hitboxes",
-      Key: newPath+"/"+(i+1)+".png",
-      Expires: 100
-    })
-
-    urls.push(url)
-  }
   
-  //Send back the signed urls
-  res.send(urls)
 })
 
 //Create HTTP Server (Development only)

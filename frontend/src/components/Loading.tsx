@@ -43,7 +43,10 @@ function Loading(props) {
 
 	let images = [];
 
-	fetch(`${environment}/s3/${props.currentMoveData.frames}/${props.url}`)
+	fetch(`${environment}/s3/${props.currentMoveData.frames}/${props.url}`, {
+		method: "GET"
+	},
+	)
 	.then(response => response.json())
 	.then(data => {
 		props.setUrls(data)

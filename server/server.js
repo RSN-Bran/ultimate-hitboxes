@@ -246,7 +246,7 @@ app.get('/:character/:move/data', (req, res) => {
 //Get API Endpoint for grabbing S3 bucket images
 app.get('/s3/:frames/:path', (req, res) => {
 
-  const allowedOrigins = ['http://localhost:8080','https://ultimate-hitboxes.com:443']
+  const allowedOrigins = ['http://localhost:8080','https://ultimate-hitboxes.com']
   if(allowedOrigins.includes(req.headers.origin)) {
     res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
   }

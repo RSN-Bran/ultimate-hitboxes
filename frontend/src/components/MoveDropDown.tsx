@@ -6,7 +6,6 @@ import { useHistory, useParams } from "react-router-dom";
 import MoveOption from './MoveOption'
 
 function MoveDropDown(props) {
-
 	try {
 		let className = props.settings.dark_light === 0 ? "darkMoveDropDown" : "lightMoveDropDown"
 
@@ -34,7 +33,6 @@ function MoveDropDown(props) {
 		//}
 	}
 	catch (e) {
-		console.log(e)
 		return null;
   }
 	

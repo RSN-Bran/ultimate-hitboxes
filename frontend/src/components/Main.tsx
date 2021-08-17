@@ -50,7 +50,6 @@ function Main(props) {
     setCurrentFrame(1)
   }
 
-
   //Determine which character is the current character, save the data and the index
   while (characterIndex < props.characterListData.length) {
     if (props.characterListData[characterIndex].value === character) {
@@ -137,7 +136,6 @@ function Main(props) {
           let data = JSON.parse(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move}/data`))
           setCurrentMoveData(data)
           setLoading(true)
-          setUrls([])
         })
 
 
@@ -151,7 +149,6 @@ function Main(props) {
             sessionStorage.setItem(`/${characterKey.number}_${characterKey.value}/${move}/data`, JSON.stringify(data))
             setCurrentMoveData(data)
             setLoading(true)
-            setUrls([])
           })
           .catch(err => {
             console.log("Failure")

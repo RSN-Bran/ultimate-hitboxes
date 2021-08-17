@@ -260,7 +260,7 @@ app.get('/s3/:frames/:path', (req, res) => {
       let url = s3.getSignedUrl('getObject', {
         Bucket: "ultimate-hitboxes",
         Key: newPath+"/"+(i+1)+".png",
-        Expires: 100
+        Expires: 600
       })
 
       urls.push(url)

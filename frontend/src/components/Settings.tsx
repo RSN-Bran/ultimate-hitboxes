@@ -104,7 +104,7 @@ function Settings(props) {
 				</div>
 
 				<div className="settingDiv">
-					<h3 style={{ cursor: "pointer" }} onClick={() => { document.cookie = "settings="; document.cookie = ""; history.go(0)}}>Click here to reset settings to default</h3>
+					<h3 style={{ cursor: "pointer" }} onClick={() => { document.cookie = "settings="; document.cookie = ""; sessionStorage.clear(); localStorage.clear(); history.go(0)}}>Click here to reset settings to default</h3>
 				</div>
 
 			</div>

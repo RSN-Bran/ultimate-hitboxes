@@ -4,12 +4,14 @@ const app = express();
 const http = require('http')
 const https = require("https")
 
-var fs = require('fs');
+const fs = require('fs');
 
 const mysql = require('mysql');
 const mysqlssh  = require('mysql-ssh')
 
 const aws = require('aws-sdk')
+
+const database = require('./database.js')
 
 //Configs to authenticate with AWS
 aws.config = new aws.Config({
@@ -27,61 +29,6 @@ let options = {
   cert: fs.readFileSync(`${__dirname}${process.env.CERT}`)
 };
 
-function writeToDB(database, dbparams) {
-  if(process.env.NODE_ENV === "development") {
-    mysqlssh.connect(
-      {
-        host: "52.72.66.212",
-        user: "ec2-user",
-        privateKey: fs.readFileSync(`${__dirname}/certs/ulthitbox_key.pem`),
-      },
-      {
-        host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
-        user: "admin",
-        password: process.env.DB_PW,
-        database: `ulthit_logs`
-      }
-    )
-    .then(client => {
-      var sql = `INSERT INTO ${database} SET ?`;
-      client.query(sql, dbparams, function (err, result) {
-        if (err) throw err;
-      });
-      client.end()
-    })
-  }
-  else {
-    conn = mysql.createConnection({
-      host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
-      user: "admin",
-      password: process.env.DB_PW,
-      database: `ulthit_logs`
-    })
-    var sql = `INSERT INTO ${database} SET ?`;
-    conn.query(sql, dbparams, function (err, result) {
-      if (err) throw err;
-    });
-    conn.end()
-  }
-
-}
-
-function writeToLog(logEntry) {
-  if (process.env.NODE_ENV === "development") {
-    return;
-  }
-  var time = new Date().toLocaleString("en-US", { timeZone: "America/New_York" })
-  var convertedTime = new Date(time).toISOString()
-
-  var date = convertedTime.substring(0, 10)
-  console.log(time)
-  console.log(convertedTime);
-
-  fs.appendFile(`${__dirname}/serverlog/${date}_serverlog.txt`, `${convertedTime}\t${logEntry}\n`, function (err) {
-    if (err) throw err;
-    console.log('Saved!');
-  });
-}
 //Giver server access to these directories
 app.use("/src", express.static('./src/'));
 
@@ -109,27 +56,7 @@ app.get('/characterData', (req, res) => {
           database: `ulthit_logs`
         }
       )
-      .then(client => {
-        var sql = `SELECT CharacterName, CharacterNum, COUNT(CharacterName) AS count FROM CharacterLogs_${process.env.NODE_ENV} GROUP BY CharacterName`;
-        client.query(sql, function (err, result) {
-          if (err) throw err;
-          json.forEach(character => {
-            var sqlCharacter = result.filter(obj => {
-              return obj.CharacterName === character.value
-            })
-            if (sqlCharacter.length === 0) {
-              character.count = 0
-            }
-            else {
-              character.count = sqlCharacter[0].count
-            }
-          })
-    
-          res.send(json) 
-    
-        });
-        client.end()
-      })
+      .then(conn => database.getPopularity(conn, json, res))
     }
     else {
       conn = mysql.createConnection({
@@ -138,28 +65,8 @@ app.get('/characterData', (req, res) => {
         password: process.env.DB_PW,
         database: `ulthit_logs`
       })
-      var sql = `SELECT CharacterName, CharacterNum, COUNT(CharacterName) AS count FROM CharacterLogs_${process.env.NODE_ENV} GROUP BY CharacterName`;
-      conn.query(sql, function (err, result) {
-        if (err) throw err;
-        json.forEach(character => {
-          var sqlCharacter = result.filter(obj => {
-            return obj.CharacterName === character.value
-          })
-          if (sqlCharacter.length === 0) {
-            character.count = 0
-          }
-          else {
-            character.count = sqlCharacter[0].count
-          }
-        })
-  
-        res.send(json) 
-  
-      });
-      conn.end()
+      database.getPopularity(conn, json, res)
     }
-    let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/characterData`
-    //writeToLog(logMessage);
   })
 });
 
@@ -181,12 +88,8 @@ app.get('/:character/data', (req, res) => {
       moveList.push(move)
     }
     allData.moves = moveList
-    
 
     res.send(allData)
-
-    let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/data`
-    //writeToLog(logMessage);
 
     let dbparams = {
       "IP": req.connection.remoteAddress,
@@ -195,7 +98,7 @@ app.get('/:character/data', (req, res) => {
       "CharacterName": req.params.character.split("_")[1],
       "DateTime": new Date()
     }
-    writeToDB(`CharacterLogs_${process.env.NODE_ENV}`, dbparams)
+    database.connectToDB(`CharacterLogs_${process.env.NODE_ENV}`, dbparams)
   })
 });
 
@@ -228,9 +131,6 @@ app.get('/:character/:move/data', (req, res) => {
     //Send the move data back as a response
     res.send(move)
 
-    //let logMessage = `Request from ${req.connection.remoteAddress} for ultimate-hitboxes.com/${req.params.character}/${req.params.move}/data`
-    //writeToLog(logMessage);
-
     let dbparams = {
       "IP": req.connection.remoteAddress,
       "URL": `/${req.params.character}/data`,
@@ -239,7 +139,8 @@ app.get('/:character/:move/data', (req, res) => {
       "MoveName": req.params.move,
       "DateTime": new Date()
     }
-    writeToDB(`MoveLogs_${process.env.NODE_ENV}`, dbparams)
+
+    database.connectToDB(`MoveLogs_${process.env.NODE_ENV}`, dbparams)
   })
 });
 
@@ -273,7 +174,6 @@ app.get('/s3/:frames/:path', (req, res) => {
   else {
     res.send("Request not available")
   }
-  
   
 })
 

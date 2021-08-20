@@ -2,11 +2,11 @@ const mysql = require('mysql');
 const mysqlssh  = require('mysql-ssh')
 const fs = require('fs');
 
-const sshConnParams = {
+/*const sshConnParams = {
     host: "52.72.66.212",
     user: "ec2-user",
     privateKey: fs.readFileSync(`${__dirname}/certs/ulthitbox_key.pem`),
-}
+}*/
 
 const dbConnParams = {
     host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
@@ -25,7 +25,8 @@ function insertToDB (conn, database, dbparams) {
 
 const connectToDB = (database, dbparams) => {
     if(process.env.NODE_ENV === "development") {
-        mysqlssh.connect(sshConnParams, dbConnParams)
+        mysqlssh.connect(
+            {host: "52.72.66.212",user: "ec2-user",privateKey: fs.readFileSync(`${__dirname}/certs/ulthitbox_key.pem`)}, dbConnParams)
         .then(conn => insertToDB(conn, database, dbparams))
     }
     else {

@@ -22,7 +22,7 @@ function insertToDB (conn, database, dbparams) {
             if (err) throw err;
         });
         console.log("Insert")
-        //conn.end()
+        conn.end()
     }
     catch(err) {
         console.log(err)

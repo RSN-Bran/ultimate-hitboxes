@@ -3716,6 +3716,7 @@
         }
       ]
     },
+    
     {
       "frames": 37,
       "faf": 37,
@@ -3759,8 +3760,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62424",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [13,14,15],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -3808,8 +3809,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62420",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [10,11,12,13,14,15,16,17,18],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3849,8 +3850,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62420",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [10,11,12,13,14,15,16,17,18],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3890,8 +3891,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62420",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [10,11,12,13,14,15,16,17,18],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3931,8 +3932,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62420",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [10,11,12,13,14,15,16,17,18],
+          "color": "red",
           "notes": ""
         },
         {
@@ -3972,8 +3973,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62420",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [12,13,14,15,16,17,18],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -4021,8 +4022,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62424",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4062,8 +4063,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62424",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4103,8 +4104,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62424",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44],
+          "color": "red",
           "notes": ""
         },
         {
@@ -4144,8 +4145,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "62424",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44],
+          "color": "red",
           "notes": ""
         }
       ]
@@ -4193,18 +4194,19 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_kick",
           "type": "attack_region_none",
-          "frames": [],
-          "color": "",
+          "frames": [1,2],
+          "color": "red",
           "notes": ""
         }
       ]
     },
+    
     {
       "frames": 35,
       "faf": 35,
       "name": "Grab",
       "value": "SoraGrab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -4217,8 +4219,8 @@
           "z2": "8.6",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [7,8],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -4233,8 +4235,8 @@
           "z2": "10.25",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [],
-          "color": "",
+          "frames": [7,8],
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -4244,7 +4246,7 @@
       "faf": 41,
       "name": "Dash Grab",
       "value": "SoraDashGrab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -4257,8 +4259,8 @@
           "z2": "10.8",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -4273,8 +4275,8 @@
           "z2": "12.1",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [],
-          "color": "",
+          "frames": [10,11],
+          "color": "#400040",
           "notes": ""
         }
       ]
@@ -4284,7 +4286,7 @@
       "faf": 37,
       "name": "Pivot Grab",
       "value": "SoraPivotGrab",
-      "hitboxes": [
+      "grabs": [
         {
           "id": "0",
           "bone": "top",
@@ -4297,8 +4299,8 @@
           "z2": "-11.6",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_g",
-          "frames": [],
-          "color": "",
+          "frames": [11,12],
+          "color": "#800080",
           "notes": ""
         },
         {
@@ -4313,12 +4315,13 @@
           "z2": "-13.25",
           "status": "fighter_status_kind_capture_pulled",
           "ground_or_air": "collision_situation_mask_a",
-          "frames": [],
-          "color": "",
+          "frames": [11,12],
+          "color": "#400040",
           "notes": ""
         }
       ]
     },
+    
     {
       "frames": 6,
       "faf": 6,
@@ -4362,8 +4365,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "collision_sound_attr_punch",
           "type": "attack_region_punch",
-          "frames": [],
-          "color": "",
+          "frames": [1],
+          "color": "red",
           "notes": ""
         }
       ]

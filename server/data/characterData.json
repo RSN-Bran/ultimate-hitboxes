@@ -168,7 +168,7 @@
     "number": "17",
     "completed": true,
     "series": "legend-of-zelda",
-    "version": "v12.0.0"
+    "version": "v13.0.0"
   },
   {
     "id": 20,
@@ -411,7 +411,7 @@
     "number": "41",
     "completed": true,
     "series": "pokemon",
-    "version": "v12.0.0"
+    "version": "v13.0.0"
   },
   {
     "id": 47,
@@ -672,7 +672,7 @@
     "number": "68",
     "completed": true,
     "series": "animal-crossing",
-    "version": "v12.0.0"
+    "version": "v13.0.0"
   },
   {
     "id": 76,

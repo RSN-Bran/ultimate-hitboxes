@@ -177,7 +177,7 @@
     "number": "18",
     "completed": true,
     "series": "super-mario",
-    "version": "v12.0.0"
+    "version": "v13.0.0"
   },
   {
     "id": 21,
@@ -483,7 +483,7 @@
     "number": "49",
     "completed": true,
     "series": "punch-out",
-    "version": "v12.0.0"
+    "version": "v13.0.0"
   },
   {
     "id": 55,
@@ -681,7 +681,7 @@
     "number": "69",
     "completed": true,
     "series": "pokemon",
-    "version": "v12.0.0"
+    "version": "v13.0.0"
   },
   {
     "id": 77,

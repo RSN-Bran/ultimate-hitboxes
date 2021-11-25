@@ -3,215 +3,272 @@
     { 
         "variable": "frames",
         "name": "Frame",
-        "toolTipID": "frameToolTip",
+        "toolTipID": "frame-ToolTip",
         "toolTipDescription": "Active frames of the hitbox/hurtbox. Click to jump to the first active frame."
     },
     "id":
     {
         "variable": "id",
         "name": "ID",
-        "toolTipID": "idToolTip",
+        "toolTipID": "id-ToolTip",
         "toolTipDescription": "ID of the Hitbox"
     },
     "part":
     {
         "variable": "part",
         "name": "Part",
-        "toolTipID": "partToolTip",
+        "toolTipID": "part-ToolTip",
         "toolTipDescription": "Determines if other hitboxes can hit an opponent" 
     },
     "bone":
     {
         "variable": "bone",
         "name": "Bone",
-        "toolTipID": "boneToolTip",
+        "toolTipID": "bone-ToolTip",
         "toolTipDescription": "Bone of the model the Hitbox is attached to"
     },
     "damage":
     {
         "variable": "damage",
         "name": "Dmg",
-        "toolTipID": "dmgToolTip",
+        "toolTipID": "damage-ToolTip",
         "toolTipDescription": "Damage dealt by the hitbox"
     },
     "angle":
     {
         "variable": "angle",
         "name": "Angle",
-        "toolTipID": "angleToolTip",
+        "toolTipID": "angle-ToolTip",
         "toolTipDescription": "Launch Angle, 361 denotes the \"Sakurai Angle\""
     },
     "kbg":
     {
         "variable": "kbg",
         "name": "KBG",
-        "toolTipID": "kbgToolTip",
+        "toolTipID": "kbg-ToolTip",
         "toolTipDescription": "Knockback Growth"
     },
     "fkb":
     {
         "variable": "fkb",
         "name": "FKB",
-        "toolTipID": "fkbToolTip",
+        "toolTipID": "fkb-ToolTip",
         "toolTipDescription": "Fixed Knockback"
     },
     "size":
     {
         "variable": "size",
         "name": "Size",
-        "toolTipID": "sizeToolTip",
+        "toolTipID": "size-ToolTip",
         "toolTipDescription": "Size of the hitbox"
     },
     "bkb": 
     {
         "variable": "bkb",
         "name": "BKB",
-        "toolTipID": "bkbToolTip",
+        "toolTipID": "bkb-ToolTip",
         "toolTipDescription": "Base Knockback"
     },
     "x":
     {
         "variable": "x",
         "name": "X",
-        "toolTipID": "xToolTip",
+        "toolTipID": "x-ToolTip",
         "toolTipDescription": "X Position of the hitbox in relation to the center of the bone"
     },
     "y":
     {
         "variable": "y",
         "name": "Y", 
-        "toolTipID": "yToolTip", 
+        "toolTipID": "y-ToolTip", 
         "toolTipDescription": "Y Position of the hitbox in relation to the center of the bone"
     },
     "z":
     {
         "variable": "z", 
         "name": "Z", 
-        "toolTipID": "zToolTip", 
+        "toolTipID": "z-ToolTip", 
         "toolTipDescription": "Z Position of the hitbox in relation to the center of the bone"
     },
     "x2":
     {
-        "variable": "dummy"
+        "variable": "x2", 
+        "name": "X2", 
+        "toolTipID": "x2-ToolTip", 
+        "toolTipDescription": "X Position for stretch coordinates on extended hitboxes"
     },
     "y2":
     {
-        "variable": "dummy"
+        "variable": "y2", 
+        "name": "Y2", 
+        "toolTipID": "y2-ToolTip", 
+        "toolTipDescription": "Y Position for stretch coordinates on extended hitboxes"
     },
     "z2":
     {
-        "variable": "dummy"
+        "variable": "z2", 
+        "name": "Z2", 
+        "toolTipID": "z2-ToolTip", 
+        "toolTipDescription": "Z Position for stretch coordinates on extended hitboxes"
     },
     "hitlag":
     {
-        "variable": "dummy"
+        "variable": "hitlag",
+        "name": "Hitlag",
+        "toolTipID": "hitlag-ToolTip",
+        "toolTipDescription": "Determines how much the opponent is frozen in hitstun when hit by this move"        
     },
     "sdi":
     {
         "variable": "sdi",
         "name": "SDI",
-        "toolTipID": "sdiToolTip",
+        "toolTipID": "sdi-ToolTip",
         "toolTipDescription": "How much each SDI input affects the victim's position"
     },
     "clang_rebound":
     {
-        "variable": "dummy"
+        "variable": "clang_rebound",
+        "name": "Clang Rebound",
+        "toolTipID": "clang_rebound-ToolTip",
+        "toolTipDescription": "Indicates how the hitbox interacts with other hitboxes"
     },
     "facingrestrict":
     {
-        "variable": "dummy"
+        "variable": "facingrestrict",
+        "name": "Facing Restrict",
+        "toolTipID": "facingrestrict-ToolTip",
+        "toolTipDescription": "Determines launch direction of the opponent"
     },
     "setweight":
     {
-        "variable": "dummy"
+        "variable": "setweight",
+        "name": "Set Weight",
+        "toolTipID": "setweight-ToolTip",
+        "toolTipDescription": "Determines if the opponent's weight should be used in Knockback calculation. When value is true, opponent's weight is always set to 100"        
     },
     "shielddamage":
     {
         "variable": "shielddamage",
         "name": "SD",
-        "toolTipID": "sdToolTip",
+        "toolTipID": "shielddamage-ToolTip",
         "toolTipDescription": "Shield Damage"
     },
     "trip":
     {
         "variable": "trip",
         "name": "Trip",
-        "toolTipID": "tripToolTip",
+        "toolTipID": "trip-ToolTip",
         "toolTipDescription": "Trip Chance"
     },
     "rehit":
     {
         "variable": "rehit",
         "name": "Rehit",
-        "toolTipID": "rehitToolTip",
+        "toolTipID": "rehit-ToolTip",
         "toolTipDescription": "Determines if a hitbox can hit an opponent multiple times"
     },
     "reflectable":
     {
-        "variable": "dummy"
+        "variable": "refletable",
+        "name": "Reflectable",
+        "toolTipID": "reflectable-ToolTip",
+        "toolTipDescription": "Determines if a move can be reflected"
     },
     "absorbable":
     {
-        "variable": "dummy"
+        "variable": "absorbable",
+        "name": "Absorbable",
+        "toolTipID": "absorbable-ToolTip",
+        "toolTipDescription": "Determines if the move can be absorbed"
     },
     "flinchless":
     {
-        "variable": "dummy"
+        "variable": "flinchless",
+        "name": "Flinchless",
+        "toolTipID": "flinchless-ToolTip",
+        "toolTipDescription": "When true, this move will not deal damage animations or hitstun, but will still launch the opponent"
     },
     "disablehitlag":
     {
-        "variable": "dummy"
+        "variable": "disablehitlag",
+        "name": "Disable Hitlag",
+        "toolTipID": "disablehitlag-ToolTip",
+        "toolTipDescription": "When true, hitlag will be set to 0 regardless of all other modifiers present"
     },
     "direct_hitbox":
     {
-        "variable": "dummy"
+        "variable": "direct_hitbox",
+        "name": "Direct Hitbox",
+        "toolTipID": "direct_hitbox-ToolTip",
+        "toolTipDescription": "Indicates if the move is not a projectile"        
     },
     "ground_or_air":
     {
         "variable": "ground_or_air",
         "name": "Ground/Air",
-        "toolTipID": "ground-airToolTip",
+        "toolTipID": "ground_or_air-ToolTip",
         "toolTipDescription": "Determines if the hitbox affects grounded or aerial opponents"},
     "hitbits":
     {
-        "variable": "dummy"
+        "variable": "hitbits",
+        "name": "Hitbits",
+        "toolTipID": "hitbits-ToolTip",
+        "toolTipDescription": "Determines what kinds of elements the move can interact with (characters, stages, items, etc)"        
     },
     "collisionpart":
     {
-        "variable": "dummy"
+        "variable": "collisionpart",
+        "name": "Collision Part",
+        "toolTipID": "collisionpart-ToolTip",
+        "toolTipDescription": "Determines what kinds of character hurtboxes the move can interact with (head, body, legs, etc)"        
     },
     "friendlyfire":
     {
-        "variable": "dummy"
+        "variable": "friendlyfire",
+        "name": "Friendly Fire",
+        "toolTipID": "friendlyfire-ToolTip",
+        "toolTipDescription": "Determines if a move can hit teammates when friendly fire is disabled"
     },
     "effect":
     {
-        "variable": "dummy"
+        "variable": "effect",
+        "name": "Effect",
+        "toolTipID": "effect-ToolTip",
+        "toolTipDescription": "Effect of the hitbox"
     },
     "sfxlevel":
     {
-        "variable": "dummy"
+        "variable": "sfxlevel",
+        "name": "SFX Level",
+        "toolTipID": "sfxlevel-ToolTip",
+        "toolTipDescription": "Determines how loud the sound effect is"        
     },
     "sfxtype":
     {
-        "variable": "dummy"
+        "variable": "sfxtype",
+        "name": "SFX Type",
+        "toolTipID": "sfxtype-ToolTip",
+        "toolTipDescription": "Determines which sound effect is used when the hitbox connects"
     },
     "type":
     {
-        "variable": "dummy"
+        "variable": "type",
+        "name": "Type",
+        "toolTipID": "type-ToolTip",
+        "toolTipDescription": "Type of hitbox, used for Spirit modifiers"        
     },
     "more":
     {
         "variable": "more",
         "name": "Data",
-        "toolTipID": "moreToolTip",
+        "toolTipID": "more-ToolTip",
         "toolTipDescription": "Shows all raw data for a hitbox"
     },
     "notes": 
     {
         "variable": "notes",
         "name": "Notes",
-        "toolTipID": "noteToolTip",
+        "toolTipID": "notes-ToolTip",
         "toolTipDescription": "Notes"
     }
 }

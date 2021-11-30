@@ -2,6 +2,7 @@
 import * as React from "react"
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import ReactTooltip from "react-tooltip";
 
 //Component Imports
 import DataPortal from './DataPortal'
@@ -77,10 +78,10 @@ function Main(props) {
     }
 
     if (props.characterListData[nextIndex].completed && nextChar === undefined) {
-      nextChar = props.characterListData[nextIndex].value
+      nextChar = props.characterListData[nextIndex]
     }
     if (props.characterListData[prevIndex].completed && prevChar === undefined) {
-      prevChar = props.characterListData[prevIndex].value
+      prevChar = props.characterListData[prevIndex]
     }
 
     i=i+1
@@ -192,15 +193,18 @@ function Main(props) {
 
       <div>
         <div id="characterChoiceBar">
-          <Link to={`/${prevChar}`}>
+          <Link to={`/${prevChar.value}`}>
             <img
               id="prevChar"
               className="nextprevChar"
-              src={`https://ultimate-hitboxes.s3.amazonaws.com/icons/${prevChar}.png`}
-              onClick={() => { newCharacter(prevChar) }}
+              src={`https://ultimate-hitboxes.s3.amazonaws.com/icons/${prevChar.value}.png`}
+              onClick={() => { newCharacter(prevChar.value) }}
               alt="Previous Character"
+              key={prevChar.value} 
+              data-tip data-for={prevChar.value}
             />
           </Link>
+          <ReactTooltip key={prevChar.value} id={prevChar.value} place="top" effect="solid">{prevChar.name}</ReactTooltip>
           <Link to="/characters">
 
             <button
@@ -211,15 +215,19 @@ function Main(props) {
             </button>
 
           </Link>
-          <Link to={`/${nextChar}`}>
+          <Link to={`/${nextChar.value}`}>
             <img
               id="nextChar"
               className="nextprevChar"
-              src={`https://ultimate-hitboxes.s3.amazonaws.com/icons/${nextChar}.png`}
-              onClick={() => { newCharacter(nextChar) }}
+              src={`https://ultimate-hitboxes.s3.amazonaws.com/icons/${nextChar.value}.png`}
+              onClick={() => { newCharacter(nextChar.value) }}
               alt="Previous Character"
+              key={nextChar.value} 
+              data-tip data-for={nextChar.value}
             />
           </Link>
+          <ReactTooltip key={nextChar.value} id={nextChar.value} place="top" effect="solid">{nextChar.name}</ReactTooltip>
+
         </div>
         <DataPortal
           settings={props.settings}

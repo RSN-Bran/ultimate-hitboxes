@@ -22,7 +22,11 @@ function HitBoxDetail(props) {
   }
 
   //If there is no data to show, don't render anything
-  if (props.hitboxData === undefined) { return null; }
+  if (props.hitboxData === undefined) { 
+    return(
+      <div id="hitboxDetail" className="fadeOut"></div>
+    ); 
+  }
 
   else {
     //Parse the hitbox json data so it is held in an array of 2 element arrays. Each inner array contains the key and the value
@@ -41,8 +45,8 @@ function HitBoxDetail(props) {
 
     //Render the array of game data strings, and an exit button
     return (
-      <div id="hitboxDetail" style={style}>
-        <img id="exit" onClick={props.updateHitboxData.bind(this, undefined)} src={x[Math.abs(props.settings.dark_light-1)]}/>
+      <div id="hitboxDetail" className={props.displayHitboxData ? "fadeIn" : "fadeOut"} style={style}>
+        <img id="exit" onClick={props.setDisplayHitboxData.bind(this, false)} src={x[Math.abs(props.settings.dark_light-1)]}/>
 
         {displayData}
         {infoToolTips}

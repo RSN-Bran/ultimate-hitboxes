@@ -14,7 +14,6 @@ import Settings from './components/Settings';
 import Info from './components/Info';
 import CharacterList from './components/CharacterList'
 import Main from './components/Main'
-import HitboxDetail from './components/HitBoxDetail'
 import CookiePopup from './components/CookiePopup'
 import Cookies from './components/Cookies'
 
@@ -57,7 +56,6 @@ class App extends React.Component {
 
     //Bind functions so they are usable within components
     this.changeDefaultSpeed = this.changeDefaultSpeed.bind(this)
-    this.updateHitboxData = this.updateHitboxData.bind(this)
     this.changeSortBy = this.changeSortBy.bind(this)
     this.changeSearchValue = this.changeSearchValue.bind(this)
     this.setInitialSettings = this.setInitialSettings.bind(this)
@@ -74,13 +72,7 @@ class App extends React.Component {
     })
   }
 
-  //Save data for a particular hitbox for use in the "More Data button"
-  updateHitboxData(hitbox) {
-    
-    this.setState({
-      hitboxData: hitbox
-    })
-  }
+  
 
   //Update the value to sort by in the character select
   changeSortBy(value) {
@@ -256,11 +248,7 @@ class App extends React.Component {
                     updateHitboxData={this.updateHitboxData}
                     urlNotification={this.urlNotification}
                   />
-                  <HitboxDetail
-                    updateHitboxData={this.updateHitboxData}
-                    hitboxData={this.state.hitboxData}
-                    settings={this.state.settings}
-                  />
+
 
                 </div>
               )} />

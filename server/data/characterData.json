@@ -6,7 +6,7 @@
     "number": "01",
     "completed": true,
     "series": "super-mario",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 2,
@@ -33,7 +33,7 @@
     "number": "04",
     "completed": true,
     "series": "metroid",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "number": "04e",
     "completed": true,
     "series": "metroid",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "number": "05",
     "completed": true,
     "series": "yoshi",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "number": "06",
     "completed": true,
     "series": "kirby",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "number": "07",
     "completed": true,
     "series": "star-fox",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "number": "08",
     "completed": true,
     "series": "pokemon",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "number": "09",
     "completed": true,
     "series": "super-mario",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "number": "10",
     "completed": true,
     "series": "earthbound",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "number": "11",
     "completed": true,
     "series": "f-zero",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "number": "12",
     "completed": true,
     "series": "pokemon",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 14,
@@ -141,7 +141,7 @@
     "number": "14",
     "completed": true,
     "series": "super-mario",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 17,
@@ -159,7 +159,7 @@
     "number": "16",
     "completed": true,
     "series": "legend-of-zelda",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 19,
@@ -168,7 +168,7 @@
     "number": "17",
     "completed": true,
     "series": "legend-of-zelda",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 20,
@@ -177,7 +177,7 @@
     "number": "18",
     "completed": true,
     "series": "super-mario",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 21,
@@ -186,7 +186,7 @@
     "number": "19",
     "completed": true,
     "series": "pokemon",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 22,
@@ -204,7 +204,7 @@
     "number": "21",
     "completed": true,
     "series": "fire-emblem",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 24,
@@ -213,7 +213,7 @@
     "number": "21e",
     "completed": true,
     "series": "fire-emblem",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 25,
@@ -222,7 +222,7 @@
     "number": "22",
     "completed": true,
     "series": "legend-of-zelda",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 26,
@@ -231,7 +231,7 @@
     "number": "23",
     "completed": true,
     "series": "legend-of-zelda",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 27,
@@ -249,7 +249,7 @@
     "number": "25",
     "completed": true,
     "series": "fire-emblem",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 29,
@@ -258,7 +258,7 @@
     "number": "25e",
     "completed": true,
     "series": "fire-emblem",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 30,
@@ -267,7 +267,7 @@
     "number": "26",
     "completed": true,
     "series": "game-watch",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 31,
@@ -285,7 +285,7 @@
     "number": "28",
     "completed": true,
     "series": "kid-icarus",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 33,
@@ -294,7 +294,7 @@
     "number": "28e",
     "completed": true,
     "series": "kid-icarus",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 34,
@@ -303,7 +303,7 @@
     "number": "29",
     "completed": true,
     "series": "metroid",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 35,
@@ -321,7 +321,7 @@
     "number": "31",
     "completed": true,
     "series": "metal-gear",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 37,
@@ -339,7 +339,7 @@
     "number": "33",
     "completed": true,
     "series": "pokemon",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 39,
@@ -348,7 +348,7 @@
     "number": "34",
     "completed": true,
     "series": "pokemon",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 40,
@@ -357,7 +357,7 @@
     "number": "35",
     "completed": true,
     "series": "pokemon",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 41,
@@ -366,7 +366,7 @@
     "number": "36",
     "completed": true,
     "series": "donkey-kong",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 42,
@@ -375,7 +375,7 @@
     "number": "37",
     "completed": true,
     "series": "earthbound",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 43,
@@ -384,7 +384,7 @@
     "number": "38",
     "completed": true,
     "series": "sonic",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 44,
@@ -393,7 +393,7 @@
     "number": "39",
     "completed": true,
     "series": "kirby",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 45,
@@ -402,7 +402,7 @@
     "number": "40",
     "completed": true,
     "series": "pikmin",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 46,
@@ -411,7 +411,7 @@
     "number": "41",
     "completed": true,
     "series": "pokemon",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 47,
@@ -420,7 +420,7 @@
     "number": "42",
     "completed": true,
     "series": "rob",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 48,
@@ -429,7 +429,7 @@
     "number": "43",
     "completed": true,
     "series": "legend-of-zelda",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 49,
@@ -438,7 +438,7 @@
     "number": "44",
     "completed": true,
     "series": "star-fox",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 50,
@@ -447,7 +447,7 @@
     "number": "45",
     "completed": true,
     "series": "animal-crossing",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 51,
@@ -465,7 +465,7 @@
     "number": "47",
     "completed": true,
     "series": "wii-fit",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 53,
@@ -483,7 +483,7 @@
     "number": "49",
     "completed": true,
     "series": "punch-out",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 55,
@@ -492,7 +492,7 @@
     "number": "50",
     "completed": true,
     "series": "pokemon",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 56,
@@ -501,7 +501,7 @@
     "number": "51",
     "completed": true,
     "series": "smash-bros",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 57,
@@ -510,7 +510,7 @@
     "number": "52",
     "completed": true,
     "series": "smash-bros",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 58,
@@ -519,7 +519,7 @@
     "number": "53",
     "completed": true,
     "series": "smash-bros",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 59,
@@ -528,7 +528,7 @@
     "number": "54",
     "completed": true,
     "series": "kid-icarus",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 60,
@@ -537,7 +537,7 @@
     "number": "55",
     "completed": true,
     "series": "pac-man",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 61,
@@ -555,7 +555,7 @@
     "number": "57",
     "completed": true,
     "series": "xenoblade",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 63,
@@ -573,7 +573,7 @@
     "number": "59",
     "completed": true,
     "series": "duck-hunt",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 65,
@@ -591,7 +591,7 @@
     "number": "60e",
     "completed": true,
     "series": "street-fighter",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 67,
@@ -609,7 +609,7 @@
     "number": "62",
     "completed": true,
     "series": "fire-emblem",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 69,
@@ -618,7 +618,7 @@
     "number": "63",
     "completed": true,
     "series": "bayonetta",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 70,
@@ -645,7 +645,7 @@
     "number": "66",
     "completed": true,
     "series": "castlevania",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 73,
@@ -654,7 +654,7 @@
     "number": "66e",
     "completed": true,
     "series": "castlevania",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 74,
@@ -663,7 +663,7 @@
     "number": "67",
     "completed": true,
     "series": "donkey-kong",
-    "version": "v12.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 75,
@@ -672,7 +672,7 @@
     "number": "68",
     "completed": true,
     "series": "animal-crossing",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 76,
@@ -681,7 +681,7 @@
     "number": "69",
     "completed": true,
     "series": "pokemon",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 77,
@@ -699,7 +699,7 @@
     "number": "71",
     "completed": true,
     "series": "persona",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 79,
@@ -708,7 +708,7 @@
     "number": "72",
     "completed": true,
     "series": "dragon-quest",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 80,
@@ -717,7 +717,7 @@
     "number": "73",
     "completed": true,
     "series": "banjo-kazooie",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 81,
@@ -726,7 +726,7 @@
     "number": "74",
     "completed": true,
     "series": "fatal-fury",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 82,
@@ -735,7 +735,7 @@
     "number": "75",
     "completed": true,
     "series": "fire-emblem",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 83,
@@ -762,7 +762,7 @@
     "number": "78",
     "completed": true,
     "series": "final-fantasy",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 86,
@@ -789,7 +789,7 @@
     "number": "81",
     "completed": true,
     "series": "tekken",
-    "version": "v13.0.0"
+    "version": "v13.0.1"
   },
   {
     "id": 89,

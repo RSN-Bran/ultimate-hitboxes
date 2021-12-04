@@ -19,10 +19,10 @@ function Player(props) {
 	const copyToClipboard = str => {
 		const el = document.createElement('textarea');
 		if(props.playing) {
-			el.value = `http://${environment}/${props.character}/${props.move}`;
+			el.value = `https://${environment}/${props.character}/${props.move}`;
 		}
 		else {
-			el.value = `http://${environment}/${props.character}/${props.move}/${props.currentFrame}`;
+			el.value = `https://${environment}/${props.character}/${props.move}/${props.currentFrame}`;
 		}
 		
 		document.body.appendChild(el);

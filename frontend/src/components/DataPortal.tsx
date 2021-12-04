@@ -92,6 +92,7 @@ function DataPortal(props) {
           loadingPercent={props.loadingPercent}
           urlNotification={props.urlNotification}
           urls={props.urls}
+          playing={props.playing}
         />
 
         <Slider

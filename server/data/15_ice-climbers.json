@@ -10847,8 +10847,8 @@
         {
             "name": "Belay (Nana)",
             "value": "IceClimbersNanaBelay",
-            "frames": 64,
-            "faf": 64,
+            "frames": 61,
+            "faf": 61,
             "hitboxes": [
                 {
                     "id": "0",
@@ -10885,6 +10885,9 @@
                     "sfxtype": "collision_sound_attr_punch",
                     "type": "attack_region_head",
                     "frames": [
+                        13,
+                        14,
+                        15,
                         16,
                         17,
                         18,
@@ -10899,10 +10902,7 @@
                         27,
                         28,
                         29,
-                        30,
-                        31,
-                        32,
-                        33
+                        30
                     ],
                     "color": "red",
                     "notes": ""
@@ -10925,10 +10925,7 @@
                         9,
                         10,
                         11,
-                        12,
-                        13,
-                        14,
-                        15
+                        12
                     ],
                     "color": "darkblue",
                     "notes": ""
@@ -10938,6 +10935,9 @@
                     "bone": "all",
                     "hp": "",
                     "frames": [
+                        13,
+                        14,
+                        15,
                         16,
                         17,
                         18,
@@ -10952,10 +10952,7 @@
                         27,
                         28,
                         29,
-                        30,
-                        31,
-                        32,
-                        33
+                        30
                     ],
                     "color": "lightgreen",
                     "notes": ""

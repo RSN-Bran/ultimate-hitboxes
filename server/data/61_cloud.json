@@ -6320,8 +6320,8 @@
         {
             "name": "Finishing Touch (Ground)",
             "value": "CloudFinishingTouchG",
-            "frames": 86,
-            "faf": 86,
+            "frames": 84,
+            "faf": 84,
             "hitboxes": [
                 
                 {
@@ -6597,8 +6597,8 @@
         {
             "name": "Finishing Touch (Aerial)",
             "value": "CloudFinishingTouchA",
-            "frames": 89,
-            "faf": 89,
+            "frames": 87,
+            "faf": 87,
             "hitboxes": [
                 {
                     "id": "0",

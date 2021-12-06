@@ -6,8 +6,8 @@
         {
             "name": "Jab 1",
             "value": "LinkJab1",
-            "frames": 24,
-            "faf": 24,
+            "frames": 23,
+            "faf": 23,
             "hitboxes": [
                 {
                     "id": "0",

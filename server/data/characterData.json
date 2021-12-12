@@ -4,7 +4,7 @@
     "name": "Mario",
     "value": "mario",
     "number": "01",
-    "completed": true,
+    "completed": false,
     "series": "super-mario",
     "version": "v13.0.1"
   },

@@ -3,9 +3,20 @@
 	display: inline-block;
 	width: 300px;
 	height: 100px;
-	margin: 10px;
+	
 	position: relative;
 	font-size: .7em;
+}
+
+.character-mobile {
+	width: 300px;
+	height: 100px;
+	margin: 10px;
+}
+
+.character-desktop {
+	width: 7%;
+	height: 60px;
 }
 
 @media (max-width: 1200px) {
@@ -26,6 +37,7 @@
 
 .character-incomplete {
 	opacity: 0.4;
+	cursor: default;
 }
 
 .character-dark {
@@ -44,14 +56,19 @@
 
 .name-dark {
 	text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+}
+
+.name-light {
+	text-shadow: -1px 1px 0 gray, 1px 1px 0 gray, 1px -1px 0 gray, -1px -1px 0 gray;
+}
+
+.name-mobile {
 	left: 1%;
 	position: absolute;
 }
 
-.name-light {
-	left: 1%;
-	text-shadow: -1px 1px 0 gray, 1px 1px 0 gray, 1px -1px 0 gray, -1px -1px 0 gray;
-	position: absolute;
+.name-desktop {
+	font-size: 75%;
 }
 
 .number {

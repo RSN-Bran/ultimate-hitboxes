@@ -15,14 +15,18 @@ function Character(props) {
 	//Determines class the object should have
 	let dark_light = props.dark_light === 0 ? "dark" : "light"
 	let complete = props.character.completed ? "complete" : "incomplete"
-	let characterClassName = `character character-${complete} character-${dark_light}`
-	let nameClass = `name-${dark_light}`
+	let mobile_desktop = screen.width < 500 ? "mobile" : "desktop"
+	let characterClassName = `character character-${complete} character-${dark_light} character-${mobile_desktop}`
+	let nameClass = `name-${dark_light} name-${mobile_desktop}`
 
 	//Return a box for the character showing their name, number, artwork, and series symbol.
 	//Associated class varies based on if the character has completed data.Incomplete characters are not selectable and grayed out
-	if (props.character.completed) {
+
+	//screen.width < 500
+
+	if(screen.width < 500) {
 		return (
-			<Link to={`/${props.character.value}`}>
+			<Link to={props.character.completed ? `/${props.character.value}` : null}>
 				<div className={characterClassName} value={props.character.value} onClick={() => console.log('Heading to /')}>
 					<small className="number">#{props.character.number.replace('e', 'ε')}</small>
 					<small className="version">{props.character.completed ? props.character.version : "Coming Soon"}</small>
@@ -37,15 +41,17 @@ function Character(props) {
 	}
 	else {
 		return (
-			<div className={characterClassName} value={props.character.value} /*onClick={props.getCharacterData.bind(this, props.character.value)}*/>
-				<small className="number" style={{ "position": "absolute" }}>#{props.character.number.replace('e', 'ε')}</small>
-				<small className="version" style={{ "position": "absolute" }}>{props.character.completed ? props.character.version : "Coming Soon"}</small>
-				<h2 className={nameClass} style={{ "position": "absolute" }}>{props.character.name}</h2>
-				<img src={renderURL} height="100" alt={props.character.name}></img>
-				<img className="series-icon" src={seriesURL} alt={props.character.series}></img>
-			</div>
-			)
+			<Link to={props.character.completed ? `/${props.character.value}` : null}>
+				<div className={characterClassName} value={props.character.value} onClick={() => console.log('Heading to /')}>
+					<h2 className={nameClass}>
+						{props.character.name}
+					</h2>
+					<img className="characterArt" height="20" src={renderURL} alt={props.character.name}></img>
+				</div>
+			</Link>
+		)
 	}
+	
 }
 
 export default Character

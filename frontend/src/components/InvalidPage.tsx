@@ -3,7 +3,6 @@ import * as React from "react"
 import { useParams, Link } from 'react-router-dom';
 
 function InvalidPage(props) {
-    console.log("invalid")
     return(
         <div id="characterChoiceBar">
       <Link to="/characters">

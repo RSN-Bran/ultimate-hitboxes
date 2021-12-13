@@ -10,6 +10,8 @@ import Slider from './Slider'
 import Buttons from './Buttons'
 import SpeedOptions from './SpeedOptions'
 import DataTable from './DataTable';
+import HitboxDetail from './HitBoxDetail'
+
 
 //CSS Imports
 import '../css/Player.css';
@@ -37,6 +39,14 @@ function useInterval(callback, delay) {
 function DataPortal(props) {
 
   const [playSpeed, setPlaySpeed] = useState(props.settings.defaultPlaySpeed)
+
+  const [displayHitboxData, setDisplayHitboxData] = useState(false)
+  const [hitboxData, setHitboxData] = useState(undefined)
+
+  let updateHitboxData = function(data) {
+    setDisplayHitboxData(true)
+    setHitboxData(data)
+  }
 
   useInterval(() => {
     if (props.settings.loopMove || props.currentFrame < props.currentMoveData.frames) {
@@ -82,6 +92,7 @@ function DataPortal(props) {
           loadingPercent={props.loadingPercent}
           urlNotification={props.urlNotification}
           urls={props.urls}
+          playing={props.playing}
         />
 
         <Slider
@@ -102,6 +113,16 @@ function DataPortal(props) {
           totalMoves={props.totalMoves}
           settings={props.settings}
         />
+
+        <HitboxDetail
+          updateHitboxData={setHitboxData}
+          hitboxData={hitboxData}
+          displayHitboxData={displayHitboxData}
+          setDisplayHitboxData={setDisplayHitboxData}
+          settings={props.settings}
+        />
+          
+
         <div id={props.settings.scrollTable ? "scrollable" : "not-scrollable"}>
           <SpeedOptions
             setPlaySpeed={setPlaySpeed}
@@ -117,7 +138,7 @@ function DataPortal(props) {
             currentFrame={props.currentFrame}
             setCurrentFrame={props.setCurrentFrame}
             jumpToFrame={props.jumpToFrame}
-            updateHitboxData={props.updateHitboxData}
+            updateHitboxData={updateHitboxData}
           /> : null}
 
           {props.currentMoveData.grabs !== undefined ? <DataTable
@@ -127,7 +148,7 @@ function DataPortal(props) {
             jumpToFrame={props.jumpToFrame}
             loading={props.loading}
             currentFrame={props.currentFrame}
-            updateHitboxData={props.updateHitboxData}
+            updateHitboxData={updateHitboxData}
           /> : null}
 
           {props.currentMoveData.throws !== undefined ? <DataTable
@@ -137,7 +158,7 @@ function DataPortal(props) {
             jumpToFrame={props.jumpToFrame}
             loading={props.loading}
             currentFrame={props.currentFrame}
-            updateHitboxData={props.updateHitboxData}
+            updateHitboxData={updateHitboxData}
           /> : null}
 
           {props.currentMoveData.hurtboxes !== undefined ? <DataTable
@@ -147,7 +168,7 @@ function DataPortal(props) {
             jumpToFrame={props.jumpToFrame}
             loading={props.loading}
             currentFrame={props.currentFrame}
-            updateHitboxData={props.updateHitboxData}
+            updateHitboxData={updateHitboxData}
           /> : null}
         </div>
         

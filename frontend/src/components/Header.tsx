@@ -45,7 +45,7 @@ function Header(props) {
           <img id="settingsButton" className="helpButtons" src={settings[props.dark_light]}/>
         </Link>
 
-        <img id="backButton" className="helpButtons" src={back[props.dark_light]} onClick={() => history.goBack()} />
+        <img id="backButton" className="helpButtons" src={back[props.dark_light]} onClick={() => {history.goBack()}} />
 
       </div>
 

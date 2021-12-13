@@ -147,9 +147,11 @@ app.get('/:character/:move/data', (req, res) => {
 //Get API Endpoint for grabbing S3 bucket images
 app.get('/s3/:frames/:path', (req, res) => {
 
-  const allowedOrigins = ['http://localhost:8080','https://ultimate-hitboxes.com']
-  if(allowedOrigins.includes(req.headers.origin)) {
-    res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  const allowedOrigins = ['http://localhost:8080','https://ultimate-hitboxes.com', 'http://ultimate-hitboxes.com']
+  //if(allowedOrigins.includes(req.headers.origin)) {
+  if(true) {
+    //res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+    res.setHeader('Access-Control-Allow-Origin', '*');
 
     //The path value passed into the API Endpoint has it's subdirectories separated by '+' symbols
     //Below statement will replace those with the appropriate '/' symbols

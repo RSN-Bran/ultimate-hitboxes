@@ -104,7 +104,7 @@ function Settings(props) {
 				</div>
 
 				<div className="settingDiv">
-					<h3 style={{ cursor: "pointer" }} onClick={() => { document.cookie = "settings="; document.cookie = ""; sessionStorage.clear(); localStorage.clear(); history.go(0)}}>Click here to reset settings to default</h3>
+					<button id="reset-button" class={"reset-button-"+settings.dark_light} onClick={() => { document.cookie = "settings="; document.cookie = ""; sessionStorage.clear(); localStorage.clear(); history.go(0)}}><b>Reset settings to default</b></button>
 				</div>
 
 			</div>

@@ -9413,9 +9413,18 @@
     {
       "frames": 51,
       "faf": 51,
-      "name": "",
+      "name": "Counterattack",
       "value": "SoraCounterattack",
-      "hitboxes": []
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 7,8],
+          "color": "darkblue",
+          "notes": ""
+        }
+      ]
     },
     {
       "frames": 49,
@@ -9680,7 +9689,7 @@
           "notes": ""
         }
       ]
-    }
+    },
         {
       "frames": 55,
       "faf": 55,
@@ -9724,8 +9733,18 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "62412",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [20,21,22],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -9773,8 +9792,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "62412",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [20,21],
+          "color": "red",
           "notes": ""
         },
         {
@@ -9814,8 +9833,18 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "62412",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [24,25],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -9863,8 +9892,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "62412",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [20,21],
+          "color": "red",
           "notes": ""
         },
         {
@@ -9904,8 +9933,18 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "62412",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [24,25],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -9953,8 +9992,8 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "62412",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [20,21],
+          "color": "red",
           "notes": ""
         },
         {
@@ -9994,8 +10033,18 @@
           "sfxlevel": "attack_sound_level_s",
           "sfxtype": "62412",
           "type": "attack_region_sword",
-          "frames": [],
-          "color": "",
+          "frames": [24,25],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7],
+          "color": "darkblue",
           "notes": ""
         }
       ]

@@ -4705,7 +4705,7 @@
           "type": "Intangible",
           "bone": "head",
           "hp": "",
-          "frames": [ 9, 10 ],
+          "frames": [ 4,5,6,7,8,9, 10 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -4713,7 +4713,7 @@
           "type": "Intangible",
           "bone": "bust",
           "hp": "",
-          "frames": [ 9, 10 ],
+          "frames": [ 4, 5, 6, 7, 8, 9, 10 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -4721,7 +4721,7 @@
           "type": "Intangible",
           "bone": "shoulderl",
           "hp": "",
-          "frames": [ 9, 10 ],
+          "frames": [ 4, 5, 6, 7, 8, 9, 10 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -4729,7 +4729,7 @@
           "type": "Intangible",
           "bone": "shoulderr",
           "hp": "",
-          "frames": [ 9, 10 ],
+          "frames": [ 4, 5, 6, 7, 8, 9, 10 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -4737,7 +4737,7 @@
           "type": "Intangible",
           "bone": "arml",
           "hp": "",
-          "frames": [ 9, 10 ],
+          "frames": [ 4, 5, 6, 7, 8, 9, 10 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -4745,7 +4745,7 @@
           "type": "Intangible",
           "bone": "armr",
           "hp": "",
-          "frames": [ 9, 10 ],
+          "frames": [ 4, 5, 6, 7, 8, 9, 10 ],
           "color": "darkblue",
           "notes": ""
         }
@@ -6192,7 +6192,7 @@
           "type": "attack_region_punch",
           "frames": [ 7, 8 ],
           "color": "red",
-          "notes": ""
+          "notes": "Only hits downed opponents"
         }
       ],
       "hurtboxes": [
@@ -8478,7 +8478,7 @@
           "type": "Intangible",
           "bone": "shoulderr",
           "hp": "",
-          "frames": [ 1, 2, 3, 8, 9, 10, 11 ],
+          "frames": [ 1, 2, 3, 9, 10, 11,12 ],
           "color": "darkblue",
           "notes": ""
 
@@ -8487,7 +8487,7 @@
           "type": "Intangible",
           "bone": "armr",
           "hp": "",
-          "frames": [ 1, 2, 3, 8, 9, 10, 11 ],
+          "frames": [ 1, 2, 3, 9, 10, 11, 12 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -8495,7 +8495,7 @@
           "type": "Intangible",
           "bone": "all",
           "hp": "",
-          "frames": [ 4, 5, 6, 7 ],
+          "frames": [ 4, 5, 6, 7,8 ],
           "color": "darkblue",
           "notes": ""
         }
@@ -8965,7 +8965,7 @@
           "type": "Intangible",
           "bone": "head",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "frames": [ 2, 3, 4, 5, 6, 15, 16, 17 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -8973,7 +8973,7 @@
           "type": "Intangible",
           "bone": "torso",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "frames": [ 2, 3, 4, 5, 6, 15, 16, 17 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -8981,7 +8981,7 @@
           "type": "Intangible",
           "bone": "shoulderl",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "frames": [ 2, 3, 4, 5, 6, 15, 16, 17 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -8989,7 +8989,7 @@
           "type": "Intangible",
           "bone": "arml",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "frames": [ 2, 3, 4, 5, 6, 15, 16, 17 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -8997,7 +8997,7 @@
           "type": "Intangible",
           "bone": "shoulderr",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "frames": [ 2, 3, 4, 5, 6, 15, 16, 17 ],
           "color": "darkblue",
           "notes": ""
 
@@ -9006,7 +9006,7 @@
           "type": "Intangible",
           "bone": "armr",
           "hp": "",
-          "frames": [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 22, 23, 24 ],
+          "frames": [ 2, 3, 4, 5, 6, 15, 16, 17 ],
           "color": "darkblue",
           "notes": ""
         },
@@ -9014,14 +9014,15 @@
           "type": "Intangible",
           "bone": "all",
           "hp": "",
-          "frames": [ 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ],
+          "frames": [ 7, 8, 9, 10, 11, 12, 13, 14 ],
           "color": "darkblue",
           "notes": ""
         }
-      ]
+      ],
+      "notes":  "Comes after first 5 frames of (Electric) Wind God Fist"
     },
     {
-      "name": "Spinning Dragon to Left Hook",
+      "name": "Spinning Demon to Left Hook",
       "value": "KazuyaSpinningDragonToLeftHook",
       "frames": 66,
       "faf": 66,
@@ -9576,7 +9577,7 @@
           "type": "attack_region_kick",
           "frames": [ 15, 16 ],
           "color": "fuchsia",
-          "notes": ""
+          "notes": "Only hits downed opponents"
         },
         {
           "id": "0",
@@ -14305,9 +14306,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [27],
+          "color": "red",
+          "notes": "Ground, No Angle"
         },
         {
           "id": "1",
@@ -14346,9 +14347,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [27],
+          "color": "red",
+          "notes": "Ground, No Angle"
         },
         {
           "id": "0",
@@ -14387,18 +14388,10 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        }
-      ]
-    },
-    {
-      "name": "blaster2",
-      "value": "KazuyaDevilFistA",
-      "frames": 68,
-      "faf": 68,
-      "hitboxes": [
+          "frames": [28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43],
+          "color": "red",
+          "notes": "Ground, No Angle"
+        },
         {
           "id": "0",
           "part": "0",
@@ -14436,9 +14429,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Ground, Up Angle"
         },
         {
           "id": "1",
@@ -14477,9 +14470,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Ground, Up Angle"
         },
         {
           "id": "0",
@@ -14518,18 +14511,10 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        }
-      ]
-    },
-    {
-      "name": "blaster3",
-      "value": "KazuyaDevilFistG",
-      "frames": 66,
-      "faf": 66,
-      "hitboxes": [
+          "frames": [ 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ],
+          "color": "red",
+          "notes": "Ground, Up Angle"
+        },
         {
           "id": "0",
           "part": "0",
@@ -14567,9 +14552,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Ground, Down Angle"
         },
         {
           "id": "1",
@@ -14608,9 +14593,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Ground, Down Angle"
         },
         {
           "id": "0",
@@ -14649,18 +14634,10 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        }
-      ]
-    },
-    {
-      "name": "blaster4",
-      "value": "KazuyaDevilWings",
-      "frames": 66,
-      "faf": 66,
-      "hitboxes": [
+          "frames": [ 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ],
+          "color": "red",
+          "notes": "Ground, Down Angle"
+        },
         {
           "id": "0",
           "part": "0",
@@ -14698,9 +14675,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Air, No Angle"
         },
         {
           "id": "1",
@@ -14739,9 +14716,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Air, No Angle"
         },
         {
           "id": "0",
@@ -14780,18 +14757,10 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        }
-      ]
-    },
-    {
-      "name": "blaster5",
-      "value": "KazuyaDFTilt1",
-      "frames": 36,
-      "faf": 36,
-      "hitboxes": [
+          "frames": [ 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ],
+          "color": "red",
+          "notes": "Air, No Angle"
+        },
         {
           "id": "0",
           "part": "0",
@@ -14829,9 +14798,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Air, Up Angle"
         },
         {
           "id": "1",
@@ -14870,9 +14839,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Air, Up Angle"
         },
         {
           "id": "0",
@@ -14911,18 +14880,10 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
-        }
-      ]
-    },
-    {
-      "name": "blaster6",
-      "value": "KazuyaDFTilt2",
-      "frames": 43,
-      "faf": 43,
-      "hitboxes": [
+          "frames": [ 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ],
+          "color": "red",
+          "notes": "Air, Up Angle"
+        },
         {
           "id": "0",
           "part": "0",
@@ -14960,9 +14921,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Air, Down Angle"
         },
         {
           "id": "1",
@@ -15001,9 +14962,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 27 ],
+          "color": "red",
+          "notes": "Air, Down Angle"
         },
         {
           "id": "0",
@@ -15042,9 +15003,9 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "collision_sound_attr_elec",
           "type": "attack_region_energy",
-          "frames": [],
-          "color": "",
-          "notes": ""
+          "frames": [ 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 ],
+          "color": "red",
+          "notes": "Air, Down Angle"
         }
       ]
     },
@@ -15488,7 +15449,7 @@
           "sfxtype": "61400",
           "type": "attack_region_body",
           "frames": [ 12, 13, 14 ],
-          "color": "red",
+          "color": "fuchsia",
           "notes": "Aerial"
         },
         {
@@ -15734,7 +15695,7 @@
           "sfxtype": "61400",
           "type": "attack_region_body",
           "frames": [ 12, 13, 14 ],
-          "color": "red",
+          "color": "fuchsia",
           "notes": "Grounded"
         },
         {
@@ -17546,8 +17507,18 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 24, 25, 26 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -17595,8 +17566,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [19,20],
+          "color": "red",
           "notes": ""
         },
         {
@@ -17636,8 +17607,18 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [24,25],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -17685,7 +17666,7 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
+          "frames": [19,20],
           "color": "",
           "notes": ""
         },
@@ -17726,8 +17707,18 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [24,25],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]
@@ -17775,8 +17766,8 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 19, 20 ],
+          "color": "red",
           "notes": ""
         },
         {
@@ -17816,8 +17807,18 @@
           "sfxlevel": "attack_sound_level_m",
           "sfxtype": "61404",
           "type": "attack_region_kick",
-          "frames": [],
-          "color": "",
+          "frames": [ 24, 25 ],
+          "color": "red",
+          "notes": ""
+        }
+      ],
+      "hurtboxes": [
+        {
+          "type": "Intangible",
+          "bone": "all",
+          "hp": "",
+          "frames": [ 1, 2, 3, 4, 5, 6, 7 ],
+          "color": "darkblue",
           "notes": ""
         }
       ]

@@ -3092,8 +3092,8 @@
         {
             "name": "Back Throw",
             "value": "MarthBThrow",
-            "frames": 47,
-            "faf": 47,
+            "frames": 44,
+            "faf": 44,
             "throws": [
                 {
                     "kind": "fighter_attack_absolute_kind_throw",

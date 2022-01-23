@@ -17,28 +17,30 @@ const sortingMethods = {
 function CharacterList(props) {
 
 	//If chararacter data doesn't exist, query the backend server
-	if (props.characterListData === undefined) {
+	if (props.characterData === undefined) {
 		return null;
 	}
 	else {
 		//Create a deep copy of the settings
 		let settings = JSON.parse(JSON.stringify(props.settings));
 		
-		let sortedCharacterData = []
+		let sortedCharacterList = []
 
+		console.log(props.settings.sortBy)
 		//Sort Characters based on the criteria in the sortBy Field
 		if (sortingMethods[props.settings.sortBy] === "ascending") {
-			sortedCharacterData = props.characterListData.slice().sort((a, b) => (a[props.settings.sortBy] > b[props.settings.sortBy]) ? 1 : -1)
+			sortedCharacterList = props.characterData.characterList.slice().sort((a, b) => (props.characterData[a][props.settings.sortBy] > props.characterData[b][props.settings.sortBy]) ? 1 : -1)
 		}
 		else {
-			sortedCharacterData = props.characterListData.slice().sort((a, b) => (a[props.settings.sortBy] < b[props.settings.sortBy]) ? 1 : -1)
-    }
+			sortedCharacterList = props.characterData.characterList.slice().sort((a, b) => (props.characterData[a][props.settings.sortBy] < props.characterData[b][props.settings.sortBy]) ? 1 : -1)
+    	}
+		console.log(sortedCharacterList)
 		//Filter the results based on the searchBar
-		sortedCharacterData = sortedCharacterData.filter(obj => { return obj.name.toUpperCase().includes(props.search.toUpperCase()) })
+		sortedCharacterList = sortedCharacterList.filter(obj => { return props.characterData[obj].name.toUpperCase().includes(props.search.toUpperCase()) })
 
 		//Create icons based on the constraints above
 		let characterButtonArray = []
-		characterButtonArray = sortedCharacterData.map(character => <Character key={character.id} dark_light={props.settings.dark_light} character={character} getCharacterData={props.getCharacterData}/>)
+		characterButtonArray = sortedCharacterList.map(character => <Character key={character.id} dark_light={props.settings.dark_light} character={props.characterData[character]} getCharacterData={props.getCharacterData}/>)
 
 		return (
 			<div id="characterList">

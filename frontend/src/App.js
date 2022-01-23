@@ -136,10 +136,9 @@ class App extends React.Component {
 
     this.setInitialSettings()
 
-    fetch(`${environment}/characterData`)
+    fetch(`${environment}/api/character/all?exclude=moves`)
       .then(response => response.json())
       .then(data => {
-
         //Set state to loading and save the data for the move
         this.setState({
           characterData: data
@@ -211,7 +210,7 @@ class App extends React.Component {
                 <div>
                   <div className="info">Check out hundreds of moves from Smash Ultimate at various speeds and view in depth details on every hitbox related to each move! </div>
                   <CharacterList
-                    characterListData={this.state.characterData}
+                    characterData={this.state.characterData}
                     updateCurrentCharacter={this.updateCurrentCharacter}
                     getCharacterData={this.getCharacterData}
                     search={this.state.search}

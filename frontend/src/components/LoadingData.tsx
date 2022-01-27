@@ -31,7 +31,7 @@ function RequestURLs(props, images) {
 		}
 
 		//Set the image url list and the timestamp to localstorage
-		localStorage.setItem(`/${props.url}/s3`, JSON.stringify(storage))
+		localStorage.setItem(`/api/images/${props.currentMoveData.value}`, JSON.stringify(storage))
 	})
 	.catch(err => {
 		console.log(err)

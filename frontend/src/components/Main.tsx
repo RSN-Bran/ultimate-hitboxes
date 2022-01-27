@@ -12,10 +12,8 @@ import InvalidPage from './InvalidPage'
 //CSS Imports
 import '../css/Player.css';
 
-//test
 //Set the environment based on dev or PROD
 const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
-//const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "http://ultimate-hitboxes.com:5080";
 
 function Main(props) {
   const [character, setCharacter] = useState(useParams().character.toLowerCase())
@@ -24,9 +22,6 @@ function Main(props) {
   const [playing, setPlaying] = useState(false)
   const [loading, setLoading] = useState(false)
   const [urls, setUrls] = useState([])
-
-
-  
 
   let characterKey;
 
@@ -49,13 +44,11 @@ function Main(props) {
   }
 
   //Determine which character is the current character, save the data and the index
-  characterKey = props.characterListData[character]
+  characterKey = props.characterData[character]
   
 
-  console.log(props.characterListData)
-  console.log(character)
   //Return nothing if the character doesn't exist
-  if(!(character in props.characterListData) || props.characterListData[character].completed === false) {
+  if(!(character in props.characterData) || props.characterData[character].completed === false) {
     return (
       <InvalidPage
         settings={props.settings}
@@ -68,21 +61,21 @@ function Main(props) {
   let nextChar, prevChar;
   let nextIndex, prevIndex;
   //Figure out next and previous characters
-  let index=props.characterListData[character].id
+  let index=props.characterData[character].id
   if(index === 1) {
     nextIndex = 2
-    prevIndex = props.characterListData.characterList.length
+    prevIndex = props.characterList.length
   }
-  else if(index === props.characterListData.characterList.length) {
+  else if(index === props.characterList.length) {
     nextIndex = 1
-    prevIndex = props.characterListData.characterList.length-1
+    prevIndex = props.characterList.length-1
   }
   else {
     nextIndex = index+1
     prevIndex = index-1
   }
 
-  for(const [key, value] of Object.entries(props.characterListData)) {
+  for(const [key, value] of Object.entries(props.characterData)) {
     if(nextChar !== undefined && prevChar !== undefined) {
       break
     }
@@ -90,10 +83,10 @@ function Main(props) {
       continue
     }
     if(nextIndex == value["id"]) {
-      nextChar = key
+      nextChar = value
      }
      else if(prevIndex == value["id"]) {
-       prevChar = key
+       prevChar = value
      }
   }
 
@@ -107,22 +100,20 @@ function Main(props) {
       resolve()
     })
 
-    console.log(characterKey)
     promise.then(() => {
-      if(sessionStorage.getItem(`/api/character/${characterKey.value}`) !== null && process.env.NODE_ENV === "production") {
-        let data = JSON.parse(sessionStorage.getItem(`/api/character/${characterKey.value}`))
+      if(sessionStorage.getItem(`/api-website/character/${characterKey.value}`) !== null && process.env.NODE_ENV === "production") {
+        let data = JSON.parse(sessionStorage.getItem(`/api-website/character/${characterKey.value}`))
         setCurrentCharacterData(data)
         if (move === undefined) { setMove(data.moves[0]) }
       }
       else {
-        fetch(`${environment}/api/character/${characterKey.value}`)
+        fetch(`${environment}/api-website/character/${characterKey.value}`)
           .then(response => response.json())
           .then(data => {
-            console.log(data.moves[0])
-            sessionStorage.setItem(`/api/character/${characterKey.value}`, JSON.stringify(data))
+            sessionStorage.setItem(`/api-website/character/${characterKey.value}`, JSON.stringify(data))
             setCurrentCharacterData(data)
             if (move === undefined) {
-              setMove(data.moves[0])
+              setMove(data.moves[0].value)
             }
           })
 
@@ -242,7 +233,7 @@ function Main(props) {
         </div>
         <DataPortal
           settings={props.settings}
-          characterListData={props.characterListData}
+          characterData={props.characterData}
           currentCharacterData={currentCharacterData}
           currentMoveData={currentMoveData}
           setCharacter={setCharacter}

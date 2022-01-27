@@ -31,6 +31,7 @@ class App extends React.Component {
     this.state = {
 
       characterData: undefined,
+      characterList: [],
 
       //Contains data for a specific hitbox, for use when displaying all data about a hitbox
       hitboxData: undefined,
@@ -139,9 +140,15 @@ class App extends React.Component {
     fetch(`${environment}/api/character/all?exclude=moves`)
       .then(response => response.json())
       .then(data => {
+
+        let characterList = []
+        for(const [key, value] of Object.entries(data)) {
+          characterList.push(key)
+        }
         //Set state to loading and save the data for the move
         this.setState({
-          characterData: data
+          characterData: data,
+          characterList: characterList
         })
       })
       .catch(err => {
@@ -211,6 +218,7 @@ class App extends React.Component {
                   <div className="info">Check out hundreds of moves from Smash Ultimate at various speeds and view in depth details on every hitbox related to each move! </div>
                   <CharacterList
                     characterData={this.state.characterData}
+                    characterList={this.state.characterList}
                     updateCurrentCharacter={this.updateCurrentCharacter}
                     getCharacterData={this.getCharacterData}
                     search={this.state.search}
@@ -225,6 +233,7 @@ class App extends React.Component {
               <Route path={['/characters']} exact render={() => (
                 <CharacterList
                   characterListData={this.state.characterData}
+                  characterList={this.state.characterList}
                   updateCurrentCharacter={this.updateCurrentCharacter}
                   getCharacterData={this.getCharacterData}
                   search={this.state.search}
@@ -242,7 +251,8 @@ class App extends React.Component {
               <Route path={['/:character', '/:character/:move', '/:character/:move/:frame']} exact render={() => (
                 <div id="main">
                   <Main
-                    characterListData={this.state.characterData}
+                    characterData={this.state.characterData}
+                    characterList={this.state.characterList}
                     settings={this.state.settings}
                     updateHitboxData={this.updateHitboxData}
                     urlNotification={this.urlNotification}

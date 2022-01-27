@@ -26,15 +26,14 @@ function CharacterList(props) {
 		
 		let sortedCharacterList = []
 
-		console.log(props.settings.sortBy)
 		//Sort Characters based on the criteria in the sortBy Field
 		if (sortingMethods[props.settings.sortBy] === "ascending") {
-			sortedCharacterList = props.characterData.characterList.slice().sort((a, b) => (props.characterData[a][props.settings.sortBy] > props.characterData[b][props.settings.sortBy]) ? 1 : -1)
+			sortedCharacterList = props.characterList.slice().sort((a, b) => (props.characterData[a][props.settings.sortBy] > props.characterData[b][props.settings.sortBy]) ? 1 : -1)
 		}
 		else {
-			sortedCharacterList = props.characterData.characterList.slice().sort((a, b) => (props.characterData[a][props.settings.sortBy] < props.characterData[b][props.settings.sortBy]) ? 1 : -1)
+			sortedCharacterList = props.characterList.slice().sort((a, b) => (props.characterData[a][props.settings.sortBy] < props.characterData[b][props.settings.sortBy]) ? 1 : -1)
     	}
-		console.log(sortedCharacterList)
+
 		//Filter the results based on the searchBar
 		sortedCharacterList = sortedCharacterList.filter(obj => { return props.characterData[obj].name.toUpperCase().includes(props.search.toUpperCase()) })
 

@@ -26,11 +26,8 @@ function Main(props) {
   const [urls, setUrls] = useState([])
 
 
-  //Variables to store the next and previous characters
-  let nextChar;
-  let prevChar;
+  
 
-  let characterIndex = 0;
   let characterKey;
 
   let jumpToFrame = function (frame) {
@@ -52,16 +49,13 @@ function Main(props) {
   }
 
   //Determine which character is the current character, save the data and the index
-  while (characterIndex < props.characterListData.length) {
-    if (props.characterListData[characterIndex].value === character) {
-      characterKey = props.characterListData[characterIndex]
-      break
-    }
-    characterIndex += 1;
-  }
+  characterKey = props.characterListData[character]
+  
 
+  console.log(props.characterListData)
+  console.log(character)
   //Return nothing if the character doesn't exist
-  if (props.characterListData.filter(element => element.value.toLowerCase() === character.toLowerCase()).length === 0 || props.characterListData[characterIndex].completed === false) {
+  if(!(character in props.characterListData) || props.characterListData[character].completed === false) {
     return (
       <InvalidPage
         settings={props.settings}
@@ -69,24 +63,39 @@ function Main(props) {
     )
   }
 
-  let i = 1;
-  while (nextChar === undefined || prevChar === undefined) {
-    let nextIndex = (characterIndex + i) % props.characterListData.length;
-    let prevIndex = characterIndex - i
-    if (prevIndex < 0) {
-      prevIndex = props.characterListData.length - Math.abs(prevIndex)
-    }
 
-    if (props.characterListData[nextIndex].completed && nextChar === undefined) {
-      nextChar = props.characterListData[nextIndex]
-    }
-    if (props.characterListData[prevIndex].completed && prevChar === undefined) {
-      prevChar = props.characterListData[prevIndex]
-    }
-
-    i=i+1
+  //Variables to store the next and previous characters
+  let nextChar, prevChar;
+  let nextIndex, prevIndex;
+  //Figure out next and previous characters
+  let index=props.characterListData[character].id
+  if(index === 1) {
+    nextIndex = 2
+    prevIndex = props.characterListData.characterList.length
+  }
+  else if(index === props.characterListData.characterList.length) {
+    nextIndex = 1
+    prevIndex = props.characterListData.characterList.length-1
+  }
+  else {
+    nextIndex = index+1
+    prevIndex = index-1
   }
 
+  for(const [key, value] of Object.entries(props.characterListData)) {
+    if(nextChar !== undefined && prevChar !== undefined) {
+      break
+    }
+    if(key === "characterList") {
+      continue
+    }
+    if(nextIndex == value["id"]) {
+      nextChar = key
+     }
+     else if(prevIndex == value["id"]) {
+       prevChar = key
+     }
+  }
 
   //Set up State variables
   const [currentCharacterData, setCurrentCharacterData] = useState({})
@@ -98,20 +107,22 @@ function Main(props) {
       resolve()
     })
 
+    console.log(characterKey)
     promise.then(() => {
-      if(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/data`) !== null && process.env.NODE_ENV === "production") {
-        let data = JSON.parse(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/data`))
+      if(sessionStorage.getItem(`/api/character/${characterKey.value}`) !== null && process.env.NODE_ENV === "production") {
+        let data = JSON.parse(sessionStorage.getItem(`/api/character/${characterKey.value}`))
         setCurrentCharacterData(data)
-        if (move === undefined) { setMove(data.moves[0].value) }
+        if (move === undefined) { setMove(data.moves[0]) }
       }
       else {
-        fetch(`${environment}/${characterKey.number}_${characterKey.value}/data`)
+        fetch(`${environment}/api/character/${characterKey.value}`)
           .then(response => response.json())
           .then(data => {
-            sessionStorage.setItem(`/${characterKey.number}_${characterKey.value}/data`, JSON.stringify(data))
+            console.log(data.moves[0])
+            sessionStorage.setItem(`/api/character/${characterKey.value}`, JSON.stringify(data))
             setCurrentCharacterData(data)
             if (move === undefined) {
-              setMove(data.moves[0].value)
+              setMove(data.moves[0])
             }
           })
 
@@ -128,13 +139,13 @@ function Main(props) {
 
 
     try {
-      if (sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move}/data`) !== null && process.env.NODE_ENV === "production") {
+      if (sessionStorage.getItem(`/api/move/${move}`) !== null && process.env.NODE_ENV === "production") {
         let promise = new Promise<void>(function (resolve, reject) {
           resolve()
         })
 
         promise.then(() => {
-          let data = JSON.parse(sessionStorage.getItem(`/${characterKey.number}_${characterKey.value}/${move}/data`))
+          let data = JSON.parse(sessionStorage.getItem(`/api/move/${move}`))
           setCurrentMoveData(data)
           setLoading(true)
         })
@@ -142,12 +153,12 @@ function Main(props) {
 
       }
       else {
-        fetch(`${environment}/${characterKey.number}_${characterKey.value}/${move}/data`)
+        fetch(`${environment}/api/move/${move}`)
           .then(response => response.json())
           .then(data => {
 
             //Set state to loading and save the data for the move
-            sessionStorage.setItem(`/${characterKey.number}_${characterKey.value}/${move}/data`, JSON.stringify(data))
+            sessionStorage.setItem(`/api/move/${move}`, JSON.stringify(data))
             setCurrentMoveData(data)
             setLoading(true)
           })
@@ -180,7 +191,7 @@ function Main(props) {
   if (loading && currentMoveData.value !== undefined) {
     return (
       <Loading
-        url={`frames+${props.characterListData[characterIndex].number}_${character.toLowerCase()}+${currentMoveData.value}`}
+        url={`frames+${characterKey.number}_${character.toLowerCase()}+${currentMoveData.value}`}
         loading={loading}
         setLoading={setLoading}
         currentMoveData={currentMoveData}

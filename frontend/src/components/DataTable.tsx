@@ -58,6 +58,8 @@ function DataTable(props) {
   }
   else {
     let extraInfo = props.settings.showExtraInfo ? "Extra" : "Basic";
+    console.log(props.move)
+    console.log(props.type)
     let showFrames = props.move[props.type][0].frames.length === 0 ? "NoFrame" : "";
     type = props.type + extraInfo + showFrames
     //Choose table headers
@@ -70,7 +72,7 @@ function DataTable(props) {
     //Split notes into separate lines if it has \n
     let notes = [];
     let jsxNotes = []
-    if (props.move.notes !== undefined) {
+    if (props.move.notes) {
       notes = props.move.notes.split("\n");
       jsxNotes = notes.map(text => <p>{text}</p>)
     }

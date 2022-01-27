@@ -84,7 +84,6 @@ function DataPortal(props) {
         />
 
         <Player
-          url={`https://ultimate-hitboxes.s3.amazonaws.com/frames/${props.currentCharacterData.number}_${props.currentCharacterData.value}/${props.currentMoveData.value}/`}
           currentFrame={props.currentFrame}
           settings={props.settings}
           character={props.currentCharacterData.value}

@@ -8,19 +8,18 @@ const environment = process.env.NODE_ENV === "development" ? "http://localhost:5
 //function to request a set of signed urls from the backend, called when a list of urls for this image does not exist in localstorage, or if the images there have timed out
 function RequestURLs(props, images) {
 	//Get Request
-	fetch(`${environment}/s3/${props.currentMoveData.frames}/${props.url}`, {
+	fetch(`${environment}/api/images/${props.currentMoveData.value}`, {
 		method: "GET"
 	},
 	)
 	.then(response => response.json())
 	.then(data => {
 		//Set the URL list in the Main Component
-		props.setUrls(data)
-		
+		props.setUrls(data.urls)
 		//Fill an array of images, setting the sources to be the urls grabbed from the backend
 		for (var i = 1; i <= props.currentMoveData.frames; i++) {	
 			let image = new Image()
-			image.src = data[i-1]
+			image.src = data.urls[i-1]
 			images.push(image)
 		}
 

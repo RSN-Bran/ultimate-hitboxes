@@ -1,6 +1,6 @@
 //React Imports
 import * as React from "react"
-import { BrowserRouter as Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 //Component Imports
 import ToolTip from './ToolTip';
@@ -8,31 +8,17 @@ import ToolTip from './ToolTip';
 //CSS Imports
 import '../css/Button.css';
 
+import IMAGES from '../media/media_imports.js'
+
 //Media Imports
-import minus_dark from '../media/darkmode/minus.png'
-import minus_light from '../media/lightmode/minus.png'
-let minus = [minus_dark, minus_light]
+let minus = [IMAGES.minus_dark, IMAGES.minus_light]
+let plus = [IMAGES.plus_dark, IMAGES.plus_light]
+let play = [IMAGES.play_dark, IMAGES.play_light]
+let pause = [IMAGES.pause_dark, IMAGES.pause_light]
+let next = [IMAGES.next_dark, IMAGES.next_light]
+let previous = [IMAGES.previous_dark, IMAGES.previous_light]
 
-import plus_dark from '../media/darkmode/plus.png'
-import plus_light from '../media/lightmode/plus.png'
-let plus = [plus_dark, plus_light]
-
-import play_dark from '../media/darkmode/play.png'
-import play_light from '../media/lightmode/play.png'
-let play = [play_dark, play_light]
-
-import pause_dark from '../media/darkmode/pause.png'
-import pause_light from '../media/lightmode/pause.png'
-let pause = [pause_dark, pause_light]
-
-import next_dark from '../media/darkmode/next.png'
-import next_light from '../media/lightmode/next.png'
-let next = [next_dark, next_light]
-
-import previous_dark from '../media/darkmode/previous.png'
-import previous_light from '../media/lightmode/previous.png'
-let previous = [previous_dark, previous_light]
-
+//Find the next available move by moving forwards or backwards until a move that is set to completed is found
 function getNextPrev(index, characterData, increment) {
 	let move=undefined
 	index = index+increment

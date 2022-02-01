@@ -7,24 +7,17 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 import '../css/Header.css';
 
 //Import Media
-import twitter from '../media/twitter.png'
-import discord from '../media/discord.png'
+import IMAGES from '../media/media_imports.js'
 
-import github_dark from '../media/darkmode/github.png'
-import github_light from '../media/lightmode/github.png'
-const github = [github_dark, github_light]
+//Set Social Media imports
+const discord = IMAGES.discord
+const twitter = IMAGES.twitter
+const github = [IMAGES.github_dark, IMAGES.github_light]
 
-import settings_dark from '../media/darkmode/settings.png'
-import settings_light from '../media/lightmode/settings.png'
-const settings = [settings_dark, settings_light]
-
-import info_dark from '../media/darkmode/info.png'
-import info_light from '../media/lightmode/info.png'
-const info = [info_dark, info_light]
-
-import back_dark from '../media/darkmode/back.png'
-import back_light from '../media/lightmode/back.png'
-const back = [back_dark, back_light]
+//Set Header Imports
+const settings = [IMAGES.settings_dark, IMAGES.settings_light]
+const info = [IMAGES.info_dark, IMAGES.info_light]
+const back = [IMAGES.back_dark, IMAGES.back_light]
 
 function Header(props) {
   let history = useHistory();

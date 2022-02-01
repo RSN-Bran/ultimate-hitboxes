@@ -116,7 +116,6 @@ class App extends React.Component {
   }
 
   changeSettings(settings, displayCookieMessage) {
-    console.log(settings)
     if (this.state.settings !== settings) {
       this.setState({
         settings: settings
@@ -164,7 +163,6 @@ class App extends React.Component {
   }
 
   urlNotification() {
-    console.log("url")
     store.addNotification({
       message: "URL saved to clipboard",
       type: "success",

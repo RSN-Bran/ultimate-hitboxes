@@ -8,18 +8,10 @@ import '../css/HitBoxDetail.css';
 //Import Data
 import * as hitboxFields from '../data/hitboxFields.json'
 
-//Media Imports
-import x_dark from '../media/darkmode/x.png'
-import x_light from '../media/lightmode/x.png'
-let x = [x_dark, x_light]
+//Import Media
+import IMAGES from '../media/media_imports.js'
 
 function HitBoxDetail(props) {
-
-  //Configure Colors based on dark/light mode
-  let style = {
-    backgroundColor: props.settings.dark_light === 0 ? "white" : "black",
-    color: props.settings.dark_light === 0 ? "black" : "white"
-  }
 
   //If there is no data to show, don't render anything
   if (props.hitboxData === undefined) { 
@@ -44,8 +36,8 @@ function HitBoxDetail(props) {
 
     //Render the array of game data strings, and an exit button
     return (
-      <div id="hitboxDetail" className={props.displayHitboxData ? "fadeIn" : "fadeOut"} style={style}>
-        <img id="exit" onClick={props.setDisplayHitboxData.bind(this, false)} src={x[Math.abs(props.settings.dark_light-1)]}/>
+      <div id="hitboxDetail" className={`${props.displayHitboxData ? "fadeIn" : "fadeOut"} hitboxDetail_${props.settings.theme}`}>
+        <img id="exit" onClick={props.setDisplayHitboxData.bind(this, false)} src={IMAGES[`exit_${props.settings.contrast_theme}`]}/>
 
         {displayData}
         {infoToolTips}

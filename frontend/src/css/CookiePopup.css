@@ -5,12 +5,12 @@
     font-size: calc(10px + 2vmin);
 }
 
-.cookiePopup-0 {
+.cookiePopup-dark {
     background-color: #F2F3F4;
     color: black;
 }
 
-.cookiePopup-1 {
+.cookiePopup-light {
     background-color: #1B1B1B;
     color: white;
 }
@@ -32,12 +32,12 @@
     margin-right: 10%;
 }
 
-#moreInfoButton-0 {
+#moreInfoButton-dark {
     background-color: black;
     color: white;
 }
 
-#moreInfoButton-1 {
+#moreInfoButton-light {
     background-color: white;
     color: black;
 }

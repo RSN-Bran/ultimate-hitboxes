@@ -8,15 +8,8 @@ import ToolTip from './ToolTip';
 //CSS Imports
 import '../css/Button.css';
 
+//Import Media
 import IMAGES from '../media/media_imports.js'
-
-//Media Imports
-let minus = [IMAGES.minus_dark, IMAGES.minus_light]
-let plus = [IMAGES.plus_dark, IMAGES.plus_light]
-let play = [IMAGES.play_dark, IMAGES.play_light]
-let pause = [IMAGES.pause_dark, IMAGES.pause_light]
-let next = [IMAGES.next_dark, IMAGES.next_light]
-let previous = [IMAGES.previous_dark, IMAGES.previous_light]
 
 //Find the next available move by moving forwards or backwards until a move that is set to completed is found
 function getNextPrev(index, characterData, increment) {
@@ -58,7 +51,7 @@ function Buttons(props) {
 						data-tip data-for="previousToolTip"
 						className={index !== 0 ? "button" : "buttonNoClick"}
 						id="previous"
-						src={previous[props.settings.dark_light]}
+						src={IMAGES[`previous_${props.settings.theme}`]}
 						onClick={() => { props.newMove(prevMove) }}
 						alt="Previous Move"
 					/>
@@ -73,7 +66,7 @@ function Buttons(props) {
 					data-tip data-for="minusToolTip"
 					className={props.currentFrame !== 1 && !props.playing ? "button" : "buttonNoClick"}
 					id="minus"
-					src={minus[props.settings.dark_light]}
+					src={IMAGES[`minus_${props.settings.theme}`]}
 					onClick={() => { props.currentFrame !== 1 && !props.playing ? props.setCurrentFrame(props.currentFrame - 1) : null }}
 					alt="Decrement Frame"
 				/>
@@ -88,7 +81,7 @@ function Buttons(props) {
 					data-tip data-for="playToolTip"
 					className={props.currentMoveData.frames !== 1 ? "button" : "buttonNoClick"}
 					id="pause-play"
-					src={props.playing ? pause[props.settings.dark_light] : play[props.settings.dark_light]}
+					src={props.playing ? IMAGES[`pause_${props.settings.theme}`] : IMAGES[`play_${props.settings.theme}`]}
 					onClick={() => {props.setPlaying(!props.playing)}}
 					alt="Play Move"
 				/>
@@ -102,7 +95,7 @@ function Buttons(props) {
 					data-tip data-for="plusToolTip"
 					className={props.currentFrame !== props.currentMoveData.frames && !props.playing ? "button" : "buttonNoClick"}
 					id="plus"
-					src={plus[props.settings.dark_light]}
+					src={IMAGES[`plus_${props.settings.theme}`]}
 					onClick={() => { props.currentFrame !== props.currentMoveData.frames && !props.playing ? props.setCurrentFrame(props.currentFrame + 1) : null }}
 					alt="Increment Frame"
 				/>
@@ -117,7 +110,7 @@ function Buttons(props) {
 						data-tip data-for="nextToolTip"
 						className={index !== props.currentCharacterData.moves.length - 1 ? "button" : "buttonNoClick"}
 						id="next"
-						src={next[props.settings.dark_light]}
+						src={IMAGES[`next_${props.settings.theme}`]}
 						onClick={() => { props.newMove(nextMove) }}
 						alt="NextMove"
 					/>

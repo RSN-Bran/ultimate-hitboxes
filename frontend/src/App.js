@@ -44,12 +44,13 @@ class App extends React.Component {
         showAllHitboxData: true,
         damageMultiplier: false,
         showExtraInfo: false,
-        dark_light: 0,
         defaultPlaySpeed: 2,
         loopMove: true,
         scrollTable: true,
         sortBy: "number",
-        cookiesEnabled: false
+        cookiesEnabled: false,
+        theme: "dark",
+        contrast_theme: "light"
       },
 
       cookieMessage: true
@@ -181,26 +182,24 @@ class App extends React.Component {
   render() {
 
     ////This extends the background color to the whole screen
-    document.body.style.backgroundColor = this.state.settings.dark_light === 0 ? "#1B1B1B" : "#F2F3F4"
+    document.body.style.backgroundColor = this.state.settings.theme === "dark" ? "#1B1B1B" : "#F2F3F4"
 
     if (this.state.characterData === undefined) {
       return null;
     }
     else {
       return (
-        <div id="App" className={this.state.settings.dark_light === 0 ? "app-light":"app-dark" } >
+        <div id="App" className={`app_${this.state.settings.theme}`} >
           <ReactNotification />
           <Router>
             <Header
-              dark_light={this.state.settings.dark_light}
+              settings={this.state.settings}
             />
 
             <Switch>
 
               <Route path='/info' render={() => (
-                <Info
-                  dark_light={this.state.settings.dark_light}
-                />
+                <Info/>
               )} />
 
               <Route path='/settings' render={() => (

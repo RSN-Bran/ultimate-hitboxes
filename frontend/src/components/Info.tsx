@@ -4,11 +4,6 @@ import * as React from "react"
 //CSS Imports
 import '../css/Info.css';
 
-//Import Media
-import x_dark from '../media/darkmode/x.png'
-import x_light from '../media/lightmode/x.png'
-let x = [x_dark, x_light]
-
 function Info(props) {
 	
 		return (

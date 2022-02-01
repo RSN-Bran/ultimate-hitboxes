@@ -16,12 +16,12 @@ a {
   flex: 1;
 }
 
-.app-dark {
+.app_light {
   background-color: #F2F3F4;
   color: black
 }
 
-.app-light {
+.app_dark {
   background-color: #1B1B1B;
   color: white;
 }

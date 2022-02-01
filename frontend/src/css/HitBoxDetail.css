@@ -1,12 +1,20 @@
 #hitboxDetail {
 	position: absolute;
 	top: 10%;
-	color: black;
-	background-color: white;
 	display: block;
 	font-size: 15px;
 	margin: 0;
 	z-index: 1;
+}
+
+.hitboxDetail_dark {
+	background-color: #F2F3F4;
+	color: black
+}
+
+.hitboxDetail_light {
+	background-color: #1B1B1B;
+	color: white;
 }
 
 .fadeOut{

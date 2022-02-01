@@ -39,7 +39,7 @@ function CharacterList(props) {
 
 		//Create icons based on the constraints above
 		let characterButtonArray = []
-		characterButtonArray = sortedCharacterList.map(character => <Character key={character.id} dark_light={props.settings.dark_light} character={props.characterData[character]} getCharacterData={props.getCharacterData}/>)
+		characterButtonArray = sortedCharacterList.map(character => <Character key={character.id} settings={props.settings} character={props.characterData[character]} getCharacterData={props.getCharacterData}/>)
 
 		return (
 			<div id="characterList">

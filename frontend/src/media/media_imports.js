@@ -31,7 +31,13 @@ const IMAGES = {
 
     twitter: require('./twitter.png').default,
 
-    discord: require('./discord.png').default
+    discord: require('./discord.png').default,
+
+    exit_dark: require('./darkmode/exit.png').default,
+    exit_light: require('./lightmode/exit.png').default,
+
+    share_dark: require('./darkmode/share.png').default,
+    share_light: require('./lightmode/share.png').default
 }
 
 

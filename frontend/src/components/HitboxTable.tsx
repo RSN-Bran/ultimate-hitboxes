@@ -31,20 +31,17 @@ function HitboxTable(props) {
     //Create a header and a tooltip for each column in the table
     let thList = []
     let toolTipList = []
-    let className = (props.settings.dark_light === 0 ? "darkTable" : "lightTable") + " tableheader"
+    let className = `table_${props.settings.theme} tableheader`
     props.fields.forEach(function (field, index) {
       thList.push(<th key={index} className={className} data-tip data-for={field.toolTipID}>{field.name}</th>)
       toolTipList.push(<ReactTooltip key={index} id={field.toolTipID} place="top" effect="solid">{field.toolTipDescription}</ReactTooltip>)
     })
 
-    let tableClass = props.settings.dark_light === 0 ? "darkTable" : "lightTable";
-    let headerClass = props.settings.dark_light === 0 ? "darkTable" : "lightTable";
-
     return (
       <div id="hitboxTable">
-        <table className={tableClass}>
+        <table className={`table_${props.settings.theme}`}>
           <thead>
-            <tr className={headerClass}>
+            <tr className={`table_${props.settings.theme}`}>
               {thList}
             </tr>
           </thead>

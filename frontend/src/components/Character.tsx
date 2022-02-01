@@ -13,10 +13,9 @@ function Character(props) {
 	let seriesURL = "https://ultimate-hitboxes.s3.amazonaws.com/series-symbol/" + props.character.series + ".png"
 
 	//Determines class the object should have
-	let dark_light = props.dark_light === 0 ? "dark" : "light"
 	let complete = props.character.completed ? "complete" : "incomplete"
-	let characterClassName = `character character-${complete} character-${dark_light}`
-	let nameClass = `name-${dark_light}`
+	let characterClassName = `character character-${complete} character-${props.settings.theme}`
+	let nameClass = `name-${props.settings.theme}`
 
 	//Return a box for the character showing their name, number, artwork, and series symbol.
 	//Associated class varies based on if the character has completed data.Incomplete characters are not selectable and grayed out

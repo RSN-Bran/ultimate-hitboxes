@@ -4,10 +4,8 @@ import * as React from "react"
 //CSS Imports
 import '../css/DataTable.css'
 
-//Media Imports
-import info_dark from '../media/darkmode/info.png'
-import info_light from '../media/lightmode/info.png'
-let info = [info_dark, info_light]
+//Import Media
+import IMAGES from '../media/media_imports.js'
 
 //import id_colors from '../id_colors.js'
 
@@ -49,7 +47,7 @@ function TableEntry(props) {
   let style = {backgroundColor:null}
 
   //Use dark or light version of the table depending on settings
-  let className = props.settings.dark_light === 0 ? "darkTable" : "lightTable"
+  let className = `table_${props.settings.theme}`
 
   //Certain color codes need their text color to change to fit the background
   let lightModeColorChange = ["#800080", "#400040", "purple", "#2F152E", "2F152E", "darkblue"]
@@ -58,10 +56,10 @@ function TableEntry(props) {
   if (props.hitbox.frames.includes(props.currentFrame) || props.hitbox.frames.length === 0) {
     style.backgroundColor = props.hitbox.color
     if (props.settings.dark_light === 0 && darkModeColorChange.includes(props.hitbox.color)) {
-      className = "darkTableDarkText"
+      className = `${className}_darktext`
     }
     if (props.settings.dark_light === 1 && lightModeColorChange.includes(props.hitbox.color)) {
-      className = "lightTableLightText"
+      className = `${className}_lighttext`
     }
   }
 
@@ -107,7 +105,7 @@ function TableEntry(props) {
     //If showing more data, create a button to click in the table
     else if (field.variable === "more") {
       tdList.push(<td key={index} className={className} onClick={props.updateHitboxData.bind(this, props.hitbox)} style={{ cursor: "pointer", width: "5px" }}><img
-        src={info[props.settings.dark_light]}
+        src={IMAGES[`info_${props.settings.theme}`]}
         style={{ width: "70%" }}
       /></td >)
     }

@@ -1,21 +1,19 @@
 //React Imports
 import * as React from "react"
-import { useParams } from 'react-router-dom';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-import { useState, useEffect } from 'react';
+import { BrowserRouter as Link} from 'react-router-dom'
 
-import x_dark from '../media/darkmode/x.png'
-import x_light from '../media/lightmode/x.png'
-let x = [x_dark, x_light]
-
+//Import CSS
 import '../css/CookiePopup.css';
+
+//Import Media
+import IMAGES from '../media/media_imports.js'
 
 function CookiePopup(props) {
 
     //Create a deep copy of the settings
     let settings = JSON.parse(JSON.stringify(props.settings));
 
-    let className = `cookiePopup-${props.settings.dark_light}`
+    let className = `cookiePopup-${props.settings.theme}`
   return (
 
         <div id="cookiePopup" className={className}>
@@ -27,7 +25,7 @@ function CookiePopup(props) {
             <button className="cookieButton" id="acceptCookiesButton" onClick={() => { settings.cookiesEnabled = true; props.changeSettings(settings, false) }}>Accept</button>
             <button className="cookieButton" id="rejectCookiesButton" onClick={() => { settings.cookiesEnabled = false; props.changeSettings(settings, false) }}>Reject</button>
             <Link to="/cookies">
-                <button className="cookieButton" id={"moreInfoButton-"+props.settings.dark_light}>More Information</button>
+                <button className="cookieButton" id={"moreInfoButton-"+props.settings.theme}>More Information</button>
             </Link>
 
         </div>

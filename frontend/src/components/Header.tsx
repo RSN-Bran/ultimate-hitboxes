@@ -9,16 +9,6 @@ import '../css/Header.css';
 //Import Media
 import IMAGES from '../media/media_imports.js'
 
-//Set Social Media imports
-const discord = IMAGES.discord
-const twitter = IMAGES.twitter
-const github = [IMAGES.github_dark, IMAGES.github_light]
-
-//Set Header Imports
-const settings = [IMAGES.settings_dark, IMAGES.settings_light]
-const info = [IMAGES.info_dark, IMAGES.info_light]
-const back = [IMAGES.back_dark, IMAGES.back_light]
-
 function Header(props) {
   let history = useHistory();
 
@@ -31,14 +21,21 @@ function Header(props) {
     <div id="header">
       <div id="help">
         <Link to="/info">
-          <img id="infoButton" className="helpButtons" src={info[props.dark_light]}/>
+          <img id="infoButton"
+          className="helpButtons"
+          src={IMAGES[`info_${props.settings.theme}`]}/>
         </Link>
 
         <Link to="/settings">
-          <img id="settingsButton" className="helpButtons" src={settings[props.dark_light]}/>
+          <img id="settingsButton"
+          className="helpButtons"
+          src={IMAGES[`settings_${props.settings.theme}`]}/>
         </Link>
 
-        <img id="backButton" className="helpButtons" src={back[props.dark_light]} onClick={() => {history.goBack()}} />
+        <img id="backButton"
+        className="helpButtons"
+        src={IMAGES[`back_${props.settings.theme}`]}
+        onClick={() => {history.goBack()}} />
 
       </div>
 
@@ -50,13 +47,19 @@ function Header(props) {
 
       <div id="links">
         <a href="https://twitter.com/SSBUHitboxes">
-          <img id="twitter" className="linkButtons" src={twitter}/>
+          <img id="twitter"
+          className="linkButtons"
+          src={IMAGES.twitter}/>
         </a>
         <a href="https://github.com/RSN-Bran/ultimate-hitboxes">
-          <img id="github" className="linkButtons" src={github[props.dark_light]}/>
+          <img id="github"
+          className="linkButtons"
+          src={IMAGES[`github_${props.settings.theme}`]}/>
         </a>
         <a href="https://discord.gg/jZ9EKJpwde">
-          <img id="discord" className="linkButtons" src={discord} />
+          <img id="discord"
+          className="linkButtons"
+          src={IMAGES.discord} />
         </a>
       </div>
     </div>

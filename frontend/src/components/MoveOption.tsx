@@ -1,22 +1,18 @@
 //React Imports
 import * as React from "react"
-import { useParams, Link } from 'react-router-dom';
 
 //CSS Imports
 import '../css/MoveOption.css';
 
 function MoveOption(props) {
 
-	//Set the class based on dark/light mode
-	let className = props.settings.dark_light === 0 ? "darkMoveOption" : "lightMoveOption"
-
 	return (
 		<option
 			value={props.move.value}
-			className={className}
+			className={`MoveOption_${props.settings.theme}`}
 			disabled={props.move.complete === false ? true : false}
 		>
-{props.move.name}
+			{props.move.name}
 		</option>
 	)
 }

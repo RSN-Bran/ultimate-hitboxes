@@ -7,7 +7,6 @@ import MoveOption from './MoveOption'
 
 function MoveDropDown(props) {
 	try {
-		let className = props.settings.dark_light === 0 ? "darkMoveDropDown" : "lightMoveDropDown"
 
 		let history = useHistory();
 		let updateMove = function (option) {
@@ -22,7 +21,7 @@ function MoveDropDown(props) {
 			return (
 				<select
 					id="moveDropDown"
-					className={className}
+					className={`MoveDropDown_${props.settings.theme}`}
 					name="Select Move"
 					onChange={(e) => { updateMove(e) }}
 					value={props.currentMoveData.value}

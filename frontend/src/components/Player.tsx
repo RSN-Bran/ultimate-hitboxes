@@ -4,9 +4,8 @@ import * as React from "react"
 //CSS Imports
 import '../css/Player.css';
 
-import share_dark from '../media/darkmode/share.png'
-import share_light from '../media/lightmode/share.png'
-let share = [share_dark, share_light]
+//Import Media
+import IMAGES from '../media/media_imports.js'
 
 //Component Imports
 import ToolTip from './ToolTip';
@@ -43,7 +42,7 @@ function Player(props) {
 				/>
 				<img
 					id="share"
-					src={share[props.settings.dark_light]}
+					src={IMAGES[`share_${props.settings.theme}`]}
 					data-tip data-for="shareToolTip"
 					onClick={copyToClipboard}
 				/>

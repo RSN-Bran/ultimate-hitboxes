@@ -211,7 +211,7 @@ function Main(props) {
 
             <button
               id="chooseCharacterButton"
-              className={props.settings.dark_light === 0 ? "chooseCharacter_dark" : "chooseCharacter_light"}
+              className={`chooseCharacter_${props.settings.theme}`}
             >
               <b>Choose a Character</b>
             </button>

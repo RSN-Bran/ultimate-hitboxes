@@ -4,22 +4,22 @@
 	}
 }
 
-.darkTable {
+.table_dark {
 	color: white;
 	border: 1px solid white;
 }
 
-.lightTable {
+.table_light {
 	color: black;
 	border: 1px solid black;
 }
 
-.lightTableLightText {
+.table_dark_darktext {
 	color: white;
 	border: 1px solid black;
 }
 
-.darkTableDarkText {
+.table_light_lighttext {
 	color: black;
 	border: 1px solid white;
 }

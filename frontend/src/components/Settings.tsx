@@ -19,6 +19,22 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
+						<span className="settingHeader"><b>Theme</b></span>
+						
+					</div>
+					<div className="speedButton" id="darkmode">
+						<input type="radio" name="theme" value="dark" onChange={() => {settings.theme = "dark"; settings.contrast_theme = "light"; props.changeSettings(settings) }} checked={settings.theme == "dark"} />
+						<label className="themeLabel" htmlFor="dark">Dark</label>
+					</div>
+
+					<div className="speedButton" id="lightmode">
+						<input type="radio" name="theme" value="light" onChange={() => {settings.theme = "light"; settings.contrast_theme = "dark"; props.changeSettings(settings) }} checked={settings.theme == "light"} />
+						<label className="themeLabel" htmlFor="light">Light</label>
+					</div>
+				</div>
+
+				<div className="settingDiv">
+					<div className="setting">
 						<input className="settingCheckbox" type="checkbox" onClick={() => { settings.showAllHitboxData = !settings.showAllHitboxData; props.changeSettings(settings) }} id="showAllHitboxData" name="showAllHitboxData" checked={settings.showAllHitboxData} />
 						<span className="settingHeader" onClick={() => { settings.showAllHitboxData = !settings.showAllHitboxData; props.changeSettings(settings) }}><b>Display all hitboxes at all times</b></span>
 					</div>
@@ -50,18 +66,6 @@ function Settings(props) {
 					<div className="settingDescription">
 						<p>
 							Use this setting to expand the hitbox data table to show some additional information. Note that this setting is only available on larger screen devices
-						</p>
-					</div>
-				</div>
-
-				<div className="settingDiv">
-					<div className="setting">
-						<input className="settingCheckbox" type="checkbox" onClick={() => { settings.dark_light = Math.abs(settings.dark_light - 1); props.changeSettings(settings) }} id="setLightDark" name="setLightDark" checked={settings.dark_light === 0} />
-						<span className="settingHeader" onClick={() => { settings.dark_light = Math.abs(settings.dark_light - 1); props.changeSettings(settings) }}><b>Dark Mode</b></span>
-					</div>
-					<div className="settingDescription">
-						<p>
-							Enable dark mode.
 						</p>
 					</div>
 				</div>
@@ -104,7 +108,7 @@ function Settings(props) {
 				</div>
 
 				<div className="settingDiv">
-					<button id="reset-button" class={"reset-button-"+settings.dark_light} onClick={() => { document.cookie = "settings="; document.cookie = ""; sessionStorage.clear(); localStorage.clear(); history.go(0)}}><b>Reset settings to default</b></button>
+					<button id="reset-button" className={"reset-button_"+settings.theme} onClick={() => { document.cookie = "settings="; document.cookie = ""; sessionStorage.clear(); localStorage.clear(); history.go(0)}}><b>Reset settings to default</b></button>
 				</div>
 
 			</div>

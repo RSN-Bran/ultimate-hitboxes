@@ -19,12 +19,12 @@
 	}
 }
 
-.darkMoveDropDown, .darkMoveOption {
+.MoveDropDown_dark, .MoveOption_dark {
 	background-color: white;
 	color: black;
 }
 
-.lightMoveDropDown, .lightMoveOption {
+.MoveDropDown_light, .MoveOption_light {
 	background-color: black;
 	color: white;
 }

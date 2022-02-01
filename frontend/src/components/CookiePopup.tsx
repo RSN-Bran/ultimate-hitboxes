@@ -1,12 +1,10 @@
 //React Imports
 import * as React from "react"
-import { BrowserRouter as Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 //Import CSS
 import '../css/CookiePopup.css';
 
-//Import Media
-import IMAGES from '../media/media_imports.js'
 
 function CookiePopup(props) {
 

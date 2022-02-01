@@ -10,7 +10,7 @@ function MoveOption(props) {
 		<option
 			value={props.move.value}
 			className={`MoveOption_${props.settings.theme}`}
-			disabled={props.move.complete === false ? true : false}
+			disabled={!props.move.completed}
 		>
 			{props.move.name}
 		</option>

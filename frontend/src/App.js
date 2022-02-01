@@ -229,7 +229,7 @@ class App extends React.Component {
 
               <Route path={['/characters']} exact render={() => (
                 <CharacterList
-                  characterListData={this.state.characterData}
+                  characterData={this.state.characterData}
                   characterList={this.state.characterList}
                   updateCurrentCharacter={this.updateCurrentCharacter}
                   getCharacterData={this.getCharacterData}

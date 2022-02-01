@@ -15,7 +15,8 @@ function MoveDropDown(props) {
     }
 
 			//For each move in the moveList, create a select object using <MoveChoice>
-		let moveList = props.currentCharacterData.moves.map(move => <MoveOption key={move.value} move={move} currentMoveData={props.currentMoveData} settings={props.settings} />)
+		let moveList = props.currentCharacterData.moves.map(
+			move => <MoveOption key={move.value} move={move} currentMoveData={props.currentMoveData} settings={props.settings} />)
 		
 			//Add all the created select options to a drop down and render it
 			return (
@@ -33,12 +34,7 @@ function MoveDropDown(props) {
 	}
 	catch (e) {
 		return null;
-  }
-	
-	
-	
-
-	
+  }	
 }
 
 export default MoveDropDown

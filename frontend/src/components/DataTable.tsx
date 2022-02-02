@@ -58,8 +58,7 @@ function DataTable(props) {
   }
   else {
     let extraInfo = props.settings.showExtraInfo ? "Extra" : "Basic";
-    console.log(props.move)
-    console.log(props.type)
+
     let showFrames = props.move[props.type][0].frames.length === 0 ? "NoFrame" : "";
     type = props.type + extraInfo + showFrames
     //Choose table headers

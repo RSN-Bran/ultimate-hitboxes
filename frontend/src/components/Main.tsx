@@ -16,12 +16,36 @@ import '../css/Player.css';
 const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
 
 function Main(props) {
+
   const [character, setCharacter] = useState(useParams().character.toLowerCase())
   const [move, setMove] = useState(useParams().move)
   const [currentFrame, setCurrentFrame] = useState(useParams().frame === undefined ? 1 : parseInt(useParams().frame))
   const [playing, setPlaying] = useState(false)
   const [loading, setLoading] = useState(false)
   const [urls, setUrls] = useState([])
+  const [params, setParams] = useState(useParams())
+
+  if(useParams() !== params) {
+    setParams(useParams())
+  }
+
+  let tempMove = useParams().move
+  let tempChar = useParams().character.toLowerCase()
+  useEffect(() => {
+    //setCharacter(useParams().character.toLowerCase())
+    if(tempMove == undefined && currentCharacterData !== {}) {
+      setMove(currentCharacterData.moves[0].value)
+    }
+    else {
+      setMove(tempMove)
+    }
+    
+    setCharacter(tempChar)
+    
+  }, [params])
+
+
+
 
   let characterKey;
 
@@ -46,7 +70,6 @@ function Main(props) {
   //Determine which character is the current character, save the data and the index
   characterKey = props.characterData[character]
   
-
   //Return nothing if the character doesn't exist
   if(!(character in props.characterData) || props.characterData[character].completed === false) {
     return (
@@ -60,6 +83,7 @@ function Main(props) {
   //Variables to store the next and previous characters
   let nextChar, prevChar;
   let nextIndex, prevIndex;
+
   //Figure out next and previous characters
   let index=props.characterData[character].id
   if(index === 1) {
@@ -128,7 +152,7 @@ function Main(props) {
   useEffect(() => {
     setPlaying(false)
 
-
+    if(move !== undefined) {
     try {
       if (sessionStorage.getItem(`/api/move/${move}`) !== null && process.env.NODE_ENV === "production") {
         let promise = new Promise<void>(function (resolve, reject) {
@@ -158,16 +182,21 @@ function Main(props) {
           })
       }
       
+      
     }
     catch(e) {
       console.log(e)
     }
+
+  }
     
   }, [move])
 
   //If move data doesn't exist or doesn't match the URL, query database to get move data
   try {
     if (currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
+      console.log(currentCharacterData.moves)
+      console.log(move)
       return (
         <InvalidPage
           settings={props.settings}

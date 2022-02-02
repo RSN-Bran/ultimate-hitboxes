@@ -1,7 +1,7 @@
 //Import React Elements
 import * as React from "react"
 import { useHistory } from "react-router-dom";
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 //Import CSS
 import '../css/Header.css';

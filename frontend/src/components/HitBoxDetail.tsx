@@ -23,7 +23,6 @@ function HitBoxDetail(props) {
   else {
     //Parse the hitbox json data so it is held in an array of 2 element arrays. Each inner array contains the key and the value
     let dataArrays = Object.entries(props.hitboxData.data);
-    console.log(dataArrays)
     let displayData = [];
     let infoToolTips = []
 

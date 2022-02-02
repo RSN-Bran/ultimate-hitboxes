@@ -33,12 +33,12 @@ function Main(props) {
   let tempChar = useParams().character.toLowerCase()
   useEffect(() => {
     //setCharacter(useParams().character.toLowerCase())
-    if(tempMove == undefined && currentCharacterData !== {}) {
-      setMove(currentCharacterData.moves[0].value)
-    }
-    else {
+    //if(tempMove == undefined && currentCharacterData !== {}) {
+    //  setMove(currentCharacterData.moves[0].value)
+    //}
+    //else {
       setMove(tempMove)
-    }
+    //}
     
     setCharacter(tempChar)
     
@@ -195,8 +195,6 @@ function Main(props) {
   //If move data doesn't exist or doesn't match the URL, query database to get move data
   try {
     if (currentCharacterData.moves.filter(element => element.value.toLowerCase() === move.toLowerCase()).length === 0) {
-      console.log(currentCharacterData.moves)
-      console.log(move)
       return (
         <InvalidPage
           settings={props.settings}

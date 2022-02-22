@@ -1,6 +1,3 @@
-server/serverlog
-server/node_modules
-server/certs
 .git
 .vs
 node_modules
@@ -11,3 +8,8 @@ frontend/.babelrc
 dbtest
 compose-dev.yml
 compose-prod.yml
+frontend/environments
+Dockerfile
+yarn-error.log
+package.json
+package-lock.json

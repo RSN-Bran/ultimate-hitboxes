@@ -137,7 +137,7 @@ class App extends React.Component {
 
     this.setInitialSettings()
 
-    fetch(`${environment}/api/character/all?exclude=moves`)
+    fetch(`${environment}/api/character/all?exclude=moves`, {headers: new Headers({'API-Key': process.env.APIKEY})})
       .then(response => response.json())
       .then(data => {
 

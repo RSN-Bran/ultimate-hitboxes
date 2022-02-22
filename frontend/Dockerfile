@@ -18,4 +18,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD [ "yarn", "serve" ]
+CMD [ "npm", "run", "serve" ]

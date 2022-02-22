@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import ReactTooltip from "react-tooltip";
 
 //Component Imports
-import DataPortal from './DataPortal'
+import DataPortal from './DataPortal.js'
 import Loading from './Loading'
 import InvalidPage from './InvalidPage'
 
@@ -32,13 +32,12 @@ function Main(props) {
   let tempMove = useParams().move
   let tempChar = useParams().character.toLowerCase()
   useEffect(() => {
-    //setCharacter(useParams().character.toLowerCase())
-    //if(tempMove == undefined && currentCharacterData !== {}) {
-    //  setMove(currentCharacterData.moves[0].value)
-    //}
-    //else {
+    if(tempMove == undefined && currentCharacterData.moves) {
+      setMove(currentCharacterData.moves[0].value)
+    }
+    else {
       setMove(tempMove)
-    //}
+    }
     
     setCharacter(tempChar)
     
@@ -120,21 +119,23 @@ function Main(props) {
 
   useEffect(() => {
 
-    let promise = new Promise<void>(function (resolve, reject) {
+    let promise = new Promise(function (resolve, reject) {
       resolve()
     })
 
     promise.then(() => {
-      if(sessionStorage.getItem(`/api-website/character/${characterKey.value}`) !== null && process.env.NODE_ENV === "production") {
-        let data = JSON.parse(sessionStorage.getItem(`/api-website/character/${characterKey.value}`))
+      if(sessionStorage.getItem(`/api/character/${characterKey.value}`) !== null && process.env.NODE_ENV === "production") {
+        let data = JSON.parse(sessionStorage.getItem(`/api/character/${characterKey.value}`))
         setCurrentCharacterData(data)
         if (move === undefined) { setMove(data.moves[0]) }
       }
       else {
-        fetch(`${environment}/api-website/character/${characterKey.value}`)
+        console.log(process.env.NODE_ENV)
+        console.log(process.env.APIKEY)
+        fetch(`${environment}/api/character/${characterKey.value}?extra=true`, {headers: new Headers({'API-Key': process.env.APIKEY})})
           .then(response => response.json())
           .then(data => {
-            sessionStorage.setItem(`/api-website/character/${characterKey.value}`, JSON.stringify(data))
+            sessionStorage.setItem(`/api/character/${characterKey.value}`, JSON.stringify(data))
             setCurrentCharacterData(data)
             if (move === undefined) {
               setMove(data.moves[0].value)
@@ -155,7 +156,7 @@ function Main(props) {
     if(move !== undefined) {
     try {
       if (sessionStorage.getItem(`/api/move/${move}`) !== null && process.env.NODE_ENV === "production") {
-        let promise = new Promise<void>(function (resolve, reject) {
+        let promise = new Promise(function (resolve, reject) {
           resolve()
         })
 
@@ -168,7 +169,7 @@ function Main(props) {
 
       }
       else {
-        fetch(`${environment}/api/move/${move}`)
+        fetch(`${environment}/api/move/${move}?images=true`, {headers: new Headers({'API-Key': process.env.APIKEY})})
           .then(response => response.json())
           .then(data => {
 

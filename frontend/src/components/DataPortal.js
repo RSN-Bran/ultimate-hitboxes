@@ -9,7 +9,7 @@ import Player from './Player'
 import Slider from './Slider'
 import Buttons from './Buttons'
 import SpeedOptions from './SpeedOptions'
-import DataTable from './DataTable';
+import DataTable from './DataTable.js';
 import HitboxDetail from './HitBoxDetail'
 
 

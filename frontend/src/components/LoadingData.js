@@ -7,10 +7,12 @@ const environment = process.env.NODE_ENV === "development" ? "http://localhost:5
 
 //function to request a set of signed urls from the backend, called when a list of urls for this image does not exist in localstorage, or if the images there have timed out
 function RequestURLs(props, images) {
+	console.log(props.currentMoveData)
 	//Get Request
 	fetch(`${environment}/api/images/${props.currentMoveData.value}`, {
-		method: "GET"
-	},
+		method: "GET",
+		headers: new Headers({'API-Key': process.env.APIKEY})
+	}
 	)
 	.then(response => response.json())
 	.then(data => {
@@ -38,6 +40,26 @@ function RequestURLs(props, images) {
 	})
 }
 
+function getURLSfromMoveData(props, images) {
+	let urls = props.currentMoveData.imgData.urls
+	props.setUrls(urls)
+	for (var i = 1; i <= props.currentMoveData.frames; i++) {	
+		let image = new Image()
+		image.src = urls[i-1]
+		images.push(image)
+	}
+
+	//Create a Date object, to use to set when the images should no longer be valid
+	let time = new Date()
+	let storage = {
+		urls: urls,
+		timestamp: time.getTime() / 1000
+	}
+
+	//Set the image url list and the timestamp to localstorage
+	localStorage.setItem(`/api/images/${props.currentMoveData.value}`, JSON.stringify(storage))
+}
+
 function LoadingData(props) {
 
 	//Empty array of images
@@ -50,7 +72,7 @@ function LoadingData(props) {
 
 	//Local Storage value for this move is empty, perform the get request
 	if(localStorage.getItem(`/${props.url}/s3`) === null) {
-		RequestURLs(props, images)
+		getURLSfromMoveData(props, images)
 	}
 
 	//Local Storage value for this move is not empty, but the images have expired, perfrom the get request

@@ -9,7 +9,7 @@ const fs = require('fs');
 }*/
 
 const dbConnParams = {
-    host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+    host: "ultimate-hitboxes.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
     user: "admin",
     password: process.env.DB_PW,
     database: `ulthit_logs`

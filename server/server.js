@@ -50,7 +50,7 @@ app.get('/characterData', (req, res) => {
           privateKey: fs.readFileSync(`${__dirname}/certs/ulthitbox_key.pem`),
         },
         {
-          host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+          host: "ultimate-hitboxes.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
           user: "admin",
           password: process.env.DB_PW,
           database: `ulthit_logs`
@@ -60,7 +60,7 @@ app.get('/characterData', (req, res) => {
     }
     else {
       conn = mysql.createConnection({
-        host: "ultimate-hitboxes-logs.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
+        host: "ultimate-hitboxes.cwzcrdy7jvya.us-east-1.rds.amazonaws.com",
         user: "admin",
         password: process.env.DB_PW,
         database: `ulthit_logs`

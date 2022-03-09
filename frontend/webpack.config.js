@@ -67,7 +67,7 @@
           template: "src/index.html" //source html
         }),
         new Dotenv({
-          path: `./environments/.env${env.file ? `.${env.file}` : ''}`
+          path: `../environments/.env${env.file ? `.${env.file}` : ''}`
         })
       ]
     }

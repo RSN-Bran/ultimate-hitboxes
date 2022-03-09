@@ -130,8 +130,6 @@ function Main(props) {
         if (move === undefined) { setMove(data.moves[0]) }
       }
       else {
-        console.log(process.env.NODE_ENV)
-        console.log(process.env.APIKEY)
         fetch(`${environment}/api/character/${characterKey.value}?extra=true`, {headers: new Headers({'API-Key': process.env.APIKEY})})
           .then(response => response.json())
           .then(data => {

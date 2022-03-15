@@ -19,9 +19,31 @@ import Cookies from './components/Cookies'
 
 //Set hostname to query depending on dev vs PROD
 const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
-//const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "http://ultimate-hitboxes.com:5080";
 
-
+const validSettings = {
+  showAllHitboxData: [true, false],
+  damageMultiplier: [true, false],
+  showExtraInfo: [true, false],
+  defaultPlaySpeed: [60,10,4,2,1],
+  loopMove: [true, false],
+  scrollTable: [true, false],
+  sortBy: ["number", "name", "count"],
+  cookiesEnabled: [true, false],
+  theme: ["dark", "light"],
+  contrast_theme: ["dark", "light"]
+}
+const defaultSettings = {
+  showAllHitboxData: true,
+  damageMultiplier: false,
+  showExtraInfo: false,
+  defaultPlaySpeed: 2,
+  loopMove: true,
+  scrollTable: true,
+  sortBy: "number",
+  cookiesEnabled: false,
+  theme: "dark",
+  contrast_theme: "light"
+}
 class App extends React.Component {
   constructor() {
 
@@ -40,18 +62,7 @@ class App extends React.Component {
       search: "",
 
       //All settings
-      settings: {
-        showAllHitboxData: true,
-        damageMultiplier: false,
-        showExtraInfo: false,
-        defaultPlaySpeed: 2,
-        loopMove: true,
-        scrollTable: true,
-        sortBy: "number",
-        cookiesEnabled: false,
-        theme: "dark",
-        contrast_theme: "light"
-      },
+      settings: defaultSettings,
 
       cookieMessage: true
     }
@@ -95,19 +106,30 @@ class App extends React.Component {
 
     //Attempt to parse the cookie and use the values acquired to change the settings
     try {
-      let settings = JSON.parse(document.cookie.split('=')[1])
+      console.log(document.cookie)
+      let settings = JSON.parse(document.cookie.split('settings=')[1])
+      let newSettings = {}
       
-      if (settings.loopMove === undefined) {
-        settings.loopMove = true
+      for (const [key, value] of Object.entries(validSettings)) {
+        if(key in settings && value.includes(settings[key])) {
+          newSettings[key] = settings[key]
+        }
+        else {
+          newSettings[key] = defaultSettings[key]
+        }
       }
+
+      // if (settings.loopMove === undefined) {
+      //   settings.loopMove = true
+      // }
       if(settings.cookiesEnabled) {
         this.setState({
           cookieMessage: false
         })
       }
       this.setState({
-        settings: settings,
-        playSpeed: settings.defaultPlaySpeed
+        settings: newSettings,
+        playSpeed: newSettings.defaultPlaySpeed
       })
       
     }
@@ -135,7 +157,10 @@ class App extends React.Component {
   //When the site initially loads, always get all character data
   componentDidMount() {
 
+    
     this.setInitialSettings()
+
+    console.log(this.state)
 
     fetch(`${environment}/api/character/all?exclude=moves`, {headers: new Headers({'API-Key': process.env.APIKEY})})
       .then(response => response.json())

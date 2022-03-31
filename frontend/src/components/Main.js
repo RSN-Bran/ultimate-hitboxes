@@ -43,9 +43,6 @@ function Main(props) {
     
   }, [params])
 
-
-
-
   let characterKey;
 
   let jumpToFrame = function (frame) {

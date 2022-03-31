@@ -106,7 +106,6 @@ class App extends React.Component {
 
     //Attempt to parse the cookie and use the values acquired to change the settings
     try {
-      console.log(document.cookie)
       let settings = JSON.parse(document.cookie.split('settings=')[1])
       let newSettings = {}
       
@@ -159,8 +158,6 @@ class App extends React.Component {
 
     
     this.setInitialSettings()
-
-    console.log(this.state)
 
     fetch(`${environment}/api/character/all?exclude=moves`, {headers: new Headers({'API-Key': process.env.APIKEY})})
       .then(response => response.json())

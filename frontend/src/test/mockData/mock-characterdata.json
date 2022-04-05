@@ -1,0 +1,191 @@
+{
+    "completed": true, 
+    "id": 1, 
+    "moves": [
+      {
+        "completed": true, 
+        "name": "Jab 1", 
+        "value": "MarioJab1"
+      }, 
+      {
+        "completed": true, 
+        "name": "Jab 2", 
+        "value": "MarioJab2"
+      }, 
+      {
+        "completed": true, 
+        "name": "Jab 3", 
+        "value": "MarioJab3"
+      }, 
+      {
+        "completed": true, 
+        "name": "Forward Tilt", 
+        "value": "MarioFTilt"
+      }, 
+      {
+        "completed": true, 
+        "name": "Forward Tilt (Up)", 
+        "value": "MarioFTiltUp"
+      }, 
+      {
+        "completed": true, 
+        "name": "Forward Tilt (Down)", 
+        "value": "MarioFTiltDown"
+      }, 
+      {
+        "completed": true, 
+        "name": "Up Tilt", 
+        "value": "MarioUTilt"
+      }, 
+      {
+        "completed": true, 
+        "name": "Down Tilt", 
+        "value": "MarioDTilt"
+      }, 
+      {
+        "completed": true, 
+        "name": "Dash Attack", 
+        "value": "MarioDashAttack"
+      }, 
+      {
+        "completed": true, 
+        "name": "Forward Smash", 
+        "value": "MarioFSmash"
+      }, 
+      {
+        "completed": true, 
+        "name": "Forward Smash (Up)", 
+        "value": "MarioFSmashUp"
+      }, 
+      {
+        "completed": true, 
+        "name": "Forward Smash (Down)", 
+        "value": "MarioFSmashDown"
+      }, 
+      {
+        "completed": true, 
+        "name": "Up Smash", 
+        "value": "MarioUSmash"
+      }, 
+      {
+        "completed": true, 
+        "name": "Down Smash", 
+        "value": "MarioDSmash"
+      }, 
+      {
+        "completed": true, 
+        "name": "Neutral Air", 
+        "value": "MarioNAir"
+      }, 
+      {
+        "completed": true, 
+        "name": "Forward Air", 
+        "value": "MarioFAir"
+      }, 
+      {
+        "completed": true, 
+        "name": "Back Air", 
+        "value": "MarioBAir"
+      }, 
+      {
+        "completed": true, 
+        "name": "Up Air", 
+        "value": "MarioUAir"
+      }, 
+      {
+        "completed": true, 
+        "name": "Down Air", 
+        "value": "MarioDAir"
+      }, 
+      {
+        "completed": true, 
+        "name": "Down Air (Landing)", 
+        "value": "MarioDAirLanding"
+      }, 
+      {
+        "completed": true, 
+        "name": "Grab", 
+        "value": "MarioGrab"
+      }, 
+      {
+        "completed": true, 
+        "name": "Dash Grab", 
+        "value": "MarioDashGrab"
+      }, 
+      {
+        "completed": true, 
+        "name": "Pivot Grab", 
+        "value": "MarioPivotGrab"
+      }, 
+      {
+        "completed": true, 
+        "name": "Pummel", 
+        "value": "MarioPummel"
+      }, 
+      {
+        "completed": true, 
+        "name": "Forward Throw", 
+        "value": "MarioFThrow"
+      }, 
+      {
+        "completed": true, 
+        "name": "Back Throw", 
+        "value": "MarioBThrow"
+      }, 
+      {
+        "completed": true, 
+        "name": "Up Throw", 
+        "value": "MarioUThrow"
+      }, 
+      {
+        "completed": true, 
+        "name": "Down Throw", 
+        "value": "MarioDThrow"
+      }, 
+      {
+        "completed": true, 
+        "name": "Fireball", 
+        "value": "MarioFireball"
+      }, 
+      {
+        "completed": true, 
+        "name": "Cape", 
+        "value": "MarioCape"
+      }, 
+      {
+        "completed": true, 
+        "name": "Super Jump Punch", 
+        "value": "MarioSuperJumpPunch"
+      }, 
+      {
+        "completed": true, 
+        "name": "F.L.U.D.D.", 
+        "value": "MarioFLUDD"
+      }, 
+      {
+        "completed": true, 
+        "name": "Ledge Attack", 
+        "value": "MarioLedgeAttack"
+      }, 
+      {
+        "completed": true, 
+        "name": "Getup Attack (Up)", 
+        "value": "MarioGetupAttackU"
+      }, 
+      {
+        "completed": true, 
+        "name": "Getup Attack (Down)", 
+        "value": "MarioGetupAttackD"
+      }, 
+      {
+        "completed": true, 
+        "name": "Trip Attack", 
+        "value": "MarioTripAttack"
+      }
+    ], 
+    "name": "Mario", 
+    "number": "01", 
+    "series": "super-mario", 
+    "value": "mario", 
+    "version": "v13.0.1"
+  }

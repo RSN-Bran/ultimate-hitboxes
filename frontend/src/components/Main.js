@@ -28,10 +28,13 @@ function Main(props) {
   if(useParams() !== params) {
     setParams(useParams())
   }
-
+  
   let tempMove = useParams().move
+  
   let tempChar = useParams().character.toLowerCase()
+  
   useEffect(() => {
+    
     if(tempMove == undefined && currentCharacterData.moves) {
       setMove(currentCharacterData.moves[0].value)
     }

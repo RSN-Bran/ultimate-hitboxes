@@ -1,7 +1,7 @@
 //Import React Elements
 import * as React from "react"
 import { useHistory } from "react-router-dom";
-import {Link} from 'react-router-dom'
+import {Link, Router, Route, BrowserRouter, Switch} from 'react-router-dom'
 
 //Import CSS
 import '../css/Header.css';
@@ -18,6 +18,8 @@ function Header(props) {
     //help - Contains Info and Settings Buttons
     //title - Contains site name
     //links - Contains links to github and twitter pages
+//    <Router>
+//    <Switch>
     <div id="header">
       <div id="help">
         <Link to="/info">
@@ -25,13 +27,11 @@ function Header(props) {
           className="helpButtons"
           src={IMAGES[`info_${props.settings.theme}`]}/>
         </Link>
-
         <Link to="/settings">
           <img id="settingsButton"
           className="helpButtons"
           src={IMAGES[`settings_${props.settings.theme}`]}/>
         </Link>
-
         <img id="backButton"
         className="helpButtons"
         src={IMAGES[`back_${props.settings.theme}`]}
@@ -63,6 +63,8 @@ function Header(props) {
         </a>
       </div>
     </div>
+//    </Switch>
+//    </Router>
       
   )
 

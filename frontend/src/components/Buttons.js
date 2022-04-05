@@ -46,7 +46,9 @@ function Buttons(props) {
 		return (
 			<div id="buttons">
 
-				<Link to={prevMove !== undefined ? `/${props.currentCharacterData.value}/${prevMove}` : null}>
+				<Link 
+					className={ prevMove !== undefined ? "enabled-link" : "disabled-link"}
+					to={`/${props.currentCharacterData.value}/${prevMove}`}>
 					<img
 						data-tip data-for="previousToolTip"
 						className={index !== 0 ? "button" : "buttonNoClick"}

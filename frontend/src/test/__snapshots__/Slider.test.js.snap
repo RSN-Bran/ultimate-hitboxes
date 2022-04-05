@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider Snapshot Test 1`] = `
+<div
+  id="sliderContainer"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <h5
+    id="frameIndicator"
+  >
+    Frame: 
+    2
+    /
+    11
+  </h5>
+  <div>
+    <input
+      id="videoSlider"
+      list="ticks"
+      max={11}
+      min="1"
+      name="videoSlider"
+      onChange={[Function]}
+      type="range"
+      value={2}
+    />
+  </div>
+  <datalist
+    id="ticks"
+  >
+    <option>
+      1
+    </option>
+    <option>
+      2
+    </option>
+    <option>
+      3
+    </option>
+    <option>
+      4
+    </option>
+    <option>
+      5
+    </option>
+    <option>
+      6
+    </option>
+    <option>
+      7
+    </option>
+    <option>
+      8
+    </option>
+    <option>
+      9
+    </option>
+    <option>
+      10
+    </option>
+    <option>
+      11
+    </option>
+  </datalist>
+</div>
+`;

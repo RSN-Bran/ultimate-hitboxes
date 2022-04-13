@@ -6,7 +6,7 @@ import {shallow} from 'enzyme'
 import Buttons from '../components/Buttons'
 
 import "@testing-library/jest-dom/extend-expect"
-import { Router } from 'react-router-dom'
+import { BrowserRouter  } from 'react-router-dom'
 
 import * as mockCharacterData from './mockData/mock-characterdata.json'
 import * as mockMoveData from './mockData/mock-movedata.json'
@@ -18,12 +18,13 @@ describe ('Buttons component', () => {
              currentMoveData={mockMoveData}
              settings={{theme:"dark"}}
              playing={true}
+             currentFrame={4}
             />)
     })
 
 })
 
-test('Slider Snapshot Test', () => {
+test('Buttons Snapshot Test', () => {
 
     let func = (frame) => {
         console.log(frame)
@@ -31,7 +32,15 @@ test('Slider Snapshot Test', () => {
 
     let app;
     act(()=>{
-        app = create(<Buttons/>)
+        app = create(<BrowserRouter >
+                <Buttons
+                    currentCharacterData={mockCharacterData}
+                    currentMoveData={mockMoveData}
+                    settings={{theme:"dark"}}
+                    playing={true}
+                    currentFrame={4}
+                />
+           </BrowserRouter >)
     })
 
 

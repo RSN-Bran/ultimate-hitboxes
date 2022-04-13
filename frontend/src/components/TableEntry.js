@@ -110,8 +110,13 @@ function TableEntry(props) {
       /></td >)
     }
 
+    else if (field.variable === "notes") {
+      tdList.push(<td key={index} className={className}>{!props.hitbox[field.variable]|| props.hitbox[field.variable] === "" ? "-" : props.hitbox[field.variable]}</td>)
+    }
+
     //For any other value, display the value without alteration, unless the value doesn't exist, for which display a '-'
     else {
+      console.log(field.variable)
       if(props.hitbox.value.includes("hurtbox")) {
         tdList.push(<td key={index} className={className}>{!props.hitbox[field.variable]|| props.hitbox[field.variable] === "" ? "-" : props.hitbox[field.variable]}</td>)
       }

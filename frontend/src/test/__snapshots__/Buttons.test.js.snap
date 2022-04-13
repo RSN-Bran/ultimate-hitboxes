@@ -1,3 +1,237 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Slider Snapshot Test 1`] = `null`;
+exports[`Buttons Snapshot Test 1`] = `
+<div
+  id="buttons"
+>
+  <a
+    className="disabled-link"
+    href="/mario/undefined"
+    onClick={[Function]}
+  >
+    <img
+      alt="Previous Move"
+      className="buttonNoClick"
+      data-for="previousToolTip"
+      data-tip={true}
+      id="previous"
+      onClick={[Function]}
+    />
+  </a>
+  <img
+    alt="Decrement Frame"
+    className="buttonNoClick"
+    data-for="minusToolTip"
+    data-tip={true}
+    id="minus"
+    onClick={[Function]}
+  />
+  <img
+    alt="Play Move"
+    className="button"
+    data-for="playToolTip"
+    data-tip={true}
+    id="pause-play"
+    onClick={[Function]}
+  />
+  <div
+    className="__react_component_tooltip t343649d9-18cf-4828-8e41-847dae13e51e place-top type-dark"
+    data-id="tooltip"
+    id="playToolTip"
+  >
+    <style
+      aria-hidden="true"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "
+  	.t343649d9-18cf-4828-8e41-847dae13e51e {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t343649d9-18cf-4828-8e41-847dae13e51e.place-top {
+        margin-top: -10px;
+    }
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-bottom {
+        margin-top: 10px;
+    }
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-left {
+        margin-left: -10px;
+    }
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-right {
+        margin-left: 10px;
+    }
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t343649d9-18cf-4828-8e41-847dae13e51e.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+        }
+      }
+    />
+    Pause the Move
+  </div>
+  <img
+    alt="Increment Frame"
+    className="buttonNoClick"
+    data-for="plusToolTip"
+    data-tip={true}
+    id="plus"
+    onClick={[Function]}
+  />
+  <a
+    href="/mario/MarioJab2"
+    onClick={[Function]}
+  >
+    <img
+      alt="NextMove"
+      className="button"
+      data-for="nextToolTip"
+      data-tip={true}
+      id="next"
+      onClick={[Function]}
+    />
+  </a>
+  <div
+    className="__react_component_tooltip t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a place-top type-dark"
+    data-id="tooltip"
+    id="nextToolTip"
+  >
+    <style
+      aria-hidden="true"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "
+  	.t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-top {
+        margin-top: -10px;
+    }
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-bottom {
+        margin-top: 10px;
+    }
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-left {
+        margin-left: -10px;
+    }
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-right {
+        margin-left: 10px;
+    }
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t7bb03fa3-f41c-41a9-8f01-51bb74e67f4a.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+        }
+      }
+    />
+    Show Next Move
+  </div>
+</div>
+`;

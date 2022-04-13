@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Snapshot Test 1`] = `
+<div
+  id="header"
+>
+  <div
+    id="help"
+  >
+    <a
+      href="/info"
+      onClick={[Function]}
+    >
+      <img
+        className="helpButtons"
+        id="infoButton"
+      />
+    </a>
+    <a
+      href="/settings"
+      onClick={[Function]}
+    >
+      <img
+        className="helpButtons"
+        id="settingsButton"
+      />
+    </a>
+    <img
+      className="helpButtons"
+      id="backButton"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    id="title"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <h3>
+        Smash Ultimate Hitbox Viewer
+      </h3>
+    </a>
+  </div>
+  <div
+    id="links"
+  >
+    <a
+      href="https://twitter.com/SSBUHitboxes"
+    >
+      <img
+        className="linkButtons"
+        id="twitter"
+      />
+    </a>
+    <a
+      href="https://github.com/RSN-Bran/ultimate-hitboxes"
+    >
+      <img
+        className="linkButtons"
+        id="github"
+      />
+    </a>
+    <a
+      href="https://discord.gg/jZ9EKJpwde"
+    >
+      <img
+        className="linkButtons"
+        id="discord"
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Header Snapshot Tests Dark mode snapshot 1`] = `
+<div
+  id="header"
+>
+  <div
+    id="help"
+  >
+    <a
+      href="/info"
+      onClick={[Function]}
+    >
+      <img
+        className="helpButtons"
+        id="infoButton"
+      />
+    </a>
+    <a
+      href="/settings"
+      onClick={[Function]}
+    >
+      <img
+        className="helpButtons"
+        id="settingsButton"
+      />
+    </a>
+    <img
+      className="helpButtons"
+      id="backButton"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    id="title"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <h3>
+        Smash Ultimate Hitbox Viewer
+      </h3>
+    </a>
+  </div>
+  <div
+    id="links"
+  >
+    <a
+      href="https://twitter.com/SSBUHitboxes"
+    >
+      <img
+        className="linkButtons"
+        id="twitter"
+      />
+    </a>
+    <a
+      href="https://github.com/RSN-Bran/ultimate-hitboxes"
+    >
+      <img
+        className="linkButtons"
+        id="github"
+      />
+    </a>
+    <a
+      href="https://discord.gg/jZ9EKJpwde"
+    >
+      <img
+        className="linkButtons"
+        id="discord"
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Header Snapshot Tests Light mode snapshot 1`] = `
+<div
+  id="header"
+>
+  <div
+    id="help"
+  >
+    <a
+      href="/info"
+      onClick={[Function]}
+    >
+      <img
+        className="helpButtons"
+        id="infoButton"
+      />
+    </a>
+    <a
+      href="/settings"
+      onClick={[Function]}
+    >
+      <img
+        className="helpButtons"
+        id="settingsButton"
+      />
+    </a>
+    <img
+      className="helpButtons"
+      id="backButton"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    id="title"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <h3>
+        Smash Ultimate Hitbox Viewer
+      </h3>
+    </a>
+  </div>
+  <div
+    id="links"
+  >
+    <a
+      href="https://twitter.com/SSBUHitboxes"
+    >
+      <img
+        className="linkButtons"
+        id="twitter"
+      />
+    </a>
+    <a
+      href="https://github.com/RSN-Bran/ultimate-hitboxes"
+    >
+      <img
+        className="linkButtons"
+        id="github"
+      />
+    </a>
+    <a
+      href="https://discord.gg/jZ9EKJpwde"
+    >
+      <img
+        className="linkButtons"
+        id="discord"
+      />
+    </a>
+  </div>
+</div>
+`;

@@ -18,8 +18,7 @@ function Header(props) {
     //help - Contains Info and Settings Buttons
     //title - Contains site name
     //links - Contains links to github and twitter pages
-//    <Router>
-//    <Switch>
+    
     <div id="header">
       <div id="help">
         <Link to="/info">
@@ -63,8 +62,6 @@ function Header(props) {
         </a>
       </div>
     </div>
-//    </Switch>
-//    </Router>
       
   )
 

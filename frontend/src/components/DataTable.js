@@ -93,6 +93,7 @@ function DataTable(props) {
           fields={table}
           settings={props.settings}
           key={type}
+          currentCharacterData={props.currentCharacterData}
         />
         <div id="moveNotes">
           {jsxNotes === undefined || props.type === "hurtboxes" ? null : jsxNotes}

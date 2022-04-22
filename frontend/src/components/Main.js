@@ -153,13 +153,17 @@ function Main(props) {
 
     if(move !== undefined) {
     try {
-      if (sessionStorage.getItem(`/api/move/${move}`) !== null && process.env.NODE_ENV === "production") {
+      let ids = ""
+	    if(props.settings.hitbox_color === "id" && currentCharacterData.ids_complete) {
+		    ids = "&ids=true"
+	    }
+      if (sessionStorage.getItem(`/api/move/${move}${ids}`) !== null && process.env.NODE_ENV === "production") {
         let promise = new Promise(function (resolve, reject) {
           resolve()
         })
 
         promise.then(() => {
-          let data = JSON.parse(sessionStorage.getItem(`/api/move/${move}`))
+          let data = JSON.parse(sessionStorage.getItem(`/api/move/${move}${ids}`))
           setCurrentMoveData(data)
           setLoading(true)
         })
@@ -167,7 +171,7 @@ function Main(props) {
 
       }
       else {
-        fetch(`${environment}/api/move/${move}?images=true`, {headers: new Headers({'API-Key': process.env.APIKEY})})
+        fetch(`${environment}/api/move/${move}?images=true${ids}`, {headers: new Headers({'API-Key': process.env.APIKEY})})
           .then(response => response.json())
           .then(data => {
 
@@ -211,8 +215,10 @@ function Main(props) {
         url={`frames+${characterKey.number}_${character.toLowerCase()}+${currentMoveData.value}`}
         loading={loading}
         setLoading={setLoading}
+        currentCharacterData={currentCharacterData}
         currentMoveData={currentMoveData}
         setUrls={setUrls}
+        hitbox_color={props.settings.hitbox_color}
       />
     )
   }

@@ -7,7 +7,7 @@ import '../css/DataTable.css'
 //Import Media
 import IMAGES from '../media/media_imports.js'
 
-//import id_colors from '../id_colors.js'
+import id_colors from '../data/id_colors.js'
 
 function condenseFrames(arr) {
   let start, end;  // track start and end
@@ -54,7 +54,13 @@ function TableEntry(props) {
   let darkModeColorChange = ["pink", "aqua", "khaki", "lightgreen"]
 
   if (props.hitbox.frames.includes(props.currentFrame) || props.hitbox.frames.length === 0) {
-    style.backgroundColor = props.hitbox.color
+    if(props.settings.hitbox_color == "id" && props.currentCharacterData.ids_complete && props.type=="hitboxes") {
+      style.backgroundColor = id_colors[parseInt(props.hitbox.data.id)]
+    }
+    else {
+      style.backgroundColor = props.hitbox.color
+    }
+    
     if (props.settings.dark_light === 0 && darkModeColorChange.includes(props.hitbox.color)) {
       className = `${className}_darktext`
     }
@@ -116,7 +122,6 @@ function TableEntry(props) {
 
     //For any other value, display the value without alteration, unless the value doesn't exist, for which display a '-'
     else {
-      console.log(field.variable)
       if(props.hitbox.value.includes("hurtbox")) {
         tdList.push(<td key={index} className={className}>{!props.hitbox[field.variable]|| props.hitbox[field.variable] === "" ? "-" : props.hitbox[field.variable]}</td>)
       }

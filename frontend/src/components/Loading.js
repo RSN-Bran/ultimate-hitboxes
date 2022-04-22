@@ -50,6 +50,8 @@ function Loading(props) {
 					setUrls={props.setUrls}
 					currentMoveData={props.currentMoveData}
 					setLoading={props.setLoading}
+					hitbox_color={props.hitbox_color}
+					currentCharacterData={props.currentCharacterData}
 				/>
 			</div>
 		</div>

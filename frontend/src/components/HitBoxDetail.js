@@ -30,7 +30,7 @@ function HitBoxDetail(props) {
     //Omit data where they key is 'frames', 'color', or 'notes', those are self inserted by myself and not part of the real game code
     dataArrays.forEach(pair => {
       displayData.push(<p><b key={pair[0]} data-tip data-for={pair[0]}>{pair[0]}</b>: {pair[1]}</p>)
-      infoToolTips.push(<ReactTooltip key={pair[0]} id={pair[0]} place="top" effect="solid">{hitboxFields[pair[0]]["toolTipDescription"]}</ReactTooltip>)
+      infoToolTips.push(<ReactTooltip key={pair[0]} id={pair[0]} place="top" effect="solid">{hitboxFields["default"][pair[0]]["toolTipDescription"]}</ReactTooltip>)
     })
 
     //Render the array of game data strings, and an exit button

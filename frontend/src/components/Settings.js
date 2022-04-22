@@ -35,6 +35,30 @@ function Settings(props) {
 
 				<div className="settingDiv">
 					<div className="setting">
+						<span className="settingHeader"><b>Hitbox Coloring</b></span>
+						
+					</div>
+					<div className="speedButton" id="damage">
+						<input type="radio" name="hitbox_color" value="damage" onChange={() => {settings.hitbox_color = "damage"; props.changeSettings(settings) }} checked={settings.hitbox_color == "damage"} />
+						<label className="hitbox_colorLabel" htmlFor="damage">Damage Based</label>
+					</div>
+
+					<div className="speedButton" id="id">
+						<input type="radio" name="hitbox_color" value="id" onChange={() => {settings.hitbox_color = "id"; props.changeSettings(settings) }} checked={settings.hitbox_color == "id"} />
+						<label className="hitbox_colorLabel" htmlFor="id">ID Based</label>
+					</div>
+
+					<div className="settingDescription">
+						<p>
+							Used to determine the colors of the hitboxes.
+							Damage Based groups hitboxes of the same strength by color
+							ID Based colors ids based on in-game priority
+						</p>
+					</div>
+				</div>
+
+				<div className="settingDiv">
+					<div className="setting">
 						<input className="settingCheckbox" type="checkbox" onClick={() => { settings.showAllHitboxData = !settings.showAllHitboxData; props.changeSettings(settings) }} id="showAllHitboxData" name="showAllHitboxData" checked={settings.showAllHitboxData} />
 						<span className="settingHeader" onClick={() => { settings.showAllHitboxData = !settings.showAllHitboxData; props.changeSettings(settings) }}><b>Display all hitboxes at all times</b></span>
 					</div>

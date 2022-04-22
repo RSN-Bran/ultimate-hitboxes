@@ -138,6 +138,8 @@ function DataPortal(props) {
             setCurrentFrame={props.setCurrentFrame}
             jumpToFrame={props.jumpToFrame}
             updateHitboxData={updateHitboxData}
+            currentCharacterData={props.currentCharacterData}
+
           /> : null}
 
           {props.currentMoveData.grabs !== undefined ? <DataTable
@@ -148,6 +150,7 @@ function DataPortal(props) {
             loading={props.loading}
             currentFrame={props.currentFrame}
             updateHitboxData={updateHitboxData}
+            currentCharacterData={props.currentCharacterData}
           /> : null}
 
           {props.currentMoveData.throws !== undefined ? <DataTable
@@ -158,6 +161,7 @@ function DataPortal(props) {
             loading={props.loading}
             currentFrame={props.currentFrame}
             updateHitboxData={updateHitboxData}
+            currentCharacterData={props.currentCharacterData}
           /> : null}
 
           {props.currentMoveData.hurtboxes !== undefined ? <DataTable
@@ -168,6 +172,7 @@ function DataPortal(props) {
             loading={props.loading}
             currentFrame={props.currentFrame}
             updateHitboxData={updateHitboxData}
+            currentCharacterData={props.currentCharacterData}
           /> : null}
         </div>
         

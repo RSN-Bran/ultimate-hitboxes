@@ -6,10 +6,10 @@ import { useState, useEffect, useRef } from 'react';
 const environment = process.env.NODE_ENV === "development" ? "http://localhost:5080" : "https://ultimate-hitboxes.com:5443";
 
 //function to request a set of signed urls from the backend, called when a list of urls for this image does not exist in localstorage, or if the images there have timed out
-function RequestURLs(props, images) {
-	console.log(props.currentMoveData)
+function RequestURLs(props, images, ids) {
+	console.log("fetch")
 	//Get Request
-	fetch(`${environment}/api/images/${props.currentMoveData.value}`, {
+	fetch(`${environment}/api/images/${props.currentMoveData.value}${ids}`, {
 		method: "GET",
 		headers: new Headers({'API-Key': process.env.APIKEY})
 	}
@@ -33,14 +33,14 @@ function RequestURLs(props, images) {
 		}
 
 		//Set the image url list and the timestamp to localstorage
-		localStorage.setItem(`/api/images/${props.currentMoveData.value}`, JSON.stringify(storage))
+		localStorage.setItem(`/api/images/${props.currentMoveData.value}${ids}`, JSON.stringify(storage))
 	})
 	.catch(err => {
 		console.log(err)
 	})
 }
 
-function getURLSfromMoveData(props, images) {
+function getURLSfromMoveData(props, images, ids) {
 	let urls = props.currentMoveData.imgData.urls
 	props.setUrls(urls)
 	for (var i = 1; i <= props.currentMoveData.frames; i++) {	
@@ -57,11 +57,17 @@ function getURLSfromMoveData(props, images) {
 	}
 
 	//Set the image url list and the timestamp to localstorage
-	localStorage.setItem(`/api/images/${props.currentMoveData.value}`, JSON.stringify(storage))
+	localStorage.setItem(`/api/images/${props.currentMoveData.value}${ids}`, JSON.stringify(storage))
 }
 
 function LoadingData(props) {
 
+	let ids = ""
+	if(props.hitbox_color === "id" && props.currentCharacterData.ids_complete) {
+		ids = "?ids=true"
+	}
+	console.log("ids")
+	console.log(ids)
 	//Empty array of images
 	let images = [];
 
@@ -72,12 +78,12 @@ function LoadingData(props) {
 
 	//Local Storage value for this move is empty, perform the get request
 	if(localStorage.getItem(`/${props.url}/s3`) === null) {
-		getURLSfromMoveData(props, images)
+		getURLSfromMoveData(props, images, ids)
 	}
 
 	//Local Storage value for this move is not empty, but the images have expired, perfrom the get request
 	else if((compareTime.getTime()/1000) - JSON.parse(localStorage.getItem(`/${props.url}/s3`)).timestamp > 500) {
-		RequestURLs(props, images)
+		RequestURLs(props, images, ids)
 	}
 
 	//Local Storage value for this move is not empty, and the images are not expired, use these images instead of generating a request

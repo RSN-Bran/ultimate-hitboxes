@@ -30,7 +30,8 @@ const validSettings = {
   sortBy: ["number", "name", "count"],
   cookiesEnabled: [true, false],
   theme: ["dark", "light"],
-  contrast_theme: ["dark", "light"]
+  contrast_theme: ["dark", "light"],
+  hitbox_color: ["damage", "id"],
 }
 const defaultSettings = {
   showAllHitboxData: true,
@@ -42,7 +43,8 @@ const defaultSettings = {
   sortBy: "number",
   cookiesEnabled: false,
   theme: "dark",
-  contrast_theme: "light"
+  contrast_theme: "light",
+  hitbox_color: "damage"
 }
 class App extends React.Component {
   constructor() {

@@ -15,6 +15,7 @@ function HitboxTable(props) {
     props.hitboxes.forEach(function (hitbox, index) {
       hitboxData.push(
         <TableEntry
+          type={props.type}
           settings={props.settings}
           hitbox={hitbox}
           frames={props.move.frames}
@@ -24,6 +25,7 @@ function HitboxTable(props) {
           jumpToFrame={props.jumpToFrame}
           fields={props.fields}
           updateHitboxData={props.updateHitboxData}
+          currentCharacterData={props.currentCharacterData}
         />
       )
     })

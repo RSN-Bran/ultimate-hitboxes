@@ -63,11 +63,10 @@ function getURLSfromMoveData(props, images, ids) {
 function LoadingData(props) {
 
 	let ids = ""
-	if(props.hitbox_color === "id" && props.currentCharacterData.ids_complete) {
+	if(props.hitbox_color === "id" && props.currentMoveData.has_ids) {
 		ids = "?ids=true"
 	}
-	console.log("ids")
-	console.log(ids)
+
 	//Empty array of images
 	let images = [];
 

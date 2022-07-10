@@ -26,6 +26,7 @@ function HitboxTable(props) {
           fields={props.fields}
           updateHitboxData={props.updateHitboxData}
           currentCharacterData={props.currentCharacterData}
+          has_ids={props.move.has_ids}
         />
       )
     })

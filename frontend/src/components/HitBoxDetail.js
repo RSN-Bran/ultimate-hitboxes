@@ -27,7 +27,6 @@ function HitBoxDetail(props) {
     let infoToolTips = []
 
     //For each array within the dataArrays array, create a string based on the value and add it to displayData
-    //Omit data where they key is 'frames', 'color', or 'notes', those are self inserted by myself and not part of the real game code
     dataArrays.forEach(pair => {
       displayData.push(<p><b key={pair[0]} data-tip data-for={pair[0]}>{pair[0]}</b>: {pair[1]}</p>)
       infoToolTips.push(<ReactTooltip key={pair[0]} id={pair[0]} place="top" effect="solid">{hitboxFields["default"][pair[0]]["toolTipDescription"]}</ReactTooltip>)

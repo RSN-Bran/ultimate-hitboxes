@@ -154,7 +154,7 @@ function Main(props) {
     if(move !== undefined) {
     try {
       let ids = ""
-	    if(props.settings.hitbox_color === "id" && currentCharacterData.ids_complete) {
+	    if(props.settings.hitbox_color === "id") {
 		    ids = "&ids=true"
 	    }
       if (sessionStorage.getItem(`/api/move/${move}${ids}`) !== null && process.env.NODE_ENV === "production") {
@@ -176,7 +176,7 @@ function Main(props) {
           .then(data => {
 
             //Set state to loading and save the data for the move
-            sessionStorage.setItem(`/api/move/${move}`, JSON.stringify(data))
+            sessionStorage.setItem(`/api/move/${move}${ids}`, JSON.stringify(data))
             setCurrentMoveData(data)
             setLoading(true)
           })

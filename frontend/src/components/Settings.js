@@ -52,7 +52,8 @@ function Settings(props) {
 						<p>
 							Used to determine the colors of the hitboxes.
 							Damage Based groups hitboxes of the same strength by color
-							ID Based colors ids based on in-game priority
+							ID Based colors ids based on in-game priority.
+							Note: This feature is in-progress, for a list of currently supported characters, <a href="https://raw.githubusercontent.com/ultimate-hitboxes/ultimate-hitboxes_backend/master/id_characters.txt">click here</a>
 						</p>
 					</div>
 				</div>

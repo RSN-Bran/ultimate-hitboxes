@@ -164,6 +164,7 @@ class App extends React.Component {
     fetch(`${environment}/api/character/all?exclude=moves`, {headers: new Headers({'API-Key': process.env.APIKEY})})
       .then(response => response.json())
       .then(data => {
+        console.log(data)
 
         let characterList = []
         for(const [key, value] of Object.entries(data)) {

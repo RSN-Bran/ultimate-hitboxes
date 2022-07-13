@@ -55,7 +55,8 @@ function TableEntry(props) {
 
   if (props.hitbox.frames.includes(props.currentFrame) || props.hitbox.frames.length === 0) {
     if(props.settings.hitbox_color == "id" && props.has_ids && props.type=="hitboxes") {
-      style.backgroundColor = id_colors[parseInt(props.hitbox.data.id)]
+      // style.backgroundColor = id_colors[parseInt(props.hitbox.data.id)]
+      style.backgroundColor = props.hitbox.id_color
     }
     else {
       style.backgroundColor = props.hitbox.color

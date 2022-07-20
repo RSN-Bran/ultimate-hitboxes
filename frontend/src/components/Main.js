@@ -34,7 +34,6 @@ function Main(props) {
   let tempChar = useParams().character.toLowerCase()
   
   useEffect(() => {
-    
     if(tempMove == undefined && currentCharacterData.moves) {
       setMove(currentCharacterData.moves[0].value)
     }
@@ -171,7 +170,7 @@ function Main(props) {
 
       }
       else {
-        fetch(`${environment}/api/move/${move}?images=true${ids}`, {headers: new Headers({'API-Key': process.env.APIKEY})})
+        fetch(`${environment}/api/move/${typeof move === 'object' ? move.value : move}?images=true${ids}`, {headers: new Headers({'API-Key': process.env.APIKEY})})
           .then(response => response.json())
           .then(data => {
 

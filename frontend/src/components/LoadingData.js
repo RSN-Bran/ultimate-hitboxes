@@ -57,7 +57,12 @@ function getURLSfromMoveData(props, images, ids) {
 	}
 
 	//Set the image url list and the timestamp to localstorage
+	try {
 	localStorage.setItem(`/api/images/${props.currentMoveData.value}${ids}`, JSON.stringify(storage))
+	}
+	catch (e) {
+		localStorage.clear()
+	}
 }
 
 function LoadingData(props) {
